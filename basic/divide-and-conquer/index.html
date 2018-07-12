@@ -13,7 +13,7 @@
         <meta name="description" content="OI Wiki">
       
       
-        <link rel="canonical" href="https://oi-wiki.cf/introduction/resources/">
+        <link rel="canonical" href="https://oi-wiki.cf/basic/divide-and-conquer/">
       
       
         <meta name="author" content="OI Wiki Team">
@@ -42,7 +42,7 @@
     
     
       
-        <title>学习资源 - OI Wiki</title>
+        <title>分治 - OI Wiki</title>
       
     
     
@@ -132,7 +132,7 @@
                 OI Wiki
               </span>
               <span class="md-header-nav__topic">
-                学习资源
+                分治
               </span>
             
           
@@ -215,7 +215,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../.." title="Introduction" class="md-tabs__link md-tabs__link--active">
+        <a href="../.." title="Introduction" class="md-tabs__link">
           Introduction
         </a>
       
@@ -228,7 +228,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../basic/enumerate/" title="Basic" class="md-tabs__link">
+        <a href="../enumerate/" title="Basic" class="md-tabs__link md-tabs__link--active">
           Basic
         </a>
       
@@ -376,12 +376,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Introduction
@@ -411,8 +409,70 @@
 
 
   <li class="md-nav__item">
-    <a href="../mode/" title="OI 赛制简介" class="md-nav__link">
+    <a href="../../introduction/mode/" title="OI 赛制简介" class="md-nav__link">
       OI 赛制简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/resources/" title="学习资源" class="md-nav__link">
+      学习资源
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Basic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Basic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../enumerate/" title="枚举" class="md-nav__link">
+      枚举
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../simulate/" title="模拟" class="md-nav__link">
+      模拟
     </a>
   </li>
 
@@ -428,47 +488,44 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        学习资源
+        分治
       </label>
     
-    <a href="./" title="学习资源" class="md-nav__link md-nav__link--active">
-      学习资源
+    <a href="./" title="分治" class="md-nav__link md-nav__link--active">
+      分治
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="在线测试（训练）平台" class="md-nav__link">
-    在线测试（训练）平台
+  <a href="#_2" title="递归式" class="md-nav__link">
+    递归式
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="在线教程" class="md-nav__link">
-    在线教程
+  <a href="#_3" title="递归出口" class="md-nav__link">
+    递归出口
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="书籍" class="md-nav__link">
-    书籍
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="工具" class="md-nav__link">
-    工具
+  <a href="#_4" title="界函数" class="md-nav__link">
+    界函数
   </a>
   
 </li>
@@ -490,73 +547,13 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
-      Basic
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Basic
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../basic/enumerate/" title="枚举" class="md-nav__link">
-      枚举
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../basic/simulate/" title="模拟" class="md-nav__link">
-      模拟
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../basic/divide-and-conquer/" title="分治" class="md-nav__link">
-      分治
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../basic/search/" title="搜索" class="md-nav__link">
+    <a href="../search/" title="搜索" class="md-nav__link">
       搜索
     </a>
   </li>
@@ -568,7 +565,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/greedy/" title="贪心" class="md-nav__link">
+    <a href="../greedy/" title="贪心" class="md-nav__link">
       贪心
     </a>
   </li>
@@ -580,7 +577,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/sort/" title="排序" class="md-nav__link">
+    <a href="../sort/" title="排序" class="md-nav__link">
       排序
     </a>
   </li>
@@ -592,7 +589,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/expression/" title="表达式求值" class="md-nav__link">
+    <a href="../expression/" title="表达式求值" class="md-nav__link">
       表达式求值
     </a>
   </li>
@@ -869,34 +866,29 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="在线测试（训练）平台" class="md-nav__link">
-    在线测试（训练）平台
+  <a href="#_2" title="递归式" class="md-nav__link">
+    递归式
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="在线教程" class="md-nav__link">
-    在线教程
+  <a href="#_3" title="递归出口" class="md-nav__link">
+    递归出口
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="书籍" class="md-nav__link">
-    书籍
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="工具" class="md-nav__link">
-    工具
+  <a href="#_4" title="界函数" class="md-nav__link">
+    界函数
   </a>
   
 </li>
@@ -923,43 +915,29 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Ir1d/OI-wiki/blob/master/docs/introduction/resources.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/Ir1d/OI-wiki/blob/master/docs/basic/divide-and-conquer.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>学习资源</h1>
-                
-                <h2 id="_1">在线测试（训练）平台<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>在线测试平台又称 Online Judging System，一般用来刷题、组织比赛，也有的会提供博客功能方便选手交流。</p>
-<ul>
-<li><a href="http://codeforces.com">Codeforces</a></li>
-<li><a href="http://poj.org">POJ</a></li>
-<li><a href="http://acm.hdu.edu.cn">HDU OJ</a></li>
-<li><a href="http://luogu.org">LuoGu</a></li>
-<li><a href="https://vijos.org/">Vijos</a></li>
-<li><a href="http://uoj.ac">UOJ</a></li>
-<li><a href="https://loj.ac/">LibreOJ</a></li>
-<li><a href="http://51nod.com">51nod</a></li>
-</ul>
-<h2 id="_2">在线教程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="http://codeforces.com/blog/entry/57282">Codeforces 上网友整理的一份教程合集</a></li>
-<li><a href="https://cp-algorithms.com/">英文版 E-Maxx 算法教程</a></li>
-<li><a href="http://www.csie.ntnu.edu.tw/~u91029/">演算法笔记</a> 台湾师范大学总结的教程</li>
-</ul>
-<h2 id="_3">书籍<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li>算法竞赛入门经典 （人称紫书）</li>
-<li>算法竞赛入门经典——训练指南 （人称大白）</li>
-<li>算法艺术与信息学竞赛 （人称黑书）</li>
-<li><a href="https://cses.fi/book/index.html">Competitive Programmer's Handbook</a></li>
-</ul>
-<h2 id="_4">工具<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://visualgo.net/en">经典算法的可视化结果 - VisuAlgo</a></li>
-<li><a href="https://oeis.org/">OEIS 整数数列搜索引擎</a></li>
-<li><a href="https://paste.ubuntu.com/">Ubuntu pastebin，可以用来分享代码</a></li>
-<li><a href="https://www.udebug.com/">uDebug 提供一些 OJ 题目的调试辅助</a></li>
-</ul>
+                <h1 id="_1">递归<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>介绍分治之前，首先要弄清楚 <a href="https://zh.wikipedia.org/zh-hans/%E9%80%92%E5%BD%92">递归</a> 这个概念。</p>
+<p>递归的基本思想是某个函数直接或者间接地调用自身，这样就把原问题的求解转换为许多性质相同但是规模更小的子问题。我们只需要关注如何把原问题划分成符合条件的子问题，而不需要去研究这个子问题是如何被解决的。</p>
+<p>递归和枚举的区别在于：枚举是横向地把问题划分，然后依次求解子问题，而递归是把问题逐级分解，是纵向的拆分。</p>
+<p>在用递归思想解题的时候，要考虑三个要素。</p>
+<h2 id="_2">递归式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>具体是如何地将原问题划分为子问题？</p>
+<h2 id="_3">递归出口<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>终止的条件是什么？换言之，最小的子问题是怎么求解的。</p>
+<p>出口可以不止一个。</p>
+<h2 id="_4">界函数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>我们用一个函数来表示问题规模变化，这个函数需要保证递归的条件是在像出口条件靠拢。</p>
+<h1 id="_5">分治<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<p>分治是一种极为重要的思想。顾名思义，分而治之，就是把大问题化小，再各个击破的过程。</p>
+<div class="admonition 例题">
+<p class="admonition-title">例题</p>
+<p>求数列中有多少个逆序对，所谓逆序对，是满足 <span><span class="MathJax_Preview">i &lt; j</span><script type="math/tex">i < j</script></span> 而且 <span><span class="MathJax_Preview">a[i] &gt; a[j]</span><script type="math/tex">a[i] > a[j]</script></span> 的数对 <span><span class="MathJax_Preview">(i, j)</span><script type="math/tex">(i, j)</script></span> 的个数。</p>
+</div>
+<p>考虑把数列等分成两部分，那么原数列的逆序对有两种情况：一种是两个数完全包含在某一侧的子数列中，另一种是两个数一左一右被分开了。</p>
+<p>不难发现前者只需要递归地求出，后者只需要对于左侧的每个数，统计右侧有多少个比它小的。</p>
                 
                   
                 
@@ -972,9 +950,9 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = "https://oi-wiki.cf/introduction/resources/";
+      this.page.url = "https://oi-wiki.cf/basic/divide-and-conquer/";
       this.page.identifier =
-        "/introduction/resources/";
+        "/basic/divide-and-conquer/";
     };
     (function() {
       var d = document, s = d.createElement("script");
@@ -996,7 +974,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../mode/" title="OI 赛制简介" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../simulate/" title="模拟" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1005,19 +983,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                OI 赛制简介
+                模拟
               </span>
             </div>
           </a>
         
         
-          <a href="../../basic/enumerate/" title="枚举" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../search/" title="搜索" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                枚举
+                搜索
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -16,7 +16,37 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.cf/basic/</loc>
+     <loc>https://oi-wiki.cf/basic/enumerate/</loc>
+     <lastmod>2018-07-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://oi-wiki.cf/basic/simulate/</loc>
+     <lastmod>2018-07-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://oi-wiki.cf/basic/divide-and-conquer/</loc>
+     <lastmod>2018-07-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://oi-wiki.cf/basic/search/</loc>
+     <lastmod>2018-07-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://oi-wiki.cf/basic/greedy/</loc>
+     <lastmod>2018-07-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://oi-wiki.cf/basic/sort/</loc>
+     <lastmod>2018-07-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://oi-wiki.cf/basic/expression/</loc>
      <lastmod>2018-07-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
