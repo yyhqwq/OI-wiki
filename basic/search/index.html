@@ -228,7 +228,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../enumerate/" title="Basic" class="md-tabs__link md-tabs__link--active">
+        <a href="../" title="Basic" class="md-tabs__link md-tabs__link--active">
           Basic
         </a>
       
@@ -459,6 +459,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../" title="基础部分简介" class="md-nav__link">
+      基础部分简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../enumerate/" title="枚举" class="md-nav__link">
       枚举
     </a>
@@ -500,12 +512,84 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        搜索
+      </label>
     
     <a href="./" title="搜索" class="md-nav__link md-nav__link--active">
       搜索
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dfs" title="深度优先搜索 (DFS)" class="md-nav__link">
+    深度优先搜索 (DFS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfs" title="宽度优先搜索 (BFS)" class="md-nav__link">
+    宽度优先搜索 (BFS)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="双向宽度优先搜索" class="md-nav__link">
+    双向宽度优先搜索
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a" title="A* 搜索" class="md-nav__link">
+    A* 搜索
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ida" title="IDA* 搜索" class="md-nav__link">
+    IDA* 搜索
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="剪枝" class="md-nav__link">
+    剪枝
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -817,8 +901,69 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dfs" title="深度优先搜索 (DFS)" class="md-nav__link">
+    深度优先搜索 (DFS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfs" title="宽度优先搜索 (BFS)" class="md-nav__link">
+    宽度优先搜索 (BFS)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="双向宽度优先搜索" class="md-nav__link">
+    双向宽度优先搜索
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a" title="A* 搜索" class="md-nav__link">
+    A* 搜索
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ida" title="IDA* 搜索" class="md-nav__link">
+    IDA* 搜索
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="剪枝" class="md-nav__link">
+    剪枝
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -833,15 +978,17 @@
                   <a href="https://github.com/Ir1d/OI-wiki/blob/master/docs/basic/search.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="dfs">深度优先搜索 (DFS)<a class="headerlink" href="#dfs" title="Permanent link">&para;</a></h1>
+                  <h1>搜索</h1>
+                
+                <h2 id="dfs">深度优先搜索 (DFS)<a class="headerlink" href="#dfs" title="Permanent link">&para;</a></h2>
 <p>优先深入遍历靠前的节点，可以用堆栈实现。</p>
-<h1 id="bfs">宽度优先搜索 (BFS)<a class="headerlink" href="#bfs" title="Permanent link">&para;</a></h1>
+<h2 id="bfs">宽度优先搜索 (BFS)<a class="headerlink" href="#bfs" title="Permanent link">&para;</a></h2>
 <p>优先扩展浅层节点，逐渐深入，可以用队列实现。</p>
-<h2 id="_1">双向宽度优先搜索<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_1">双向宽度优先搜索<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>从状态图上起点和终点同时开始进行宽度优先搜索，如果发现相遇了，那么可以认为是获得了可行解。</p>
-<h1 id="a">A* 搜索<a class="headerlink" href="#a" title="Permanent link">&para;</a></h1>
-<h1 id="ida">IDA* 搜索<a class="headerlink" href="#ida" title="Permanent link">&para;</a></h1>
-<h1 id="_2">剪枝<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="a">A* 搜索<a class="headerlink" href="#a" title="Permanent link">&para;</a></h2>
+<h2 id="ida">IDA* 搜索<a class="headerlink" href="#ida" title="Permanent link">&para;</a></h2>
+<h2 id="_2">剪枝<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>搜索往往是在庞大的解空间中尝试获得最优解，这时候剪枝就显得十分必要了。剪枝顾名思义，是运用已有的信息，尽早地确定一种方案是否可行，如果已经知道无法获得最优解就及时退回。这样的操作对于搜索树来说，就相当于是在搜索树上剪掉一些枝杈。</p>
 <p>剪枝思路有很多种，大多需要对于具体问题来分析，在此简要介绍几种常见的剪枝思路。</p>
                 
