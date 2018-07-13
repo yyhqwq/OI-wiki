@@ -186,41 +186,6 @@
             "title": "\u5206\u6cbb"
         },
         {
-            "location": "/basic/search/",
-            "text": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22 (DFS)\n\u00b6\n\n\n\u4f18\u5148\u6df1\u5165\u904d\u5386\u9760\u524d\u7684\u8282\u70b9\uff0c\u53ef\u4ee5\u7528\u5806\u6808\u5b9e\u73b0\u3002\n\n\n\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22 (BFS)\n\u00b6\n\n\n\u4f18\u5148\u6269\u5c55\u6d45\u5c42\u8282\u70b9\uff0c\u9010\u6e10\u6df1\u5165\uff0c\u53ef\u4ee5\u7528\u961f\u5217\u5b9e\u73b0\u3002\n\n\n\u53cc\u5411\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22\n\u00b6\n\n\n\u4ece\u72b6\u6001\u56fe\u4e0a\u8d77\u70b9\u548c\u7ec8\u70b9\u540c\u65f6\u5f00\u59cb\u8fdb\u884c\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5982\u679c\u53d1\u73b0\u76f8\u9047\u4e86\uff0c\u90a3\u4e48\u53ef\u4ee5\u8ba4\u4e3a\u662f\u83b7\u5f97\u4e86\u53ef\u884c\u89e3\u3002\n\n\nA* \u641c\u7d22\n\u00b6\n\n\nIDA* \u641c\u7d22\n\u00b6\n\n\n\u526a\u679d\n\u00b6\n\n\n\u641c\u7d22\u5f80\u5f80\u662f\u5728\u5e9e\u5927\u7684\u89e3\u7a7a\u95f4\u4e2d\u5c1d\u8bd5\u83b7\u5f97\u6700\u4f18\u89e3\uff0c\u8fd9\u65f6\u5019\u526a\u679d\u5c31\u663e\u5f97\u5341\u5206\u5fc5\u8981\u4e86\u3002\u526a\u679d\u987e\u540d\u601d\u4e49\uff0c\u662f\u8fd0\u7528\u5df2\u6709\u7684\u4fe1\u606f\uff0c\u5c3d\u65e9\u5730\u786e\u5b9a\u4e00\u79cd\u65b9\u6848\u662f\u5426\u53ef\u884c\uff0c\u5982\u679c\u5df2\u7ecf\u77e5\u9053\u65e0\u6cd5\u83b7\u5f97\u6700\u4f18\u89e3\u5c31\u53ca\u65f6\u9000\u56de\u3002\u8fd9\u6837\u7684\u64cd\u4f5c\u5bf9\u4e8e\u641c\u7d22\u6811\u6765\u8bf4\uff0c\u5c31\u76f8\u5f53\u4e8e\u662f\u5728\u641c\u7d22\u6811\u4e0a\u526a\u6389\u4e00\u4e9b\u679d\u6748\u3002\n\n\n\u526a\u679d\u601d\u8def\u6709\u5f88\u591a\u79cd\uff0c\u5927\u591a\u9700\u8981\u5bf9\u4e8e\u5177\u4f53\u95ee\u9898\u6765\u5206\u6790\uff0c\u5728\u6b64\u7b80\u8981\u4ecb\u7ecd\u51e0\u79cd\u5e38\u89c1\u7684\u526a\u679d\u601d\u8def\u3002",
-            "title": "\u641c\u7d22"
-        },
-        {
-            "location": "/basic/search/#dfs",
-            "text": "\u4f18\u5148\u6df1\u5165\u904d\u5386\u9760\u524d\u7684\u8282\u70b9\uff0c\u53ef\u4ee5\u7528\u5806\u6808\u5b9e\u73b0\u3002",
-            "title": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22 (DFS)"
-        },
-        {
-            "location": "/basic/search/#bfs",
-            "text": "\u4f18\u5148\u6269\u5c55\u6d45\u5c42\u8282\u70b9\uff0c\u9010\u6e10\u6df1\u5165\uff0c\u53ef\u4ee5\u7528\u961f\u5217\u5b9e\u73b0\u3002",
-            "title": "\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22 (BFS)"
-        },
-        {
-            "location": "/basic/search/#_1",
-            "text": "\u4ece\u72b6\u6001\u56fe\u4e0a\u8d77\u70b9\u548c\u7ec8\u70b9\u540c\u65f6\u5f00\u59cb\u8fdb\u884c\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5982\u679c\u53d1\u73b0\u76f8\u9047\u4e86\uff0c\u90a3\u4e48\u53ef\u4ee5\u8ba4\u4e3a\u662f\u83b7\u5f97\u4e86\u53ef\u884c\u89e3\u3002",
-            "title": "\u53cc\u5411\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22"
-        },
-        {
-            "location": "/basic/search/#a",
-            "text": "",
-            "title": "A* \u641c\u7d22"
-        },
-        {
-            "location": "/basic/search/#ida",
-            "text": "",
-            "title": "IDA* \u641c\u7d22"
-        },
-        {
-            "location": "/basic/search/#_2",
-            "text": "\u641c\u7d22\u5f80\u5f80\u662f\u5728\u5e9e\u5927\u7684\u89e3\u7a7a\u95f4\u4e2d\u5c1d\u8bd5\u83b7\u5f97\u6700\u4f18\u89e3\uff0c\u8fd9\u65f6\u5019\u526a\u679d\u5c31\u663e\u5f97\u5341\u5206\u5fc5\u8981\u4e86\u3002\u526a\u679d\u987e\u540d\u601d\u4e49\uff0c\u662f\u8fd0\u7528\u5df2\u6709\u7684\u4fe1\u606f\uff0c\u5c3d\u65e9\u5730\u786e\u5b9a\u4e00\u79cd\u65b9\u6848\u662f\u5426\u53ef\u884c\uff0c\u5982\u679c\u5df2\u7ecf\u77e5\u9053\u65e0\u6cd5\u83b7\u5f97\u6700\u4f18\u89e3\u5c31\u53ca\u65f6\u9000\u56de\u3002\u8fd9\u6837\u7684\u64cd\u4f5c\u5bf9\u4e8e\u641c\u7d22\u6811\u6765\u8bf4\uff0c\u5c31\u76f8\u5f53\u4e8e\u662f\u5728\u641c\u7d22\u6811\u4e0a\u526a\u6389\u4e00\u4e9b\u679d\u6748\u3002  \u526a\u679d\u601d\u8def\u6709\u5f88\u591a\u79cd\uff0c\u5927\u591a\u9700\u8981\u5bf9\u4e8e\u5177\u4f53\u95ee\u9898\u6765\u5206\u6790\uff0c\u5728\u6b64\u7b80\u8981\u4ecb\u7ecd\u51e0\u79cd\u5e38\u89c1\u7684\u526a\u679d\u601d\u8def\u3002",
-            "title": "\u526a\u679d"
-        },
-        {
             "location": "/basic/greedy/",
             "text": "\u8d2a\u5fc3\u7b97\u6cd5\u987e\u540d\u601d\u4e49\u5c31\u662f\u7528\u8ba1\u7b97\u673a\u6765\u6a21\u62df\u4e00\u4e2a\u201c\u8d2a\u5fc3\u201d\u7684\u4eba\u505a\u51fa\u51b3\u7b56\u7684\u8fc7\u7a0b\u3002\n\n\n\u8fd9\u4e2a\u4eba\u6bcf\u4e00\u6b65\u884c\u52a8\u603b\u662f\u6309\u67d0\u79cd\u6307\u6807\u9009\u53d6\u6700\u4f18\u7684\u64cd\u4f5c\uff0c\n\n\n\u4ed6\u603b\u662f\u53ea\u770b\u773c\u524d\uff0c\u5e76\u4e0d\u8003\u8651\u4ee5\u540e\u53ef\u80fd\u9020\u6210\u7684\u5f71\u54cd\u3002\n\n\n\u53ef\u60f3\u800c\u77e5\uff0c\u5e76\u4e0d\u662f\u6240\u6709\u7684\u65f6\u5019\u8d2a\u5fc3\u6cd5\u90fd\u80fd\u83b7\u5f97\u6700\u4f18\u89e3\uff0c\u6240\u4ee5\u4e00\u822c\u4f7f\u7528\u8d2a\u5fc3\u6cd5\u7684\u65f6\u5019\uff0c\u90fd\u8981\u786e\u4fdd\u81ea\u5df1\u80fd\u8bc1\u660e\u5176\u6b63\u786e\u6027\u3002\n\n\n\u8bc1\u660e\u65b9\u6cd5\n\u00b6\n\n\n\u53ef\u4ee5\u4ece\u201c\u5982\u679c\u4ea4\u6362\u65b9\u6848\u4e2d\u76f8\u90bb\u7684\u4e24\u4e2a\u5143\u7d20\u4f1a\u53d1\u751f\u4ec0\u4e48\u201d\u6765\u8003\u8651\uff0c\u5982\u679c\u7b54\u6848\u4e0d\u4f1a\u53d8\u5f97\u66f4\u597d\uff0c\u90a3\u4e48\u53ef\u4ee5\u53d1\u73b0\u76ee\u524d\u7684\u89e3\u5df2\u7ecf\u662f\u6700\u4f18\u89e3\u4e86\u3002",
             "title": "\u8d2a\u5fc3"
@@ -261,39 +226,799 @@
             "title": "\u8868\u8fbe\u5f0f\u6c42\u503c"
         },
         {
+            "location": "/basic/binary/",
+            "text": "",
+            "title": "\u4e8c\u5206"
+        },
+        {
+            "location": "/basic/construction/",
+            "text": "",
+            "title": "\u6784\u9020"
+        },
+        {
+            "location": "/search/",
+            "text": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22 (DFS)\n\u00b6\n\n\n\u4f18\u5148\u6df1\u5165\u904d\u5386\u9760\u524d\u7684\u8282\u70b9\uff0c\u53ef\u4ee5\u7528\u5806\u6808\u5b9e\u73b0\u3002\n\n\n\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22 (BFS)\n\u00b6\n\n\n\u4f18\u5148\u6269\u5c55\u6d45\u5c42\u8282\u70b9\uff0c\u9010\u6e10\u6df1\u5165\uff0c\u53ef\u4ee5\u7528\u961f\u5217\u5b9e\u73b0\u3002\n\n\n\u53cc\u5411\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22\n\u00b6\n\n\n\u4ece\u72b6\u6001\u56fe\u4e0a\u8d77\u70b9\u548c\u7ec8\u70b9\u540c\u65f6\u5f00\u59cb\u8fdb\u884c\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5982\u679c\u53d1\u73b0\u76f8\u9047\u4e86\uff0c\u90a3\u4e48\u53ef\u4ee5\u8ba4\u4e3a\u662f\u83b7\u5f97\u4e86\u53ef\u884c\u89e3\u3002\n\n\nA* \u641c\u7d22\n\u00b6\n\n\nIDA* \u641c\u7d22\n\u00b6\n\n\n\u526a\u679d\n\u00b6\n\n\n\u641c\u7d22\u5f80\u5f80\u662f\u5728\u5e9e\u5927\u7684\u89e3\u7a7a\u95f4\u4e2d\u5c1d\u8bd5\u83b7\u5f97\u6700\u4f18\u89e3\uff0c\u8fd9\u65f6\u5019\u526a\u679d\u5c31\u663e\u5f97\u5341\u5206\u5fc5\u8981\u4e86\u3002\u526a\u679d\u987e\u540d\u601d\u4e49\uff0c\u662f\u8fd0\u7528\u5df2\u6709\u7684\u4fe1\u606f\uff0c\u5c3d\u65e9\u5730\u786e\u5b9a\u4e00\u79cd\u65b9\u6848\u662f\u5426\u53ef\u884c\uff0c\u5982\u679c\u5df2\u7ecf\u77e5\u9053\u65e0\u6cd5\u83b7\u5f97\u6700\u4f18\u89e3\u5c31\u53ca\u65f6\u9000\u56de\u3002\u8fd9\u6837\u7684\u64cd\u4f5c\u5bf9\u4e8e\u641c\u7d22\u6811\u6765\u8bf4\uff0c\u5c31\u76f8\u5f53\u4e8e\u662f\u5728\u641c\u7d22\u6811\u4e0a\u526a\u6389\u4e00\u4e9b\u679d\u6748\u3002\n\n\n\u526a\u679d\u601d\u8def\u6709\u5f88\u591a\u79cd\uff0c\u5927\u591a\u9700\u8981\u5bf9\u4e8e\u5177\u4f53\u95ee\u9898\u6765\u5206\u6790\uff0c\u5728\u6b64\u7b80\u8981\u4ecb\u7ecd\u51e0\u79cd\u5e38\u89c1\u7684\u526a\u679d\u601d\u8def\u3002\n\n\n\u6781\u7aef\u6cd5\n\u00b6\n\n\n\u8003\u8651\u6781\u7aef\u60c5\u51b5\uff0c\u5982\u679c\u6700\u6781\u7aef\uff08\u6700\u7406\u60f3\uff09\u7684\u60c5\u51b5\u90fd\u65e0\u6cd5\u6ee1\u8db3\uff0c\u90a3\u4e48\u80af\u5b9a\u5b9e\u9645\u60c5\u51b5\u641c\u51fa\u6765\u7684\u7ed3\u679c\u4e0d\u4f1a\u66f4\u4f18\u4e86\u3002\n\n\n\u8c03\u6574\u6cd5\n\u00b6\n\n\n\u901a\u8fc7\u5bf9\u5b50\u6811\u7684\u6bd4\u8f83\u526a\u6389\u91cd\u590d\u5b50\u6811\u548c\u660e\u663e\u4e0d\u662f\u6700\u6709\u201c\u524d\u9014\u201d\u7684\u5b50\u6811\u3002\n\n\n\u6570\u5b66\u65b9\u6cd5\n\u00b6\n\n\n\u6bd4\u5982\u5728\u56fe\u8bba\u4e2d\u501f\u52a9\u8fde\u901a\u5206\u91cf\uff0c\u6570\u8bba\u4e2d\u501f\u52a9\u6a21\u65b9\u7a0b\u7684\u5206\u6790\uff0c\u501f\u52a9\u4e0d\u7b49\u5f0f\u7684\u653e\u7f29\u6765\u4f30\u8ba1\u4e0b\u754c\u7b49\u7b49\u3002",
+            "title": "\u641c\u7d22\u90e8\u5206\u7b80\u4ecb"
+        },
+        {
+            "location": "/search/#dfs",
+            "text": "\u4f18\u5148\u6df1\u5165\u904d\u5386\u9760\u524d\u7684\u8282\u70b9\uff0c\u53ef\u4ee5\u7528\u5806\u6808\u5b9e\u73b0\u3002",
+            "title": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22 (DFS)"
+        },
+        {
+            "location": "/search/#bfs",
+            "text": "\u4f18\u5148\u6269\u5c55\u6d45\u5c42\u8282\u70b9\uff0c\u9010\u6e10\u6df1\u5165\uff0c\u53ef\u4ee5\u7528\u961f\u5217\u5b9e\u73b0\u3002",
+            "title": "\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22 (BFS)"
+        },
+        {
+            "location": "/search/#_1",
+            "text": "\u4ece\u72b6\u6001\u56fe\u4e0a\u8d77\u70b9\u548c\u7ec8\u70b9\u540c\u65f6\u5f00\u59cb\u8fdb\u884c\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5982\u679c\u53d1\u73b0\u76f8\u9047\u4e86\uff0c\u90a3\u4e48\u53ef\u4ee5\u8ba4\u4e3a\u662f\u83b7\u5f97\u4e86\u53ef\u884c\u89e3\u3002",
+            "title": "\u53cc\u5411\u5bbd\u5ea6\u4f18\u5148\u641c\u7d22"
+        },
+        {
+            "location": "/search/#a",
+            "text": "",
+            "title": "A* \u641c\u7d22"
+        },
+        {
+            "location": "/search/#ida",
+            "text": "",
+            "title": "IDA* \u641c\u7d22"
+        },
+        {
+            "location": "/search/#_2",
+            "text": "\u641c\u7d22\u5f80\u5f80\u662f\u5728\u5e9e\u5927\u7684\u89e3\u7a7a\u95f4\u4e2d\u5c1d\u8bd5\u83b7\u5f97\u6700\u4f18\u89e3\uff0c\u8fd9\u65f6\u5019\u526a\u679d\u5c31\u663e\u5f97\u5341\u5206\u5fc5\u8981\u4e86\u3002\u526a\u679d\u987e\u540d\u601d\u4e49\uff0c\u662f\u8fd0\u7528\u5df2\u6709\u7684\u4fe1\u606f\uff0c\u5c3d\u65e9\u5730\u786e\u5b9a\u4e00\u79cd\u65b9\u6848\u662f\u5426\u53ef\u884c\uff0c\u5982\u679c\u5df2\u7ecf\u77e5\u9053\u65e0\u6cd5\u83b7\u5f97\u6700\u4f18\u89e3\u5c31\u53ca\u65f6\u9000\u56de\u3002\u8fd9\u6837\u7684\u64cd\u4f5c\u5bf9\u4e8e\u641c\u7d22\u6811\u6765\u8bf4\uff0c\u5c31\u76f8\u5f53\u4e8e\u662f\u5728\u641c\u7d22\u6811\u4e0a\u526a\u6389\u4e00\u4e9b\u679d\u6748\u3002  \u526a\u679d\u601d\u8def\u6709\u5f88\u591a\u79cd\uff0c\u5927\u591a\u9700\u8981\u5bf9\u4e8e\u5177\u4f53\u95ee\u9898\u6765\u5206\u6790\uff0c\u5728\u6b64\u7b80\u8981\u4ecb\u7ecd\u51e0\u79cd\u5e38\u89c1\u7684\u526a\u679d\u601d\u8def\u3002",
+            "title": "\u526a\u679d"
+        },
+        {
+            "location": "/search/#_3",
+            "text": "\u8003\u8651\u6781\u7aef\u60c5\u51b5\uff0c\u5982\u679c\u6700\u6781\u7aef\uff08\u6700\u7406\u60f3\uff09\u7684\u60c5\u51b5\u90fd\u65e0\u6cd5\u6ee1\u8db3\uff0c\u90a3\u4e48\u80af\u5b9a\u5b9e\u9645\u60c5\u51b5\u641c\u51fa\u6765\u7684\u7ed3\u679c\u4e0d\u4f1a\u66f4\u4f18\u4e86\u3002",
+            "title": "\u6781\u7aef\u6cd5"
+        },
+        {
+            "location": "/search/#_4",
+            "text": "\u901a\u8fc7\u5bf9\u5b50\u6811\u7684\u6bd4\u8f83\u526a\u6389\u91cd\u590d\u5b50\u6811\u548c\u660e\u663e\u4e0d\u662f\u6700\u6709\u201c\u524d\u9014\u201d\u7684\u5b50\u6811\u3002",
+            "title": "\u8c03\u6574\u6cd5"
+        },
+        {
+            "location": "/search/#_5",
+            "text": "\u6bd4\u5982\u5728\u56fe\u8bba\u4e2d\u501f\u52a9\u8fde\u901a\u5206\u91cf\uff0c\u6570\u8bba\u4e2d\u501f\u52a9\u6a21\u65b9\u7a0b\u7684\u5206\u6790\uff0c\u501f\u52a9\u4e0d\u7b49\u5f0f\u7684\u653e\u7f29\u6765\u4f30\u8ba1\u4e0b\u754c\u7b49\u7b49\u3002",
+            "title": "\u6570\u5b66\u65b9\u6cd5"
+        },
+        {
+            "location": "/search/dfs/",
+            "text": "",
+            "title": "DFS"
+        },
+        {
+            "location": "/search/bfs/",
+            "text": "",
+            "title": "BFS"
+        },
+        {
+            "location": "/search/dbfs/",
+            "text": "",
+            "title": "\u53cc\u5411\u5e7f\u641c"
+        },
+        {
+            "location": "/search/heuristic/",
+            "text": "",
+            "title": "\u542f\u53d1\u5f0f\u641c\u7d22"
+        },
+        {
+            "location": "/search/astar/",
+            "text": "",
+            "title": "A-"
+        },
+        {
+            "location": "/search/idastar/",
+            "text": "",
+            "title": "IDA-"
+        },
+        {
+            "location": "/search/iterative/",
+            "text": "",
+            "title": "\u8fed\u4ee3\u6df1\u641c"
+        },
+        {
+            "location": "/search/backtracking/",
+            "text": "",
+            "title": "\u56de\u6eaf\u6cd5"
+        },
+        {
+            "location": "/search/dlx/",
+            "text": "",
+            "title": "Dancing Links"
+        },
+        {
             "location": "/dp/",
             "text": "",
-            "title": "Getting Started"
+            "title": "\u52a8\u6001\u89c4\u5212\u7b80\u4ecb"
+        },
+        {
+            "location": "/dp/\u8bb0\u5fc6\u5316\u641c\u7d22/",
+            "text": "",
+            "title": "\u8bb0\u5fc6\u5316\u641c\u7d22"
+        },
+        {
+            "location": "/dp/backpack/",
+            "text": "",
+            "title": "\u80cc\u5305DP"
+        },
+        {
+            "location": "/dp/interval/",
+            "text": "",
+            "title": "\u533a\u95f4DP"
+        },
+        {
+            "location": "/dp/dag/",
+            "text": "",
+            "title": "DAG\u4e0a\u7684dp"
+        },
+        {
+            "location": "/dp/tree/",
+            "text": "",
+            "title": "\u6811\u5f62DP"
+        },
+        {
+            "location": "/dp/state/",
+            "text": "",
+            "title": "\u72b6\u538bDP"
+        },
+        {
+            "location": "/dp/number/",
+            "text": "",
+            "title": "\u6570\u4f4dDP"
+        },
+        {
+            "location": "/dp/plug/",
+            "text": "",
+            "title": "\u63d2\u5934DP"
+        },
+        {
+            "location": "/dp/optimization/",
+            "text": "",
+            "title": "\u4f18\u5316\u53ca\u5176\u5b83"
+        },
+        {
+            "location": "/dp/misc/",
+            "text": "",
+            "title": "\u5176\u5b83\u52a8\u89c4\u65b9\u6cd5"
         },
         {
             "location": "/string/",
             "text": "",
-            "title": "Getting Started"
+            "title": "\u5b57\u7b26\u4e32\u90e8\u5206\u7b80\u4ecb"
+        },
+        {
+            "location": "/string/stl/",
+            "text": "",
+            "title": "\u4e00\u5806\u5b57\u7b26\u4e32\u51fd\u6570"
+        },
+        {
+            "location": "/string/hash/",
+            "text": "",
+            "title": "\u54c8\u5e0c\u5927\u6cd5"
+        },
+        {
+            "location": "/string/trie/",
+            "text": "",
+            "title": "\u5b57\u5178\u6811\uff08Trie\uff09"
+        },
+        {
+            "location": "/string/pam/",
+            "text": "",
+            "title": "\u56de\u6587\u81ea\u52a8\u673a"
+        },
+        {
+            "location": "/string/palindrome-tree/",
+            "text": "",
+            "title": "\u56de\u6587\u6811"
+        },
+        {
+            "location": "/string/sa/",
+            "text": "",
+            "title": "\u540e\u7f00\u6570\u7ec4\uff08SA\uff09"
+        },
+        {
+            "location": "/string/ac-automaton/",
+            "text": "",
+            "title": "AC\u81ea\u52a8\u673a"
+        },
+        {
+            "location": "/string/sam/",
+            "text": "",
+            "title": "\u540e\u7f00\u81ea\u52a8\u673a\uff08SAM\uff09"
+        },
+        {
+            "location": "/string/suffix-tree/",
+            "text": "",
+            "title": "\u540e\u7f00\u6811"
+        },
+        {
+            "location": "/string/manacher/",
+            "text": "",
+            "title": "Manacher"
+        },
+        {
+            "location": "/string/minimal-string/",
+            "text": "",
+            "title": "\u6700\u5c0f\u8868\u793a\u6cd5"
         },
         {
             "location": "/math/",
             "text": "",
-            "title": "Getting Started"
+            "title": "\u6570\u5b66\u90e8\u5206\u7b80\u4ecb"
+        },
+        {
+            "location": "/math/base/",
+            "text": "",
+            "title": "\u8fdb\u5236\u76f8\u5173"
+        },
+        {
+            "location": "/math/gcd/",
+            "text": "",
+            "title": "\u6700\u5927\u516c\u7ea6\u6570"
+        },
+        {
+            "location": "/math/divisor/",
+            "text": "",
+            "title": "\u627e\u4e00\u4e2a\u6570\u7684\u6240\u6709\u7ea6\u6570"
+        },
+        {
+            "location": "/math/fermat/",
+            "text": "",
+            "title": "\u8d39\u9a6c\u5c0f\u5b9a\u7406\uff08\u6b27\u62c9\u5b9a\u7406\uff09"
+        },
+        {
+            "location": "/math/prime/",
+            "text": "",
+            "title": "\u7d20\u6570"
+        },
+        {
+            "location": "/math/quick-pow/",
+            "text": "",
+            "title": "\u5feb\u901f\u5e42"
+        },
+        {
+            "location": "/math/crt/",
+            "text": "",
+            "title": "\u4e2d\u56fd\u5269\u4f59\u5b9a\u7406"
+        },
+        {
+            "location": "/math/dictionary/",
+            "text": "",
+            "title": "\u5206\u6bb5\u6253\u8868"
+        },
+        {
+            "location": "/math/euclid/",
+            "text": "",
+            "title": "\u6b27\u51e0\u91cc\u5f97\u7b97\u6cd5\u3001\u6269\u5c55\u6b27\u51e0\u91cc\u5f97\u7b97\u6cd5"
+        },
+        {
+            "location": "/math/matrix/",
+            "text": "",
+            "title": "\u77e9\u9635"
+        },
+        {
+            "location": "/math/bit/",
+            "text": "",
+            "title": "\u4f4d\u8fd0\u7b97"
+        },
+        {
+            "location": "/math/inverse/",
+            "text": "",
+            "title": "\u4e58\u6cd5\u9006\u5143"
+        },
+        {
+            "location": "/math/primitive-root/",
+            "text": "",
+            "title": "\u9636 \u539f\u6839"
+        },
+        {
+            "location": "/math/bsgs/",
+            "text": "",
+            "title": "BSGS"
+        },
+        {
+            "location": "/math/sieve/",
+            "text": "",
+            "title": "\u7b5b\u6cd5"
+        },
+        {
+            "location": "/math/game/",
+            "text": "",
+            "title": "\u535a\u5f08\u8bba"
+        },
+        {
+            "location": "/math/euler/",
+            "text": "",
+            "title": "\u6b27\u62c9\u51fd\u6570"
+        },
+        {
+            "location": "/math/poly/",
+            "text": "",
+            "title": "\u591a\u9879\u5f0f\u9ed1\u79d1\u6280"
+        },
+        {
+            "location": "/math/catalan/",
+            "text": "",
+            "title": "\u5361\u7279\u5170\u6570"
+        },
+        {
+            "location": "/math/combination/",
+            "text": "",
+            "title": "\u6392\u5217\u7ec4\u5408"
+        },
+        {
+            "location": "/math/cantor/",
+            "text": "",
+            "title": "\u5eb7\u6258\u5c55\u5f00"
+        },
+        {
+            "location": "/math/expectation/",
+            "text": "",
+            "title": "\u6982\u7387\u4e0e\u671f\u671b"
+        },
+        {
+            "location": "/math/permutation-group/",
+            "text": "",
+            "title": "\u7f6e\u6362\u7fa4"
+        },
+        {
+            "location": "/math/gauss/",
+            "text": "",
+            "title": "\u9ad8\u65af\u6d88\u5143"
+        },
+        {
+            "location": "/math/linear-equations/",
+            "text": "",
+            "title": "xor\u6a21\u7ebf\u6027\u65b9\u7a0b\u7ec4"
+        },
+        {
+            "location": "/math/inclusion-exclusion-principle/",
+            "text": "",
+            "title": "\u5bb9\u65a5\u539f\u7406"
+        },
+        {
+            "location": "/math/drawer-principle/",
+            "text": "",
+            "title": "\u62bd\u5c49\u539f\u7406"
+        },
+        {
+            "location": "/math/integral/",
+            "text": "",
+            "title": "\u6570\u503c\u4e0e\u79ef\u5206"
+        },
+        {
+            "location": "/math/mobius/",
+            "text": "",
+            "title": "\u83ab\u6bd4\u4e4c\u65af\u53cd\u6f14"
+        },
+        {
+            "location": "/math/fft/",
+            "text": "",
+            "title": "\u5feb\u901f\u5085\u91cc\u53f6\u53d8\u6362"
+        },
+        {
+            "location": "/math/fnt/",
+            "text": "",
+            "title": "\u5feb\u901f\u6570\u8bba\u53d8\u6362"
+        },
+        {
+            "location": "/math/linear-programming/",
+            "text": "",
+            "title": "\u7ebf\u6027\u89c4\u5212"
+        },
+        {
+            "location": "/math/misc/",
+            "text": "",
+            "title": "\u6742\u9879"
         },
         {
             "location": "/data-structure/",
             "text": "",
-            "title": "Getting Started"
+            "title": "\u6570\u636e\u7ed3\u6784\u90e8\u5206\u7b80\u4ecb"
+        },
+        {
+            "location": "/data-structure/stl/",
+            "text": "",
+            "title": "STL"
+        },
+        {
+            "location": "/data-structure/pb_ds/",
+            "text": "",
+            "title": "pb_ds"
+        },
+        {
+            "location": "/data-structure/novice/heap/",
+            "text": "",
+            "title": "\u5806"
+        },
+        {
+            "location": "/data-structure/novice/linked-list/",
+            "text": "",
+            "title": "\u94fe\u8868"
+        },
+        {
+            "location": "/data-structure/novice/square-root-decomposition/",
+            "text": "",
+            "title": "\u5206\u5757"
+        },
+        {
+            "location": "/data-structure/novice/hash/",
+            "text": "",
+            "title": "\u54c8\u5e0c\u8868"
+        },
+        {
+            "location": "/data-structure/novice/monotonous-stack/",
+            "text": "",
+            "title": "\u5355\u8c03\u6808"
+        },
+        {
+            "location": "/data-structure/novice/monotonous-queue/",
+            "text": "",
+            "title": "\u5355\u8c03\u961f\u5217"
+        },
+        {
+            "location": "/data-structure/novice/dsu/",
+            "text": "",
+            "title": "\u5e76\u67e5\u96c6"
+        },
+        {
+            "location": "/data-structure/intermediate/sparse-table/",
+            "text": "",
+            "title": "\u500d\u589e\u6cd5"
+        },
+        {
+            "location": "/data-structure/intermediate/block-list/",
+            "text": "",
+            "title": "\u5757\u72b6\u94fe\u8868"
+        },
+        {
+            "location": "/data-structure/intermediate/block-array/",
+            "text": "",
+            "title": "\u5757\u72b6\u6570\u7ec4"
+        },
+        {
+            "location": "/data-structure/intermediate/bit/",
+            "text": "",
+            "title": "\u6811\u72b6\u6570\u7ec4"
+        },
+        {
+            "location": "/data-structure/intermediate/segment/",
+            "text": "",
+            "title": "\u7ebf\u6bb5\u6811"
+        },
+        {
+            "location": "/data-structure/intermediate/treap/",
+            "text": "",
+            "title": "Treap"
+        },
+        {
+            "location": "/data-structure/intermediate/sbt/",
+            "text": "",
+            "title": "SBT"
+        },
+        {
+            "location": "/data-structure/intermediate/splay/",
+            "text": "",
+            "title": "Splay"
+        },
+        {
+            "location": "/data-structure/intermediate/scapegoat/",
+            "text": "",
+            "title": "\u66ff\u7f6a\u7f8a\u6811"
+        },
+        {
+            "location": "/data-structure/advanced/seg-in-seg/",
+            "text": "",
+            "title": "\u7ebf\u6bb5\u6811\u5957\u7ebf\u6bb5\u6811"
+        },
+        {
+            "location": "/data-structure/advanced/seg-in-balanced/",
+            "text": "",
+            "title": "\u7ebf\u6bb5\u6811\u5957\u5e73\u8861\u6811"
+        },
+        {
+            "location": "/data-structure/advanced/balanced-in-seg/",
+            "text": "",
+            "title": "\u5e73\u8861\u6811\u5957\u7ebf\u6bb5\u6811"
+        },
+        {
+            "location": "/data-structure/advanced/avl/",
+            "text": "",
+            "title": "AVL\u6811"
+        },
+        {
+            "location": "/data-structure/advanced/dividin/",
+            "text": "",
+            "title": "\u5212\u5206\u6811"
+        },
+        {
+            "location": "/data-structure/advanced/ett/",
+            "text": "",
+            "title": "Euler Tour Tree"
+        },
+        {
+            "location": "/data-structure/advanced/k-dtree/",
+            "text": "",
+            "title": "K-Dtree"
+        },
+        {
+            "location": "/data-structure/advanced/persistent-seg/",
+            "text": "",
+            "title": "\u53ef\u6301\u4e45\u5316\u7ebf\u6bb5\u6811"
+        },
+        {
+            "location": "/data-structure/advanced/persistent-block-array/",
+            "text": "",
+            "title": "\u53ef\u6301\u4e45\u5316\u5757\u72b6\u6570\u7ec4"
+        },
+        {
+            "location": "/data-structure/advanced/persistent-balanced/",
+            "text": "",
+            "title": "\u53ef\u6301\u4e45\u5316\u5e73\u8861\u6811"
+        },
+        {
+            "location": "/data-structure/advanced/persistent-trie/",
+            "text": "",
+            "title": "\u53ef\u6301\u4e45\u5316\u5b57\u5178\u6811"
+        },
+        {
+            "location": "/data-structure/advanced/lct/",
+            "text": "",
+            "title": "Link Cut Tree"
+        },
+        {
+            "location": "/data-structure/advanced/tree-decompose/",
+            "text": "",
+            "title": "\u6811\u5206\u5757"
         },
         {
             "location": "/graph/",
             "text": "",
-            "title": "Getting Started"
+            "title": "\u56fe\u8bba\u90e8\u5206\u7b80\u4ecb"
+        },
+        {
+            "location": "/graph/save/",
+            "text": "",
+            "title": "\u5b58\u50a8\u65b9\u5f0f\uff1a\u90bb\u63a5\u77e9\u9635\u3001\u524d\u5411\u661f\u3001\u94fe\u5f0f\u524d\u5411\u661f"
+        },
+        {
+            "location": "/graph/traverse/",
+            "text": "",
+            "title": "\u904d\u5386\uff1aBFS\u548cDFS"
+        },
+        {
+            "location": "/graph/mst/",
+            "text": "",
+            "title": "\u6700\u5c0f\u751f\u6210\u6811"
+        },
+        {
+            "location": "/graph/lca/",
+            "text": "",
+            "title": "\u6700\u8fd1\u516c\u5171\u7956\u5148"
+        },
+        {
+            "location": "/graph/heavy-light-decomposition/",
+            "text": "",
+            "title": "\u6811\u94fe\u5256\u5206"
+        },
+        {
+            "location": "/graph/tree-divide/",
+            "text": "",
+            "title": "\u6811\u5206\u6cbb"
+        },
+        {
+            "location": "/graph/tree-misc/",
+            "text": "",
+            "title": "\u6811\u7684\u5176\u4ed6\u95ee\u9898"
+        },
+        {
+            "location": "/graph/topo/",
+            "text": "",
+            "title": "\u62d3\u6251\u6392\u5e8f"
+        },
+        {
+            "location": "/graph/dynamic-tree-divide/",
+            "text": "",
+            "title": "\u52a8\u6001\u6811\u5206\u6cbb"
+        },
+        {
+            "location": "/graph/2-sat/",
+            "text": "",
+            "title": "2-SAT"
+        },
+        {
+            "location": "/graph/euler/",
+            "text": "",
+            "title": "\u6b27\u62c9\u56fe"
+        },
+        {
+            "location": "/graph/scc/",
+            "text": "",
+            "title": "\u5f3a\u8fde\u901a\u5206\u91cf"
+        },
+        {
+            "location": "/graph/bcc/",
+            "text": "",
+            "title": "\u53cc\u8fde\u901a\u5206\u91cf"
+        },
+        {
+            "location": "/graph/bridge/",
+            "text": "",
+            "title": "\u5272\u70b9\u5272\u8fb9"
+        },
+        {
+            "location": "/graph/differential-constraints/",
+            "text": "",
+            "title": "\u5dee\u5206\u7ea6\u675f"
+        },
+        {
+            "location": "/graph/bi-graph/",
+            "text": "",
+            "title": "\u4e8c\u5206\u56fe"
+        },
+        {
+            "location": "/graph/shortest-path/",
+            "text": "",
+            "title": "\u6700\u77ed\u8def"
+        },
+        {
+            "location": "/graph/min-circle/",
+            "text": "",
+            "title": "\u6700\u5c0f\u73af"
+        },
+        {
+            "location": "/graph/kth-path/",
+            "text": "",
+            "title": "k\u77ed\u8def"
+        },
+        {
+            "location": "/graph/euler/",
+            "text": "",
+            "title": "\u6b27\u62c9\u56fe"
+        },
+        {
+            "location": "/graph/flow/",
+            "text": "",
+            "title": "\u7f51\u7edc\u6d41"
+        },
+        {
+            "location": "/graph/flow/node/",
+            "text": "",
+            "title": "\u62c6\u70b9"
+        },
+        {
+            "location": "/graph/flow/max-flow/",
+            "text": "",
+            "title": "\u6700\u5927\u6d41"
+        },
+        {
+            "location": "/graph/flow/min-cut/",
+            "text": "",
+            "title": "\u6700\u5c0f\u5272"
+        },
+        {
+            "location": "/graph/flow/min-cost/",
+            "text": "",
+            "title": "\u8d39\u7528\u6d41"
+        },
+        {
+            "location": "/graph/flow/bound/",
+            "text": "",
+            "title": "\u4e0a\u4e0b\u754c\u7f51\u7edc\u6d41"
         },
         {
             "location": "/geometry/",
             "text": "",
-            "title": "Getting Started"
+            "title": "\u8ba1\u7b97\u51e0\u4f55\u90e8\u5206\u7b80\u4ecb"
+        },
+        {
+            "location": "/geometry/2d/",
+            "text": "",
+            "title": "\u4e8c\u7ef4\u8ba1\u7b97\u51e0\u4f55\u57fa\u7840"
+        },
+        {
+            "location": "/geometry/3d/",
+            "text": "",
+            "title": "\u4e09\u7ef4\u8ba1\u7b97\u51e0\u4f55\u57fa\u7840"
+        },
+        {
+            "location": "/geometry/pick/",
+            "text": "",
+            "title": "pick\u5b9a\u7406"
+        },
+        {
+            "location": "/geometry/triangulation/",
+            "text": "",
+            "title": "\u4e09\u89d2\u5256\u5206"
+        },
+        {
+            "location": "/geometry/convex-hull/",
+            "text": "",
+            "title": "\u51f8\u5305"
+        },
+        {
+            "location": "/geometry/scanning/",
+            "text": "",
+            "title": "\u626b\u63cf\u7ebf"
+        },
+        {
+            "location": "/geometry/rotating-calipers/",
+            "text": "",
+            "title": "\u65cb\u8f6c\u5361\u58f3"
+        },
+        {
+            "location": "/geometry/half-plane-intersection/",
+            "text": "",
+            "title": "\u534a\u5e73\u9762\u4ea4"
+        },
+        {
+            "location": "/geometry/magic/",
+            "text": "",
+            "title": "\u5176\u4ed6\u9ed1\u79d1\u6280"
         },
         {
             "location": "/misc/",
             "text": "",
-            "title": "Getting Started"
+            "title": "\u6742\u9879\u7b80\u4ecb"
+        },
+        {
+            "location": "/misc/non-traditional/",
+            "text": "",
+            "title": "\u975e\u4f20\u7edf\u9898\uff08\u63d0\u7b54\u5927\u6cd5\uff09"
+        },
+        {
+            "location": "/misc/cdq-divide/",
+            "text": "",
+            "title": "cdq\u5206\u6cbb"
+        },
+        {
+            "location": "/misc/mo-algo/",
+            "text": "",
+            "title": "\u83ab\u961f\u7b97\u6cd5"
+        },
+        {
+            "location": "/misc/hill-climbing/",
+            "text": "",
+            "title": "\u722c\u5c71\u7b97\u6cd5"
+        },
+        {
+            "location": "/misc/fractional-programming/",
+            "text": "",
+            "title": "\u5206\u6570\u89c4\u5212"
+        },
+        {
+            "location": "/misc/simulated-annealing/",
+            "text": "",
+            "title": "\u6a21\u62df\u9000\u706b"
+        },
+        {
+            "location": "/misc/zhu-liu-algorithm/",
+            "text": "",
+            "title": "\u6731\u5218\u7b97\u6cd5"
+        },
+        {
+            "location": "/misc/random-incremental/",
+            "text": "",
+            "title": "\u968f\u673a\u589e\u91cf\u6cd5"
+        },
+        {
+            "location": "/misc/random/",
+            "text": "",
+            "title": "\u968f\u673a\u5316"
+        },
+        {
+            "location": "/misc/offline/",
+            "text": "",
+            "title": "\u79bb\u7ebf\u5904\u7406"
+        },
+        {
+            "location": "/misc/distance/",
+            "text": "",
+            "title": "\u5404\u79cd\u8ddd\u79bb"
         }
     ]
 }
