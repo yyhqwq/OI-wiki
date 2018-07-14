@@ -517,8 +517,23 @@
         },
         {
             "location": "/math/bsgs/",
-            "text": "",
+            "text": "\u5927\u6b65\u5c0f\u6b65\u7b97\u6cd5\n\u00b6\n\n\n1.0 \u57fa\u7840\u7bc7\n\u00b6\n\n\n\u5927\u6b65\u5c0f\u6b65\u7b97\u6cd5\u82f1\u6587\u540d\uff1a\nBaby Step Gaint Step (BSGS)\n.\n\n\n\u8be5\u7b97\u6cd5\u53ef\u4ee5\u5728 \nO(\\sqrt{q})\nO(\\sqrt{q})\n \u7528\u4e8e\u6c42\u89e3 $$\na^x \\equiv b \\bmod p\na^x \\equiv b \\bmod p\n \u5176\u4e2d \np\np\n \u662f\u4e2a\u8d28\u6570\u7684\u65b9\u7a0b\u7684\u89e3 \nx\nx\n \u6ee1\u8db3 \n0 \\le x < p\n0 \\le x < p\n .\n\n\n\u4ee4 \nx = A \\lceil \\sqrt p \\rceil - B\nx = A \\lceil \\sqrt p \\rceil - B\n\uff0c\u5176\u4e2d \n0\\le A,B \\le \\lceil \\sqrt p \\rceil\n0\\le A,B \\le \\lceil \\sqrt p \\rceil\n\uff0c\n\n\n\u5219\u6709 \na^{A\\lceil \\sqrt p \\rceil -B} \\equiv b\na^{A\\lceil \\sqrt p \\rceil -B} \\equiv b\n\uff0c\u7a0d\u52a0\u53d8\u6362\uff0c\u5219\u6709 \na^{A\\lceil \\sqrt p \\rceil} \\equiv ba^B\na^{A\\lceil \\sqrt p \\rceil} \\equiv ba^B\n.\n\n\n\u6211\u4eec\u5df2\u77e5\u7684\u662f \na,b\na,b\n\uff0c\u6240\u4ee5\u6211\u4eec\u53ef\u4ee5\u5148\u7b97\u51fa\u7b49\u5f0f\u53f3\u8fb9\u7684 \nba^B\nba^B\n \u7684\u6240\u6709\u53d6\u503c\uff0c\u679a\u4e3e \nB\nB\n\uff0c\u7528 hash/map \u5b58\u4e0b\u6765\uff0c\u7136\u540e\u9010\u4e00\u8ba1\u7b97 \na^{A\\lceil \\sqrt p \\rceil}\na^{A\\lceil \\sqrt p \\rceil}\n\uff0c\u679a\u4e3e \nA\nA\n\uff0c\u5bfb\u627e\u662f\u5426\u6709\u4e0e\u4e4b\u76f8\u7b49\u7684 \nba^B\nba^B\n\uff0c\u4ece\u800c\u6211\u4eec\u53ef\u4ee5\u5f97\u5230\u6240\u6709\u7684 \nx\nx\n\uff0c\nx=A \\lceil \\sqrt p \\rceil - B\nx=A \\lceil \\sqrt p \\rceil - B\n.\n\n\n\u6ce8\u610f\u5230 \nA,B\nA,B\n \u5747\u5c0f\u4e8e \n\\lceil \\sqrt p \\rceil\n\\lceil \\sqrt p \\rceil\n\uff0c\u6240\u4ee5\u65f6\u95f4\u590d\u6742\u5ea6\u4e3a \nO(\\sqrt q)\nO(\\sqrt q)\n.\n\n\nBZOJ-2480\n \u662f\u4e00\u9053\u6a21\u677f\u9898\uff08\u53ef\u80fd\u662f\u6743\u9650\u9898\uff09\uff0c\nBZOJ-3122\n \u662f\u4e00\u9053\u7565\u5fae\u8fdb\u9636\u9898\uff0c\u4ee3\u7801\u53ef\u4ee5\u5728 \nSteaunk\u7684\u535a\u5ba2\n \u4e2d\u770b\u5230\u3002\n\n\n2.0 \u7565\u5fae\u8fdb\u9636\u7bc7\n\u00b6\n\n\n\u6c42\u89e3 \nx^a \\equiv b \\bmod p\nx^a \\equiv b \\bmod p\n\uff0c\np\np\n \u662f\u4e2a\u8d28\u6570",
             "title": "BSGS"
+        },
+        {
+            "location": "/math/bsgs/#_1",
+            "text": "",
+            "title": "\u5927\u6b65\u5c0f\u6b65\u7b97\u6cd5"
+        },
+        {
+            "location": "/math/bsgs/#10",
+            "text": "\u5927\u6b65\u5c0f\u6b65\u7b97\u6cd5\u82f1\u6587\u540d\uff1a Baby Step Gaint Step (BSGS) .  \u8be5\u7b97\u6cd5\u53ef\u4ee5\u5728  O(\\sqrt{q}) O(\\sqrt{q})  \u7528\u4e8e\u6c42\u89e3 $$ a^x \\equiv b \\bmod p a^x \\equiv b \\bmod p  \u5176\u4e2d  p p  \u662f\u4e2a\u8d28\u6570\u7684\u65b9\u7a0b\u7684\u89e3  x x  \u6ee1\u8db3  0 \\le x < p 0 \\le x < p  .  \u4ee4  x = A \\lceil \\sqrt p \\rceil - B x = A \\lceil \\sqrt p \\rceil - B \uff0c\u5176\u4e2d  0\\le A,B \\le \\lceil \\sqrt p \\rceil 0\\le A,B \\le \\lceil \\sqrt p \\rceil \uff0c  \u5219\u6709  a^{A\\lceil \\sqrt p \\rceil -B} \\equiv b a^{A\\lceil \\sqrt p \\rceil -B} \\equiv b \uff0c\u7a0d\u52a0\u53d8\u6362\uff0c\u5219\u6709  a^{A\\lceil \\sqrt p \\rceil} \\equiv ba^B a^{A\\lceil \\sqrt p \\rceil} \\equiv ba^B .  \u6211\u4eec\u5df2\u77e5\u7684\u662f  a,b a,b \uff0c\u6240\u4ee5\u6211\u4eec\u53ef\u4ee5\u5148\u7b97\u51fa\u7b49\u5f0f\u53f3\u8fb9\u7684  ba^B ba^B  \u7684\u6240\u6709\u53d6\u503c\uff0c\u679a\u4e3e  B B \uff0c\u7528 hash/map \u5b58\u4e0b\u6765\uff0c\u7136\u540e\u9010\u4e00\u8ba1\u7b97  a^{A\\lceil \\sqrt p \\rceil} a^{A\\lceil \\sqrt p \\rceil} \uff0c\u679a\u4e3e  A A \uff0c\u5bfb\u627e\u662f\u5426\u6709\u4e0e\u4e4b\u76f8\u7b49\u7684  ba^B ba^B \uff0c\u4ece\u800c\u6211\u4eec\u53ef\u4ee5\u5f97\u5230\u6240\u6709\u7684  x x \uff0c x=A \\lceil \\sqrt p \\rceil - B x=A \\lceil \\sqrt p \\rceil - B .  \u6ce8\u610f\u5230  A,B A,B  \u5747\u5c0f\u4e8e  \\lceil \\sqrt p \\rceil \\lceil \\sqrt p \\rceil \uff0c\u6240\u4ee5\u65f6\u95f4\u590d\u6742\u5ea6\u4e3a  O(\\sqrt q) O(\\sqrt q) .  BZOJ-2480  \u662f\u4e00\u9053\u6a21\u677f\u9898\uff08\u53ef\u80fd\u662f\u6743\u9650\u9898\uff09\uff0c BZOJ-3122  \u662f\u4e00\u9053\u7565\u5fae\u8fdb\u9636\u9898\uff0c\u4ee3\u7801\u53ef\u4ee5\u5728  Steaunk\u7684\u535a\u5ba2  \u4e2d\u770b\u5230\u3002",
+            "title": "1.0 \u57fa\u7840\u7bc7"
+        },
+        {
+            "location": "/math/bsgs/#20",
+            "text": "\u6c42\u89e3  x^a \\equiv b \\bmod p x^a \\equiv b \\bmod p \uff0c p p  \u662f\u4e2a\u8d28\u6570",
+            "title": "2.0 \u7565\u5fae\u8fdb\u9636\u7bc7"
         },
         {
             "location": "/math/sieve/",
