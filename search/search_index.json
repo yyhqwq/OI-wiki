@@ -641,7 +641,7 @@
             "title": "STL"
         },
         {
-            "location": "/data-structure/pb_ds/",
+            "location": "/data-structure/pb-ds/",
             "text": "",
             "title": "pb_ds"
         },
@@ -751,11 +751,6 @@
             "title": "\u5212\u5206\u6811"
         },
         {
-            "location": "/data-structure/advanced/ett/",
-            "text": "",
-            "title": "Euler Tour Tree"
-        },
-        {
             "location": "/data-structure/advanced/k-dtree/",
             "text": "",
             "title": "K-Dtree"
@@ -784,6 +779,11 @@
             "location": "/data-structure/advanced/lct/",
             "text": "",
             "title": "Link Cut Tree"
+        },
+        {
+            "location": "/data-structure/advanced/ett/",
+            "text": "",
+            "title": "Euler Tour Tree"
         },
         {
             "location": "/data-structure/advanced/tree-decompose/",
