@@ -106,6 +106,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -1090,6 +1094,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../prime/" title="素数" class="md-nav__link">
+      素数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -1098,9 +1114,76 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        最大公约数
+      </label>
+    
     <a href="./" title="最大公约数" class="md-nav__link md-nav__link--active">
       最大公约数
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="两个数的" class="md-nav__link">
+    两个数的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="多个数的" class="md-nav__link">
+    多个数的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="最小公倍数" class="md-nav__link">
+    最小公倍数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="两个数的" class="md-nav__link">
+    两个数的
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="多个数的" class="md-nav__link">
+    多个数的
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1111,8 +1194,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../divisor/" title="找一个数的所有约数" class="md-nav__link">
-      找一个数的所有约数
+    <a href="../sieve/" title="筛法" class="md-nav__link">
+      筛法
     </a>
   </li>
 
@@ -1125,18 +1208,6 @@
   <li class="md-nav__item">
     <a href="../fermat/" title="费马小定理（欧拉定理）" class="md-nav__link">
       费马小定理（欧拉定理）
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../prime/" title="素数" class="md-nav__link">
-      素数
     </a>
   </li>
 
@@ -1245,18 +1316,6 @@
   <li class="md-nav__item">
     <a href="../bsgs/" title="BSGS" class="md-nav__link">
       BSGS
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../sieve/" title="筛法" class="md-nav__link">
-      筛法
     </a>
   </li>
 
@@ -2653,6 +2712,75 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="两个数的" class="md-nav__link">
+    两个数的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="多个数的" class="md-nav__link">
+    多个数的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="最小公倍数" class="md-nav__link">
+    最小公倍数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="两个数的" class="md-nav__link">
+    两个数的
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="多个数的" class="md-nav__link">
+    多个数的
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2663,7 +2791,32 @@
                 
                   <h1>最大公约数</h1>
                 
-                
+                <p>最大公约数即为 Greatest Common Divisor，常缩写为 gcd</p>
+<p>在 <a href="../../math/prime">素数</a> 一节中，我们已经介绍了约数的概念。</p>
+<p>一组数的公约数，是指同时是这组数中每一个数的约数的数。而最大公约数，则是指所有公约数里面最大的一个。</p>
+<p>那么如何求最大公约数呢？我们先考虑两个数的情况。</p>
+<h3 id="_1">两个数的<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>如果我们已知两个数 a 和 b，如何求出二者的最大公约数呢？</p>
+<p>不妨设 <span><span class="MathJax_Preview">a &gt; b</span><script type="math/tex">a > b</script></span></p>
+<p>我们发现如果 b 是 a 的约数，那么 b 就是二者的最大公约数。
+下面讨论不能整除的情况， <span><span class="MathJax_Preview">a = b * q + r</span><script type="math/tex">a = b * q + r</script></span>，其中 <span><span class="MathJax_Preview">r &lt; b</span><script type="math/tex">r < b</script></span>。</p>
+<p>不难证明，<span><span class="MathJax_Preview">gcd(a, b) == gcd(b, r)</span><script type="math/tex">gcd(a, b) == gcd(b, r)</script></span>，这里两个数的大小是不会增大的，我们得到了关于两个数的最大公约数的一个递归求法。</p>
+<h3 id="_2">多个数的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>那怎么求多个书的最大公约数呢？显然答案一定是每个数的约数，那么也一定是每相邻两个数的约数。我们采用归纳法，可以证明，每次取出两个数求出答案后再放回去，不会对所需要的答案造成影响。</p>
+<h2 id="_3">最小公倍数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">两个数的<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>首先我们介绍这样一个定理 —— 算术基本定理：</p>
+<blockquote>
+<p>每一个正整数都可以表示成若干整数的乘积，这种分解方式在忽略排列次序的条件下是唯一的。</p>
+</blockquote>
+<p>用数学公式来表示就是 <span><span class="MathJax_Preview">x = p_1^{k_1}p_2^{k_2} \cdots p_s^{k_s}</span><script type="math/tex">x = p_1^{k_1}p_2^{k_2} \cdots p_s^{k_s}</script></span></p>
+<p>设 <span><span class="MathJax_Preview">a = p_{a_1}^{k_{a_1}}p_{a_2}^{k_{a_2}} \cdots p_{a_s}^{k_{a_s}}</span><script type="math/tex">a = p_{a_1}^{k_{a_1}}p_{a_2}^{k_{a_2}} \cdots p_{a_s}^{k_{a_s}}</script></span>, <span><span class="MathJax_Preview">b = p_{b_1}^{k_{b_1}}p_{b_2}^{k_{b_2}} \cdots p_{b_s}^{k_{b_s}}</span><script type="math/tex">b = p_{b_1}^{k_{b_1}}p_{b_2}^{k_{b_2}} \cdots p_{b_s}^{k_{b_s}}</script></span></p>
+<p>我们发现，对于 a 和 b 的情况，二者的最大公约数等于 <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}</span><script type="math/tex">p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}</span><script type="math/tex">p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}</script></span></script></span>
+最小公倍数等于 <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}</span><script type="math/tex">p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}</span><script type="math/tex">p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}</script></span></script></span></p>
+<p>由于 <span><span class="MathJax_Preview">a + b == max\{a, b\} + min\{a, b\}</span><script type="math/tex">a + b == max\{a, b\} + min\{a, b\}</script></span></p>
+<p>所以得到结论是 <span><span class="MathJax_Preview">gcd(a, b) * lcm(a, b) == a * b</span><script type="math/tex">gcd(a, b) * lcm(a, b) == a * b</script></span></p>
+<p>要求两个数的最小公倍数，先求出最大公约数即可。</p>
+<h3 id="_5">多个数的<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
                 
                   
                 
@@ -2699,7 +2852,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../base/" title="进制相关" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../prime/" title="素数" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2708,19 +2861,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                进制相关
+                素数
               </span>
             </div>
           </a>
         
         
-          <a href="../divisor/" title="找一个数的所有约数" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../sieve/" title="筛法" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                找一个数的所有约数
+                筛法
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
