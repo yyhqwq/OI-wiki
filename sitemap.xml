@@ -246,7 +246,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://oi-wiki.cf/math/euler/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://oi-wiki.cf/math/sieve/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://oi-wiki.cf/math/mobius/</loc>
      <lastmod>2018-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -306,11 +316,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.cf/math/euler/</loc>
-     <lastmod>2018-07-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://oi-wiki.cf/math/poly/</loc>
      <lastmod>2018-07-21</lastmod>
      <changefreq>daily</changefreq>
@@ -366,11 +371,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.cf/math/mobius/</loc>
-     <lastmod>2018-07-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://oi-wiki.cf/math/fft/</loc>
      <lastmod>2018-07-21</lastmod>
      <changefreq>daily</changefreq>
@@ -406,22 +406,27 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.cf/data-structure/novice/heap/</loc>
-     <lastmod>2018-07-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://oi-wiki.cf/data-structure/novice/linked-list/</loc>
      <lastmod>2018-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.cf/data-structure/novice/square-root-decomposition/</loc>
+     <loc>https://oi-wiki.cf/data-structure/novice/hash/</loc>
      <lastmod>2018-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.cf/data-structure/novice/hash/</loc>
+     <loc>https://oi-wiki.cf/data-structure/novice/dsu/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://oi-wiki.cf/data-structure/novice/heap/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://oi-wiki.cf/data-structure/novice/square-root-decomposition/</loc>
      <lastmod>2018-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -432,11 +437,6 @@
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/novice/monotonous-queue/</loc>
-     <lastmod>2018-07-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://oi-wiki.cf/data-structure/novice/dsu/</loc>
      <lastmod>2018-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>

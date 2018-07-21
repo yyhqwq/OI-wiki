@@ -1118,6 +1118,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../euler/" title="欧拉函数" class="md-nav__link">
+      欧拉函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -1191,6 +1203,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mobius/" title="莫比乌斯反演" class="md-nav__link">
+      莫比乌斯反演
+    </a>
   </li>
 
         
@@ -1322,18 +1346,6 @@
   <li class="md-nav__item">
     <a href="../game/" title="博弈论" class="md-nav__link">
       博弈论
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../euler/" title="欧拉函数" class="md-nav__link">
-      欧拉函数
     </a>
   </li>
 
@@ -1476,18 +1488,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../mobius/" title="莫比乌斯反演" class="md-nav__link">
-      莫比乌斯反演
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../fft/" title="快速傅里叶变换" class="md-nav__link">
       快速傅里叶变换
     </a>
@@ -1615,18 +1615,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/heap/" title="堆" class="md-nav__link">
-      堆
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -1639,8 +1627,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/square-root-decomposition/" title="分块" class="md-nav__link">
-      分块
+    <a href="../../data-structure/novice/hash/" title="哈希表" class="md-nav__link">
+      哈希表
     </a>
   </li>
 
@@ -1651,8 +1639,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/hash/" title="哈希表" class="md-nav__link">
-      哈希表
+    <a href="../../data-structure/novice/dsu/" title="并查集" class="md-nav__link">
+      并查集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/heap/" title="堆" class="md-nav__link">
+      堆
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/square-root-decomposition/" title="分块" class="md-nav__link">
+      分块
     </a>
   </li>
 
@@ -1677,18 +1689,6 @@
   <li class="md-nav__item">
     <a href="../../data-structure/novice/monotonous-queue/" title="单调队列" class="md-nav__link">
       单调队列
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../data-structure/novice/dsu/" title="并查集" class="md-nav__link">
-      并查集
     </a>
   </li>
 
@@ -2827,11 +2827,6 @@
 <p>上面代码中的 phi 数组，会在下面提到。</p>
 <p>这种线性筛也称为欧拉筛法</p>
 <h2 id="_2">筛法求欧拉函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>欧拉函数是什么？ <span><span class="MathJax_Preview">\phi(n)</span><script type="math/tex">\phi(n)</script></span> 表示的是小于等于 n 和 n 互质的数的个数。</p>
-<p>比如说 <span><span class="MathJax_Preview">\phi(1) = 1</span><script type="math/tex">\phi(1) = 1</script></span>。</p>
-<p>当 n 是质数的时候，显然有 <span><span class="MathJax_Preview">\phi(n) = n - 1</span><script type="math/tex">\phi(n) = n - 1</script></span></p>
-<p>利用唯一分解定理，我们可以把一个整数唯一地分解为质数幂次的乘积，</p>
-<p>设 <span><span class="MathJax_Preview">n = p_1^{k_1}p_2^{k_2} \cdots p_s^{k_s}</span><script type="math/tex">n = p_1^{k_1}p_2^{k_2} \cdots p_s^{k_s}</script></span>，其中 <span><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 是质数，那么定义 <span><span class="MathJax_Preview">\phi(n) = n * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}}</span><script type="math/tex">\phi(n) = n * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}}</script></span></p>
 <p>注意到在线性筛中，每一个合数都是被最小的质因子筛掉。比如设 <span><span class="MathJax_Preview">p_1</span><script type="math/tex">p_1</script></span> 是 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的最小质因子，<span><span class="MathJax_Preview">n' = \frac{n}{p_1}</span><script type="math/tex">n' = \frac{n}{p_1}</script></span>，那么线性筛的过程中 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 通过 <span><span class="MathJax_Preview">n' * p_1</span><script type="math/tex">n' * p_1</script></span> 筛掉。</p>
 <p>观察线性筛的过程，我们还需要处理两个部分，下面对<span><span class="MathJax_Preview">n' \bmod p_1</span><script type="math/tex">n' \bmod p_1</script></span> 分情况讨论。</p>
 <p>如果 <span><span class="MathJax_Preview">n' \bmod p_1 = 0</span><script type="math/tex">n' \bmod p_1 = 0</script></span>，那么 <span><span class="MathJax_Preview">n'</span><script type="math/tex">n'</script></span> 包含了 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的所有质因子。</p>
@@ -2904,7 +2899,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../gcd/" title="最大公约数" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../euler/" title="欧拉函数" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2913,19 +2908,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                最大公约数
+                欧拉函数
               </span>
             </div>
           </a>
         
         
-          <a href="../fermat/" title="费马小定理（欧拉定理）" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../mobius/" title="莫比乌斯反演" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                费马小定理（欧拉定理）
+                莫比乌斯反演
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

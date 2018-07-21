@@ -1194,8 +1194,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../euler/" title="欧拉函数" class="md-nav__link">
+      欧拉函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../sieve/" title="筛法" class="md-nav__link">
       筛法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mobius/" title="莫比乌斯反演" class="md-nav__link">
+      莫比乌斯反演
     </a>
   </li>
 
@@ -1338,18 +1362,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../euler/" title="欧拉函数" class="md-nav__link">
-      欧拉函数
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../poly/" title="多项式黑科技" class="md-nav__link">
       多项式黑科技
     </a>
@@ -1472,18 +1484,6 @@
   <li class="md-nav__item">
     <a href="../integral/" title="数值与积分" class="md-nav__link">
       数值与积分
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../mobius/" title="莫比乌斯反演" class="md-nav__link">
-      莫比乌斯反演
     </a>
   </li>
 
@@ -1621,18 +1621,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/heap/" title="堆" class="md-nav__link">
-      堆
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -1645,8 +1633,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/square-root-decomposition/" title="分块" class="md-nav__link">
-      分块
+    <a href="../../data-structure/novice/hash/" title="哈希表" class="md-nav__link">
+      哈希表
     </a>
   </li>
 
@@ -1657,8 +1645,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/hash/" title="哈希表" class="md-nav__link">
-      哈希表
+    <a href="../../data-structure/novice/dsu/" title="并查集" class="md-nav__link">
+      并查集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/heap/" title="堆" class="md-nav__link">
+      堆
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/square-root-decomposition/" title="分块" class="md-nav__link">
+      分块
     </a>
   </li>
 
@@ -1683,18 +1695,6 @@
   <li class="md-nav__item">
     <a href="../../data-structure/novice/monotonous-queue/" title="单调队列" class="md-nav__link">
       单调队列
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../data-structure/novice/dsu/" title="并查集" class="md-nav__link">
-      并查集
     </a>
   </li>
 
@@ -2792,7 +2792,7 @@
                   <h1>最大公约数</h1>
                 
                 <p>最大公约数即为 Greatest Common Divisor，常缩写为 gcd</p>
-<p>在 <a href="../../math/prime">素数</a> 一节中，我们已经介绍了约数的概念。</p>
+<p>在 <a href="../prime">素数</a> 一节中，我们已经介绍了约数的概念。</p>
 <p>一组数的公约数，是指同时是这组数中每一个数的约数的数。而最大公约数，则是指所有公约数里面最大的一个。</p>
 <p>那么如何求最大公约数呢？我们先考虑两个数的情况。</p>
 <h3 id="_1">两个数的<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
@@ -2811,10 +2811,26 @@
 </blockquote>
 <p>用数学公式来表示就是 <span><span class="MathJax_Preview">x = p_1^{k_1}p_2^{k_2} \cdots p_s^{k_s}</span><script type="math/tex">x = p_1^{k_1}p_2^{k_2} \cdots p_s^{k_s}</script></span></p>
 <p>设 <span><span class="MathJax_Preview">a = p_{a_1}^{k_{a_1}}p_{a_2}^{k_{a_2}} \cdots p_{a_s}^{k_{a_s}}</span><script type="math/tex">a = p_{a_1}^{k_{a_1}}p_{a_2}^{k_{a_2}} \cdots p_{a_s}^{k_{a_s}}</script></span>, <span><span class="MathJax_Preview">b = p_{b_1}^{k_{b_1}}p_{b_2}^{k_{b_2}} \cdots p_{b_s}^{k_{b_s}}</span><script type="math/tex">b = p_{b_1}^{k_{b_1}}p_{b_2}^{k_{b_2}} \cdots p_{b_s}^{k_{b_s}}</script></span></p>
-<p>我们发现，对于 a 和 b 的情况，二者的最大公约数等于 <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}</span><script type="math/tex">p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}</span><script type="math/tex">p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}</script></span></script></span>
-最小公倍数等于 <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}</span><script type="math/tex">p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}</span><script type="math/tex">p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}</script></span></script></span></p>
-<p>由于 <span><span class="MathJax_Preview">a + b == max\{a, b\} + min\{a, b\}</span><script type="math/tex">a + b == max\{a, b\} + min\{a, b\}</script></span></p>
-<p>所以得到结论是 <span><span class="MathJax_Preview">gcd(a, b) * lcm(a, b) == a * b</span><script type="math/tex">gcd(a, b) * lcm(a, b) == a * b</script></span></p>
+<p>我们发现，对于 a 和 b 的情况，二者的最大公约数等于</p>
+<div>
+<div class="MathJax_Preview">
+p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}
+</div>
+<script type="math/tex; mode=display">
+p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}
+</script>
+</div>
+<p>最小公倍数等于</p>
+<div>
+<div class="MathJax_Preview">
+p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}
+</div>
+<script type="math/tex; mode=display">
+p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}
+</script>
+</div>
+<p>由于 <span><span class="MathJax_Preview">a + b = max\{a, b\} + min\{a, b\}</span><script type="math/tex">a + b = max\{a, b\} + min\{a, b\}</script></span></p>
+<p>所以得到结论是 <span><span class="MathJax_Preview">gcd(a, b) * lcm(a, b) = a * b</span><script type="math/tex">gcd(a, b) * lcm(a, b) = a * b</script></span></p>
 <p>要求两个数的最小公倍数，先求出最大公约数即可。</p>
 <h3 id="_5">多个数的<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
                 
@@ -2867,13 +2883,13 @@
           </a>
         
         
-          <a href="../sieve/" title="筛法" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../euler/" title="欧拉函数" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                筛法
+                欧拉函数
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
