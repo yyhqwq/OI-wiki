@@ -106,6 +106,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -1170,9 +1174,62 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        费马小定理（欧拉定理）
+      </label>
+    
     <a href="./" title="费马小定理（欧拉定理）" class="md-nav__link md-nav__link--active">
       费马小定理（欧拉定理）
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="费马小定理" class="md-nav__link">
+    费马小定理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="欧拉定理" class="md-nav__link">
+    欧拉定理
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="证明" class="md-nav__link">
+    证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2653,6 +2710,61 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="费马小定理" class="md-nav__link">
+    费马小定理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="欧拉定理" class="md-nav__link">
+    欧拉定理
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="证明" class="md-nav__link">
+    证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2663,7 +2775,14 @@
                 
                   <h1>费马小定理（欧拉定理）</h1>
                 
-                
+                <h2 id="_1">费马小定理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>若 <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 为素数，<span><span class="MathJax_Preview">gcd(a, p) = 1</span><script type="math/tex">gcd(a, p) = 1</script></span>，则 <span><span class="MathJax_Preview">a^{p - 1} \equiv 1 \pmod{p}</span><script type="math/tex">a^{p - 1} \equiv 1 \pmod{p}</script></span>。</p>
+<p>另一个形式：对于任意整数 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，有 <span><span class="MathJax_Preview">a^p \equiv a \pmod{p}</span><script type="math/tex">a^p \equiv a \pmod{p}</script></span>。</p>
+<h2 id="_2">欧拉定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>若 <span><span class="MathJax_Preview">gcd(a, m) = 1</span><script type="math/tex">gcd(a, m) = 1</script></span>，则 <span><span class="MathJax_Preview">a^{\phi(m)} \equiv 1 \pmod{m}</span><script type="math/tex">a^{\phi(m)} \equiv 1 \pmod{m}</script></span>。</p>
+<h3 id="_3">证明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>设 <span><span class="MathJax_Preview">r_1, r_2, \cdots, r_{\phi(m)}</span><script type="math/tex">r_1, r_2, \cdots, r_{\phi(m)}</script></span> 为模 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 意义下的一个简化剩余系，则 <span><span class="MathJax_Preview">ar_1, ar_2, \cdots, ar_{\phi(m)}</span><script type="math/tex">ar_1, ar_2, \cdots, ar_{\phi(m)}</script></span> 也为模 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 意义下的一个简化剩余系。所以 <span><span class="MathJax_Preview">r_1r_2 \cdots r_{\phi(m)} \equiv ar_1 \cdot ar_2 \cdots ar_{\phi(m)} = a^{\phi(m)}r_1r_2 \cdots r_{\phi(m)} \pmod{m}</span><script type="math/tex">r_1r_2 \cdots r_{\phi(m)} \equiv ar_1 \cdot ar_2 \cdots ar_{\phi(m)} = a^{\phi(m)}r_1r_2 \cdots r_{\phi(m)} \pmod{m}</script></span>，可约去 <span><span class="MathJax_Preview">r_1r_2 \cdots r_{\phi(m)}</span><script type="math/tex">r_1r_2 \cdots r_{\phi(m)}</script></span>，即得 <span><span class="MathJax_Preview">a^{\phi(m)} \equiv 1 \pmod{m}</span><script type="math/tex">a^{\phi(m)} \equiv 1 \pmod{m}</script></span>。</p>
+<p>当 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 为素数时，由于 <span><span class="MathJax_Preview">\phi(m) = m - 1</span><script type="math/tex">\phi(m) = m - 1</script></span>，代入欧拉定理可立即得到费马小定理。</p>
                 
                   
                 

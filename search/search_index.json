@@ -612,8 +612,23 @@
         },
         {
             "location": "/math/fermat/",
-            "text": "",
+            "text": "\u8d39\u9a6c\u5c0f\u5b9a\u7406\n\u00b6\n\n\n\u82e5 \np\np\n \u4e3a\u7d20\u6570\uff0c\ngcd(a, p) = 1\ngcd(a, p) = 1\n\uff0c\u5219 \na^{p - 1} \\equiv 1 \\pmod{p}\na^{p - 1} \\equiv 1 \\pmod{p}\n\u3002\n\n\n\u53e6\u4e00\u4e2a\u5f62\u5f0f\uff1a\u5bf9\u4e8e\u4efb\u610f\u6574\u6570 \na\na\n\uff0c\u6709 \na^p \\equiv a \\pmod{p}\na^p \\equiv a \\pmod{p}\n\u3002\n\n\n\u6b27\u62c9\u5b9a\u7406\n\u00b6\n\n\n\u82e5 \ngcd(a, m) = 1\ngcd(a, m) = 1\n\uff0c\u5219 \na^{\\phi(m)} \\equiv 1 \\pmod{m}\na^{\\phi(m)} \\equiv 1 \\pmod{m}\n\u3002\n\n\n\u8bc1\u660e\n\u00b6\n\n\n\u8bbe \nr_1, r_2, \\cdots, r_{\\phi(m)}\nr_1, r_2, \\cdots, r_{\\phi(m)}\n \u4e3a\u6a21 \nm\nm\n \u610f\u4e49\u4e0b\u7684\u4e00\u4e2a\u7b80\u5316\u5269\u4f59\u7cfb\uff0c\u5219 \nar_1, ar_2, \\cdots, ar_{\\phi(m)}\nar_1, ar_2, \\cdots, ar_{\\phi(m)}\n \u4e5f\u4e3a\u6a21 \nm\nm\n \u610f\u4e49\u4e0b\u7684\u4e00\u4e2a\u7b80\u5316\u5269\u4f59\u7cfb\u3002\u6240\u4ee5 \nr_1r_2 \\cdots r_{\\phi(m)} \\equiv ar_1 \\cdot ar_2 \\cdots ar_{\\phi(m)} = a^{\\phi(m)}r_1r_2 \\cdots r_{\\phi(m)} \\pmod{m}\nr_1r_2 \\cdots r_{\\phi(m)} \\equiv ar_1 \\cdot ar_2 \\cdots ar_{\\phi(m)} = a^{\\phi(m)}r_1r_2 \\cdots r_{\\phi(m)} \\pmod{m}\n\uff0c\u53ef\u7ea6\u53bb \nr_1r_2 \\cdots r_{\\phi(m)}\nr_1r_2 \\cdots r_{\\phi(m)}\n\uff0c\u5373\u5f97 \na^{\\phi(m)} \\equiv 1 \\pmod{m}\na^{\\phi(m)} \\equiv 1 \\pmod{m}\n\u3002\n\n\n\u5f53 \nm\nm\n \u4e3a\u7d20\u6570\u65f6\uff0c\u7531\u4e8e \n\\phi(m) = m - 1\n\\phi(m) = m - 1\n\uff0c\u4ee3\u5165\u6b27\u62c9\u5b9a\u7406\u53ef\u7acb\u5373\u5f97\u5230\u8d39\u9a6c\u5c0f\u5b9a\u7406\u3002",
             "title": "\u8d39\u9a6c\u5c0f\u5b9a\u7406\uff08\u6b27\u62c9\u5b9a\u7406\uff09"
+        },
+        {
+            "location": "/math/fermat/#_1",
+            "text": "\u82e5  p p  \u4e3a\u7d20\u6570\uff0c gcd(a, p) = 1 gcd(a, p) = 1 \uff0c\u5219  a^{p - 1} \\equiv 1 \\pmod{p} a^{p - 1} \\equiv 1 \\pmod{p} \u3002  \u53e6\u4e00\u4e2a\u5f62\u5f0f\uff1a\u5bf9\u4e8e\u4efb\u610f\u6574\u6570  a a \uff0c\u6709  a^p \\equiv a \\pmod{p} a^p \\equiv a \\pmod{p} \u3002",
+            "title": "\u8d39\u9a6c\u5c0f\u5b9a\u7406"
+        },
+        {
+            "location": "/math/fermat/#_2",
+            "text": "\u82e5  gcd(a, m) = 1 gcd(a, m) = 1 \uff0c\u5219  a^{\\phi(m)} \\equiv 1 \\pmod{m} a^{\\phi(m)} \\equiv 1 \\pmod{m} \u3002",
+            "title": "\u6b27\u62c9\u5b9a\u7406"
+        },
+        {
+            "location": "/math/fermat/#_3",
+            "text": "\u8bbe  r_1, r_2, \\cdots, r_{\\phi(m)} r_1, r_2, \\cdots, r_{\\phi(m)}  \u4e3a\u6a21  m m  \u610f\u4e49\u4e0b\u7684\u4e00\u4e2a\u7b80\u5316\u5269\u4f59\u7cfb\uff0c\u5219  ar_1, ar_2, \\cdots, ar_{\\phi(m)} ar_1, ar_2, \\cdots, ar_{\\phi(m)}  \u4e5f\u4e3a\u6a21  m m  \u610f\u4e49\u4e0b\u7684\u4e00\u4e2a\u7b80\u5316\u5269\u4f59\u7cfb\u3002\u6240\u4ee5  r_1r_2 \\cdots r_{\\phi(m)} \\equiv ar_1 \\cdot ar_2 \\cdots ar_{\\phi(m)} = a^{\\phi(m)}r_1r_2 \\cdots r_{\\phi(m)} \\pmod{m} r_1r_2 \\cdots r_{\\phi(m)} \\equiv ar_1 \\cdot ar_2 \\cdots ar_{\\phi(m)} = a^{\\phi(m)}r_1r_2 \\cdots r_{\\phi(m)} \\pmod{m} \uff0c\u53ef\u7ea6\u53bb  r_1r_2 \\cdots r_{\\phi(m)} r_1r_2 \\cdots r_{\\phi(m)} \uff0c\u5373\u5f97  a^{\\phi(m)} \\equiv 1 \\pmod{m} a^{\\phi(m)} \\equiv 1 \\pmod{m} \u3002  \u5f53  m m  \u4e3a\u7d20\u6570\u65f6\uff0c\u7531\u4e8e  \\phi(m) = m - 1 \\phi(m) = m - 1 \uff0c\u4ee3\u5165\u6b27\u62c9\u5b9a\u7406\u53ef\u7acb\u5373\u5f97\u5230\u8d39\u9a6c\u5c0f\u5b9a\u7406\u3002",
+            "title": "\u8bc1\u660e"
         },
         {
             "location": "/math/quick-pow/",
