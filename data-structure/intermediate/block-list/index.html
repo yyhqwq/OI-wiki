@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../../../">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.3">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
     
     
       
@@ -105,6 +105,10 @@
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
     
     
       <header class="md-header" data-md-component="header">
@@ -1682,6 +1686,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
     <a href="./" title="块状链表" class="md-nav__link md-nav__link--active">
       块状链表
@@ -1770,6 +1776,18 @@
   <li class="md-nav__item">
     <a href="../scapegoat/" title="替罪羊树" class="md-nav__link">
       替罪羊树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../virtual-tree/" title="虚树" class="md-nav__link">
+      虚树
     </a>
   </li>
 
@@ -2703,6 +2721,21 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2711,9 +2744,94 @@
                   <a href="https://github.com/24OI/OI-wiki/blob/master/docs/data-structure/intermediate/block-list.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>块状链表</h1>
-                
-                
+                <h1 id="_1">块状链表<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p><a href="../images/kuaizhuanglianbiao.png" title="./images/kuaizhuanglianbiao.png"><img alt="./images/kuaizhuanglianbiao.png" src="../images/kuaizhuanglianbiao.png" title="./images/kuaizhuanglianbiao.png" /></a></p>
+<p>大概就长这样。。。</p>
+<p>不难发现块状链表就是一个链表，每个节点指向一个数组。
+我们把原来长度为n的数组分为√n个节点，每个节点对应的数组大小为√n。
+所以我们这么定义结构体，代码见下。
+其中sqn表示sqrt(n)即√n，pb表示push_back，即在这个node中加入一个元素。
+<div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">node</span>
+<span class="p">{</span>
+    <span class="n">node</span><span class="o">*</span><span class="n">nxt</span><span class="p">;</span><span class="kt">int</span> <span class="n">size</span><span class="p">;</span><span class="kt">char</span> <span class="n">d</span><span class="p">[(</span><span class="n">sqn</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">5</span><span class="p">];</span>
+    <span class="n">node</span><span class="p">(){</span><span class="n">size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">nxt</span><span class="o">=</span><span class="nb">NULL</span><span class="p">,</span><span class="n">memset</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">d</span><span class="p">));}</span>
+    <span class="kt">void</span> <span class="n">pb</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">){</span><span class="n">d</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span><span class="o">=</span><span class="n">c</span><span class="p">;}</span>
+<span class="p">};</span>
+</pre></div></p>
+<p>块状链表应该至少支持：分裂、插入、查找。
+什么是分裂？分裂就是分裂一个node，变成两个小的node，以保证每个node的大小都接近√n（否则可能退化成普通数组）。当一个node的大小超过2*√n时执行分裂操作。</p>
+<p>分裂操作怎么做呢？先新建一个节点，再把被分裂的节点的后√n个值copy到新节点，然后把被分裂的节点的后√n个值删掉(size--)，最后把新节点插入到被分裂节点的后面即可。</p>
+<p>块状链表的所有操作的复杂度都是√n的。</p>
+<p>还有一个要说的。
+随着元素的插入（或删除），n会边，√n也会变。这样块的大小就会变化，我们难道还要每次维护块的大小？</p>
+<p>其实不然，把√n设置为一个定值即可。比如题目给的范围是10<sup>6，那么√n就设置为大小为10</sup>3的常量，不用更改它。</p>
+<p>另外，你想<font color=red><strong>TLE</strong></font>的话那就用STL吧，也没人拦你。
+对吧<font color=orange><strong>z(j)yf</strong></font>?
+这样子：
+<div class="codehilite"><pre><span></span><span class="n">list</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">orz_list</span><span class="p">;</span>
+</pre></div></p>
+<h1 id="_2">例题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p>Big String POJ - 2887</p>
+<p>题解：
+很简单的模板题。代码如下：
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cstring&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cctype&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">sqn</span><span class="o">=</span><span class="mf">1e3</span><span class="p">;</span>
+<span class="k">struct</span> <span class="n">node</span>
+<span class="p">{</span>
+    <span class="n">node</span><span class="o">*</span><span class="n">nxt</span><span class="p">;</span><span class="kt">int</span> <span class="n">size</span><span class="p">;</span><span class="kt">char</span> <span class="n">d</span><span class="p">[(</span><span class="n">sqn</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">5</span><span class="p">];</span>
+    <span class="n">node</span><span class="p">(){</span><span class="n">size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">nxt</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;}</span>
+    <span class="kt">void</span> <span class="n">pb</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">){</span><span class="n">d</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span><span class="o">=</span><span class="n">c</span><span class="p">;}</span>
+<span class="p">}</span><span class="o">*</span><span class="n">head</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">inits</span><span class="p">[(</span><span class="kt">int</span><span class="p">)</span><span class="mf">1e6</span><span class="o">+</span><span class="mi">5</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">llen</span><span class="p">,</span><span class="n">q</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">readch</span><span class="p">(</span><span class="kt">char</span> <span class="o">&amp;</span> <span class="n">ch</span><span class="p">){</span><span class="k">do</span> <span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">();</span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">isalpha</span><span class="p">(</span><span class="n">ch</span><span class="p">));}</span>
+<span class="kt">void</span> <span class="nf">check</span><span class="p">(</span><span class="n">node</span><span class="o">*</span><span class="n">p</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">size</span><span class="o">&gt;=</span><span class="p">(</span><span class="n">sqn</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="n">node</span><span class="o">*</span><span class="n">q</span><span class="o">=</span><span class="k">new</span> <span class="n">node</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">sqn</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">pb</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="n">p</span><span class="o">-&gt;</span><span class="n">size</span><span class="o">=</span><span class="n">sqn</span><span class="p">,</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">nxt</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nxt</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nxt</span><span class="o">=</span><span class="n">q</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">,</span><span class="kt">int</span> <span class="n">pos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">node</span><span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">head</span><span class="p">;</span><span class="kt">int</span> <span class="n">tot</span><span class="p">,</span><span class="n">cnt</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">pos</span><span class="o">&gt;</span><span class="n">llen</span><span class="o">++</span><span class="p">){</span><span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nxt</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">)</span><span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nxt</span><span class="p">;</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">pb</span><span class="p">(</span><span class="n">c</span><span class="p">),</span><span class="n">check</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="k">return</span><span class="p">;}</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">tot</span><span class="o">=</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="o">&amp;&amp;</span><span class="n">tot</span><span class="o">&lt;</span><span class="n">pos</span><span class="p">;</span><span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nxt</span><span class="p">,</span><span class="n">tot</span><span class="o">+=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
+    <span class="n">tot</span><span class="o">-=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">,</span><span class="n">cnt</span><span class="o">=</span><span class="n">pos</span><span class="o">-</span><span class="n">tot</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="n">cnt</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">p</span><span class="o">-&gt;</span><span class="n">d</span><span class="p">[</span><span class="n">cnt</span><span class="p">]</span><span class="o">=</span><span class="n">c</span><span class="p">,</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">size</span><span class="o">++</span><span class="p">;</span>
+    <span class="n">check</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">char</span> <span class="nf">query</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">node</span><span class="o">*</span><span class="n">p</span><span class="p">;</span><span class="kt">int</span> <span class="n">tot</span><span class="p">,</span><span class="n">cnt</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="n">head</span><span class="p">,</span><span class="n">tot</span><span class="o">=</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span><span class="n">p</span><span class="o">!=</span><span class="nb">NULL</span><span class="o">&amp;&amp;</span><span class="n">tot</span><span class="o">&lt;</span><span class="n">pos</span><span class="p">;</span><span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nxt</span><span class="p">,</span><span class="n">tot</span><span class="o">+=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
+    <span class="n">tot</span><span class="o">-=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span><span class="k">return</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">d</span><span class="p">[</span><span class="n">pos</span><span class="o">-</span><span class="n">tot</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s %d&quot;</span><span class="p">,</span><span class="n">inits</span><span class="p">,</span><span class="o">&amp;</span><span class="n">q</span><span class="p">),</span><span class="n">llen</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">inits</span><span class="p">);</span>
+    <span class="n">node</span><span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="k">new</span> <span class="n">node</span><span class="p">;</span><span class="n">head</span><span class="o">=</span><span class="n">p</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">llen</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="n">sqn</span><span class="o">==</span><span class="mi">0</span><span class="o">&amp;&amp;</span><span class="n">i</span><span class="p">)</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nxt</span><span class="o">=</span><span class="k">new</span> <span class="n">node</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">nxt</span><span class="p">;</span>
+        <span class="n">p</span><span class="o">-&gt;</span><span class="n">pb</span><span class="p">(</span><span class="n">inits</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="kt">char</span> <span class="n">a</span><span class="p">;</span><span class="kt">int</span> <span class="n">k</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">q</span><span class="o">--</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">readch</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="sc">&#39;Q&#39;</span><span class="p">)</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">k</span><span class="p">),</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">query</span><span class="p">(</span><span class="n">k</span><span class="p">));</span>
+        <span class="k">else</span> <span class="n">readch</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">k</span><span class="p">),</span><span class="n">insert</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">k</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
                 
                   
                 
