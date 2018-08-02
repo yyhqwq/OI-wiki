@@ -2849,7 +2849,7 @@
 <p>树状数组和下面的线段树可是亲兄弟了，但他俩毕竟还有一些区别：<br>
 树状数组能有的操作，线段树一定有；<br>
 线段树有的操作，树状数组不一定有。</p>
-<p>这么看来选择线段树不就“得天下了”？</p>
+<p>这么看来选择线段树不就<strong>“得天下了”</strong>？</p>
 <p>事实上，树状数组的代码要比线段树短得多，思维也更清晰，在解决一些单点修改的问题时，树状数组是不二之选。</p>
 <hr />
 <h2 id="_3">树状数组原理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
@@ -2863,7 +2863,7 @@
 <span><span class="MathJax_Preview">c[6]</span><script type="math/tex">c[6]</script></span>管理的是<span><span class="MathJax_Preview">a[5]</span><script type="math/tex">a[5]</script></span> &amp; <span><span class="MathJax_Preview">a[6]</span><script type="math/tex">a[6]</script></span> ；<span><span class="MathJax_Preview">c[8]</span><script type="math/tex">c[8]</script></span>则管理全部8个数。</p>
 <p>所以，如果你要算区间和的话，比如说要算<span><span class="MathJax_Preview">a[51]</span><script type="math/tex">a[51]</script></span> ~ <span><span class="MathJax_Preview">a[91]</span><script type="math/tex">a[91]</script></span>的区间和，暴力算当然可以，那上百万的数，那就RE喽。</p>
 <p>那么这种类似于跳一跳的连续跳到中心点而分值不断变大的原理是一样的(倍增)。</p>
-<p>你从91开始往前跳，发现<span><span class="MathJax_Preview">c[n]</span><script type="math/tex">c[n]</script></span>（n我也不确定是多少，算起来太麻烦，就意思一下）只管<span><span class="MathJax_Preview">a[91]</span><script type="math/tex">a[91]</script></span>这个点，那么你就会找<span><span class="MathJax_Preview">a[90]</span><script type="math/tex">a[90]</script></span>，发现<span><span class="MathJax_Preview">c[n - 1]</span><script type="math/tex">c[n - 1]</script></span>管的是<span><span class="MathJax_Preview">a[90]</span><script type="math/tex">a[90]</script></span> &amp; <span><span class="MathJax_Preview">a[89]</span><script type="math/tex">a[89]</script></span> ；那么你就会直接跳到<span><span class="MathJax_Preview">a[88]</span><script type="math/tex">a[88]</script></span> ，<span><span class="MathJax_Preview">c[n - 2]</span><script type="math/tex">c[n - 2]</script></span>就会管<span><span class="MathJax_Preview">a[81]</span><script type="math/tex">a[81]</script></span> ~ a[88]<span><span class="MathJax_Preview">这些数，下次查询从</span><script type="math/tex">这些数，下次查询从</script></span>a[80]$往前找，以此类推。</p>
+<p>你从91开始往前跳，发现<span><span class="MathJax_Preview">c[n]</span><script type="math/tex">c[n]</script></span>（n我也不确定是多少，算起来太麻烦，就意思一下）只管<span><span class="MathJax_Preview">a[91]</span><script type="math/tex">a[91]</script></span>这个点，那么你就会找<span><span class="MathJax_Preview">a[90]</span><script type="math/tex">a[90]</script></span>，发现<span><span class="MathJax_Preview">c[n - 1]</span><script type="math/tex">c[n - 1]</script></span>管的是<span><span class="MathJax_Preview">a[90]</span><script type="math/tex">a[90]</script></span> &amp; <span><span class="MathJax_Preview">a[89]</span><script type="math/tex">a[89]</script></span> ；那么你就会直接跳到<span><span class="MathJax_Preview">a[88]</span><script type="math/tex">a[88]</script></span> ，<span><span class="MathJax_Preview">c[n - 2]</span><script type="math/tex">c[n - 2]</script></span>就会管<span><span class="MathJax_Preview">a[81]</span><script type="math/tex">a[81]</script></span> ~ <span><span class="MathJax_Preview">a[88]</span><script type="math/tex">a[88]</script></span>这些数，下次查询从<span><span class="MathJax_Preview">a[80]</span><script type="math/tex">a[80]</script></span>往前找，以此类推。</p>
 <hr />
 <h2 id="_4">树状数组的用法及操作<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>那么问题来了，你是怎么知道c管的a的个数分别是多少呢？你那个1个 2个 8个……是怎么来的呢？
@@ -2879,14 +2879,16 @@ lowbit的意思注释说明了，咱们就用这个说法来证明一下<span><s
 1000 B -&gt; 8<br>
 1000对应的十进制是8，所以<span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>一共管理8个<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>。</p>
 <p>这就是<span><span class="MathJax_Preview">lowbit</span><script type="math/tex">lowbit</script></span>的用处，仅此而已（但也相当有用）。</p>
-<p>你可能又问了：x &amp; -x 是什么意思啊？</p>
+<p><strong>你可能又问了：x &amp; -x 是什么意思啊？</strong></p>
+<blockquote>
 <p>-x 代表x的负数，计算机中负数使用对应的正数的补码来表示。</p>
+</blockquote>
 <p>例如 :<br>
 x =88（1011000）;<br>
 -x = -88 = (0100111 + 1) = (101000);<br>
 x &amp; (-x) = (1000) = 8.</p>
 <p>神奇吧，我也觉得神奇！</p>
-<p>那么对于单点修改就更轻松了：</p>
+<p>那么对于<strong>单点修改</strong>就更轻松了：</p>
 <div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">change</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="p">,</span><span class="kt">int</span> <span class="n">k</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">)</span><span class="c1">//不能越界 </span>
@@ -2910,8 +2912,10 @@ x &amp; (-x) = (1000) = 8.</p>
 <span class="p">}</span>
 </pre></div>
 
-<p>区间和也不用说了吧，代码十分清真。</p>
+<p><strong>区间和</strong>也不用说了吧，代码十分清真。</p>
 <h2 id="_5">例题<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.luogu.org/problemnew/show/P3374">传送门</a><br>
+<a href="https://www.luogu.org/problemnew/show/P3368">传送门2</a></p>
                 
                   
                 
