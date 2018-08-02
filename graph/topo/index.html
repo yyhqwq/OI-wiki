@@ -106,6 +106,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -2040,8 +2044,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../tree-basic/" title="树相关" class="md-nav__link">
-      树相关
+    <a href="../tree-basic/" title="树相关基础" class="md-nav__link">
+      树相关基础
     </a>
   </li>
 
@@ -2130,9 +2134,76 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        拓扑排序
+      </label>
+    
     <a href="./" title="拓扑排序" class="md-nav__link md-nav__link--active">
       拓扑排序
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="定义" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="拓扑排序算法及实现" class="md-nav__link">
+    拓扑排序算法及实现
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="算法思路" class="md-nav__link">
+    算法思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="实现" class="md-nav__link">
+    实现
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="合理性证明" class="md-nav__link">
+    合理性证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2217,6 +2288,18 @@
   <li class="md-nav__item">
     <a href="../differential-constraints/" title="差分约束" class="md-nav__link">
       差分约束
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dag/" title="有向无环图" class="md-nav__link">
+      有向无环图
     </a>
   </li>
 
@@ -2713,6 +2796,75 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="定义" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="拓扑排序算法及实现" class="md-nav__link">
+    拓扑排序算法及实现
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="算法思路" class="md-nav__link">
+    算法思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="实现" class="md-nav__link">
+    实现
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="合理性证明" class="md-nav__link">
+    合理性证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2723,7 +2875,66 @@
                 
                   <h1>拓扑排序</h1>
                 
-                
+                <h2 id="_1">定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>拓扑排序的英文名是 topological sort。</p>
+<p>拓扑排序要解决的问题是给一个图的所有节点排序，而图中有若干限制，形如：“点 x 要在点 y 后面”。</p>
+<p>举个现实一些的栗子，比如你去给刚开始学 OI 的同学们讲课，你会发现有很多知识点需要前置技能才能够听懂，并非是所有人都可以第一天就学明白 <a href="../../data-structure/intermediate/segment">线段树</a>。怎么办呢？讲课的时候是需要按顺序来的，并不能同时讲若干个知识点。这时候就需要用到拓扑排序了。</p>
+<p>形式化定义一下：</p>
+<p>给定一个 [DAG （有向无环图）])(dag)，如果从 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 到 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 有边，啧认为 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 依赖于 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>。如果 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 到 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 有路径（<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 可达 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>），则称 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 间接依赖于 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>。</p>
+<p>拓扑排序的目标是将所有节点排序，使得排在前面的节点不能依赖于排在后面的节点。</p>
+<h2 id="_2">拓扑排序算法及实现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">算法思路<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>核心思想是每次找一个入度为 0 的节点，取出来丢到答案序列里。然后再删除这个节点（以及对应的边），更新其他节点的入度，不断重复此操作直到答案序列包含了所有的节点。</p>
+<p>在这个过程中，如果某一时刻发现找不到入度为 0 的节点，则可以认为这个图不能进行拓扑排序（会产生冲突）。</p>
+<details class="question"><summary>这里入度为 0 的点应该如何选取呢？</summary><p>随便选就好啦！找到一个就可以直接用！</p><p>为什么会这样呢？
+是因为某个点既然在新图中入度为 0 了，那么它就没有依赖的东西了（或者依赖的都已经被完成了）。</p></details><h3 id="_4">实现<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>伪代码：</p>
+<div class="codehilite"><pre><span></span>bool toposort() {
+    q = new queue();
+    for (i = 0; i &lt; n; i++)
+        if (in_deg[i] == 0) q.push(i);
+    ans = new vector();
+    while (!q.empty()) {
+        u = q.pop();
+        ans.push_back(u);
+        for each edge(u, v) {
+            if (--in_deg[v] == 0) q.push(v);
+        }
+    }
+    if (ans.size() == n) {
+        for (i = 0; i &lt; n; i++)
+            std::cout &lt;&lt; ans[i] &lt;&lt; std::endl;
+        return true;
+    } else {
+        return false;
+    }
+}
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="c1">// dfs 版本</span>
+<span class="kt">bool</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">){</span>
+  <span class="n">c</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">v</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">v</span><span class="o">++</span><span class="p">)</span> <span class="k">if</span><span class="p">(</span><span class="n">G</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">v</span><span class="p">])</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">c</span><span class="p">[</span><span class="n">v</span><span class="p">])</span> <span class="n">dfs</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">c</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">topo</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">bool</span> <span class="nf">toposort</span><span class="p">(){</span>
+  <span class="n">topo</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+  <span class="n">memset</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">c</span><span class="p">));</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">u</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">u</span><span class="o">++</span><span class="p">)</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">c</span><span class="p">[</span><span class="n">u</span><span class="p">])</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">dfs</span><span class="p">(</span><span class="n">u</span><span class="p">))</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="n">reverse</span><span class="p">(</span><span class="n">topo</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">topo</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>时间复杂度：<span><span class="MathJax_Preview">O(n+m)</span><script type="math/tex">O(n+m)</script></span>
+空间复杂度：<span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span></p>
+<h3 id="_5">合理性证明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>考虑一个图，删掉某个入度为 0 的节点之后，如果新图可以拓扑排序，那么原图一定也可以。反过来，如果原图可以拓扑排序，那么删掉后也可以。</p>
                 
                   
                 
