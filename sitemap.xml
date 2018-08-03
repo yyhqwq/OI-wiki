@@ -326,12 +326,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://oi-wiki.cf/math/combination/</loc>
+     <lastmod>2018-08-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://oi-wiki.cf/math/catalan/</loc>
      <lastmod>2018-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.cf/math/combination/</loc>
+     <loc>https://oi-wiki.cf/math/stirling/</loc>
      <lastmod>2018-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
