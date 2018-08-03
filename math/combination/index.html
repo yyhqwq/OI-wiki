@@ -2995,7 +2995,7 @@
 <hr />
 <h2 id="_3">排列组合公式及定义<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="_4">排列的定义<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>从n个不同元素中，任取m(m≤n,m与n均为自然数,下同）个元素按照一定的顺序排成一列，叫做从n个不同元素中取出m个元素的一个排列；从n个不同元素中取出m(m≤n）个元素的所有排列的个数，叫做从n个不同元素中取出m个元素的排列数，用符号 <span><span class="MathJax_Preview">A_n^m</span><script type="math/tex">A_n^m</script></span> 表示。</p>
+<p>从<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个不同元素中，任取<span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>(<span><span class="MathJax_Preview">m≤n</span><script type="math/tex">m≤n</script></span>,<span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>与<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>均为自然数,下同）个元素按照一定的顺序排成一列，叫做从<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个不同元素中取出<span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>个元素的一个排列；从<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个不同元素中取出<span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>(<span><span class="MathJax_Preview">m≤n</span><script type="math/tex">m≤n</script></span>）个元素的所有排列的个数，叫做从<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>个不同元素中取出<span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>个元素的排列数，用符号 <span><span class="MathJax_Preview">A_n^m</span><script type="math/tex">A_n^m</script></span> 表示。</p>
 <h3 id="_5">排列的计算公式<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <div>
 <div class="MathJax_Preview">A_n^m = n(n-1)(n-2)......(n-m+1) = \frac{n!}{(n - m)!}</div>
@@ -3039,8 +3039,8 @@
 <script type="math/tex; mode=display">C_n^m = C_n ^ n-m</script>
 </div>
 <div>
-<div class="MathJax_Preview">C_n^m = C_n-1 ^ m + C_n-1 ^ m-1</div>
-<script type="math/tex; mode=display">C_n^m = C_n-1 ^ m + C_n-1 ^ m-1</script>
+<div class="MathJax_Preview">C_n^m = C_(n-1) ^ m + C_(n-1) ^ (m-1)</div>
+<script type="math/tex; mode=display">C_n^m = C_(n-1) ^ m + C_(n-1) ^ (m-1)</script>
 </div>
 <p>如果编程实现，以上两个公式有没有帮助？</p>
 <h3 id="_12">圆排列<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
@@ -3050,7 +3050,7 @@
 <div class="MathJax_Preview">Q_n^n * n = A_n^n → Q_n = \frac{A_n^n}{n} = (n-1)!</div>
 <script type="math/tex; mode=display">Q_n^n * n = A_n^n → Q_n = \frac{A_n^n}{n} = (n-1)!</script>
 </div>
-<p>**由此可知：部分圆排 </p>
+<p><strong>由此可知：部分圆排</strong></p>
 <div>
 <div class="MathJax_Preview">Q_n^r = \frac{A_n^r}{r} = \frac{n!}{r * (n-r)!}</div>
 <script type="math/tex; mode=display">Q_n^r = \frac{A_n^r}{r} = \frac{n!}{r * (n-r)!}</script>
