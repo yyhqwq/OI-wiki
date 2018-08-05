@@ -37,8 +37,8 @@
       
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
-      <link rel="shortcut icon" href="../../">
-      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.4">
+      <link rel="shortcut icon" href="../..">
+      <meta name="generator" content="mkdocs-1.0, mkdocs-material-2.9.4">
     
     
       
@@ -68,7 +68,7 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="../../_static/css/extra.css">
+      <link rel="stylesheet" href="../../../../_static/css/extra.css">
     
     
   </head>
@@ -106,7 +106,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#_1" tabindex="1" class="md-skip">
+      <a href="../../#_1" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -3235,7 +3235,7 @@
 <h3 id="_2">直接存边<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>什么意思呢？我们开一个数组，数组里每个元素是图的一条边。</p>
 <p>这样做有个缺点，每次想要知道两个点之间是否有连边（或者说一条边是否存在），都需要在数组里进行一番查找。而且如果没有对边事先排序的话，就不能使用二分查找的方法（<span><span class="MathJax_Preview">O(logn)</span><script type="math/tex">O(logn)</script></span>），而是每次只能按顺序找（<span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>），成本较高。</p>
-<p>什么时候会用到这个方法呢？最简单的一个例子是使用 Kruskal 算法求 <a href="../graph/mst">最小生成树</a> 的时候、</p>
+<p>什么时候会用到这个方法呢？最简单的一个例子是使用 Kruskal 算法求 <a href="graph/mst">最小生成树</a> 的时候、</p>
 <h3 id="_3">邻接矩阵<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>邻接矩阵的英文名是 adjacency matrix。它的形式是 <code>bool adj[n][n]</code>，这里面 <code>n</code> 是节点个数，<code>adj[i][j]</code> 表示 i 和 j 之间是否有边。</p>
 <p>如果边有权值，也可以直接用 <code>int adj[n][n]</code>，直接把边权存进去。</p>
@@ -3250,7 +3250,7 @@
 <p>形式上是一个结构体：<code>struct edge {edfge *pre, int to;} *head[N], edge[M]'</code></p>
 <p>这个结构广泛出现于算法竞赛选手的代码中，编写简洁而且对于大多数题目效率足够高。</p>
 <p>其中 <code>head[i]</code> 用来存以 i 为起点的边，<code>edge</code> 数组是边表。</p>
-<p>那么什么是前向星呢？事先把 <code>edge</code> 数组排个序即可。这里可以使用 <a href="../basic/sort">基数排序</a> 做到 <span><span class="MathJax_Preview">O(m)</span><script type="math/tex">O(m)</script></span>。</p>
+<p>那么什么是前向星呢？事先把 <code>edge</code> 数组排个序即可。这里可以使用 <a href="basic/sort">基数排序</a> 做到 <span><span class="MathJax_Preview">O(m)</span><script type="math/tex">O(m)</script></span>。</p>
 <h2 id="_6">一些跟图有关的定义<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <h3 id="_7">路径<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>path，是指一个边的序列，其中的边首尾相连。</p>
@@ -3267,9 +3267,9 @@
 <p>如果无向图 G 中任意两个节点连通，称其为是连通的。</p>
 <h3 id="_14">可达<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <p>有向图中点 <code>u</code> 到 <code>v</code> 可达是指存在一条 <code>u</code> 到 <code>v</code> 的路径。</p>
-<h3 id="_15"><a href="../scc">强连通</a><a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h3 id="_15"><a href="scc">强连通</a><a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>有向图 G 强连通是指，G 中任意两个节点连通。</p>
-<h3 id="_16"><a href="../bcc">弱连通</a><a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h3 id="_16"><a href="bcc">弱连通</a><a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p>有向图 G 强连通是指，G 中的所有边替换为无向边后，G 为连通图。</p>
 <h3 id="_17">子图<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>选取一个节点的子集和边的子集构成的图。</p>
@@ -3292,7 +3292,7 @@
 <p><span><span class="MathJax_Preview">m = n(n-1) / 2</span><script type="math/tex">m = n(n-1) / 2</script></span> 的简单无向图</p>
 <h3 id="_26">路径的长度<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
 <p>一般来说，路径的长度在数值上等于路径的边数，或者如果边是带权的，则是路径的边权和。</p>
-<h3 id="_27"><a href="../shortest-path">最短路径</a><a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<h3 id="_27"><a href="shortest-path">最短路径</a><a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
 <p>两个节点之间，长度最小的路径。</p>
 <p>【注】：不一定存在，不一定唯一。</p>
                 
@@ -3390,29 +3390,27 @@
         
         
           
-          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="assets/javascripts/lunr/../../lunr.stemmer.support.js"></script>
           
             
               
-                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+                <script src="assets/javascripts/lunr/../../tinyseg.js"></script>
               
               
-                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+                <script src="assets/javascripts/lunr/lunr.jp../../.js"></script>
               
             
           
           
         
       
-      <script>app.initialize({version:"0.17.5",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0",url:{base:"../.."}})</script>
       
-        <script src="../../_static/js/extra.js"></script>
+        <script src="../../../../_static/js/extra.js"></script>
       
         <script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
-        <script src="../../search/require.js"></script>
-      
-        <script src="../../search/search.js"></script>
+        <script src="../../../../search/main.js"></script>
       
     
     
