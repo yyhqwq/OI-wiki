@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../../..">
-      <meta name="generator" content="mkdocs-1.0, mkdocs-material-2.9.4">
+      <meta name="generator" content="mkdocs-1.0, mkdocs-material-3.0.3">
     
     
       
@@ -68,7 +68,7 @@
     
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="../../../../../../_static/css/extra.css">
+      <link rel="stylesheet" href="../../../_static/css/extra.css">
     
     
   </head>
@@ -105,6 +105,10 @@
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../../#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
     
     
       <header class="md-header" data-md-component="header">
@@ -922,8 +926,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../string/stl/" title="一堆字符串函数" class="md-nav__link">
-      一堆字符串函数
+    <a href="../../../string/stl/" title="标准库" class="md-nav__link">
+      标准库
     </a>
   </li>
 
@@ -934,8 +938,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../string/hash/" title="哈希大法" class="md-nav__link">
-      哈希大法
+    <a href="../../../string/match/" title="字符串匹配问题" class="md-nav__link">
+      字符串匹配问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../string/hash/" title="哈希" class="md-nav__link">
+      哈希
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../string/kmp/" title="KMP" class="md-nav__link">
+      KMP
     </a>
   </li>
 
@@ -1200,18 +1228,6 @@
   <li class="md-nav__item">
     <a href="../../../math/dictionary/" title="分段打表" class="md-nav__link">
       分段打表
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../math/euclid/" title="欧几里得算法" class="md-nav__link">
-      欧几里得算法
     </a>
   </li>
 
@@ -1611,9 +1627,104 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        堆
+      </label>
+    
     <a href="./" title="堆" class="md-nav__link md-nav__link--active">
       堆
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="堆" class="md-nav__link">
+    堆
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="堆的分类" class="md-nav__link">
+    堆的分类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="二叉堆" class="md-nav__link">
+    二叉堆
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="结构" class="md-nav__link">
+    结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="插入操作" class="md-nav__link">
+    插入操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="删除操作" class="md-nav__link">
+    删除操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="减小某个点的权值" class="md-nav__link">
+    减小某个点的权值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="实现" class="md-nav__link">
+    实现
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="建堆" class="md-nav__link">
+    建堆
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2715,18 +2826,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../misc/magic/" title="科学上网" class="md-nav__link">
-      科学上网
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -2739,6 +2838,103 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="堆" class="md-nav__link">
+    堆
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="堆的分类" class="md-nav__link">
+    堆的分类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="二叉堆" class="md-nav__link">
+    二叉堆
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="结构" class="md-nav__link">
+    结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="插入操作" class="md-nav__link">
+    插入操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="删除操作" class="md-nav__link">
+    删除操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="减小某个点的权值" class="md-nav__link">
+    减小某个点的权值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="实现" class="md-nav__link">
+    实现
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="建堆" class="md-nav__link">
+    建堆
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2749,7 +2945,122 @@
                 
                   <h1>堆</h1>
                 
-                
+                <h2 id="_1">堆<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>堆是一种数据结构</p>
+<p>堆维护一个数的集合（或者，一个支持比较的元素的集合）</p>
+<p>主要功能有：insert, getmin, deletemin, decreasekey</p>
+<p>注意：简单起见，我们这里讨论的都是维护最小值的堆，也叫小根堆，与之相对的叫做大根堆</p>
+<p>一些功能强大的堆还能（高效地）支持 merge 等操作</p>
+<p>一些功能更强大的堆还支持可持久化，也就是对任意历史版本进行查询或者操作，产生新的版本</p>
+<h2 id="_2">堆的分类<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>一个有趣的事实是，这些堆都是用基于树的数据结构实现的</p>
+<p>在 NOIP 中，我们只要求一个能支持主要操作的堆就行，也就是二叉堆。</p>
+<ul>
+<li>二叉堆 (binary heap)</li>
+</ul>
+<p>最基础的堆，不支持 merge 和可持久化，所有操作的复杂度都是 <span><span class="MathJax_Preview">O(log n)</span><script type="math/tex">O(log n)</script></span> 的</p>
+<ul>
+<li>二项堆 (binomial heap)</li>
+</ul>
+<p>支持 merge 的堆，（也能可持久化），所有操作的复杂度都是 <span><span class="MathJax_Preview">O(log n)</span><script type="math/tex">O(log n)</script></span></p>
+<ul>
+<li>Fib 堆 (fibonacci heap)：</li>
+</ul>
+<p>除了不能可持久化，支持全部功能，而且除了 deletemin 以外都是均摊 <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 的</p>
+<h2 id="_3">二叉堆<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">结构<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>从二叉堆的结构说起</p>
+<p>是一棵二叉树，并且是完全二叉树，每个结点中存有一个元素（或者说，有个权值）</p>
+<p>堆性质：父亲的权值不大于儿子的权值 （小根堆）</p>
+<p>由堆性质，树根存的是最小值 （getmin 操作就解决了）</p>
+<h3 id="_5">插入操作<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>首先，要保证插入后也是一棵完全二叉树</p>
+<p>最简单的方法就是，最下一层最右边的叶子之后插入</p>
+<p>如果最下一层已满，就新增一层</p>
+<p>插入之后可能会不满足堆性质？</p>
+<p>向上调整：如果这个结点的权值大于它父亲的权值，就交换，重复此过程直到不满足或者到根</p>
+<p>可以证明，插入之后向上调整后，没有其他结点会不满足堆性质</p>
+<p>向上调整的时间复杂度是 <span><span class="MathJax_Preview">O(log n)</span><script type="math/tex">O(log n)</script></span> 的</p>
+<h3 id="_6">删除操作<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>删除根结点</p>
+<p>如果直接删除，则变成了两个堆，难以处理</p>
+<p>所以不妨考虑插入操作的逆过程，设法将根结点移到最后一个结点，然后直接删掉</p>
+<p>然而实际上不好做，我们通常采用的方法是，把根结点和最后一个结点直接交换</p>
+<p>于是直接删掉（在最后一个结点处的）根结点，但是新的根结点可能不满足堆性质……</p>
+<p>向下调整：在该结点的所有儿子中，找一个最小的，与该结点交换，重复此过程直到底层</p>
+<p>可以证明，删除并向下调整后，没有其他结点不满足堆性质</p>
+<p>时间复杂度 <span><span class="MathJax_Preview">O(log n)</span><script type="math/tex">O(log n)</script></span></p>
+<h3 id="_7">减小某个点的权值<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>很显然，直接修改后，向上调整一次即可
+时间复杂度为 <span><span class="MathJax_Preview">O(log n)</span><script type="math/tex">O(log n)</script></span></p>
+<h3 id="_8">实现<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>我们发现，上面介绍的几种操作主要依赖于两个核心：向上调整和向下调整</p>
+<p>（伪代码）</p>
+<div class="codehilite"><pre><span></span>up(x) {
+    while (x &gt; 1 &amp;&amp; h[x] &gt; h[x / 2]) {
+        swap(h[x], h[x / 2]);
+        x /= 2;
+    }
+}
+down(x) {
+    while (x * 2 &lt;= n) {
+        t = x * 2;
+        if (t + 1 &lt;= n &amp;&amp; h[t + 1] &lt; h[t]) t++;
+        if (h[t] &gt;= h[x]) break;
+        swap(h[x], h[t]);
+        x = t;
+    }
+}
+</pre></div>
+
+<h3 id="_9">建堆<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>考虑这么一个问题，从一个空的堆开始，插入 n 个元素，不在乎顺序</p>
+<p>直接一个一个插入需要 <span><span class="MathJax_Preview">O(n log n)</span><script type="math/tex">O(n log n)</script></span> 的时间，有没有更好的方法？</p>
+<blockquote>
+<p>方法一：使用 decreasekey（即，向上调整）</p>
+</blockquote>
+<p>从根开始，按BFS序进行</p>
+<div class="codehilite"><pre><span></span>build_heap_1() {
+    for (i = 1; i &lt;= n; i++) up(i);
+}
+</pre></div>
+
+<p>为啥这么做：对于第 k 层的结点，向上调整的复杂度为 <span><span class="MathJax_Preview">O(k)</span><script type="math/tex">O(k)</script></span> 而不是 <span><span class="MathJax_Preview">O(log n)</span><script type="math/tex">O(log n)</script></span></p>
+<p>总复杂度：<span><span class="MathJax_Preview">log 1 + log 2 + \cdots + log n = \Theta(n log n)</span><script type="math/tex">log 1 + log 2 + \cdots + log n = \Theta(n log n)</script></span></p>
+<p>（在“基于比较的排序”中证明过）</p>
+<blockquote>
+<p>方法二：使用向下调整</p>
+</blockquote>
+<p>这时换一种思路，从叶子开始，逐个向下调整</p>
+<div class="codehilite"><pre><span></span>build_heap_2() {
+    for (i = n; i &gt;= 1; i--) down(i);
+}
+</pre></div>
+
+<p>换一种理解方法，每次“合并”两个已经调整好的堆，这说明了正确性</p>
+<p>注意到向下调整的复杂度，为 <span><span class="MathJax_Preview">O(log n - k)</span><script type="math/tex">O(log n - k)</script></span></p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+总复杂度 &amp; = n log n - log 1 - log 2 - ... - log n \\\\
+&amp; \leq n log n - 0 * 2^0 - 1 * 2^1 - ... - (log n - 1) * (n/2) \\\\
+&amp; = n log n - (n-1) - (n-2) - (n-4) - ... - (n-n/2) \\\\
+&amp; = n log n - n log n + 1 + 2 + 4 + ... + n/2 \\\\
+&amp; = n - 1 \\\\ &amp;  = O(n)
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+总复杂度 & = n log n - log 1 - log 2 - ... - log n \\\\
+& \leq n log n - 0 * 2^0 - 1 * 2^1 - ... - (log n - 1) * (n/2) \\\\
+& = n log n - (n-1) - (n-2) - (n-4) - ... - (n-n/2) \\\\
+& = n log n - n log n + 1 + 2 + 4 + ... + n/2 \\\\
+& = n - 1 \\\\ &  = O(n)
+\end{aligned}
+</script>
+</div>
+<p>之所以能 <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 建堆，是因为堆性质很弱，二叉堆并不是唯一的</p>
+<p>要是像排序那样的强条件就难说了</p>
                 
                   
                 
@@ -2840,19 +3151,19 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.5c3774b5.js"></script>
+      <script src="../../../assets/javascripts/application.e72fd936.js"></script>
       
         
         
           
-          <script src="assets/javascripts/lunr/../../../lunr.stemmer.support.js"></script>
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
               
-                <script src="assets/javascripts/lunr/../../../tinyseg.js"></script>
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
               
               
-                <script src="assets/javascripts/lunr/lunr.jp../../../.js"></script>
+                <script src="../../../assets/javascripts/lunr/lunr.jp.js"></script>
               
             
           
@@ -2861,11 +3172,11 @@
       
       <script>app.initialize({version:"1.0",url:{base:"../../.."}})</script>
       
-        <script src="../../../../../../_static/js/extra.js"></script>
+        <script src="../../../_static/js/extra.js"></script>
       
         <script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
-        <script src="../../../../../../search/main.js"></script>
+        <script src="../../../search/main.js"></script>
       
     
     
