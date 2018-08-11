@@ -1671,8 +1671,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" title="启发式合并（选学）" class="md-nav__link">
-    启发式合并（选学）
+  <a href="#_6" title="启发式合并" class="md-nav__link">
+    启发式合并
   </a>
   
 </li>
@@ -2903,8 +2903,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" title="启发式合并（选学）" class="md-nav__link">
-    启发式合并（选学）
+  <a href="#_6" title="启发式合并" class="md-nav__link">
+    启发式合并
   </a>
   
 </li>
@@ -2975,9 +2975,15 @@
                 
                 <h1 id="_1">并查集<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>并查集是一种树形的数据结构，顾名思义，它用于处理一些不交集的<strong>合并</strong>及<strong>查询</strong>问题。<br />
-它支持两种操作：
-- 查找 （Find）：确定某个元素处于哪个子集<br />
-- 合并 (Union)：将两个子集合合并成同一个集合  </p>
+它支持两种操作：</p>
+<ul>
+<li>
+<p>查找 （Find）：确定某个元素处于哪个子集  </p>
+</li>
+<li>
+<p>合并 (Union)：将两个子集合合并成同一个集合  </p>
+</li>
+</ul>
 <h2 id="_2">初始化<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">makeSet</span><span class="p">(</span><span class="kt">int</span> <span class="n">size</span><span class="p">)</span>
 <span class="p">{</span>
@@ -2990,9 +2996,11 @@
 </pre></div>
 
 <h2 id="_3">查找<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>举个例子 <br />
-几个家族进行宴会，但是家族普遍长寿，所以人数众多。由于长时间的分离以及年龄的增长，这些人逐渐忘掉了自己的亲人，只记得自己的爸爸是谁了，而最长者（称为“祖先”）的父亲已经去世，他只知道自己是祖先。为了确定自己是哪个家族，他们想出了一个办法，只要问自己的爸爸是不是祖先，一层一层的向上问，直到问到祖先。如果要判断两人是否在同一家族，只要看两人的祖先是不是同一人就可以了。<br />
-在这样的思想下，并查集的查找诞生了。我们可以用代码模拟这个过程。（路径压缩等会再说）<br />
+<div class="admonition 举个例子">
+<p class="admonition-title">举个例子</p>
+</div>
+<p>几个家族进行宴会，但是家族普遍长寿，所以人数众多。由于长时间的分离以及年龄的增长，这些人逐渐忘掉了自己的亲人，只记得自己的爸爸是谁了，而最长者（称为“祖先”）的父亲已经去世，他只知道自己是祖先。为了确定自己是哪个家族，他们想出了一个办法，只要问自己的爸爸是不是祖先，一层一层的向上问，直到问到祖先。如果要判断两人是否在同一家族，只要看两人的祖先是不是同一人就可以了。  </p>
+<p>在这样的思想下，并查集的查找诞生了。我们可以用代码模拟这个过程。（路径压缩等会再说）  </p>
 <div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">fa</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span> <span class="c1">//记录某个人的爸爸是谁，特别规定，祖先的爸爸是他自己</span>
 <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="c1">//寻找x的祖先</span>
 <span class="p">{</span>
@@ -3001,20 +3009,22 @@
     <span class="k">else</span> <span class="k">return</span> <span class="n">find</span><span class="p">(</span><span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span> <span class="c1">//如果不是则x的爸爸问x的爷爷</span>
 <span class="p">}</span>
 </pre></div>
-显然这样最终会返回x的祖先。</p>
+
+<p>显然这样最终会返回x的祖先。</p>
 <h3 id="_4">路径压缩<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>这样的确可以达成目的，但是显然效率实在太低。为什么呢？因为我们使用了太多没用的信息，我关心的是我祖先是谁，我爸爸是谁没什么关系，这样一层一层找太浪费时间，不如我直接当祖先的儿子，问一次就可以出结果了。甚至祖先是谁都无所谓，只要这个人可以代表我们家族就能得到想要的效果。<strong>把在路径上的每个节点都直接连接到根上</strong>，这就是路径压缩。 
-于是用代码实现它。
+于是用代码实现它。</p>
 <div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="c1">//x不是自身的父亲，即x不是该集合的代表</span>
     <span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span><span class="c1">//查找x的祖先直到找到代表,于是顺手路径压缩</span>
     <span class="k">return</span> <span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">];</span>
 <span class="p">}</span>
-</pre></div></p>
+</pre></div>
+
 <h2 id="_5">合并<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>宴会上，一个家族的祖先突然对另一个家族说:我们两个家族交情这么好，不如合成一家好了。另一个家族也欣然接受了。<br />
-我们之前说过，并不在意祖先究竟是谁，所以只要其中一个祖先变成另一个祖先的儿子就可以了。
+我们之前说过，并不在意祖先究竟是谁，所以只要其中一个祖先变成另一个祖先的儿子就可以了。</p>
 <div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">unionSet</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span><span class="c1">//x与y所在家族合并</span>
 <span class="p">{</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
@@ -3023,10 +3033,11 @@
     <span class="k">return</span><span class="p">;</span>
     <span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span><span class="c1">//把x的祖先变成y的祖先的儿子</span>
 <span class="p">}</span>
-</pre></div></p>
-<h3 id="_6">启发式合并（选学）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>一个祖先突然抖了机灵：“你们家族人比较少，搬家到我们家族里比较方便，我们要是搬过去的话太费事了。”<br />
-启发式合并是将深度小的集合合并到深度大的集合（也成为按秩合并），但是笔者认为这样做的话路径压缩之后它就失去意义了，或按照节点数量，这样还可以减少下次路径压缩的工作量。（反正启发式合并用得很少，路径压缩已经够快了。）</p>
+</pre></div>
+
+<h3 id="_6">启发式合并<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>一个祖先突然抖了机灵：“你们家族人比较少，搬家到我们家族里比较方便，我们要是搬过去的话太费事了。”  </p>
+<p>启发式合并是将深度小的集合合并到深度大的集合（也成为按秩合并），但是笔者认为这样做的话路径压缩之后它就失去意义了，或按照节点数量，这样还可以减少下次路径压缩的工作量。（反正启发式合并用得很少，路径压缩已经够快了。）</p>
 <div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">size</span><span class="p">[</span><span class="n">N</span><span class="p">];</span><span class="c1">//记录子树的大小</span>
 <span class="kt">void</span> <span class="nf">unionSet</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
 <span class="p">{</span>
@@ -3042,17 +3053,22 @@
 
 <h2 id="_7">时间复杂度及空间复杂度<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <h3 id="_8">时间复杂度<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>同时使用路径压缩和启发式合并之后，并查集的每个操作平均时间仅为 <span><span class="MathJax_Preview">O(α(n))</span><script type="math/tex">O(α(n))</script></span> ，其中α为反阿克曼函数，其增长极其缓慢，也就是说其平均运行时间可以认为是一个含笑的常数。感兴趣的同学可以自行百科。</p>
+<p>同时使用路径压缩和启发式合并之后，并查集的每个操作平均时间仅为 <span><span class="MathJax_Preview">O(\alpha(n))</span><script type="math/tex">O(\alpha(n))</script></span> ，其中 <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> 为 <a href="https://en.wikipedia.org/wiki/Ackermann_function">阿克曼函数</a> 的反函数，其增长极其缓慢，也就是说其平均运行时间可以认为是一个含笑的常数。 </p>
 <h3 id="_9">空间复杂度<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>显然为 <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span></p>
 <h2 id="_10">其他应用<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<p>最小生成树 Kruskal算法的优化</p>
+<p><a href="/graph/mst">最小生成树</a> Kruskal 算法</p>
                 
                   
                 
               
               
-                  
+                <!-- Set from config but allow override -->
+ 
+
+<!-- Comments Integration -->
+
+<h2 id="__comments">评论</h2>
 <div id="gitment_container">
     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
