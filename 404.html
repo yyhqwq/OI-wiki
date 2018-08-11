@@ -13,8 +13,6 @@
         <meta name="description" content="OI Wiki">
       
       
-        <link rel="canonical" href="https://oi-wiki.cf/geometry/convex-hull/">
-      
       
         <meta name="author" content="OI Wiki Team">
       
@@ -37,18 +35,18 @@
       
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
-      <link rel="shortcut icon" href="../..">
+      <link rel="shortcut icon" href=".">
       <meta name="generator" content="mkdocs-1.0, mkdocs-material-3.0.3">
     
     
       
-        <title>凸包 - OI Wiki</title>
+        <title>OI Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.451f80e5.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.22915126.css">
       
       
         
@@ -57,7 +55,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       <link href="https://gstatic.loli.net" rel="preconnect" crossorigin>
@@ -66,9 +64,9 @@
         <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="../../_static/css/extra.css">
+      <link rel="stylesheet" href="_static/css/extra.css">
     
     
   </head>
@@ -128,7 +126,7 @@
                 OI Wiki
               </span>
               <span class="md-header-nav__topic">
-                凸包
+                
               </span>
             
           
@@ -200,9 +198,7 @@
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -211,7 +207,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../.." title="简介" class="md-tabs__link">
+        <a href="." title="简介" class="md-tabs__link">
           简介
         </a>
       
@@ -224,7 +220,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../basic/" title="基础部分" class="md-tabs__link">
+        <a href="basic/" title="基础部分" class="md-tabs__link">
           基础部分
         </a>
       
@@ -237,7 +233,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../search/" title="搜索" class="md-tabs__link">
+        <a href="search/" title="搜索" class="md-tabs__link">
           搜索
         </a>
       
@@ -250,7 +246,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../dp/" title="动态规划" class="md-tabs__link">
+        <a href="dp/" title="动态规划" class="md-tabs__link">
           动态规划
         </a>
       
@@ -263,7 +259,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../string/" title="字符串" class="md-tabs__link">
+        <a href="string/" title="字符串" class="md-tabs__link">
           字符串
         </a>
       
@@ -276,7 +272,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../math/" title="数学" class="md-tabs__link">
+        <a href="math/" title="数学" class="md-tabs__link">
           数学
         </a>
       
@@ -289,7 +285,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../data-structure/" title="数据结构" class="md-tabs__link">
+        <a href="data-structure/" title="数据结构" class="md-tabs__link">
           数据结构
         </a>
       
@@ -302,7 +298,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../graph/" title="图论" class="md-tabs__link">
+        <a href="graph/" title="图论" class="md-tabs__link">
           图论
         </a>
       
@@ -315,7 +311,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../" title="计算几何" class="md-tabs__link md-tabs__link--active">
+        <a href="geometry/" title="计算几何" class="md-tabs__link">
           计算几何
         </a>
       
@@ -328,7 +324,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../misc/" title="杂项" class="md-tabs__link">
+        <a href="misc/" title="杂项" class="md-tabs__link">
           杂项
         </a>
       
@@ -406,7 +402,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Getting Started" class="md-nav__link">
+    <a href="." title="Getting Started" class="md-nav__link">
       Getting Started
     </a>
   </li>
@@ -418,7 +414,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../introduction/mode/" title="OI 赛制简介" class="md-nav__link">
+    <a href="introduction/mode/" title="OI 赛制简介" class="md-nav__link">
       OI 赛制简介
     </a>
   </li>
@@ -430,7 +426,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../introduction/resources/" title="学习资源" class="md-nav__link">
+    <a href="introduction/resources/" title="学习资源" class="md-nav__link">
       学习资源
     </a>
   </li>
@@ -442,7 +438,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../introduction/softwares/" title="工具软件" class="md-nav__link">
+    <a href="introduction/softwares/" title="工具软件" class="md-nav__link">
       工具软件
     </a>
   </li>
@@ -478,7 +474,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/" title="基础部分简介" class="md-nav__link">
+    <a href="basic/" title="基础部分简介" class="md-nav__link">
       基础部分简介
     </a>
   </li>
@@ -490,7 +486,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/enumerate/" title="枚举" class="md-nav__link">
+    <a href="basic/enumerate/" title="枚举" class="md-nav__link">
       枚举
     </a>
   </li>
@@ -502,7 +498,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/simulate/" title="模拟" class="md-nav__link">
+    <a href="basic/simulate/" title="模拟" class="md-nav__link">
       模拟
     </a>
   </li>
@@ -514,7 +510,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/divide-and-conquer/" title="分治" class="md-nav__link">
+    <a href="basic/divide-and-conquer/" title="分治" class="md-nav__link">
       分治
     </a>
   </li>
@@ -526,7 +522,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/greedy/" title="贪心" class="md-nav__link">
+    <a href="basic/greedy/" title="贪心" class="md-nav__link">
       贪心
     </a>
   </li>
@@ -538,7 +534,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/sort/" title="排序" class="md-nav__link">
+    <a href="basic/sort/" title="排序" class="md-nav__link">
       排序
     </a>
   </li>
@@ -550,7 +546,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/expression/" title="表达式求值" class="md-nav__link">
+    <a href="basic/expression/" title="表达式求值" class="md-nav__link">
       表达式求值
     </a>
   </li>
@@ -562,7 +558,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/binary/" title="二分" class="md-nav__link">
+    <a href="basic/binary/" title="二分" class="md-nav__link">
       二分
     </a>
   </li>
@@ -574,7 +570,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../basic/construction/" title="构造" class="md-nav__link">
+    <a href="basic/construction/" title="构造" class="md-nav__link">
       构造
     </a>
   </li>
@@ -610,7 +606,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../search/" title="搜索部分简介" class="md-nav__link">
+    <a href="search/" title="搜索部分简介" class="md-nav__link">
       搜索部分简介
     </a>
   </li>
@@ -622,7 +618,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../search/dfs/" title="DFS" class="md-nav__link">
+    <a href="search/dfs/" title="DFS" class="md-nav__link">
       DFS
     </a>
   </li>
@@ -634,7 +630,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../search/bfs/" title="BFS" class="md-nav__link">
+    <a href="search/bfs/" title="BFS" class="md-nav__link">
       BFS
     </a>
   </li>
@@ -646,7 +642,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../search/dbfs/" title="双向广搜" class="md-nav__link">
+    <a href="search/dbfs/" title="双向广搜" class="md-nav__link">
       双向广搜
     </a>
   </li>
@@ -658,7 +654,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../search/heuristic/" title="启发式搜索" class="md-nav__link">
+    <a href="search/heuristic/" title="启发式搜索" class="md-nav__link">
       启发式搜索
     </a>
   </li>
@@ -670,7 +666,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../search/astar/" title="Astar" class="md-nav__link">
+    <a href="search/astar/" title="Astar" class="md-nav__link">
       Astar
     </a>
   </li>
@@ -682,7 +678,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../search/idastar/" title="IDAstar" class="md-nav__link">
+    <a href="search/idastar/" title="IDAstar" class="md-nav__link">
       IDAstar
     </a>
   </li>
@@ -694,7 +690,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../search/iterative/" title="迭代深搜" class="md-nav__link">
+    <a href="search/iterative/" title="迭代深搜" class="md-nav__link">
       迭代深搜
     </a>
   </li>
@@ -706,7 +702,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../search/backtracking/" title="回溯法" class="md-nav__link">
+    <a href="search/backtracking/" title="回溯法" class="md-nav__link">
       回溯法
     </a>
   </li>
@@ -718,7 +714,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../search/dlx/" title="Dancing Links" class="md-nav__link">
+    <a href="search/dlx/" title="Dancing Links" class="md-nav__link">
       Dancing Links
     </a>
   </li>
@@ -754,7 +750,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/" title="动态规划部分简介" class="md-nav__link">
+    <a href="dp/" title="动态规划部分简介" class="md-nav__link">
       动态规划部分简介
     </a>
   </li>
@@ -766,7 +762,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/memo/" title="记忆化搜索" class="md-nav__link">
+    <a href="dp/memo/" title="记忆化搜索" class="md-nav__link">
       记忆化搜索
     </a>
   </li>
@@ -778,7 +774,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/backpack/" title="背包 DP" class="md-nav__link">
+    <a href="dp/backpack/" title="背包 DP" class="md-nav__link">
       背包 DP
     </a>
   </li>
@@ -790,7 +786,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/interval/" title="区间 DP" class="md-nav__link">
+    <a href="dp/interval/" title="区间 DP" class="md-nav__link">
       区间 DP
     </a>
   </li>
@@ -802,7 +798,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/dag/" title="DAG 上的 dp" class="md-nav__link">
+    <a href="dp/dag/" title="DAG 上的 dp" class="md-nav__link">
       DAG 上的 dp
     </a>
   </li>
@@ -814,7 +810,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/tree/" title="树形 DP" class="md-nav__link">
+    <a href="dp/tree/" title="树形 DP" class="md-nav__link">
       树形 DP
     </a>
   </li>
@@ -826,7 +822,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/state/" title="状压 DP" class="md-nav__link">
+    <a href="dp/state/" title="状压 DP" class="md-nav__link">
       状压 DP
     </a>
   </li>
@@ -838,7 +834,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/number/" title="数位 DP" class="md-nav__link">
+    <a href="dp/number/" title="数位 DP" class="md-nav__link">
       数位 DP
     </a>
   </li>
@@ -850,7 +846,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/plug/" title="插头 DP" class="md-nav__link">
+    <a href="dp/plug/" title="插头 DP" class="md-nav__link">
       插头 DP
     </a>
   </li>
@@ -862,7 +858,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/optimization/" title="优化及其它" class="md-nav__link">
+    <a href="dp/optimization/" title="优化及其它" class="md-nav__link">
       优化及其它
     </a>
   </li>
@@ -874,7 +870,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dp/misc/" title="其它动规方法" class="md-nav__link">
+    <a href="dp/misc/" title="其它动规方法" class="md-nav__link">
       其它动规方法
     </a>
   </li>
@@ -910,7 +906,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/" title="字符串部分简介" class="md-nav__link">
+    <a href="string/" title="字符串部分简介" class="md-nav__link">
       字符串部分简介
     </a>
   </li>
@@ -922,7 +918,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/stl/" title="标准库" class="md-nav__link">
+    <a href="string/stl/" title="标准库" class="md-nav__link">
       标准库
     </a>
   </li>
@@ -934,7 +930,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/match/" title="字符串匹配问题" class="md-nav__link">
+    <a href="string/match/" title="字符串匹配问题" class="md-nav__link">
       字符串匹配问题
     </a>
   </li>
@@ -946,7 +942,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/hash/" title="哈希" class="md-nav__link">
+    <a href="string/hash/" title="哈希" class="md-nav__link">
       哈希
     </a>
   </li>
@@ -958,7 +954,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/kmp/" title="KMP" class="md-nav__link">
+    <a href="string/kmp/" title="KMP" class="md-nav__link">
       KMP
     </a>
   </li>
@@ -970,7 +966,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/trie/" title="字典树（Trie）" class="md-nav__link">
+    <a href="string/trie/" title="字典树（Trie）" class="md-nav__link">
       字典树（Trie）
     </a>
   </li>
@@ -982,7 +978,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/pam/" title="回文自动机" class="md-nav__link">
+    <a href="string/pam/" title="回文自动机" class="md-nav__link">
       回文自动机
     </a>
   </li>
@@ -994,7 +990,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/palindrome-tree/" title="回文树" class="md-nav__link">
+    <a href="string/palindrome-tree/" title="回文树" class="md-nav__link">
       回文树
     </a>
   </li>
@@ -1006,7 +1002,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/sa/" title="后缀数组（SA）" class="md-nav__link">
+    <a href="string/sa/" title="后缀数组（SA）" class="md-nav__link">
       后缀数组（SA）
     </a>
   </li>
@@ -1018,7 +1014,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/ac-automaton/" title="AC 自动机" class="md-nav__link">
+    <a href="string/ac-automaton/" title="AC 自动机" class="md-nav__link">
       AC 自动机
     </a>
   </li>
@@ -1030,7 +1026,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/sam/" title="后缀自动机（SAM）" class="md-nav__link">
+    <a href="string/sam/" title="后缀自动机（SAM）" class="md-nav__link">
       后缀自动机（SAM）
     </a>
   </li>
@@ -1042,7 +1038,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/suffix-tree/" title="后缀树" class="md-nav__link">
+    <a href="string/suffix-tree/" title="后缀树" class="md-nav__link">
       后缀树
     </a>
   </li>
@@ -1054,7 +1050,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/manacher/" title="Manacher" class="md-nav__link">
+    <a href="string/manacher/" title="Manacher" class="md-nav__link">
       Manacher
     </a>
   </li>
@@ -1066,7 +1062,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../string/minimal-string/" title="最小表示法" class="md-nav__link">
+    <a href="string/minimal-string/" title="最小表示法" class="md-nav__link">
       最小表示法
     </a>
   </li>
@@ -1102,7 +1098,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/" title="数学部分简介" class="md-nav__link">
+    <a href="math/" title="数学部分简介" class="md-nav__link">
       数学部分简介
     </a>
   </li>
@@ -1114,7 +1110,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/base/" title="进制相关" class="md-nav__link">
+    <a href="math/base/" title="进制相关" class="md-nav__link">
       进制相关
     </a>
   </li>
@@ -1126,7 +1122,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/prime/" title="素数" class="md-nav__link">
+    <a href="math/prime/" title="素数" class="md-nav__link">
       素数
     </a>
   </li>
@@ -1138,7 +1134,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/gcd/" title="最大公约数" class="md-nav__link">
+    <a href="math/gcd/" title="最大公约数" class="md-nav__link">
       最大公约数
     </a>
   </li>
@@ -1150,7 +1146,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/euler/" title="欧拉函数" class="md-nav__link">
+    <a href="math/euler/" title="欧拉函数" class="md-nav__link">
       欧拉函数
     </a>
   </li>
@@ -1162,7 +1158,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/sieve/" title="筛法" class="md-nav__link">
+    <a href="math/sieve/" title="筛法" class="md-nav__link">
       筛法
     </a>
   </li>
@@ -1174,7 +1170,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/mobius/" title="莫比乌斯反演" class="md-nav__link">
+    <a href="math/mobius/" title="莫比乌斯反演" class="md-nav__link">
       莫比乌斯反演
     </a>
   </li>
@@ -1186,7 +1182,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/fermat/" title="费马小定理（欧拉定理）" class="md-nav__link">
+    <a href="math/fermat/" title="费马小定理（欧拉定理）" class="md-nav__link">
       费马小定理（欧拉定理）
     </a>
   </li>
@@ -1198,7 +1194,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/quick-pow/" title="快速幂" class="md-nav__link">
+    <a href="math/quick-pow/" title="快速幂" class="md-nav__link">
       快速幂
     </a>
   </li>
@@ -1210,7 +1206,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/crt/" title="中国剩余定理" class="md-nav__link">
+    <a href="math/crt/" title="中国剩余定理" class="md-nav__link">
       中国剩余定理
     </a>
   </li>
@@ -1222,7 +1218,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/dictionary/" title="分段打表" class="md-nav__link">
+    <a href="math/dictionary/" title="分段打表" class="md-nav__link">
       分段打表
     </a>
   </li>
@@ -1234,7 +1230,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/matrix/" title="矩阵" class="md-nav__link">
+    <a href="math/matrix/" title="矩阵" class="md-nav__link">
       矩阵
     </a>
   </li>
@@ -1246,7 +1242,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/bit/" title="位运算" class="md-nav__link">
+    <a href="math/bit/" title="位运算" class="md-nav__link">
       位运算
     </a>
   </li>
@@ -1258,7 +1254,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/inverse/" title="乘法逆元" class="md-nav__link">
+    <a href="math/inverse/" title="乘法逆元" class="md-nav__link">
       乘法逆元
     </a>
   </li>
@@ -1270,7 +1266,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/primitive-root/" title="阶 原根" class="md-nav__link">
+    <a href="math/primitive-root/" title="阶 原根" class="md-nav__link">
       阶 原根
     </a>
   </li>
@@ -1282,7 +1278,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/bsgs/" title="BSGS" class="md-nav__link">
+    <a href="math/bsgs/" title="BSGS" class="md-nav__link">
       BSGS
     </a>
   </li>
@@ -1294,7 +1290,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/game/" title="博弈论" class="md-nav__link">
+    <a href="math/game/" title="博弈论" class="md-nav__link">
       博弈论
     </a>
   </li>
@@ -1306,7 +1302,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/poly/" title="多项式黑科技" class="md-nav__link">
+    <a href="math/poly/" title="多项式黑科技" class="md-nav__link">
       多项式黑科技
     </a>
   </li>
@@ -1318,7 +1314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/combination/" title="排列组合" class="md-nav__link">
+    <a href="math/combination/" title="排列组合" class="md-nav__link">
       排列组合
     </a>
   </li>
@@ -1330,7 +1326,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/catalan/" title="卡特兰数" class="md-nav__link">
+    <a href="math/catalan/" title="卡特兰数" class="md-nav__link">
       卡特兰数
     </a>
   </li>
@@ -1342,7 +1338,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/stirling/" title="斯特林数" class="md-nav__link">
+    <a href="math/stirling/" title="斯特林数" class="md-nav__link">
       斯特林数
     </a>
   </li>
@@ -1354,7 +1350,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/cantor/" title="康托展开" class="md-nav__link">
+    <a href="math/cantor/" title="康托展开" class="md-nav__link">
       康托展开
     </a>
   </li>
@@ -1366,7 +1362,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/expectation/" title="概率与期望" class="md-nav__link">
+    <a href="math/expectation/" title="概率与期望" class="md-nav__link">
       概率与期望
     </a>
   </li>
@@ -1378,7 +1374,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/permutation-group/" title="置换群" class="md-nav__link">
+    <a href="math/permutation-group/" title="置换群" class="md-nav__link">
       置换群
     </a>
   </li>
@@ -1390,7 +1386,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/gauss/" title="高斯消元" class="md-nav__link">
+    <a href="math/gauss/" title="高斯消元" class="md-nav__link">
       高斯消元
     </a>
   </li>
@@ -1402,7 +1398,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/linear-equations/" title="xor模线性方程组" class="md-nav__link">
+    <a href="math/linear-equations/" title="xor模线性方程组" class="md-nav__link">
       xor模线性方程组
     </a>
   </li>
@@ -1414,7 +1410,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/inclusion-exclusion-principle/" title="容斥原理" class="md-nav__link">
+    <a href="math/inclusion-exclusion-principle/" title="容斥原理" class="md-nav__link">
       容斥原理
     </a>
   </li>
@@ -1426,7 +1422,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/drawer-principle/" title="抽屉原理" class="md-nav__link">
+    <a href="math/drawer-principle/" title="抽屉原理" class="md-nav__link">
       抽屉原理
     </a>
   </li>
@@ -1438,7 +1434,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/integral/" title="数值与积分" class="md-nav__link">
+    <a href="math/integral/" title="数值与积分" class="md-nav__link">
       数值与积分
     </a>
   </li>
@@ -1450,7 +1446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/fft/" title="快速傅里叶变换" class="md-nav__link">
+    <a href="math/fft/" title="快速傅里叶变换" class="md-nav__link">
       快速傅里叶变换
     </a>
   </li>
@@ -1462,7 +1458,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/fnt/" title="快速数论变换" class="md-nav__link">
+    <a href="math/fnt/" title="快速数论变换" class="md-nav__link">
       快速数论变换
     </a>
   </li>
@@ -1474,7 +1470,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/linear-programming/" title="线性规划" class="md-nav__link">
+    <a href="math/linear-programming/" title="线性规划" class="md-nav__link">
       线性规划
     </a>
   </li>
@@ -1486,7 +1482,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/misc/" title="杂项" class="md-nav__link">
+    <a href="math/misc/" title="杂项" class="md-nav__link">
       杂项
     </a>
   </li>
@@ -1522,7 +1518,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/" title="数据结构部分简介" class="md-nav__link">
+    <a href="data-structure/" title="数据结构部分简介" class="md-nav__link">
       数据结构部分简介
     </a>
   </li>
@@ -1534,7 +1530,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/stl/" title="STL" class="md-nav__link">
+    <a href="data-structure/stl/" title="STL" class="md-nav__link">
       STL
     </a>
   </li>
@@ -1546,7 +1542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/pb-ds/" title="pb_ds" class="md-nav__link">
+    <a href="data-structure/pb-ds/" title="pb_ds" class="md-nav__link">
       pb_ds
     </a>
   </li>
@@ -1577,7 +1573,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
+    <a href="data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
   </li>
@@ -1589,7 +1585,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/hash/" title="哈希表" class="md-nav__link">
+    <a href="data-structure/novice/hash/" title="哈希表" class="md-nav__link">
       哈希表
     </a>
   </li>
@@ -1601,7 +1597,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/dsu/" title="并查集" class="md-nav__link">
+    <a href="data-structure/novice/dsu/" title="并查集" class="md-nav__link">
       并查集
     </a>
   </li>
@@ -1613,7 +1609,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/heap/" title="堆" class="md-nav__link">
+    <a href="data-structure/novice/heap/" title="堆" class="md-nav__link">
       堆
     </a>
   </li>
@@ -1625,7 +1621,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/square-root-decomposition/" title="分块" class="md-nav__link">
+    <a href="data-structure/novice/square-root-decomposition/" title="分块" class="md-nav__link">
       分块
     </a>
   </li>
@@ -1637,7 +1633,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/monotonous-stack/" title="单调栈" class="md-nav__link">
+    <a href="data-structure/novice/monotonous-stack/" title="单调栈" class="md-nav__link">
       单调栈
     </a>
   </li>
@@ -1649,7 +1645,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/novice/monotonous-queue/" title="单调队列" class="md-nav__link">
+    <a href="data-structure/novice/monotonous-queue/" title="单调队列" class="md-nav__link">
       单调队列
     </a>
   </li>
@@ -1685,7 +1681,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/intermediate/sparse-table/" title="倍增法" class="md-nav__link">
+    <a href="data-structure/intermediate/sparse-table/" title="倍增法" class="md-nav__link">
       倍增法
     </a>
   </li>
@@ -1697,7 +1693,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/intermediate/block-list/" title="块状链表" class="md-nav__link">
+    <a href="data-structure/intermediate/block-list/" title="块状链表" class="md-nav__link">
       块状链表
     </a>
   </li>
@@ -1709,7 +1705,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/intermediate/block-array/" title="块状数组" class="md-nav__link">
+    <a href="data-structure/intermediate/block-array/" title="块状数组" class="md-nav__link">
       块状数组
     </a>
   </li>
@@ -1721,7 +1717,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/intermediate/bit/" title="树状数组" class="md-nav__link">
+    <a href="data-structure/intermediate/bit/" title="树状数组" class="md-nav__link">
       树状数组
     </a>
   </li>
@@ -1733,7 +1729,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/intermediate/segment/" title="线段树" class="md-nav__link">
+    <a href="data-structure/intermediate/segment/" title="线段树" class="md-nav__link">
       线段树
     </a>
   </li>
@@ -1745,7 +1741,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/intermediate/treap/" title="Treap" class="md-nav__link">
+    <a href="data-structure/intermediate/treap/" title="Treap" class="md-nav__link">
       Treap
     </a>
   </li>
@@ -1757,7 +1753,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/intermediate/sbt/" title="SBT" class="md-nav__link">
+    <a href="data-structure/intermediate/sbt/" title="SBT" class="md-nav__link">
       SBT
     </a>
   </li>
@@ -1769,7 +1765,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/intermediate/splay/" title="Splay" class="md-nav__link">
+    <a href="data-structure/intermediate/splay/" title="Splay" class="md-nav__link">
       Splay
     </a>
   </li>
@@ -1781,7 +1777,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/intermediate/scapegoat/" title="替罪羊树" class="md-nav__link">
+    <a href="data-structure/intermediate/scapegoat/" title="替罪羊树" class="md-nav__link">
       替罪羊树
     </a>
   </li>
@@ -1793,7 +1789,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/intermediate/virtual-tree/" title="虚树" class="md-nav__link">
+    <a href="data-structure/intermediate/virtual-tree/" title="虚树" class="md-nav__link">
       虚树
     </a>
   </li>
@@ -1848,7 +1844,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/seg-in-seg/" title="线段树套线段树" class="md-nav__link">
+    <a href="data-structure/advanced/seg-in-seg/" title="线段树套线段树" class="md-nav__link">
       线段树套线段树
     </a>
   </li>
@@ -1860,7 +1856,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/seg-in-balanced/" title="线段树套平衡树" class="md-nav__link">
+    <a href="data-structure/advanced/seg-in-balanced/" title="线段树套平衡树" class="md-nav__link">
       线段树套平衡树
     </a>
   </li>
@@ -1872,7 +1868,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/balanced-in-seg/" title="平衡树套线段树" class="md-nav__link">
+    <a href="data-structure/advanced/balanced-in-seg/" title="平衡树套线段树" class="md-nav__link">
       平衡树套线段树
     </a>
   </li>
@@ -1889,7 +1885,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/avl/" title="AVL树" class="md-nav__link">
+    <a href="data-structure/advanced/avl/" title="AVL树" class="md-nav__link">
       AVL树
     </a>
   </li>
@@ -1901,7 +1897,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/dividin/" title="划分树" class="md-nav__link">
+    <a href="data-structure/advanced/dividin/" title="划分树" class="md-nav__link">
       划分树
     </a>
   </li>
@@ -1913,7 +1909,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/k-dtree/" title="K-Dtree" class="md-nav__link">
+    <a href="data-structure/advanced/k-dtree/" title="K-Dtree" class="md-nav__link">
       K-Dtree
     </a>
   </li>
@@ -1925,7 +1921,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/persistent-seg/" title="可持久化线段树" class="md-nav__link">
+    <a href="data-structure/advanced/persistent-seg/" title="可持久化线段树" class="md-nav__link">
       可持久化线段树
     </a>
   </li>
@@ -1937,7 +1933,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/persistent-block-array/" title="可持久化块状数组" class="md-nav__link">
+    <a href="data-structure/advanced/persistent-block-array/" title="可持久化块状数组" class="md-nav__link">
       可持久化块状数组
     </a>
   </li>
@@ -1949,7 +1945,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/persistent-balanced/" title="可持久化平衡树" class="md-nav__link">
+    <a href="data-structure/advanced/persistent-balanced/" title="可持久化平衡树" class="md-nav__link">
       可持久化平衡树
     </a>
   </li>
@@ -1961,7 +1957,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/persistent-trie/" title="可持久化字典树" class="md-nav__link">
+    <a href="data-structure/advanced/persistent-trie/" title="可持久化字典树" class="md-nav__link">
       可持久化字典树
     </a>
   </li>
@@ -1973,7 +1969,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/lct/" title="Link Cut Tree" class="md-nav__link">
+    <a href="data-structure/advanced/lct/" title="Link Cut Tree" class="md-nav__link">
       Link Cut Tree
     </a>
   </li>
@@ -1985,7 +1981,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/ett/" title="Euler Tour Tree" class="md-nav__link">
+    <a href="data-structure/advanced/ett/" title="Euler Tour Tree" class="md-nav__link">
       Euler Tour Tree
     </a>
   </li>
@@ -1997,7 +1993,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-structure/advanced/tree-decompose/" title="树分块" class="md-nav__link">
+    <a href="data-structure/advanced/tree-decompose/" title="树分块" class="md-nav__link">
       树分块
     </a>
   </li>
@@ -2038,7 +2034,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/" title="图论部分简介" class="md-nav__link">
+    <a href="graph/" title="图论部分简介" class="md-nav__link">
       图论部分简介
     </a>
   </li>
@@ -2050,7 +2046,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/basic/" title="图论基础" class="md-nav__link">
+    <a href="graph/basic/" title="图论基础" class="md-nav__link">
       图论基础
     </a>
   </li>
@@ -2062,7 +2058,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/tree-basic/" title="树相关基础" class="md-nav__link">
+    <a href="graph/tree-basic/" title="树相关基础" class="md-nav__link">
       树相关基础
     </a>
   </li>
@@ -2074,7 +2070,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/traverse/" title="遍历：BFS 和 DFS" class="md-nav__link">
+    <a href="graph/traverse/" title="遍历：BFS 和 DFS" class="md-nav__link">
       遍历：BFS 和 DFS
     </a>
   </li>
@@ -2086,7 +2082,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/mst/" title="最小生成树" class="md-nav__link">
+    <a href="graph/mst/" title="最小生成树" class="md-nav__link">
       最小生成树
     </a>
   </li>
@@ -2098,7 +2094,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/lca/" title="最近公共祖先" class="md-nav__link">
+    <a href="graph/lca/" title="最近公共祖先" class="md-nav__link">
       最近公共祖先
     </a>
   </li>
@@ -2110,7 +2106,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/heavy-light-decomposition/" title="树链剖分" class="md-nav__link">
+    <a href="graph/heavy-light-decomposition/" title="树链剖分" class="md-nav__link">
       树链剖分
     </a>
   </li>
@@ -2122,7 +2118,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/tree-divide/" title="树分治" class="md-nav__link">
+    <a href="graph/tree-divide/" title="树分治" class="md-nav__link">
       树分治
     </a>
   </li>
@@ -2134,7 +2130,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/tree-misc/" title="树的其他问题" class="md-nav__link">
+    <a href="graph/tree-misc/" title="树的其他问题" class="md-nav__link">
       树的其他问题
     </a>
   </li>
@@ -2146,7 +2142,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/topo/" title="拓扑排序" class="md-nav__link">
+    <a href="graph/topo/" title="拓扑排序" class="md-nav__link">
       拓扑排序
     </a>
   </li>
@@ -2158,7 +2154,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/dynamic-tree-divide/" title="动态树分治" class="md-nav__link">
+    <a href="graph/dynamic-tree-divide/" title="动态树分治" class="md-nav__link">
       动态树分治
     </a>
   </li>
@@ -2170,7 +2166,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/2-sat/" title="2-SAT" class="md-nav__link">
+    <a href="graph/2-sat/" title="2-SAT" class="md-nav__link">
       2-SAT
     </a>
   </li>
@@ -2182,7 +2178,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/euler/" title="欧拉图" class="md-nav__link">
+    <a href="graph/euler/" title="欧拉图" class="md-nav__link">
       欧拉图
     </a>
   </li>
@@ -2194,7 +2190,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/scc/" title="强连通分量" class="md-nav__link">
+    <a href="graph/scc/" title="强连通分量" class="md-nav__link">
       强连通分量
     </a>
   </li>
@@ -2206,7 +2202,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/bcc/" title="双连通分量" class="md-nav__link">
+    <a href="graph/bcc/" title="双连通分量" class="md-nav__link">
       双连通分量
     </a>
   </li>
@@ -2218,7 +2214,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/bridge/" title="割点割边" class="md-nav__link">
+    <a href="graph/bridge/" title="割点割边" class="md-nav__link">
       割点割边
     </a>
   </li>
@@ -2230,7 +2226,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/differential-constraints/" title="差分约束" class="md-nav__link">
+    <a href="graph/differential-constraints/" title="差分约束" class="md-nav__link">
       差分约束
     </a>
   </li>
@@ -2242,7 +2238,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/dag/" title="有向无环图" class="md-nav__link">
+    <a href="graph/dag/" title="有向无环图" class="md-nav__link">
       有向无环图
     </a>
   </li>
@@ -2254,7 +2250,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/bi-graph/" title="二分图" class="md-nav__link">
+    <a href="graph/bi-graph/" title="二分图" class="md-nav__link">
       二分图
     </a>
   </li>
@@ -2266,7 +2262,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/shortest-path/" title="最短路" class="md-nav__link">
+    <a href="graph/shortest-path/" title="最短路" class="md-nav__link">
       最短路
     </a>
   </li>
@@ -2278,7 +2274,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/min-circle/" title="最小环" class="md-nav__link">
+    <a href="graph/min-circle/" title="最小环" class="md-nav__link">
       最小环
     </a>
   </li>
@@ -2290,7 +2286,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/kth-path/" title="k 短路" class="md-nav__link">
+    <a href="graph/kth-path/" title="k 短路" class="md-nav__link">
       k 短路
     </a>
   </li>
@@ -2302,7 +2298,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/euler/" title="欧拉图" class="md-nav__link">
+    <a href="graph/euler/" title="欧拉图" class="md-nav__link">
       欧拉图
     </a>
   </li>
@@ -2314,7 +2310,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/flow/" title="网络流" class="md-nav__link">
+    <a href="graph/flow/" title="网络流" class="md-nav__link">
       网络流
     </a>
   </li>
@@ -2326,7 +2322,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/flow/node/" title="拆点" class="md-nav__link">
+    <a href="graph/flow/node/" title="拆点" class="md-nav__link">
       拆点
     </a>
   </li>
@@ -2338,7 +2334,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/flow/max-flow/" title="最大流" class="md-nav__link">
+    <a href="graph/flow/max-flow/" title="最大流" class="md-nav__link">
       最大流
     </a>
   </li>
@@ -2350,7 +2346,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/flow/min-cut/" title="最小割" class="md-nav__link">
+    <a href="graph/flow/min-cut/" title="最小割" class="md-nav__link">
       最小割
     </a>
   </li>
@@ -2362,7 +2358,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/flow/min-cost/" title="费用流" class="md-nav__link">
+    <a href="graph/flow/min-cost/" title="费用流" class="md-nav__link">
       费用流
     </a>
   </li>
@@ -2374,7 +2370,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../graph/flow/bound/" title="上下界网络流" class="md-nav__link">
+    <a href="graph/flow/bound/" title="上下界网络流" class="md-nav__link">
       上下界网络流
     </a>
   </li>
@@ -2389,12 +2385,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
     <label class="md-nav__link" for="nav-9">
       计算几何
@@ -2412,7 +2406,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="计算几何部分简介" class="md-nav__link">
+    <a href="geometry/" title="计算几何部分简介" class="md-nav__link">
       计算几何部分简介
     </a>
   </li>
@@ -2424,7 +2418,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../2d/" title="二维计算几何基础" class="md-nav__link">
+    <a href="geometry/2d/" title="二维计算几何基础" class="md-nav__link">
       二维计算几何基础
     </a>
   </li>
@@ -2436,7 +2430,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../3d/" title="三维计算几何基础" class="md-nav__link">
+    <a href="geometry/3d/" title="三维计算几何基础" class="md-nav__link">
       三维计算几何基础
     </a>
   </li>
@@ -2448,7 +2442,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../pick/" title="pick定理" class="md-nav__link">
+    <a href="geometry/pick/" title="pick定理" class="md-nav__link">
       pick定理
     </a>
   </li>
@@ -2460,7 +2454,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../triangulation/" title="三角剖分" class="md-nav__link">
+    <a href="geometry/triangulation/" title="三角剖分" class="md-nav__link">
       三角剖分
     </a>
   </li>
@@ -2470,18 +2464,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="凸包" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="geometry/convex-hull/" title="凸包" class="md-nav__link">
       凸包
     </a>
-    
   </li>
 
         
@@ -2491,7 +2478,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../scanning/" title="扫描线" class="md-nav__link">
+    <a href="geometry/scanning/" title="扫描线" class="md-nav__link">
       扫描线
     </a>
   </li>
@@ -2503,7 +2490,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../rotating-calipers/" title="旋转卡壳" class="md-nav__link">
+    <a href="geometry/rotating-calipers/" title="旋转卡壳" class="md-nav__link">
       旋转卡壳
     </a>
   </li>
@@ -2515,7 +2502,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../half-plane-intersection/" title="半平面交" class="md-nav__link">
+    <a href="geometry/half-plane-intersection/" title="半平面交" class="md-nav__link">
       半平面交
     </a>
   </li>
@@ -2527,7 +2514,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../magic/" title="其他黑科技" class="md-nav__link">
+    <a href="geometry/magic/" title="其他黑科技" class="md-nav__link">
       其他黑科技
     </a>
   </li>
@@ -2563,7 +2550,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/" title="杂项简介" class="md-nav__link">
+    <a href="misc/" title="杂项简介" class="md-nav__link">
       杂项简介
     </a>
   </li>
@@ -2575,7 +2562,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/non-traditional/" title="非传统题（提答大法）" class="md-nav__link">
+    <a href="misc/non-traditional/" title="非传统题（提答大法）" class="md-nav__link">
       非传统题（提答大法）
     </a>
   </li>
@@ -2587,7 +2574,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/cdq-divide/" title="cdq分治" class="md-nav__link">
+    <a href="misc/cdq-divide/" title="cdq分治" class="md-nav__link">
       cdq分治
     </a>
   </li>
@@ -2599,7 +2586,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/mo-algo/" title="莫队算法" class="md-nav__link">
+    <a href="misc/mo-algo/" title="莫队算法" class="md-nav__link">
       莫队算法
     </a>
   </li>
@@ -2611,7 +2598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/hill-climbing/" title="爬山算法" class="md-nav__link">
+    <a href="misc/hill-climbing/" title="爬山算法" class="md-nav__link">
       爬山算法
     </a>
   </li>
@@ -2623,7 +2610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/fractional-programming/" title="分数规划" class="md-nav__link">
+    <a href="misc/fractional-programming/" title="分数规划" class="md-nav__link">
       分数规划
     </a>
   </li>
@@ -2635,7 +2622,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/simulated-annealing/" title="模拟退火" class="md-nav__link">
+    <a href="misc/simulated-annealing/" title="模拟退火" class="md-nav__link">
       模拟退火
     </a>
   </li>
@@ -2647,7 +2634,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/zhu-liu-algorithm/" title="朱刘算法" class="md-nav__link">
+    <a href="misc/zhu-liu-algorithm/" title="朱刘算法" class="md-nav__link">
       朱刘算法
     </a>
   </li>
@@ -2659,7 +2646,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/random-incremental/" title="随机增量法" class="md-nav__link">
+    <a href="misc/random-incremental/" title="随机增量法" class="md-nav__link">
       随机增量法
     </a>
   </li>
@@ -2671,7 +2658,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/random/" title="随机化" class="md-nav__link">
+    <a href="misc/random/" title="随机化" class="md-nav__link">
       随机化
     </a>
   </li>
@@ -2683,7 +2670,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/offline/" title="离线处理" class="md-nav__link">
+    <a href="misc/offline/" title="离线处理" class="md-nav__link">
       离线处理
     </a>
   </li>
@@ -2695,7 +2682,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/distance/" title="各种距离" class="md-nav__link">
+    <a href="misc/distance/" title="各种距离" class="md-nav__link">
       各种距离
     </a>
   </li>
@@ -2707,7 +2694,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/endianness/" title="字节顺序" class="md-nav__link">
+    <a href="misc/endianness/" title="字节顺序" class="md-nav__link">
       字节顺序
     </a>
   </li>
@@ -2719,7 +2706,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../misc/complexity/" title="复杂度" class="md-nav__link">
+    <a href="misc/complexity/" title="复杂度" class="md-nav__link">
       复杂度
     </a>
   </li>
@@ -2741,17 +2728,8 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-                
-                  <a href="https://github.com/24OI/OI-wiki/blob/master/docs/geometry/convex-hull.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
-                
-                
-                  <h1>凸包</h1>
-                
-                
-                
-                  
-                
-              
+  <h1>404 - Not found</h1>
+
               
                   
 <div id="lv-container" data-id="city" data-uid="MTAyMC8zODIwNy8xNDczNQ==">
@@ -2780,41 +2758,6 @@
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../triangulation/" title="三角剖分" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  后退
-                </span>
-                三角剖分
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../scanning/" title="扫描线" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  前进
-                </span>
-                扫描线
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -2838,28 +2781,28 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.e72fd936.js"></script>
+      <script src="assets/javascripts/application.e72fd936.js"></script>
       
         
         
           
-          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
               
-                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+                <script src="assets/javascripts/lunr/tinyseg.js"></script>
               
               
-                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+                <script src="assets/javascripts/lunr/lunr.jp.js"></script>
               
             
           
           
         
       
-      <script>app.initialize({version:"1.0",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0",url:{base:""}})</script>
       
-        <script src="../../_static/js/extra.js"></script>
+        <script src="_static/js/extra.js"></script>
       
         <script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
