@@ -3904,21 +3904,21 @@ JOI 公开赛是在线竞赛，实行完整的 IOI 赛制，可以实时提交�
               
               
                   
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zODIwNy8xNDczNQ==">
-  <script type="text/javascript">
-    (function (d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-
-      if (typeof LivereTower === 'function') { return; }
-
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-
-      e.parentNode.insertBefore(j, e);
-    })(document, 'script');
-  </script>
-  <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+<div id="gitment_container">
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+      var gitment = new Gitment({
+        id: 'OI 赛制简介',
+        owner: 'Ir1d',
+        repo: 'gitment',
+        oauth: {
+          client_id: 'd6a911c8fba0194626d4',
+          client_secret: '867ec7e13cc99b420bd147cbb62d5cfec271ba81',
+        },
+      })
+      gitment.render('gitment_container')
+    </script>
 </div>
 
               
