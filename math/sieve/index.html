@@ -2892,7 +2892,7 @@
 <span class="p">}</span>
 </pre></div>
 
-<p>这个筛法被成为 eratosthenes （念作“埃拉托斯特尼”）筛法，时间复杂度是 <span><span class="MathJax_Preview">O(nloglogn)</span><script type="math/tex">O(nloglogn)</script></span>。</p>
+<p>这个筛法被成为 eratosthenes （念作“埃拉托斯特尼”）筛法，时间复杂度是 <span><span class="MathJax_Preview">O(n\log\log n)</span><script type="math/tex">O(n\log\log n)</script></span>。</p>
 <p>以上做法仍有优化空间，我们发现这里面似乎会对某些数标记了很多次其为合数。有没有什么办法省掉无意义的步骤呢？</p>
 <p>答案当然是：有！</p>
 <p>如果能让每个合数都只被标记一次，那么时间复杂度就可以降到 <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 了</p>
@@ -2929,16 +2929,16 @@
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\phi(n) &amp; = n * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
+\varphi(n) &amp; = n * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
 &amp; = p_1 * n' * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
-&amp; = p_1 * \phi(n')
+&amp; = p_1 * \varphi(n')
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\phi(n) & = n * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
+\varphi(n) & = n * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
 & = p_1 * n' * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
-& = p_1 * \phi(n')
+& = p_1 * \varphi(n')
 \end{aligned}
 </script>
 </div>
@@ -2946,14 +2946,14 @@
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\phi(n) &amp; = \phi(p_1) * \phi(n') \\\\
-&amp; = (p_1 - 1) * \phi(n')
+\varphi(n) &amp; = \varphi(p_1) * \varphi(n') \\\\
+&amp; = (p_1 - 1) * \varphi(n')
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\phi(n) & = \phi(p_1) * \phi(n') \\\\
-& = (p_1 - 1) * \phi(n')
+\varphi(n) & = \varphi(p_1) * \varphi(n') \\\\
+& = (p_1 - 1) * \varphi(n')
 \end{aligned}
 </script>
 </div>
