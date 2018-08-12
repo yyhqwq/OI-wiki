@@ -2915,47 +2915,47 @@
 <h3 id="_2">常见用途<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>在算法竞赛中，我们有时需要维护多维度信息。在这种时候，我们经常需要树套树来记录信息。</p>
 <h3 id="_3">实现原理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>我们考虑用树套树如何实现在二维平面上进行单点修改，区域查询。我们考虑外层的线段树，最底层的1到n个节点的子树，分别代表第1行到第n行的线段树。那么这些底层的节点对应的父节点，就代表其两个子节点的子树所在的一片区域。</p>
+<p>我们考虑用树套树如何实现在二维平面上进行单点修改，区域查询。我们考虑外层的线段树，最底层的 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个节点的子树，分别代表第1行到第n行的线段树。那么这些底层的节点对应的父节点，就代表其两个子节点的子树所在的一片区域。</p>
 <h3 id="_4">空间复杂度<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>通常情况下，我们不可能对于外层线段树的每一个结点都建立一颗子线段树，空间需求过大。树套树一般采取动态开点的策略。单次修改，我们会涉及到外层线段树的<strong>logn</strong>个节点，且对于每个节点的子树涉及<strong>logn</strong>个节点，所以单次修改产生的空间最多为<strong>logn<sup>2</sup></strong>。</p>
+<p>通常情况下，我们不可能对于外层线段树的每一个结点都建立一颗子线段树，空间需求过大。树套树一般采取动态开点的策略。单次修改，我们会涉及到外层线段树的 <span><span class="MathJax_Preview">\log{n}</span><script type="math/tex">\log{n}</script></span> 个节点，且对于每个节点的子树涉及 <span><span class="MathJax_Preview">\log{n}</span><script type="math/tex">\log{n}</script></span> 个节点，所以单次修改产生的空间最多为 <span><span class="MathJax_Preview">\log^2{n}</span><script type="math/tex">\log^2{n}</script></span>。</p>
 <h3 id="_5">时间复杂度<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>对于询问操作，我们考虑我们在外层线段树上进行<strong>logn</strong>次操作，每次操作会在一个内层线段树上进行<strong>logn</strong>次操作，所以时间复杂度为<strong>logn<sup>2</sup></strong>。
-修改操作，与询问操作复杂度相同，也为<strong>logn<sup>2</sup></strong>。</p>
+<p>对于询问操作，我们考虑我们在外层线段树上进行 <span><span class="MathJax_Preview">\log{n}</span><script type="math/tex">\log{n}</script></span> 次操作，每次操作会在一个内层线段树上进行 <span><span class="MathJax_Preview">\log{n}</span><script type="math/tex">\log{n}</script></span> 次操作，所以时间复杂度为 <span><span class="MathJax_Preview">\log^2{n}</span><script type="math/tex">\log^2{n}</script></span>。
+修改操作，与询问操作复杂度相同，也为 <span><span class="MathJax_Preview">\log^2{n}</span><script type="math/tex">\log^2{n}</script></span>。</p>
 <h3 id="_6">经典例题<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3262">陌上花开</a> 将第一维排序处理，然后用树套树维护第二维和第三维。</p>
 <h3 id="_7">示例代码<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>第二维查询
-<div class="codehilite"><pre><span></span>int tree_query(int k,int l,int r,int x)
-{
-    if (k == 0) return 0;
-    if (1 &lt;= l &amp;&amp; r &lt;= sec[x].y) return vec_query(ou_root[k],1,p,1,sec[x].z);
-    int mid = l + r &gt;&gt; 1,res = 0;
-    if (1 &lt;= mid) res += tree_query(ou_ch[k][0],l,mid,x);
-    if (sec[x].y &gt; mid) res += tree_query(ou_ch[k][1],mid + 1,r,x);
-    return res;
-}
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">tree_query</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">l</span> <span class="o">&amp;&amp;</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="n">sec</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="n">vec_query</span><span class="p">(</span><span class="n">ou_root</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">sec</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">z</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">)</span> <span class="n">res</span> <span class="o">+=</span> <span class="n">tree_query</span><span class="p">(</span><span class="n">ou_ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">,</span><span class="n">mid</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">sec</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="p">)</span> <span class="n">res</span> <span class="o">+=</span> <span class="n">tree_query</span><span class="p">(</span><span class="n">ou_ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 第二维修改
-<div class="codehilite"><pre><span></span>void tree_insert(int &amp;k,int l,int r,int x)
-{
-    if (k == 0) k = ++ou_tot;
-    vec_insert(ou_root[k],1,p,sec[x].z);
-    if (l == r) return;
-    int mid = l + r &gt;&gt; 1;
-    if (sec[x].y &lt;= mid) tree_insert(ou_ch[k][0],l,mid,x);
-    else tree_insert(ou_ch[k][1],mid + 1,r,x);
-}
+<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">tree_insert</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">k</span> <span class="o">=</span> <span class="o">++</span><span class="n">ou_tot</span><span class="p">;</span>
+    <span class="n">vec_insert</span><span class="p">(</span><span class="n">ou_root</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">sec</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">z</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">==</span> <span class="n">r</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">sec</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">y</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">)</span> <span class="n">tree_insert</span><span class="p">(</span><span class="n">ou_ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">,</span><span class="n">mid</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+    <span class="k">else</span> <span class="n">tree_insert</span><span class="p">(</span><span class="n">ou_ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 第三维查询
-<div class="codehilite"><pre><span></span>int vec_query(int k,int l,int r,int x,int y)
-{
-    if (k == 0) return 0;
-    if (x &lt;= l &amp;&amp; r &lt;= y) return data[k];
-    int mid = l + r &gt;&gt; 1,res = 0;
-    if (x &lt;= mid) res += vec_query(ch[k][0],l,mid,x,y);
-    if (y &gt; mid) res += vec_query(ch[k][1],mid + 1,r,x,y);
-    return res;
-}
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">vec_query</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">l</span> <span class="o">&amp;&amp;</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">)</span> <span class="n">res</span> <span class="o">+=</span> <span class="n">vec_query</span><span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">,</span><span class="n">mid</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="p">)</span> <span class="n">res</span> <span class="o">+=</span> <span class="n">vec_query</span><span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 第三维修改
 <div class="codehilite"><pre><span></span>void vec_insert(int &amp;k,int l,int r,int loc)
