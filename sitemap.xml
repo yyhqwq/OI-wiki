@@ -21,6 +21,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://oi-wiki.cf/introduction/faq/</loc>
+     <lastmod>2018-08-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://oi-wiki.cf/basic/</loc>
      <lastmod>2018-08-13</lastmod>
      <changefreq>daily</changefreq>
@@ -391,7 +396,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.cf/math/fnt/</loc>
+     <loc>https://oi-wiki.cf/math/ntt/</loc>
+     <lastmod>2018-08-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://oi-wiki.cf/math/fwt/</loc>
      <lastmod>2018-08-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
