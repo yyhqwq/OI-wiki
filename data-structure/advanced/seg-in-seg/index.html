@@ -2958,15 +2958,15 @@
 <span class="p">}</span>
 </pre></div>
 第三维修改
-<div class="codehilite"><pre><span></span>void vec_insert(int &amp;k,int l,int r,int loc)
-{
-    if (k == 0) k = ++tot;
-    data[k]++;
-    if (l == r) return;
-    int mid = l + r &gt;&gt; 1;
-    if (loc &lt;= mid) vec_insert(ch[k][0],l,mid,loc);
-    if (loc &gt; mid) vec_insert(ch[k][1],mid + 1,r,loc);
-}
+<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">vec_insert</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">loc</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">k</span> <span class="o">=</span> <span class="o">++</span><span class="n">tot</span><span class="p">;</span>
+    <span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">==</span> <span class="n">r</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">loc</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">)</span> <span class="n">vec_insert</span><span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">,</span><span class="n">mid</span><span class="p">,</span><span class="n">loc</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">loc</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="p">)</span> <span class="n">vec_insert</span><span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">loc</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div></p>
 <h3 id="_8">相关算法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>面对多维度信息的题目时，如果题目没有要求强制在线，我们还可以考虑<strong>CDQ分治</strong>，或者<strong>整体二分</strong>等分治算法，来避免使用高级数据结构，减少代码实现难度。</p>
