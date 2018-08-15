@@ -1567,6 +1567,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../math/complex/" title="复数" class="md-nav__link">
+      复数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../math/misc/" title="杂项" class="md-nav__link">
       杂项
     </a>
@@ -2866,8 +2878,8 @@
 <p>主要思想是暴力的改进</p>
 <p>对于模式串 b，定义 next[]</p>
 <div>
-<div class="MathJax_Preview">next[i] = largest j s.t. 0 \leq j&lt;i\ \&amp;\&amp;\ b[0..j-1]==b[i-j..i-1]</div>
-<script type="math/tex; mode=display">next[i] = largest j s.t. 0 \leq j<i\ \&\&\ b[0..j-1]==b[i-j..i-1]</script>
+<div class="MathJax_Preview">next[i] = max\{j\}\ s.t.\ 0 \leq j&lt;i\ \&amp;\&amp;\ b[0..j-1]=b[i-j..i-1]</div>
+<script type="math/tex; mode=display">next[i] = max\{j\}\ s.t.\ 0 \leq j<i\ \&\&\ b[0..j-1]=b[i-j..i-1]</script>
 </div>
 <p>【注意下标从 0 开始】【需要画图】</p>
 <p>说好听点，a 的第 i 个前缀的最长的等于同长度的后缀的真前缀的长度</p>

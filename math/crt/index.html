@@ -1624,6 +1624,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../complex/" title="复数" class="md-nav__link">
+      复数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../misc/" title="杂项" class="md-nav__link">
       杂项
     </a>
@@ -3020,7 +3032,7 @@ x &\equiv& a_n \pmod {n_k} \\
 <li>对于第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个方程：<ol>
 <li>计算 <span><span class="MathJax_Preview">m_i=n/n_i</span><script type="math/tex">m_i=n/n_i</script></span>；</li>
 <li>计算 <span><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span> 在模 <span><span class="MathJax_Preview">n_i</span><script type="math/tex">n_i</script></span> 意义下的逆元 <span><span class="MathJax_Preview">m_i^{-1}</span><script type="math/tex">m_i^{-1}</script></span>；</li>
-<li>计算 <span><span class="MathJax_Preview">c_i=m_im_i^{-1}</span><script type="math/tex">c_i=m_im_i^{-1}</script></span>（<strong>不要对 <span><span class="MathJax_Preview">n_i</span><script type="math/tex">n_i</script></span> 取模</strong>）。</li>
+<li>计算 <span><span class="MathJax_Preview">c_i=m_im_i^{-1}</span><script type="math/tex">c_i=m_im_i^{-1}</script></span>（<strong> 不要对 <span><span class="MathJax_Preview">n_i</span><script type="math/tex">n_i</script></span> 取模 </strong>）。</li>
 </ol>
 </li>
 <li>方程组的唯一解为：<span><span class="MathJax_Preview">a=\sum_{i=1}^k a_ic_i \pmod n</span><script type="math/tex">a=\sum_{i=1}^k a_ic_i \pmod n</script></span>。</li>
@@ -3046,21 +3058,21 @@ a&\equiv \sum_{j=1}^k a_jc_j        &\pmod {n_i} \\
 \end{aligned}
 </script>
 </div>
-<p><strong>即对于任意 <span><span class="MathJax_Preview">i=1,2,\cdots,k</span><script type="math/tex">i=1,2,\cdots,k</script></span>，上面算法得到的 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 总是满足 <span><span class="MathJax_Preview">a\equiv a_i \pmod{n_i}</span><script type="math/tex">a\equiv a_i \pmod{n_i}</script></span>，即证明了解同余方程组的算法的正确性。</strong></p>
+<p><strong> 即对于任意 <span><span class="MathJax_Preview">i=1,2,\cdots,k</span><script type="math/tex">i=1,2,\cdots,k</script></span>，上面算法得到的 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 总是满足 <span><span class="MathJax_Preview">a\equiv a_i \pmod{n_i}</span><script type="math/tex">a\equiv a_i \pmod{n_i}</script></span>，即证明了解同余方程组的算法的正确性。</strong></p>
 <p>因为我们没有对输入的 <span><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 作特殊限制，所以任何一组输入 <span><span class="MathJax_Preview">\{a_i\}</span><script type="math/tex">\{a_i\}</script></span> 都对应一个解 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>。</p>
 <p>另外，若 <span><span class="MathJax_Preview">x\neq y</span><script type="math/tex">x\neq y</script></span>，则总存在 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 使得 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 在模 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 下不同余。</p>
-<p><strong>故系数列表 <span><span class="MathJax_Preview">\{a_i\}</span><script type="math/tex">\{a_i\}</script></span> 与解 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 之间是一一映射关系，方程组总是有唯一解。</strong></p>
+<p><strong> 故系数列表 <span><span class="MathJax_Preview">\{a_i\}</span><script type="math/tex">\{a_i\}</script></span> 与解 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 之间是一一映射关系，方程组总是有唯一解。</strong></p>
 <h2 id="_5">例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>下面演示 CRT 如何解「物不知数」问题。</p>
 <ol>
 <li><span><span class="MathJax_Preview">n=3\times 5\times 7=105</span><script type="math/tex">n=3\times 5\times 7=105</script></span>；</li>
-<li>三人同行<strong>七十</strong>希：<span><span class="MathJax_Preview">n_1=3, m_1=n/n_1=35, m_1^{-1}\equiv 2\pmod 3</span><script type="math/tex">n_1=3, m_1=n/n_1=35, m_1^{-1}\equiv 2\pmod 3</script></span>，故 <span><span class="MathJax_Preview">c_1=35\times 2=70</span><script type="math/tex">c_1=35\times 2=70</script></span>；</li>
-<li>五树梅花<strong>廿一</strong>支：<span><span class="MathJax_Preview">n_2=5, m_2=n/n_2=21, m_2^{-1}\equiv 1\pmod 5</span><script type="math/tex">n_2=5, m_2=n/n_2=21, m_2^{-1}\equiv 1\pmod 5</script></span>，故 <span><span class="MathJax_Preview">c_2=21\times 1=21</span><script type="math/tex">c_2=21\times 1=21</script></span>；</li>
-<li>七子团圆正<strong>半月</strong>：<span><span class="MathJax_Preview">n_3=7, m_3=n/n_3=15, m_3^{-1}\equiv 1\pmod 7</span><script type="math/tex">n_3=7, m_3=n/n_3=15, m_3^{-1}\equiv 1\pmod 7</script></span>，故 <span><span class="MathJax_Preview">c_3=15\times 1=15</span><script type="math/tex">c_3=15\times 1=15</script></span>；</li>
-<li>所以方程组的唯一解为 <span><span class="MathJax_Preview">a\equiv 2\times 70+3\times 21+2\times 15\equiv 233\equiv 23 \pmod {105}</span><script type="math/tex">a\equiv 2\times 70+3\times 21+2\times 15\equiv 233\equiv 23 \pmod {105}</script></span>。（除<strong>百零五</strong>便得知）</li>
+<li>三人同行 <strong> 七十 </strong> 希：<span><span class="MathJax_Preview">n_1=3, m_1=n/n_1=35, m_1^{-1}\equiv 2\pmod 3</span><script type="math/tex">n_1=3, m_1=n/n_1=35, m_1^{-1}\equiv 2\pmod 3</script></span>，故 <span><span class="MathJax_Preview">c_1=35\times 2=70</span><script type="math/tex">c_1=35\times 2=70</script></span>；</li>
+<li>五树梅花 <strong> 廿一 </strong> 支：<span><span class="MathJax_Preview">n_2=5, m_2=n/n_2=21, m_2^{-1}\equiv 1\pmod 5</span><script type="math/tex">n_2=5, m_2=n/n_2=21, m_2^{-1}\equiv 1\pmod 5</script></span>，故 <span><span class="MathJax_Preview">c_2=21\times 1=21</span><script type="math/tex">c_2=21\times 1=21</script></span>；</li>
+<li>七子团圆正 <strong> 半月 </strong>：<span><span class="MathJax_Preview">n_3=7, m_3=n/n_3=15, m_3^{-1}\equiv 1\pmod 7</span><script type="math/tex">n_3=7, m_3=n/n_3=15, m_3^{-1}\equiv 1\pmod 7</script></span>，故 <span><span class="MathJax_Preview">c_3=15\times 1=15</span><script type="math/tex">c_3=15\times 1=15</script></span>；</li>
+<li>所以方程组的唯一解为 <span><span class="MathJax_Preview">a\equiv 2\times 70+3\times 21+2\times 15\equiv 233\equiv 23 \pmod {105}</span><script type="math/tex">a\equiv 2\times 70+3\times 21+2\times 15\equiv 233\equiv 23 \pmod {105}</script></span>。（除 <strong> 百零五 </strong> 便得知）</li>
 </ol>
 <h2 id="_6">应用<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>某些计数问题或数论问题出于加长代码、增加难度、或者是一些其他不可告人的原因，给出的模数：<strong>不是质数</strong>！</p>
+<p>某些计数问题或数论问题出于加长代码、增加难度、或者是一些其他不可告人的原因，给出的模数：<strong> 不是质数 </strong>！</p>
 <p>但是对其质因数分解会发现它没有平方因子，也就是该模数是由一些不重复的质数相乘得到。</p>
 <p>那么我们可以分别对这些模数进行计算，最后用 CRT 合并答案。</p>
 <p>推荐练习：BZOJ 1951</p>

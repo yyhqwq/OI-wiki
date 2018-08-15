@@ -1514,6 +1514,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../math/complex/" title="复数" class="md-nav__link">
+      复数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../math/misc/" title="杂项" class="md-nav__link">
       杂项
     </a>
@@ -1800,8 +1812,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#treap" title="无旋式treap的核心操作" class="md-nav__link">
-    无旋式treap的核心操作
+  <a href="#treap" title="无旋式 treap 的核心操作" class="md-nav__link">
+    无旋式 treap 的核心操作
   </a>
   
     <nav class="md-nav">
@@ -1827,30 +1839,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#treapsetint" title="将treap包装成为set&lt;int&gt;" class="md-nav__link">
-    将treap包装成为set&lt;int&gt;
+  <a href="#treap-setint" title="将 treap 包装成为 set&lt;int&gt;" class="md-nav__link">
+    将 treap 包装成为 set&lt;int&gt;
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#count" title="count函数" class="md-nav__link">
-    count函数
+  <a href="#count" title="count 函数" class="md-nav__link">
+    count 函数
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#insert" title="insert函数" class="md-nav__link">
-    insert函数
+  <a href="#insert" title="insert 函数" class="md-nav__link">
+    insert 函数
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#erase" title="erase函数" class="md-nav__link">
-    erase函数
+  <a href="#erase" title="erase 函数" class="md-nav__link">
+    erase 函数
   </a>
   
 </li>
@@ -2866,8 +2878,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#treap" title="无旋式treap的核心操作" class="md-nav__link">
-    无旋式treap的核心操作
+  <a href="#treap" title="无旋式 treap 的核心操作" class="md-nav__link">
+    无旋式 treap 的核心操作
   </a>
   
     <nav class="md-nav">
@@ -2893,30 +2905,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#treapsetint" title="将treap包装成为set&lt;int&gt;" class="md-nav__link">
-    将treap包装成为set&lt;int&gt;
+  <a href="#treap-setint" title="将 treap 包装成为 set&lt;int&gt;" class="md-nav__link">
+    将 treap 包装成为 set&lt;int&gt;
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#count" title="count函数" class="md-nav__link">
-    count函数
+  <a href="#count" title="count 函数" class="md-nav__link">
+    count 函数
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#insert" title="insert函数" class="md-nav__link">
-    insert函数
+  <a href="#insert" title="insert 函数" class="md-nav__link">
+    insert 函数
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#erase" title="erase函数" class="md-nav__link">
-    erase函数
+  <a href="#erase" title="erase 函数" class="md-nav__link">
+    erase 函数
   </a>
   
 </li>
@@ -2953,12 +2965,12 @@
                 
                   <h1>Treap</h1>
                 
-                <p>treap是一种弱平衡的二叉搜索树。treap这个单词是tree和heap的组合，表明treap是一种由树和堆组合形成的数据结构。treap的每个结点上要额外储存一个值 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span>。treap除了要满足二叉搜索树的性质之外，还需满足父节点的 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span> 大于等于两个儿子的 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span>。而 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span> 是每个结点建立时随机生成的，因此treap是期望平衡的。</p>
-<p>treap分为旋转式和无旋式两种。两种treap都易于编写，但无旋式treap的操作方式使得它天生支持维护序列、可持久化等特性。这里以重新实现<code>set&lt;int&gt;</code>（不可重集合）为例，介绍无旋式treap。</p>
-<h2 id="treap">无旋式treap的核心操作<a class="headerlink" href="#treap" title="Permanent link">&para;</a></h2>
-<p>无旋式treap又称分裂合并treap。它仅有两种核心操作，即为分裂与合并。下面逐一介绍这两种操作。</p>
+                <p>treap 是一种弱平衡的二叉搜索树。treap 这个单词是 tree 和 heap 的组合，表明 treap 是一种由树和堆组合形成的数据结构。treap 的每个结点上要额外储存一个值 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span>。treap 除了要满足二叉搜索树的性质之外，还需满足父节点的 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span> 大于等于两个儿子的 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span>。而 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span> 是每个结点建立时随机生成的，因此 treap 是期望平衡的。</p>
+<p>treap 分为旋转式和无旋式两种。两种 treap 都易于编写，但无旋式 treap 的操作方式使得它天生支持维护序列、可持久化等特性。这里以重新实现 <code>set&lt;int&gt;</code>（不可重集合）为例，介绍无旋式 treap。</p>
+<h2 id="treap">无旋式 treap 的核心操作<a class="headerlink" href="#treap" title="Permanent link">&para;</a></h2>
+<p>无旋式 treap 又称分裂合并 treap。它仅有两种核心操作，即为分裂与合并。下面逐一介绍这两种操作。</p>
 <h3 id="split">分裂（split）<a class="headerlink" href="#split" title="Permanent link">&para;</a></h3>
-<p>分裂过程接受两个参数：根指针 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>、关键值 <span><span class="MathJax_Preview">key</span><script type="math/tex">key</script></span>。结果为将根指针指向的treap分裂为两个treap，第一个treap所有结点的关键值小于等于 <span><span class="MathJax_Preview">key</span><script type="math/tex">key</script></span>，第二个treap所有结点的关键值大于 <span><span class="MathJax_Preview">key</span><script type="math/tex">key</script></span>。该过程首先判断 <span><span class="MathJax_Preview">key</span><script type="math/tex">key</script></span> 是否小于 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 的关键值，若小于，则说明 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 及其右子树全部属于第二个treap，否则说明 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 及其左子树全部属于第一个treap。根据此判断决定应向左子树递归还是应向右子树递归，继续分裂子树。待子树分裂完成后按刚刚的判断情况连接 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 的左子树或右子树到递归分裂所得的子树中。</p>
+<p>分裂过程接受两个参数：根指针 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>、关键值 <span><span class="MathJax_Preview">key</span><script type="math/tex">key</script></span>。结果为将根指针指向的 treap 分裂为两个 treap，第一个 treap 所有结点的关键值小于等于 <span><span class="MathJax_Preview">key</span><script type="math/tex">key</script></span>，第二个 treap 所有结点的关键值大于 <span><span class="MathJax_Preview">key</span><script type="math/tex">key</script></span>。该过程首先判断 <span><span class="MathJax_Preview">key</span><script type="math/tex">key</script></span> 是否小于 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 的关键值，若小于，则说明 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 及其右子树全部属于第二个 treap，否则说明 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 及其左子树全部属于第一个 treap。根据此判断决定应向左子树递归还是应向右子树递归，继续分裂子树。待子树分裂完成后按刚刚的判断情况连接 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 的左子树或右子树到递归分裂所得的子树中。</p>
 <div class="codehilite"><pre><span></span><span class="n">pair</span><span class="o">&lt;</span><span class="n">node</span><span class="o">*</span><span class="p">,</span> <span class="n">node</span><span class="o">*&gt;</span> <span class="n">split</span><span class="p">(</span><span class="n">node</span> <span class="o">*</span><span class="n">u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">u</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">make_pair</span><span class="p">(</span><span class="k">nullptr</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">);</span>
@@ -2977,7 +2989,7 @@
 </pre></div>
 
 <h3 id="merge">合并（merge）<a class="headerlink" href="#merge" title="Permanent link">&para;</a></h3>
-<p>合并过程接受两个参数：左treap的根指针 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>、右treap的根指针 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>。必须满足 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 中所有结点的关键值小于等于 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 中左右结点的关键值。因为两个treap已经有序，我们只需要考虑 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span> 来决定哪个treap应与另一个treap的儿子合并。若 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 的根结点的 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span> 大于 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的，那么 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 即为新根结点，<span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 应与 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 的右子树合并；反之，则 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 作为新根结点，然后让 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 与 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的左子树合并。不难发现，这样合并所得的树依然满足 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span> 的大根堆性质。</p>
+<p>合并过程接受两个参数：左 treap 的根指针 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>、右 treap 的根指针 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>。必须满足 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 中所有结点的关键值小于等于 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 中左右结点的关键值。因为两个 treap 已经有序，我们只需要考虑 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span> 来决定哪个 treap 应与另一个 treap 的儿子合并。若 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 的根结点的 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span> 大于 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的，那么 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 即为新根结点，<span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 应与 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 的右子树合并；反之，则 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 作为新根结点，然后让 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 与 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的左子树合并。不难发现，这样合并所得的树依然满足 <span><span class="MathJax_Preview">priority</span><script type="math/tex">priority</script></span> 的大根堆性质。</p>
 <div class="codehilite"><pre><span></span><span class="n">node</span><span class="o">*</span> <span class="nf">merge</span><span class="p">(</span><span class="n">node</span> <span class="o">*</span><span class="n">u</span><span class="p">,</span> <span class="n">node</span> <span class="o">*</span><span class="n">v</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">u</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">v</span><span class="p">;</span>
@@ -2996,8 +3008,8 @@
 <span class="p">}</span>
 </pre></div>
 
-<h2 id="treapsetint">将treap包装成为<code>set&lt;int&gt;</code><a class="headerlink" href="#treapsetint" title="Permanent link">&para;</a></h2>
-<h3 id="count">count函数<a class="headerlink" href="#count" title="Permanent link">&para;</a></h3>
+<h2 id="treap-setint">将 treap 包装成为 <code>set&lt;int&gt;</code><a class="headerlink" href="#treap-setint" title="Permanent link">&para;</a></h2>
+<h3 id="count">count 函数<a class="headerlink" href="#count" title="Permanent link">&para;</a></h3>
 <p>直接依靠二叉搜索树的性质查找即可。</p>
 <div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="n">node</span> <span class="o">*</span><span class="n">u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">u</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
@@ -3019,8 +3031,8 @@
 <span class="p">}</span>
 </pre></div>
 
-<h3 id="insert">insert函数<a class="headerlink" href="#insert" title="Permanent link">&para;</a></h3>
-<p>先在待插入的关键值处将整棵treap分裂，判断关键值是否已插入过之后新建一个结点，包含待插入的关键值，然后进行两次合并操作即可。</p>
+<h3 id="insert">insert 函数<a class="headerlink" href="#insert" title="Permanent link">&para;</a></h3>
+<p>先在待插入的关键值处将整棵 treap 分裂，判断关键值是否已插入过之后新建一个结点，包含待插入的关键值，然后进行两次合并操作即可。</p>
 <div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">pair</span><span class="o">&lt;</span><span class="n">node</span><span class="o">*</span><span class="p">,</span> <span class="n">node</span><span class="o">*&gt;</span> <span class="n">o</span> <span class="o">=</span> <span class="n">split</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">find</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
@@ -3030,8 +3042,8 @@
 <span class="p">}</span>
 </pre></div>
 
-<h3 id="erase">erase函数<a class="headerlink" href="#erase" title="Permanent link">&para;</a></h3>
-<p>将具有待删除的关键值的结点从整棵treap中孤立出来（进行两侧分裂操作），删除中间的一段（具有待删除关键值），再将左右两端合并即可。</p>
+<h3 id="erase">erase 函数<a class="headerlink" href="#erase" title="Permanent link">&para;</a></h3>
+<p>将具有待删除的关键值的结点从整棵 treap 中孤立出来（进行两侧分裂操作），删除中间的一段（具有待删除关键值），再将左右两端合并即可。</p>
 <div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">erase</span><span class="p">(</span><span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">pair</span><span class="o">&lt;</span><span class="n">node</span><span class="o">*</span><span class="p">,</span> <span class="n">node</span><span class="o">*&gt;</span> <span class="n">o</span> <span class="o">=</span> <span class="n">split</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">key</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
     <span class="n">pair</span><span class="o">&lt;</span><span class="n">node</span><span class="o">*</span><span class="p">,</span> <span class="n">node</span><span class="o">*&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">split</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">second</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span>

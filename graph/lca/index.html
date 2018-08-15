@@ -106,6 +106,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -1510,6 +1514,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../math/complex/" title="复数" class="md-nav__link">
+      复数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../math/misc/" title="杂项" class="md-nav__link">
       杂项
     </a>
@@ -2130,9 +2146,83 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        最近公共祖先
+      </label>
+    
     <a href="./" title="最近公共祖先" class="md-nav__link md-nav__link--active">
       最近公共祖先
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="定义" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="求法" class="md-nav__link">
+    求法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="暴力做法" class="md-nav__link">
+    暴力做法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="倍增" class="md-nav__link">
+    倍增
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tarjan" title="Tarjan 算法" class="md-nav__link">
+    Tarjan 算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmq" title="转化为 RMQ 问题" class="md-nav__link">
+    转化为 RMQ 问题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2761,6 +2851,82 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="定义" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="求法" class="md-nav__link">
+    求法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="暴力做法" class="md-nav__link">
+    暴力做法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="倍增" class="md-nav__link">
+    倍增
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tarjan" title="Tarjan 算法" class="md-nav__link">
+    Tarjan 算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmq" title="转化为 RMQ 问题" class="md-nav__link">
+    转化为 RMQ 问题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2771,7 +2937,14 @@
                 
                   <h1>最近公共祖先</h1>
                 
-                
+                <h2 id="_1">定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>最近公共祖先简称 LCA（Lowest Common Ancestor）。两个节点的最近公共祖先，就是这两个点的公共祖先里面，离根最远的那个。</p>
+<h2 id="_2">求法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">暴力做法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>可以每次找深度比较大的那个点，让它向上跳。显然在树上，这两个点最后一定会相遇，相遇的位置就是想要求的 LCA。</p>
+<h3 id="_4">倍增<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="tarjan">Tarjan 算法<a class="headerlink" href="#tarjan" title="Permanent link">&para;</a></h3>
+<h3 id="rmq">转化为 RMQ 问题<a class="headerlink" href="#rmq" title="Permanent link">&para;</a></h3>
                 
                   
                 

@@ -106,6 +106,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -1510,6 +1514,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../math/complex/" title="复数" class="md-nav__link">
+      复数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../math/misc/" title="杂项" class="md-nav__link">
       杂项
     </a>
@@ -2166,9 +2182,76 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        树的其他问题
+      </label>
+    
     <a href="./" title="树的其他问题" class="md-nav__link md-nav__link--active">
       树的其他问题
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="树的重心" class="md-nav__link">
+    树的重心
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="定义" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="性质" class="md-nav__link">
+    性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="求法" class="md-nav__link">
+    求法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="参考" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2761,6 +2844,75 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="树的重心" class="md-nav__link">
+    树的重心
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="定义" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="性质" class="md-nav__link">
+    性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="求法" class="md-nav__link">
+    求法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="参考" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2771,7 +2923,56 @@
                 
                   <h1>树的其他问题</h1>
                 
-                
+                <h2 id="_1">树的重心<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">定义<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>以这个点为根，那么所有的子树（不算整个树自身）的大小都不超过整个树大小的一半。</p>
+<p>找到一个点，其所有的子树中最大的子树节点数最少, 那么这个点就是这棵树的重心。</p>
+<p>删去重心后，生成的多棵树尽可能平衡。</p>
+<h3 id="_3">性质<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>树中所有点到某个点的距离和中，到重心的距离和是最小的；如果有两个重心，那么他们的距离和一样。</p>
+<p>把两个树通过一条边相连得到一个新的树，那么新的树的重心在连接原来两个树的重心的路径上。</p>
+<p>把一个树添加或删除一个叶子，那么它的重心最多只移动一条边的距离。</p>
+<h3 id="_4">求法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>树的重心可以通过简单的两次搜索求出。</p>
+<ol>
+<li>第一遍搜索求出每个结点的子结点数量 <span><span class="MathJax_Preview">sz[u]</span><script type="math/tex">sz[u]</script></span></li>
+<li>第二遍搜索找出使 <span><span class="MathJax_Preview">max\{sz[u],n-sz[u]-1\}</span><script type="math/tex">max\{sz[u],n-sz[u]-1\}</script></span> 最小的结点。</li>
+</ol>
+<p>实际上这两步操作可以在一次遍历中解决。对结点 u 的每一个儿子 v，递归的处理 v，求出 sz[v]，然后判断是否是结点数最多的子树，处理完所有子结点后，判断 u 是否为重心。</p>
+<p>（代码来自叉姐）
+<div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">CenterTree</span><span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">siz</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">son</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+    <span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">,</span><span class="kt">int</span> <span class="n">pa</span><span class="p">){</span>
+        <span class="n">son</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">res</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">head</span><span class="p">[</span><span class="n">u</span><span class="p">];</span><span class="n">i</span><span class="o">!=-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">=</span><span class="n">edges</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">v</span><span class="o">=</span><span class="n">edges</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">v</span><span class="o">==</span><span class="n">pa</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">vis</span><span class="p">[</span><span class="n">v</span><span class="p">])</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">u</span><span class="p">);</span>
+            <span class="n">son</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+=</span><span class="n">son</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+            <span class="n">res</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">son</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">res</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="n">son</span><span class="p">[</span><span class="n">u</span><span class="p">]);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">res</span><span class="o">&lt;</span><span class="n">siz</span><span class="p">){</span>
+            <span class="n">ans</span><span class="o">=</span><span class="n">u</span><span class="p">;</span>
+            <span class="n">siz</span><span class="o">=</span><span class="n">res</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="nf">getCenter</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+        <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="n">siz</span><span class="o">=</span><span class="n">INF</span><span class="p">;</span>
+        <span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></p>
+<h2 id="_5">参考<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><a href="http://fanhq666.blog.163.com/blog/static/81943426201172472943638/">http://fanhq666.blog.163.com/blog/static/81943426201172472943638/</a></p>
+<p><a href="https://www.cnblogs.com/zinthos/p/3899075.html">https://www.cnblogs.com/zinthos/p/3899075.html</a></p>
                 
                   
                 

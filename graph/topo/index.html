@@ -1514,6 +1514,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../math/complex/" title="复数" class="md-nav__link">
+      复数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../math/misc/" title="杂项" class="md-nav__link">
       杂项
     </a>
@@ -2916,7 +2928,7 @@
 <p>拓扑排序要解决的问题是给一个图的所有节点排序，而图中有若干限制，形如：“点 x 要在点 y 后面”。</p>
 <p>举个现实一些的栗子，比如你去给刚开始学 OI 的同学们讲课，你会发现有很多知识点需要前置技能才能够听懂，并非是所有人都可以第一天就学明白 <a href="/data-structure/intermediate/segment">线段树</a>。怎么办呢？讲课的时候是需要按顺序来的，并不能同时讲若干个知识点。这时候就需要用到拓扑排序了。</p>
 <p>形式化定义一下：</p>
-<p>给定一个 [DAG （有向无环图）])(dag)，如果从 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 到 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 有边，啧认为 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 依赖于 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>。如果 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 到 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 有路径（<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 可达 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>），则称 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 间接依赖于 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>。</p>
+<p>给定一个 <a href="/graph/dag">DAG （有向无环图）</a>，如果从 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 到 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 有边，啧认为 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 依赖于 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>。如果 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 到 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 有路径（<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 可达 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>），则称 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 间接依赖于 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>。</p>
 <p>拓扑排序的目标是将所有节点排序，使得排在前面的节点不能依赖于排在后面的节点。</p>
 <h2 id="_2">拓扑排序算法及实现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="_3">算法思路<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
