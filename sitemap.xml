@@ -821,6 +821,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://oi-wiki.cf/misc/matrix-tree/</loc>
+     <lastmod>2018-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://oi-wiki.cf/misc/random-incremental/</loc>
      <lastmod>2018-08-15</lastmod>
      <changefreq>daily</changefreq>
