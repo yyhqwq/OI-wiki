@@ -106,6 +106,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../../#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -1919,10 +1923,89 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        平衡树套线段树
+      </label>
     
     <a href="./" title="平衡树套线段树" class="md-nav__link md-nav__link--active">
       平衡树套线段树
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="常见用途" class="md-nav__link">
+    常见用途
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="实现原理" class="md-nav__link">
+    实现原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="空间复杂度" class="md-nav__link">
+    空间复杂度
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="时间复杂度" class="md-nav__link">
+    时间复杂度
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="经典例题" class="md-nav__link">
+    经典例题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="示例代码" class="md-nav__link">
+    示例代码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="相关算法" class="md-nav__link">
+    相关算法
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2789,6 +2872,85 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="常见用途" class="md-nav__link">
+    常见用途
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="实现原理" class="md-nav__link">
+    实现原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="空间复杂度" class="md-nav__link">
+    空间复杂度
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="时间复杂度" class="md-nav__link">
+    时间复杂度
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="经典例题" class="md-nav__link">
+    经典例题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="示例代码" class="md-nav__link">
+    示例代码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="相关算法" class="md-nav__link">
+    相关算法
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2797,9 +2959,75 @@
                   <a href="https://github.com/24OI/OI-wiki/blob/master/docs/data-structure/advanced/balanced-in-seg.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>平衡树套线段树</h1>
-                
-                
+                <h1 id="_1">线段树套平衡树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="_2">常见用途<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>在算法竞赛中，我们有时需要维护多维度信息。在这种时候，我们经常需要树套树来记录信息。当需要维护前驱，后继，第<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>大，某个数的排名，或者插入删除的时候，我们通常需要使用平衡树来满足我们的需求，即线段树套平衡树。</p>
+<h3 id="_3">实现原理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>我们以<strong>二逼平衡树</strong>为例，来解释实现原理。</p>
+<p>关于树套树的构建，我们对于外层线段树正常建树，对于线段树上的某一个节点，建立一棵平衡树，包含该节点所覆盖的序列。具体操作时我们可以将序列元素一个个插入，每经过一个线段树节点，就将该元素加入到该节点的平衡树中。</p>
+<p>操作一，求某区间中某值的排名：我们对于外层线段树正常操作，对于在某区间中的节点的平衡树，我们返回平衡树中比该值小的元素个数，合并区间时，我们将小的元素个数求和即可。最后将返回值<span><span class="MathJax_Preview">+1</span><script type="math/tex">+1</script></span>，即为某值在某区间中的排名。</p>
+<p>操作二，求某区间中排名为<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>的值：我们可以采用二分策略。因为一个元素可能存在多个，其排名为一区间，且有些元素原序列不存在。所以我们采取和操作一类似的思路，我们用小于该值的元素个数作为参考进行二分，即可得解。</p>
+<p>操作三，将某个数替换为另外一个数：我们只要在所有包含某数的平衡树中删除某数，然后再插入另外一个数即可。外层依旧正常线段树操作。</p>
+<p>操作四，求某区间中某值的前驱：我们对于外层线段树正常操作，对于在某区间中的节点的平衡树，我们返回某值在该平衡树中的前驱，线段树的区间结果合并时，我们取最大值即可。</p>
+<h3 id="_4">空间复杂度<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>我们每个元素加入logn个平衡树，所以空间复杂度为<span><span class="MathJax_Preview">(n + q)\log{n}</span><script type="math/tex">(n + q)\log{n}</script></span>。</p>
+<h3 id="_5">时间复杂度<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>对于<span><span class="MathJax_Preview">1，2，4</span><script type="math/tex">1，2，4</script></span>操作，我们考虑我们在外层线段树上进<span><span class="MathJax_Preview">\log{n}</span><script type="math/tex">\log{n}</script></span>次操作，每次操作会在一个内层平衡树树上进行<span><span class="MathJax_Preview">\log{n}</span><script type="math/tex">\log{n}</script></span>次操作，所以时间复杂度为<span><span class="MathJax_Preview">\log^2{n}</span><script type="math/tex">\log^2{n}</script></span>。
+对于3操作，多一个二分过程，为<span><span class="MathJax_Preview">\log^3{n}</span><script type="math/tex">\log^3{n}</script></span>。</p>
+<h3 id="_6">经典例题<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3196">二逼平衡树</a> 外层线段树，内层平衡树。</p>
+<h3 id="_7">示例代码<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>平衡树部分代码请参考splay等其他条目。<a href="https://oi-wiki.cf/data-structure/intermediate/splay/">传送至splay条目</a></p>
+<p>操作一
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">vec_rank</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">l</span> <span class="o">&amp;&amp;</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">spy</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">chk_rank</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">)</span> <span class="n">res</span> <span class="o">+=</span> <span class="n">vec_rank</span><span class="p">(</span><span class="n">k</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">mid</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">t</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="p">)</span> <span class="n">res</span> <span class="o">+=</span> <span class="n">vec_rank</span><span class="p">(</span><span class="n">k</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">1</span><span class="p">,</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">t</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">mid</span> <span class="o">&amp;&amp;</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="p">)</span> <span class="n">res</span><span class="o">--</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">res</span><span class="p">;</span> 
+<span class="p">}</span>
+</pre></div>
+操作二
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">el</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">er</span> <span class="o">=</span> <span class="mi">100000001</span><span class="p">,</span><span class="n">emid</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">el</span> <span class="o">!=</span> <span class="n">er</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">emid</span> <span class="o">=</span> <span class="n">el</span> <span class="o">+</span> <span class="n">er</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">vec_rank</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">tl</span><span class="p">,</span><span class="n">tr</span><span class="p">,</span><span class="n">emid</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">tk</span><span class="p">)</span> <span class="n">el</span> <span class="o">=</span> <span class="n">emid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">else</span> <span class="n">er</span> <span class="o">=</span> <span class="n">emid</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">el</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</pre></div>
+操作三
+<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">vec_chg</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">loc</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="n">spy</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">find</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="n">loc</span><span class="p">]);</span>
+    <span class="n">spy</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">dele</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+    <span class="n">spy</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">insert</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">==</span> <span class="n">r</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">loc</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">)</span> <span class="n">vec_chg</span><span class="p">(</span><span class="n">k</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">mid</span><span class="p">,</span><span class="n">loc</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">loc</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="p">)</span> <span class="n">vec_chg</span><span class="p">(</span><span class="n">k</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">1</span><span class="p">,</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">loc</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+操作四
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">vec_front</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">l</span> <span class="o">&amp;&amp;</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="n">spy</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">chk_front</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">)</span> <span class="n">res</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">vec_front</span><span class="p">(</span><span class="n">k</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">mid</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">t</span><span class="p">));</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="p">)</span> <span class="n">res</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">vec_front</span><span class="p">(</span><span class="n">k</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">1</span><span class="p">,</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">t</span><span class="p">));</span>
+    <span class="k">return</span> <span class="n">res</span><span class="p">;</span> 
+<span class="p">}</span>
+</pre></div></p>
+<h3 id="_8">相关算法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>面对多维度信息的题目时，如果题目没有要求强制在线，我们还可以考虑<strong>CDQ分治</strong>，或者<strong>整体二分</strong>等分治算法，来避免使用高级数据结构，减少代码实现难度。</p>
                 
                   
                 
