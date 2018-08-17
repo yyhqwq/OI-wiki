@@ -2765,10 +2765,30 @@
     定理的应用
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="直接利用本定理" class="md-nav__link">
+    直接利用本定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="与其它问题相结合" class="md-nav__link">
+    与其它问题相结合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="注释" class="md-nav__link">
+  <a href="#_8" title="注释" class="md-nav__link">
     注释
   </a>
   
@@ -2925,10 +2945,30 @@
     定理的应用
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="直接利用本定理" class="md-nav__link">
+    直接利用本定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="与其它问题相结合" class="md-nav__link">
+    与其它问题相结合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="注释" class="md-nav__link">
+  <a href="#_8" title="注释" class="md-nav__link">
     注释
   </a>
   
@@ -2987,8 +3027,8 @@
 <div class="MathJax_Preview">D^{out}_{ii}(G) = \mathrm{deg^{out}}(i), D^{out}_{ij} = 0, i\neq j</div>
 <script type="math/tex; mode=display">D^{out}_{ii}(G) = \mathrm{deg^{out}}(i), D^{out}_{ij} = 0, i\neq j</script>
 </div>
-<p>类似地定理入度矩阵<span><span class="MathJax_Preview">D^{in}(G)</span><script type="math/tex">D^{in}(G)</script></span>
-设<span><span class="MathJax_Preview">\#e(i,j)</span><script type="math/tex">\#e(i,j)</script></span>为点<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>指向点<span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>的有向边数，并定义邻接矩阵<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>为：</p>
+<p>类似地定理入度矩阵<span><span class="MathJax_Preview">D^{in}(G)</span><script type="math/tex">D^{in}(G)</script></span></p>
+<p>设<span><span class="MathJax_Preview">\#e(i,j)</span><script type="math/tex">\#e(i,j)</script></span>为点<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>指向点<span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>的有向边数，并定义邻接矩阵<span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>为：</p>
 <div>
 <div class="MathJax_Preview">A_{ij}(G)=\#e(i,j), i\neq j</div>
 <script type="math/tex; mode=display">A_{ij}(G)=\#e(i,j), i\neq j</script>
@@ -2998,37 +3038,159 @@
 <div class="MathJax_Preview">L^{out}(G) = D^{out}(G) - A(G)</div>
 <script type="math/tex; mode=display">L^{out}(G) = D^{out}(G) - A(G)</script>
 </div>
-<p>类似地定义入度Laplace矩阵<span><span class="MathJax_Preview">L^{in}</span><script type="math/tex">L^{in}</script></span>。
-记图<span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的以<span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>为根的所有根向树形图个数为<span><span class="MathJax_Preview">t^{root}(G,r)</span><script type="math/tex">t^{root}(G,r)</script></span>。所谓根向树形图，是说这张图的基图是一棵树，所有的边全部指向父亲。
-记图<span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的以<span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>为根的所有叶向树形图个数为<span><span class="MathJax_Preview">t^{leaf}(G,r)</span><script type="math/tex">t^{leaf}(G,r)</script></span>。所谓叶向树形图，是说这张图的基图是一棵树，所有的边全部指向儿子。</p>
+<p>类似地定义入度Laplace矩阵<span><span class="MathJax_Preview">L^{in}</span><script type="math/tex">L^{in}</script></span>。</p>
+<p>记图<span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的以<span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>为根的所有根向树形图个数为<span><span class="MathJax_Preview">t^{root}(G,r)</span><script type="math/tex">t^{root}(G,r)</script></span>。所谓根向树形图，是说这张图的基图是一棵树，所有的边全部指向父亲。</p>
+<p>记图<span><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的以<span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>为根的所有叶向树形图个数为<span><span class="MathJax_Preview">t^{leaf}(G,r)</span><script type="math/tex">t^{leaf}(G,r)</script></span>。所谓叶向树形图，是说这张图的基图是一棵树，所有的边全部指向儿子。</p>
 <h2 id="_4">定理叙述<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>矩阵树定理具有多种形式。其中用得较多的是定理1、定理3与定理4。</p>
-<p><strong>定理1(矩阵树定理，无向图行列式形式)</strong> 对于任意的<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，都有</p>
+<p><strong>定理1 (矩阵树定理，无向图行列式形式)</strong> 对于任意的<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，都有</p>
 <div>
 <div class="MathJax_Preview">t(G) = \det L(G)\binom{1,2,...,i-1,i+1,...,n}{1,2,...,i-1,i+1,...,n}</div>
 <script type="math/tex; mode=display">t(G) = \det L(G)\binom{1,2,...,i-1,i+1,...,n}{1,2,...,i-1,i+1,...,n}</script>
 </div>
 <p>其中记号<span><span class="MathJax_Preview">L(G)\binom{1,2,...,i-1,i+1,...,n}{1,2,...,i-1,i+1,...,n}</span><script type="math/tex">L(G)\binom{1,2,...,i-1,i+1,...,n}{1,2,...,i-1,i+1,...,n}</script></span>表示矩阵<span><span class="MathJax_Preview">L(G)</span><script type="math/tex">L(G)</script></span>的第<span><span class="MathJax_Preview">1,...,i-1,i+1,...,n</span><script type="math/tex">1,...,i-1,i+1,...,n</script></span>行与第<span><span class="MathJax_Preview">1,...,i-1,i+1,...,n</span><script type="math/tex">1,...,i-1,i+1,...,n</script></span>列构成的子矩阵。也就是说，无向图的Laplace矩阵具有这样的性质，它的所有<span><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span>阶主子式都相等。</p>
-<p><strong>定理2(矩阵树定理，无向图特征值形式)</strong> 设<span><span class="MathJax_Preview">\lambda_1, \lambda_2, ..., \lambda_{n-1}</span><script type="math/tex">\lambda_1, \lambda_2, ..., \lambda_{n-1}</script></span>为<span><span class="MathJax_Preview">L(G)</span><script type="math/tex">L(G)</script></span>的<span><span class="MathJax_Preview">n - 1</span><script type="math/tex">n - 1</script></span>个非零特征值，那么有</p>
+<p><strong>定理2 (矩阵树定理，无向图特征值形式)</strong> 设<span><span class="MathJax_Preview">\lambda_1, \lambda_2, ..., \lambda_{n-1}</span><script type="math/tex">\lambda_1, \lambda_2, ..., \lambda_{n-1}</script></span>为<span><span class="MathJax_Preview">L(G)</span><script type="math/tex">L(G)</script></span>的<span><span class="MathJax_Preview">n - 1</span><script type="math/tex">n - 1</script></span>个非零特征值，那么有</p>
 <div>
 <div class="MathJax_Preview">t(G) = \frac{1}{n}\lambda_1\lambda_2...\lambda_{n-1}</div>
 <script type="math/tex; mode=display">t(G) = \frac{1}{n}\lambda_1\lambda_2...\lambda_{n-1}</script>
 </div>
-<p><strong>定理3(矩阵树定理，有向图根向形式)</strong> 对于任意的<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，都有</p>
+<p><strong>定理3 (矩阵树定理，有向图根向形式)</strong> 对于任意的<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，都有</p>
 <div>
 <div class="MathJax_Preview">t^{root}(G,k) = \det L^{out}(G)\binom{1,2,...,k-1,k+1,...,n}{1,2,...,k-1,k+1,...,n}</div>
 <script type="math/tex; mode=display">t^{root}(G,k) = \det L^{out}(G)\binom{1,2,...,k-1,k+1,...,n}{1,2,...,k-1,k+1,...,n}</script>
 </div>
 <p>因此如果要统计一张图所有的根向树形图，只要枚举所有的根<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>并对<span><span class="MathJax_Preview">t^{root}(G,k)</span><script type="math/tex">t^{root}(G,k)</script></span>求和即可。</p>
-<p><strong>定理4(矩阵树定理，有向图叶向形式)</strong> 对于任意的<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，都有</p>
+<p><strong>定理4 (矩阵树定理，有向图叶向形式)</strong> 对于任意的<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，都有</p>
 <div>
 <div class="MathJax_Preview">t^{leaf}(G,k) = \det L^{in}(G)\binom{1,2,...,k-1,k+1,...,n}{1,2,...,k-1,k+1,...,n}</div>
 <script type="math/tex; mode=display">t^{leaf}(G,k) = \det L^{in}(G)\binom{1,2,...,k-1,k+1,...,n}{1,2,...,k-1,k+1,...,n}</script>
 </div>
 <p>因此如果要统计一张图所有的叶向树形图，只要枚举所有的根<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>并对<span><span class="MathJax_Preview">t^{leaf}(G,k)</span><script type="math/tex">t^{leaf}(G,k)</script></span>求和即可。</p>
 <h2 id="_5">定理的应用<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="_6">直接利用本定理<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="admonition 例题1">
+<p class="admonition-title">例题1</p>
+<p>[HEOI2015]小Z的房间，请参考https://<a href="http://www.lydsy.com/JudgeOnline/problem.php?id=4031">www.lydsy.com/JudgeOnline/problem.php?id=4031</a></p>
+</div>
+<p><strong>解</strong> 矩阵树定理的裸题。将每个空房间看作一个结点，根据输入的信息建图，得到Laplace矩阵后，任意删掉L的第<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>行第<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>列，求这个子式的行列式即可。求行列式的方法就是高斯消元成上三角阵然后算对角线积。另外本题需要在模<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>的整数子环<span><span class="MathJax_Preview">\mathbb{Z}_k</span><script type="math/tex">\mathbb{Z}_k</script></span>上进行高斯消元，采用辗转相除法即可。</p>
+<div class="admonition 例题2">
+<p class="admonition-title">例题2</p>
+<p>[FJOI2007]轮状病毒。请参考https://<a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1002">www.lydsy.com/JudgeOnline/problem.php?id=1002</a></p>
+</div>
+<p><strong>解</strong> 本题的解法很多，这里用矩阵树定理是最直接的解法。当输入为<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>时，容易写出其<span><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span>阶的Laplace矩阵为：</p>
+<div>
+<div class="MathJax_Preview">
+L_n = \begin{bmatrix}
+n&amp;  -1&amp; -1&amp; -1&amp; \cdots&amp; -1&amp; -1\\
+-1&amp; 3&amp;  -1&amp; 0&amp;  \cdots&amp; 0&amp;  -1\\
+-1&amp; -1&amp; 3&amp;  -1&amp; \cdots&amp; 0&amp;  0\\
+-1&amp; 0&amp;  -1&amp; 3&amp;  \cdots&amp; 0&amp;  0\\
+\vdots&amp; \vdots&amp; \vdots&amp; \vdots&amp; \ddots&amp; \vdots&amp; \vdots\\
+-1&amp; 0&amp;  0&amp;  0&amp;  \cdots&amp; 3&amp;  -1\\
+-1&amp; -1&amp; 0&amp;  0&amp;  \cdots&amp; -1&amp; 3\\
+\end{bmatrix}_{n+1}
+</div>
+<script type="math/tex; mode=display">
+L_n = \begin{bmatrix}
+n&  -1& -1& -1& \cdots& -1& -1\\
+-1& 3&  -1& 0&  \cdots& 0&  -1\\
+-1& -1& 3&  -1& \cdots& 0&  0\\
+-1& 0&  -1& 3&  \cdots& 0&  0\\
+\vdots& \vdots& \vdots& \vdots& \ddots& \vdots& \vdots\\
+-1& 0&  0&  0&  \cdots& 3&  -1\\
+-1& -1& 0&  0&  \cdots& -1& 3\\
+\end{bmatrix}_{n+1}
+</script>
+</div>
+<p>求出它的<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>阶子式的行列式即可，剩下的只有高精度计算了。</p>
+<p>!!! 例题2'
+    将例题2的数据加强，要求<span><span class="MathJax_Preview">n\leq 100000</span><script type="math/tex">n\leq 100000</script></span>，但是答案对1000007取模。（本题求解需要一些线性代数知识）</p>
+<p><strong>解</strong> 注意到<span><span class="MathJax_Preview">L_n</span><script type="math/tex">L_n</script></span>删掉第1行第1列以后得到的矩阵很有规律，因此其实就是在求矩阵</p>
+<div>
+<div class="MathJax_Preview">
+M_n = \begin{bmatrix}
+3&amp;  -1&amp; 0&amp;  \cdots&amp; 0&amp;  -1\\
+-1&amp; 3&amp;  -1&amp; \cdots&amp; 0&amp;  0\\
+0&amp;  -1&amp; 3&amp;  \cdots&amp; 0&amp;  0\\
+\vdots&amp; \vdots&amp; \vdots&amp; \ddots&amp; \vdots&amp; \vdots\\
+0&amp;  0&amp;  0&amp;  \cdots&amp; 3&amp;  -1\\
+-1&amp; 0&amp;  0&amp;  \cdots&amp; -1&amp; 3\\
+\end{bmatrix}_{n}
+</div>
+<script type="math/tex; mode=display">
+M_n = \begin{bmatrix}
+3&  -1& 0&  \cdots& 0&  -1\\
+-1& 3&  -1& \cdots& 0&  0\\
+0&  -1& 3&  \cdots& 0&  0\\
+\vdots& \vdots& \vdots& \ddots& \vdots& \vdots\\
+0&  0&  0&  \cdots& 3&  -1\\
+-1& 0&  0&  \cdots& -1& 3\\
+\end{bmatrix}_{n}
+</script>
+</div>
+<p>的行列式。对<span><span class="MathJax_Preview">M_n</span><script type="math/tex">M_n</script></span>的行列式按第一列展开，得到</p>
+<div>
+<div class="MathJax_Preview">
+\det M_n = 3\det \begin{bmatrix}
+3&amp;  -1&amp; \cdots&amp; 0&amp;  0\\
+-1&amp; 3&amp;  \cdots&amp; 0&amp;  0\\
+\vdots&amp; \vdots&amp; \ddots&amp; \vdots&amp; \vdots\\
+0&amp;  0&amp;  \cdots&amp; 3&amp;  -1\\
+0&amp;  0&amp;  \cdots&amp; -1&amp; 3\\
+\end{bmatrix}_{n-1} + \det\begin{bmatrix}
+-1&amp; 0&amp;  \cdots&amp; 0&amp;  -1\\
+-1&amp; 3&amp;  \cdots&amp; 0&amp;  0\\
+\vdots&amp; \vdots&amp; \ddots&amp; \vdots&amp; \vdots\\
+0&amp;  0&amp;  \cdots&amp; 3&amp;  -1\\
+0&amp;  0&amp;  \cdots&amp; -1&amp; 3\\
+\end{bmatrix}_{n-1} + (-1)^n \det\begin{bmatrix}
+-1&amp; 0&amp;  \cdots&amp; 0&amp;  -1\\
+3&amp;  -1&amp; \cdots&amp; 0&amp;  0\\
+-1&amp; 3&amp;  \cdots&amp; 0&amp;  0\\
+\vdots&amp; \vdots&amp; \ddots&amp; \vdots&amp; \vdots\\
+0&amp;  0&amp;  \cdots&amp; 3&amp;  -1\\
+\end{bmatrix}_{n-1}
+</div>
+<script type="math/tex; mode=display">
+\det M_n = 3\det \begin{bmatrix}
+3&  -1& \cdots& 0&  0\\
+-1& 3&  \cdots& 0&  0\\
+\vdots& \vdots& \ddots& \vdots& \vdots\\
+0&  0&  \cdots& 3&  -1\\
+0&  0&  \cdots& -1& 3\\
+\end{bmatrix}_{n-1} + \det\begin{bmatrix}
+-1& 0&  \cdots& 0&  -1\\
+-1& 3&  \cdots& 0&  0\\
+\vdots& \vdots& \ddots& \vdots& \vdots\\
+0&  0&  \cdots& 3&  -1\\
+0&  0&  \cdots& -1& 3\\
+\end{bmatrix}_{n-1} + (-1)^n \det\begin{bmatrix}
+-1& 0&  \cdots& 0&  -1\\
+3&  -1& \cdots& 0&  0\\
+-1& 3&  \cdots& 0&  0\\
+\vdots& \vdots& \ddots& \vdots& \vdots\\
+0&  0&  \cdots& 3&  -1\\
+\end{bmatrix}_{n-1}
+</script>
+</div>
+<p>上述三个矩阵的行列式记为<span><span class="MathJax_Preview">d_{n-1}, a_{n-1}, b_{n-1}</span><script type="math/tex">d_{n-1}, a_{n-1}, b_{n-1}</script></span>。注意到<span><span class="MathJax_Preview">d_n</span><script type="math/tex">d_n</script></span>是三对角行列式，采用类似的展开的方法可以得到<span><span class="MathJax_Preview">d_n</span><script type="math/tex">d_n</script></span>具有递推公式<span><span class="MathJax_Preview">d_n=3d_{n-1}-d_{n-2}</span><script type="math/tex">d_n=3d_{n-1}-d_{n-2}</script></span>。类似地，采用展开的方法可以得到<span><span class="MathJax_Preview">a_{n-1}=-d_{n-2}-1</span><script type="math/tex">a_{n-1}=-d_{n-2}-1</script></span>，以及<span><span class="MathJax_Preview">(-1)^n b_{n-1}=-d_{n-2}-1</span><script type="math/tex">(-1)^n b_{n-1}=-d_{n-2}-1</script></span>。将这些递推公式代入上式，得到</p>
+<div>
+<div class="MathJax_Preview">\det M_n = 3d_{n-1}-2d_{n-2}-2</div>
+<script type="math/tex; mode=display">\det M_n = 3d_{n-1}-2d_{n-2}-2</script>
+</div>
+<div>
+<div class="MathJax_Preview">d_n = 3d_{n-1}-d_{n-2}</div>
+<script type="math/tex; mode=display">d_n = 3d_{n-1}-d_{n-2}</script>
+</div>
+<p>于是猜测<span><span class="MathJax_Preview">\det M_n</span><script type="math/tex">\det M_n</script></span>也是非齐次的二阶线性递推。采用待定系数法可以得到最终的递推公式为</p>
+<div>
+<div class="MathJax_Preview">\det M_n = 3\det M_{n-1} - \det M_{n-2} + 2</div>
+<script type="math/tex; mode=display">\det M_n = 3\det M_{n-1} - \det M_{n-2} + 2</script>
+</div>
+<p>改写成<span><span class="MathJax_Preview">(\det M_n+2) = 3(\det M_{n-1}+2) - (\det M_{n-2} + 2)</span><script type="math/tex">(\det M_n+2) = 3(\det M_{n-1}+2) - (\det M_{n-2} + 2)</script></span>后，采用矩阵快速幂即可求出答案。</p>
+<h3 id="_7">与其它问题相结合<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>（挖坑）</p>
-<h2 id="_6">注释<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_8">注释<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>根向树形图在一些地方被称为内向树形图，但因为计算内向树形图用的是出度，为了不引起in和out的混淆，所以采用了根向这一说法。</p>
                 
                   
