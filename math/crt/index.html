@@ -1272,34 +1272,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_4" title="伪代码" class="md-nav__link">
+    伪代码
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="算法的证明" class="md-nav__link">
+  <a href="#_5" title="算法的证明" class="md-nav__link">
     算法的证明
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="例" class="md-nav__link">
+  <a href="#_6" title="例" class="md-nav__link">
     例
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="应用" class="md-nav__link">
+  <a href="#_7" title="应用" class="md-nav__link">
     应用
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" title="扩展：模数不互质的情况" class="md-nav__link">
+  <a href="#_8" title="扩展：模数不互质的情况" class="md-nav__link">
     扩展：模数不互质的情况
   </a>
   
@@ -1307,14 +1314,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" title="两个方程" class="md-nav__link">
+  <a href="#_9" title="两个方程" class="md-nav__link">
     两个方程
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" title="多个方程" class="md-nav__link">
+  <a href="#_10" title="多个方程" class="md-nav__link">
     多个方程
   </a>
   
@@ -1564,8 +1571,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../integral/" title="数值与积分" class="md-nav__link">
-      数值与积分
+    <a href="../integral/" title="数值积分" class="md-nav__link">
+      数值积分
     </a>
   </li>
 
@@ -2935,34 +2942,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_4" title="伪代码" class="md-nav__link">
+    伪代码
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="算法的证明" class="md-nav__link">
+  <a href="#_5" title="算法的证明" class="md-nav__link">
     算法的证明
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="例" class="md-nav__link">
+  <a href="#_6" title="例" class="md-nav__link">
     例
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="应用" class="md-nav__link">
+  <a href="#_7" title="应用" class="md-nav__link">
     应用
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" title="扩展：模数不互质的情况" class="md-nav__link">
+  <a href="#_8" title="扩展：模数不互质的情况" class="md-nav__link">
     扩展：模数不互质的情况
   </a>
   
@@ -2970,14 +2984,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" title="两个方程" class="md-nav__link">
+  <a href="#_9" title="两个方程" class="md-nav__link">
     两个方程
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" title="多个方程" class="md-nav__link">
+  <a href="#_10" title="多个方程" class="md-nav__link">
     多个方程
   </a>
   
@@ -3055,13 +3069,25 @@ x &\equiv& a_n \pmod {n_k} \\
 <li>计算所有模数的积 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>；</li>
 <li>对于第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个方程：<ol>
 <li>计算 <span><span class="MathJax_Preview">m_i=n/n_i</span><script type="math/tex">m_i=n/n_i</script></span>；</li>
-<li>计算 <span><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span> 在模 <span><span class="MathJax_Preview">n_i</span><script type="math/tex">n_i</script></span> 意义下的逆元 <span><span class="MathJax_Preview">m_i^{-1}</span><script type="math/tex">m_i^{-1}</script></span>；</li>
-<li>计算 <span><span class="MathJax_Preview">c_i=m_im_i^{-1}</span><script type="math/tex">c_i=m_im_i^{-1}</script></span>（<strong> 不要对 <span><span class="MathJax_Preview">n_i</span><script type="math/tex">n_i</script></span> 取模 </strong>）。</li>
+<li>计算 <span><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span> 在模 <span><span class="MathJax_Preview">n_i</span><script type="math/tex">n_i</script></span> 意义下的<a href="/math/inverse/">逆元</a> <span><span class="MathJax_Preview">m_i^{-1}</span><script type="math/tex">m_i^{-1}</script></span>；</li>
+<li>计算 <span><span class="MathJax_Preview">c_i=m_im_i^{-1}</span><script type="math/tex">c_i=m_im_i^{-1}</script></span>（<strong>不要对 <span><span class="MathJax_Preview">n_i</span><script type="math/tex">n_i</script></span> 取模</strong>）。</li>
 </ol>
 </li>
 <li>方程组的唯一解为：<span><span class="MathJax_Preview">a=\sum_{i=1}^k a_ic_i \pmod n</span><script type="math/tex">a=\sum_{i=1}^k a_ic_i \pmod n</script></span>。</li>
 </ol>
-<h2 id="_4">算法的证明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_4">伪代码<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>1 → n
+0 → ans
+for i = 1 to k
+    n * n[i] → n
+for i = 1 to k
+    n / n[i] → m
+    inv(m, n[i]) → b               // b * m mod n[i] = 1
+    (ans + m * b) mod n → ans
+return ans
+</pre></div>
+
+<h2 id="_5">算法的证明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>我们需要证明上面算法计算所得的 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 对于任意 <span><span class="MathJax_Preview">i=1,2,\cdots,k</span><script type="math/tex">i=1,2,\cdots,k</script></span> 满足 <span><span class="MathJax_Preview">a\equiv a_i \pmod {n_i}</span><script type="math/tex">a\equiv a_i \pmod {n_i}</script></span>。</p>
 <p>当 <span><span class="MathJax_Preview">i\neq j</span><script type="math/tex">i\neq j</script></span> 时，有 <span><span class="MathJax_Preview">m_j\equiv 0 \pmod {n_i}</span><script type="math/tex">m_j\equiv 0 \pmod {n_i}</script></span>，故 <span><span class="MathJax_Preview">c_j\equiv m_j\equiv 0 \pmod {n_i}</span><script type="math/tex">c_j\equiv m_j\equiv 0 \pmod {n_i}</script></span>。又有 <span><span class="MathJax_Preview">c_i\equiv m_i(m_i^{-1}\bmod {n_i})\equiv 1 \pmod {n_i}</span><script type="math/tex">c_i\equiv m_i(m_i^{-1}\bmod {n_i})\equiv 1 \pmod {n_i}</script></span>，所以我们有：</p>
 <div>
@@ -3082,32 +3108,32 @@ a&\equiv \sum_{j=1}^k a_jc_j        &\pmod {n_i} \\
 \end{aligned}
 </script>
 </div>
-<p><strong> 即对于任意 <span><span class="MathJax_Preview">i=1,2,\cdots,k</span><script type="math/tex">i=1,2,\cdots,k</script></span>，上面算法得到的 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 总是满足 <span><span class="MathJax_Preview">a\equiv a_i \pmod{n_i}</span><script type="math/tex">a\equiv a_i \pmod{n_i}</script></span>，即证明了解同余方程组的算法的正确性。</strong></p>
+<p><strong>即对于任意 <span><span class="MathJax_Preview">i=1,2,\cdots,k</span><script type="math/tex">i=1,2,\cdots,k</script></span>，上面算法得到的 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 总是满足 <span><span class="MathJax_Preview">a\equiv a_i \pmod{n_i}</span><script type="math/tex">a\equiv a_i \pmod{n_i}</script></span>，即证明了解同余方程组的算法的正确性。</strong></p>
 <p>因为我们没有对输入的 <span><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 作特殊限制，所以任何一组输入 <span><span class="MathJax_Preview">\{a_i\}</span><script type="math/tex">\{a_i\}</script></span> 都对应一个解 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>。</p>
-<p>另外，若 <span><span class="MathJax_Preview">x\neq y</span><script type="math/tex">x\neq y</script></span>，则总存在 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 使得 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 在模 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 下不同余。</p>
-<p><strong> 故系数列表 <span><span class="MathJax_Preview">\{a_i\}</span><script type="math/tex">\{a_i\}</script></span> 与解 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 之间是一一映射关系，方程组总是有唯一解。</strong></p>
-<h2 id="_5">例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>另外，若 <span><span class="MathJax_Preview">x\neq y</span><script type="math/tex">x\neq y</script></span>，则总存在 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 使得 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 在模 <span><span class="MathJax_Preview">n_i</span><script type="math/tex">n_i</script></span> 下不同余。</p>
+<p><strong>故系数列表 <span><span class="MathJax_Preview">\{a_i\}</span><script type="math/tex">\{a_i\}</script></span> 与解 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 之间是一一映射关系，方程组总是有唯一解。</strong></p>
+<h2 id="_6">例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>下面演示 CRT 如何解「物不知数」问题。</p>
 <ol>
 <li><span><span class="MathJax_Preview">n=3\times 5\times 7=105</span><script type="math/tex">n=3\times 5\times 7=105</script></span>；</li>
-<li>三人同行 <strong> 七十 </strong> 希：<span><span class="MathJax_Preview">n_1=3, m_1=n/n_1=35, m_1^{-1}\equiv 2\pmod 3</span><script type="math/tex">n_1=3, m_1=n/n_1=35, m_1^{-1}\equiv 2\pmod 3</script></span>，故 <span><span class="MathJax_Preview">c_1=35\times 2=70</span><script type="math/tex">c_1=35\times 2=70</script></span>；</li>
-<li>五树梅花 <strong> 廿一 </strong> 支：<span><span class="MathJax_Preview">n_2=5, m_2=n/n_2=21, m_2^{-1}\equiv 1\pmod 5</span><script type="math/tex">n_2=5, m_2=n/n_2=21, m_2^{-1}\equiv 1\pmod 5</script></span>，故 <span><span class="MathJax_Preview">c_2=21\times 1=21</span><script type="math/tex">c_2=21\times 1=21</script></span>；</li>
-<li>七子团圆正 <strong> 半月 </strong>：<span><span class="MathJax_Preview">n_3=7, m_3=n/n_3=15, m_3^{-1}\equiv 1\pmod 7</span><script type="math/tex">n_3=7, m_3=n/n_3=15, m_3^{-1}\equiv 1\pmod 7</script></span>，故 <span><span class="MathJax_Preview">c_3=15\times 1=15</span><script type="math/tex">c_3=15\times 1=15</script></span>；</li>
-<li>所以方程组的唯一解为 <span><span class="MathJax_Preview">a\equiv 2\times 70+3\times 21+2\times 15\equiv 233\equiv 23 \pmod {105}</span><script type="math/tex">a\equiv 2\times 70+3\times 21+2\times 15\equiv 233\equiv 23 \pmod {105}</script></span>。（除 <strong> 百零五 </strong> 便得知）</li>
+<li>三人同行<strong>七十</strong>希：<span><span class="MathJax_Preview">n_1=3, m_1=n/n_1=35, m_1^{-1}\equiv 2\pmod 3</span><script type="math/tex">n_1=3, m_1=n/n_1=35, m_1^{-1}\equiv 2\pmod 3</script></span>，故 <span><span class="MathJax_Preview">c_1=35\times 2=70</span><script type="math/tex">c_1=35\times 2=70</script></span>；</li>
+<li>五树梅花<strong>廿一</strong>支：<span><span class="MathJax_Preview">n_2=5, m_2=n/n_2=21, m_2^{-1}\equiv 1\pmod 5</span><script type="math/tex">n_2=5, m_2=n/n_2=21, m_2^{-1}\equiv 1\pmod 5</script></span>，故 <span><span class="MathJax_Preview">c_2=21\times 1=21</span><script type="math/tex">c_2=21\times 1=21</script></span>；</li>
+<li>七子团圆正<strong>半月</strong>：<span><span class="MathJax_Preview">n_3=7, m_3=n/n_3=15, m_3^{-1}\equiv 1\pmod 7</span><script type="math/tex">n_3=7, m_3=n/n_3=15, m_3^{-1}\equiv 1\pmod 7</script></span>，故 <span><span class="MathJax_Preview">c_3=15\times 1=15</span><script type="math/tex">c_3=15\times 1=15</script></span>；</li>
+<li>所以方程组的唯一解为 <span><span class="MathJax_Preview">a\equiv 2\times 70+3\times 21+2\times 15\equiv 233\equiv 23 \pmod {105}</span><script type="math/tex">a\equiv 2\times 70+3\times 21+2\times 15\equiv 233\equiv 23 \pmod {105}</script></span>。（除<strong>百零五</strong>便得知）</li>
 </ol>
-<h2 id="_6">应用<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>某些计数问题或数论问题出于加长代码、增加难度、或者是一些其他不可告人的原因，给出的模数：<strong> 不是质数 </strong>！</p>
+<h2 id="_7">应用<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>某些计数问题或数论问题出于加长代码、增加难度、或者是一些其他不可告人的原因，给出的模数：<strong>不是质数</strong>！</p>
 <p>但是对其质因数分解会发现它没有平方因子，也就是该模数是由一些不重复的质数相乘得到。</p>
 <p>那么我们可以分别对这些模数进行计算，最后用 CRT 合并答案。</p>
 <p>推荐练习：BZOJ 1951</p>
-<h2 id="_7">扩展：模数不互质的情况<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<h3 id="_8">两个方程<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h2 id="_8">扩展：模数不互质的情况<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_9">两个方程<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>设两个方程分别是 <span><span class="MathJax_Preview">x\equiv a_1 \pmod {m_1}</span><script type="math/tex">x\equiv a_1 \pmod {m_1}</script></span>、<span><span class="MathJax_Preview">x\equiv a_2 \pmod {m_2}</span><script type="math/tex">x\equiv a_2 \pmod {m_2}</script></span>；</p>
 <p>将它们转化为不定方程：<span><span class="MathJax_Preview">x=m_1p+a_1=m_2q+a_2</span><script type="math/tex">x=m_1p+a_1=m_2q+a_2</script></span>，其中 <span><span class="MathJax_Preview">p, q</span><script type="math/tex">p, q</script></span> 是整数，则有 <span><span class="MathJax_Preview">m_1p-m_2q=a_2-a_1</span><script type="math/tex">m_1p-m_2q=a_2-a_1</script></span>。</p>
 <p>由裴蜀定理，当 <span><span class="MathJax_Preview">a_2-a_1</span><script type="math/tex">a_2-a_1</script></span> 不能被 <span><span class="MathJax_Preview">\gcd(m_1,m_2)</span><script type="math/tex">\gcd(m_1,m_2)</script></span> 整除时，无解；</p>
 <p>其他情况下，可以通过扩展欧几里得算法解出来一组可行解 <span><span class="MathJax_Preview">(p, q)</span><script type="math/tex">(p, q)</script></span>；</p>
 <p>则原来的两方程组成的模方程组的解为 <span><span class="MathJax_Preview">x\equiv b\pmod M</span><script type="math/tex">x\equiv b\pmod M</script></span>，其中 <span><span class="MathJax_Preview">b=m_1p+a_1</span><script type="math/tex">b=m_1p+a_1</script></span>，<span><span class="MathJax_Preview">M=\text{lcm}(m_1, m_2)</span><script type="math/tex">M=\text{lcm}(m_1, m_2)</script></span>。</p>
-<h3 id="_9">多个方程<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_10">多个方程<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>用上面的方法两两合并就可以了……</p>
 <p>推荐练习：POJ 2891</p>
                 
