@@ -2928,44 +2928,44 @@
 <p>树状数组和下面的线段树可是亲兄弟了，但他俩毕竟还有一些区别：<br>
 树状数组能有的操作，线段树一定有；<br>
 线段树有的操作，树状数组不一定有。</p>
-<p>这么看来选择线段树不就<strong>“得天下了”</strong>？</p>
+<p>这么看来选择线段树不就<strong>「得天下了」</strong>？</p>
 <p>事实上，树状数组的代码要比线段树短得多，思维也更清晰，在解决一些单点修改的问题时，树状数组是不二之选。</p>
 <hr />
 <h2 id="_2">原理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>如果要具体了解树状数组的工作原理，请看下面这张图：</p>
 <p><img alt="" src="../images/bit1.png" /></p>
-<p>最下面的八个方块就代表存入a中的八个数，现在都是十进制；</p>
-<p>他们上面的参差不齐的剩下的方块就代表a的上级——c数组；</p>
+<p>最下面的八个方块就代表存入 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中的八个数，现在都是十进制。</p>
+<p>他们上面的参差不齐的剩下的方块就代表 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的上级——<span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 数组。</p>
 <p>很显然看出：<br>
-<span><span class="MathJax_Preview">c[2]</span><script type="math/tex">c[2]</script></span>管理的是<span><span class="MathJax_Preview">a[1]</span><script type="math/tex">a[1]</script></span> &amp; <span><span class="MathJax_Preview">a[2]</span><script type="math/tex">a[2]</script></span> ；<br>
-<span><span class="MathJax_Preview">c[4]</span><script type="math/tex">c[4]</script></span>管理的是<span><span class="MathJax_Preview">a[1]</span><script type="math/tex">a[1]</script></span> &amp; <span><span class="MathJax_Preview">a[2]</span><script type="math/tex">a[2]</script></span> &amp; <span><span class="MathJax_Preview">a[3]</span><script type="math/tex">a[3]</script></span> &amp; <span><span class="MathJax_Preview">a[4]</span><script type="math/tex">a[4]</script></span> ；<br>
-<span><span class="MathJax_Preview">c[6]</span><script type="math/tex">c[6]</script></span>管理的是<span><span class="MathJax_Preview">a[5]</span><script type="math/tex">a[5]</script></span> &amp; <span><span class="MathJax_Preview">a[6]</span><script type="math/tex">a[6]</script></span> ；<span><span class="MathJax_Preview">c[8]</span><script type="math/tex">c[8]</script></span>则管理全部8个数。</p>
-<p>所以，如果你要算区间和的话，比如说要算<span><span class="MathJax_Preview">a[51]</span><script type="math/tex">a[51]</script></span> ~ <span><span class="MathJax_Preview">a[91]</span><script type="math/tex">a[91]</script></span>的区间和，暴力算当然可以，那上百万的数，那就RE喽。</p>
-<p>那么这种类似于跳一跳的连续跳到中心点而分值不断变大的原理是一样的(倍增)。</p>
-<p>你从91开始往前跳，发现<span><span class="MathJax_Preview">c[n]</span><script type="math/tex">c[n]</script></span>（n我也不确定是多少，算起来太麻烦，就意思一下）只管<span><span class="MathJax_Preview">a[91]</span><script type="math/tex">a[91]</script></span>这个点，那么你就会找<span><span class="MathJax_Preview">a[90]</span><script type="math/tex">a[90]</script></span>，发现<span><span class="MathJax_Preview">c[n - 1]</span><script type="math/tex">c[n - 1]</script></span>管的是<span><span class="MathJax_Preview">a[90]</span><script type="math/tex">a[90]</script></span> &amp; <span><span class="MathJax_Preview">a[89]</span><script type="math/tex">a[89]</script></span> ；那么你就会直接跳到<span><span class="MathJax_Preview">a[88]</span><script type="math/tex">a[88]</script></span> ，<span><span class="MathJax_Preview">c[n - 2]</span><script type="math/tex">c[n - 2]</script></span>就会管<span><span class="MathJax_Preview">a[81]</span><script type="math/tex">a[81]</script></span> ~ <span><span class="MathJax_Preview">a[88]</span><script type="math/tex">a[88]</script></span>这些数，下次查询从<span><span class="MathJax_Preview">a[80]</span><script type="math/tex">a[80]</script></span>往前找，以此类推。</p>
+<span><span class="MathJax_Preview">c[2]</span><script type="math/tex">c[2]</script></span> 管理的是 <span><span class="MathJax_Preview">a[1]</span><script type="math/tex">a[1]</script></span> &amp; <span><span class="MathJax_Preview">a[2]</span><script type="math/tex">a[2]</script></span> ；<br>
+<span><span class="MathJax_Preview">c[4]</span><script type="math/tex">c[4]</script></span> 管理的是 <span><span class="MathJax_Preview">a[1]</span><script type="math/tex">a[1]</script></span> &amp; <span><span class="MathJax_Preview">a[2]</span><script type="math/tex">a[2]</script></span> &amp; <span><span class="MathJax_Preview">a[3]</span><script type="math/tex">a[3]</script></span> &amp; <span><span class="MathJax_Preview">a[4]</span><script type="math/tex">a[4]</script></span> ；<br>
+<span><span class="MathJax_Preview">c[6]</span><script type="math/tex">c[6]</script></span> 管理的是 <span><span class="MathJax_Preview">a[5]</span><script type="math/tex">a[5]</script></span> &amp; <span><span class="MathJax_Preview">a[6]</span><script type="math/tex">a[6]</script></span> ；<span><span class="MathJax_Preview">c[8]</span><script type="math/tex">c[8]</script></span> 则管理全部 <span><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span> 个数。</p>
+<p>所以，如果你要算区间和的话，比如说要算 <span><span class="MathJax_Preview">a[51]</span><script type="math/tex">a[51]</script></span> ~ <span><span class="MathJax_Preview">a[91]</span><script type="math/tex">a[91]</script></span> 的区间和，暴力算当然可以，那上百万的数，那就 RE 喽。</p>
+<p>那么这种类似于跳一跳的连续跳到中心点而分值不断变大的原理是一样的（倍增）。</p>
+<p>你从 <span><span class="MathJax_Preview">91</span><script type="math/tex">91</script></span> 开始往前跳，发现 <span><span class="MathJax_Preview">c[n]</span><script type="math/tex">c[n]</script></span>（<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 我也不确定是多少，算起来太麻烦，就意思一下）只管 <span><span class="MathJax_Preview">a[91]</span><script type="math/tex">a[91]</script></span> 这个点，那么你就会找 <span><span class="MathJax_Preview">a[90]</span><script type="math/tex">a[90]</script></span>，发现 <span><span class="MathJax_Preview">c[n - 1]</span><script type="math/tex">c[n - 1]</script></span> 管的是 <span><span class="MathJax_Preview">a[90]</span><script type="math/tex">a[90]</script></span> &amp; <span><span class="MathJax_Preview">a[89]</span><script type="math/tex">a[89]</script></span> ；那么你就会直接跳到 <span><span class="MathJax_Preview">a[88]</span><script type="math/tex">a[88]</script></span> ，<span><span class="MathJax_Preview">c[n - 2]</span><script type="math/tex">c[n - 2]</script></span> 就会管 <span><span class="MathJax_Preview">a[81]</span><script type="math/tex">a[81]</script></span> ~ <span><span class="MathJax_Preview">a[88]</span><script type="math/tex">a[88]</script></span> 这些数，下次查询从 <span><span class="MathJax_Preview">a[80]</span><script type="math/tex">a[80]</script></span> 往前找，以此类推。</p>
 <hr />
 <h2 id="_3">用法及操作<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>那么问题来了，你是怎么知道c管的a的个数分别是多少呢？你那个1个 2个 8个……是怎么来的呢？
-这时，我们引入一个函数——lowbit：
+<p>那么问题来了，你是怎么知道 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 管的 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的个数分别是多少呢？你那个 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 个，<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个，<span><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span> 个……是怎么来的呢？
+这时，我们引入一个函数—— <code>lowbit</code>：
 <div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">lowbit</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span><span class="c1">//算出x二进制的从右往左出现第一个1以及这个1之后的那些0组成数的二进制对应的十进制的数 </span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="o">-</span><span class="n">x</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
-lowbit的意思注释说明了，咱们就用这个说法来证明一下<span><span class="MathJax_Preview">a[88]</span><script type="math/tex">a[88]</script></span>：<br>
-88 -&gt; 1011000 B（B代表二进制）<br>
-发现第一个1以及他后面的0组成的二进制是 1000<br>
-1000 B -&gt; 8<br>
-1000对应的十进制是8，所以<span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>一共管理8个<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>。</p>
-<p>这就是<span><span class="MathJax_Preview">lowbit</span><script type="math/tex">lowbit</script></span>的用处，仅此而已（但也相当有用）。</p>
+<code>lowbit</code> 的意思注释说明了，咱们就用这个说法来证明一下 <span><span class="MathJax_Preview">a[88]</span><script type="math/tex">a[88]</script></span>：<br>
+<span><span class="MathJax_Preview">88_{(10)}=1011000_{(2)}</span><script type="math/tex">88_{(10)}=1011000_{(2)}</script></span><br>
+发现第一个 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 以及他后面的 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 组成的二进制是 <span><span class="MathJax_Preview">1000</span><script type="math/tex">1000</script></span><br>
+<span><span class="MathJax_Preview">1000_{(2)} = 8_{(10)}</span><script type="math/tex">1000_{(2)} = 8_{(10)}</script></span><br>
+<span><span class="MathJax_Preview">1000</span><script type="math/tex">1000</script></span> 对应的十进制是 <span><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span>，所以 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 一共管理 <span><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span> 个 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>。</p>
+<p>这就是 <code>lowbit</code> 的用处，仅此而已（但也相当有用）。</p>
 <p><strong>你可能又问了：x &amp; -x 是什么意思啊？</strong></p>
 <blockquote>
-<p>-x 代表x的负数，计算机中负数使用对应的正数的补码来表示。</p>
+<p><span><span class="MathJax_Preview">-x</span><script type="math/tex">-x</script></span> 代表 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的负数，计算机中负数使用对应的正数的补码来表示。</p>
 </blockquote>
 <p>例如 :<br>
-x =88（1011000）;<br>
--x = -88 = (0100111 + 1) = (101000);<br>
-x &amp; (-x) = (1000) = 8.</p>
+<span><span class="MathJax_Preview">x =88_{(10)}=1011000_{(2)}</span><script type="math/tex">x =88_{(10)}=1011000_{(2)}</script></span>；<br>
+<span><span class="MathJax_Preview">-x = -88_{(10)} = (0100111_{(2)} + 1_{(2)}) =101000_{(2)}</span><script type="math/tex">-x = -88_{(10)} = (0100111_{(2)} + 1_{(2)}) =101000_{(2)}</script></span>；<br>
+<span><span class="MathJax_Preview">x\ \&amp; \ (-x) = 1000_{(2)} = 8_{(10)}</span><script type="math/tex">x\ \& \ (-x) = 1000_{(2)} = 8_{(10)}</script></span>。</p>
 <p>神奇吧，我也觉得神奇！</p>
 <p>那么对于<strong>单点修改</strong>就更轻松了：</p>
 <div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">change</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="p">,</span><span class="kt">int</span> <span class="n">k</span><span class="p">)</span>

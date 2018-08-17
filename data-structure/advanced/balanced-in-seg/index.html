@@ -2973,23 +2973,23 @@
                 
                 <h1 id="_1">线段树套平衡树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h3 id="_2">常见用途<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>在算法竞赛中，我们有时需要维护多维度信息。在这种时候，我们经常需要树套树来记录信息。当需要维护前驱，后继，第<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>大，某个数的排名，或者插入删除的时候，我们通常需要使用平衡树来满足我们的需求，即线段树套平衡树。</p>
+<p>在算法竞赛中，我们有时需要维护多维度信息。在这种时候，我们经常需要树套树来记录信息。当需要维护前驱，后继，第 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 大，某个数的排名，或者插入删除的时候，我们通常需要使用平衡树来满足我们的需求，即线段树套平衡树。</p>
 <h3 id="_3">实现原理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>我们以<strong>二逼平衡树</strong>为例，来解释实现原理。</p>
 <p>关于树套树的构建，我们对于外层线段树正常建树，对于线段树上的某一个节点，建立一棵平衡树，包含该节点所覆盖的序列。具体操作时我们可以将序列元素一个个插入，每经过一个线段树节点，就将该元素加入到该节点的平衡树中。</p>
-<p>操作一，求某区间中某值的排名：我们对于外层线段树正常操作，对于在某区间中的节点的平衡树，我们返回平衡树中比该值小的元素个数，合并区间时，我们将小的元素个数求和即可。最后将返回值<span><span class="MathJax_Preview">+1</span><script type="math/tex">+1</script></span>，即为某值在某区间中的排名。</p>
-<p>操作二，求某区间中排名为<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>的值：我们可以采用二分策略。因为一个元素可能存在多个，其排名为一区间，且有些元素原序列不存在。所以我们采取和操作一类似的思路，我们用小于该值的元素个数作为参考进行二分，即可得解。</p>
+<p>操作一，求某区间中某值的排名：我们对于外层线段树正常操作，对于在某区间中的节点的平衡树，我们返回平衡树中比该值小的元素个数，合并区间时，我们将小的元素个数求和即可。最后将返回值 <span><span class="MathJax_Preview">+1</span><script type="math/tex">+1</script></span>，即为某值在某区间中的排名。</p>
+<p>操作二，求某区间中排名为 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的值：我们可以采用二分策略。因为一个元素可能存在多个，其排名为一区间，且有些元素原序列不存在。所以我们采取和操作一类似的思路，我们用小于该值的元素个数作为参考进行二分，即可得解。</p>
 <p>操作三，将某个数替换为另外一个数：我们只要在所有包含某数的平衡树中删除某数，然后再插入另外一个数即可。外层依旧正常线段树操作。</p>
 <p>操作四，求某区间中某值的前驱：我们对于外层线段树正常操作，对于在某区间中的节点的平衡树，我们返回某值在该平衡树中的前驱，线段树的区间结果合并时，我们取最大值即可。</p>
 <h3 id="_4">空间复杂度<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>我们每个元素加入logn个平衡树，所以空间复杂度为<span><span class="MathJax_Preview">(n + q)\log{n}</span><script type="math/tex">(n + q)\log{n}</script></span>。</p>
+<p>我们每个元素加入 <span><span class="MathJax_Preview">\log n</span><script type="math/tex">\log n</script></span> 个平衡树，所以空间复杂度为 <span><span class="MathJax_Preview">(n + q)\log{n}</span><script type="math/tex">(n + q)\log{n}</script></span>。</p>
 <h3 id="_5">时间复杂度<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>对于<span><span class="MathJax_Preview">1，2，4</span><script type="math/tex">1，2，4</script></span>操作，我们考虑我们在外层线段树上进<span><span class="MathJax_Preview">\log{n}</span><script type="math/tex">\log{n}</script></span>次操作，每次操作会在一个内层平衡树树上进行<span><span class="MathJax_Preview">\log{n}</span><script type="math/tex">\log{n}</script></span>次操作，所以时间复杂度为<span><span class="MathJax_Preview">\log^2{n}</span><script type="math/tex">\log^2{n}</script></span>。
-对于3操作，多一个二分过程，为<span><span class="MathJax_Preview">\log^3{n}</span><script type="math/tex">\log^3{n}</script></span>。</p>
+<p>对于 <span><span class="MathJax_Preview">1,2,4</span><script type="math/tex">1,2,4</script></span> 操作，我们考虑我们在外层线段树上进行 <span><span class="MathJax_Preview">\log{n}</span><script type="math/tex">\log{n}</script></span> 次操作，每次操作会在一个内层平衡树树上进行 <span><span class="MathJax_Preview">\log{n}</span><script type="math/tex">\log{n}</script></span> 次操作，所以时间复杂度为 <span><span class="MathJax_Preview">\log^2{n}</span><script type="math/tex">\log^2{n}</script></span>。
+对于 <span><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 操作，多一个二分过程，为 <span><span class="MathJax_Preview">\log^3{n}</span><script type="math/tex">\log^3{n}</script></span>。</p>
 <h3 id="_6">经典例题<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3196">二逼平衡树</a> 外层线段树，内层平衡树。</p>
 <h3 id="_7">示例代码<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>平衡树部分代码请参考splay等其他条目。<a href="https://oi-wiki.cf/data-structure/intermediate/splay/">传送至splay条目</a></p>
+<p>平衡树部分代码请参考 Splay 等其他条目。<a href="https://oi-wiki.cf/data-structure/intermediate/splay/">传送至 Splay 条目</a></p>
 <p>操作一
 <div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">vec_rank</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">)</span>
 <span class="p">{</span>
@@ -3039,7 +3039,7 @@
 <span class="p">}</span>
 </pre></div></p>
 <h3 id="_8">相关算法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>面对多维度信息的题目时，如果题目没有要求强制在线，我们还可以考虑<strong>CDQ分治</strong>，或者<strong>整体二分</strong>等分治算法，来避免使用高级数据结构，减少代码实现难度。</p>
+<p>面对多维度信息的题目时，如果题目没有要求强制在线，我们还可以考虑 <strong>CDQ 分治</strong>，或者<strong>整体二分</strong>等分治算法，来避免使用高级数据结构，减少代码实现难度。</p>
                 
                   
                 

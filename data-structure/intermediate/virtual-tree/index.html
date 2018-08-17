@@ -1934,8 +1934,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#virtual-tree" title="虚树Virtual Tree" class="md-nav__link">
-    虚树Virtual Tree
+  <a href="#virtual-tree" title="虚树 Virtual Tree" class="md-nav__link">
+    虚树 Virtual Tree
   </a>
   
 </li>
@@ -3007,8 +3007,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#virtual-tree" title="虚树Virtual Tree" class="md-nav__link">
-    虚树Virtual Tree
+  <a href="#virtual-tree" title="虚树 Virtual Tree" class="md-nav__link">
+    虚树 Virtual Tree
   </a>
   
 </li>
@@ -3077,63 +3077,63 @@
                 
                 <h2 id="bzoj-2286">引子：BZOJ - 2286 消耗战<a class="headerlink" href="#bzoj-2286" title="Permanent link">&para;</a></h2>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>在一场战争中，战场由n个岛屿和n-1个桥梁组成，保证每两个岛屿间有且仅有一条路径可达。现在，我军已经侦查到敌军的总部在编号为1的岛屿，而且他们已经没有足够多的能源维系战斗，我军胜利在望。已知在其他k个岛屿上有丰富能源，为了防止敌军获取能源，我军的任务是炸毁一些桥梁，使得敌军不能到达任何能源丰富的岛屿。由于不同桥梁的材质和结构不同，所以炸毁不同的桥梁有不同的代价，我军希望在满足目标的同时使得总代价最小。</p>
-<p>侦查部门还发现，敌军有一台神秘机器。即使我军切断所有能源之后，他们也可以用那台机器。机器产生的效果不仅仅会修复所有我军炸毁的桥梁，而且会重新随机资源分布（但可以保证的是，资源不会分布到1号岛屿上）。不过侦查部门还发现了这台机器只能够使用m次，所以我们只需要把每次任务完成即可。</p>
+<p>在一场战争中，战场由 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个岛屿和 <span><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 个桥梁组成，保证每两个岛屿间有且仅有一条路径可达。现在，我军已经侦查到敌军的总部在编号为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的岛屿，而且他们已经没有足够多的能源维系战斗，我军胜利在望。已知在其他 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个岛屿上有丰富能源，为了防止敌军获取能源，我军的任务是炸毁一些桥梁，使得敌军不能到达任何能源丰富的岛屿。由于不同桥梁的材质和结构不同，所以炸毁不同的桥梁有不同的代价，我军希望在满足目标的同时使得总代价最小。</p>
+<p>侦查部门还发现，敌军有一台神秘机器。即使我军切断所有能源之后，他们也可以用那台机器。机器产生的效果不仅仅会修复所有我军炸毁的桥梁，而且会重新随机资源分布（但可以保证的是，资源不会分布到 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 号岛屿上）。不过侦查部门还发现了这台机器只能够使用 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 次，所以我们只需要把每次任务完成即可。</p>
 <h3 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h3>
-<p>第一行一个整数n，代表岛屿数量。</p>
-<p>接下来n-1行，每行三个整数u,v,w，代表u号岛屿和v号岛屿由一条代价为c的桥梁直接相连，保证1&lt;=u,v&lt;=n且1&lt;=c&lt;=100000。</p>
-<p>第n+1行，一个整数m，代表敌方机器能使用的次数。</p>
-<p>接下来m行，每行一个整数ki，代表第i次后，有ki个岛屿资源丰富，接下来k个整数h1,h2,…hk，表示资源丰富岛屿的编号。</p>
+<p>第一行一个整数 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，代表岛屿数量。</p>
+<p>接下来n-1行，每行三个整数 <span><span class="MathJax_Preview">u,v,w</span><script type="math/tex">u,v,w</script></span>，代表 <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 号岛屿和 <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 号岛屿由一条代价为 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 的桥梁直接相连，保证 <span><span class="MathJax_Preview">1\le u,v\le n</span><script type="math/tex">1\le u,v\le n</script></span> 且 <span><span class="MathJax_Preview">1\le c\le 10^5</span><script type="math/tex">1\le c\le 10^5</script></span>。</p>
+<p>第 <span><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span> 行，一个整数 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>，代表敌方机器能使用的次数。</p>
+<p>接下来 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 行，每行一个整数 <span><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span>，代表第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 次后，有 <span><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span> 个岛屿资源丰富，接下来 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个整数 <span><span class="MathJax_Preview">h_1,h_2,\cdots ,h_k</span><script type="math/tex">h_1,h_2,\cdots ,h_k</script></span>，表示资源丰富岛屿的编号。</p>
 <h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
-<p>输出有m行，分别代表每次任务的最小代价。</p>
+<p>输出有 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 行，分别代表每次任务的最小代价。 </p>
 <h3 id="sample-input">Sample Input<a class="headerlink" href="#sample-input" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="mi">10</span>
-<span class="mi">1</span> <span class="mi">5</span> <span class="mi">13</span>
-<span class="mi">1</span> <span class="mi">9</span> <span class="mi">6</span>
-<span class="mi">2</span> <span class="mi">1</span> <span class="mi">19</span>
-<span class="mi">2</span> <span class="mi">4</span> <span class="mi">8</span>
-<span class="mi">2</span> <span class="mi">3</span> <span class="mi">91</span>
-<span class="mi">5</span> <span class="mi">6</span> <span class="mi">8</span>
-<span class="mi">7</span> <span class="mi">5</span> <span class="mi">4</span>
-<span class="mi">7</span> <span class="mi">8</span> <span class="mi">31</span>
-<span class="mi">10</span> <span class="mi">7</span> <span class="mi">9</span>
-<span class="mi">3</span>
-<span class="mi">2</span> <span class="mi">10</span> <span class="mi">6</span>
-<span class="mi">4</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">3</span>
-<span class="mi">3</span> <span class="mi">9</span> <span class="mi">4</span> <span class="mi">6</span>
+<div class="codehilite"><pre><span></span>10
+1 5 13
+1 9 6
+2 1 19
+2 4 8
+2 3 91
+5 6 8
+7 5 4
+7 8 31
+10 7 9
+3
+2 10 6
+4 5 7 8 3
+3 9 4 6
 </pre></div>
 
 <h3 id="sample-output">Sample Output<a class="headerlink" href="#sample-output" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="mi">12</span>
-<span class="mi">32</span>
-<span class="mi">22</span>
+<div class="codehilite"><pre><span></span>12
+32
+22
 </pre></div>
 
 <h3 id="hint">HINT<a class="headerlink" href="#hint" title="Permanent link">&para;</a></h3>
-<p>对于100%的数据，2&lt;=n&lt;=250000,m&gt;=1,sigma(ki)&lt;=500000,1&lt;=ki&lt;=n-1</p>
+<p>对于 <span><span class="MathJax_Preview">100\%</span><script type="math/tex">100\%</script></span> 的数据，<span><span class="MathJax_Preview">2\le n\le 2.5\times 10^5,m\ge 1,\sum k_i\le 5\times 10^5,1\le k_i\le n-1</span><script type="math/tex">2\le n\le 2.5\times 10^5,m\ge 1,\sum k_i\le 5\times 10^5,1\le k_i\le n-1</script></span>。</p>
 <h3 id="source">Source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h3>
 <p><a href="http://www.lydsy.com/JudgeOnline/problemset.php?search=Stage2%20day2">Stage2 day2</a></p>
-<h2 id="virtual-tree">虚树Virtual Tree<a class="headerlink" href="#virtual-tree" title="Permanent link">&para;</a></h2>
-<p>对于上面那题，我们不难发现——如果树的点数很少，那么我们可以直接跑Dp。</p>
-<p>首先我们称某次询问中被选中的点为——<strong>“关键点”</strong></p>
-<p>设<span><span class="MathJax_Preview">Dp[i]</span><script type="math/tex">Dp[i]</script></span>表示——使<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>不与其子树中任意一个关键点联通的<strong>最小代价</strong>。</p>
-<p>设<span><span class="MathJax_Preview">w[a,b]</span><script type="math/tex">w[a,b]</script></span>表示<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>与<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>之间的边的权值</p>
+<h2 id="virtual-tree">虚树 Virtual Tree<a class="headerlink" href="#virtual-tree" title="Permanent link">&para;</a></h2>
+<p>对于上面那题，我们不难发现——如果树的点数很少，那么我们可以直接跑 DP。</p>
+<p>首先我们称某次询问中被选中的点为——<strong>「关键点」</strong>。</p>
+<p>设 <span><span class="MathJax_Preview">Dp[i]</span><script type="math/tex">Dp[i]</script></span> 表示——使 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 不与其子树中任意一个关键点联通的<strong>最小代价</strong>。</p>
+<p>设 <span><span class="MathJax_Preview">w[a,b]</span><script type="math/tex">w[a,b]</script></span> 表示 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 与 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 之间的边的权值。</p>
 <p>则：</p>
 <ul>
-<li>若<span><span class="MathJax_Preview">son[i]</span><script type="math/tex">son[i]</script></span>不是关键点：<span><span class="MathJax_Preview">Dp[i]=Dp[i] + min\\{Dp[son[i]],w[i,son[i]]\\}</span><script type="math/tex">Dp[i]=Dp[i] + min\\{Dp[son[i]],w[i,son[i]]\\}</script></span></li>
-<li>若<span><span class="MathJax_Preview">son[i]</span><script type="math/tex">son[i]</script></span>是关键点：<span><span class="MathJax_Preview">Dp[i]=Dp[i] + w[i,son[i]]</span><script type="math/tex">Dp[i]=Dp[i] + w[i,son[i]]</script></span></li>
+<li>若 <span><span class="MathJax_Preview">son[i]</span><script type="math/tex">son[i]</script></span> 不是关键点：<span><span class="MathJax_Preview">Dp[i]=Dp[i] + \min \{Dp[son[i]],w[i,son[i]]\}</span><script type="math/tex">Dp[i]=Dp[i] + \min \{Dp[son[i]],w[i,son[i]]\}</script></span>；</li>
+<li>若 <span><span class="MathJax_Preview">son[i]</span><script type="math/tex">son[i]</script></span> 是关键点：<span><span class="MathJax_Preview">Dp[i]=Dp[i] + w[i,son[i]]</span><script type="math/tex">Dp[i]=Dp[i] + w[i,son[i]]</script></span>。</li>
 </ul>
-<p>很好，这样我们得到了一份<span><span class="MathJax_Preview">O(n\times q)</span><script type="math/tex">O(n\times q)</script></span>的代码</p>
-<p>听起来很有意思</p>
+<p>很好，这样我们得到了一份 <span><span class="MathJax_Preview">O(n\times q)</span><script type="math/tex">O(n\times q)</script></span> 的代码。</p>
+<p>听起来很有意思。</p>
 <p>我们不难发现——其实很多点是没有用的。</p>
 <p>比如下图：</p>
 <p><img alt="vtree1" src="../images/vtree1.png" /></p>
-<p>图中只有两个红色的点是<strong>关键点</strong>，而别的黑色的点全都是“非关键点”。一号节点（敌人所在之处）是树顶的那个标了1的节点。</p>
-<p>对于这题来说，我们只需要保证红色的点无法到达1号节点就行了。</p>
-<p>通过肉眼观察可以得出结论——1号节点的右子树（虽然实际上可能有多个子树，但这里只有两个子树，所以暂时这么称呼了）一个红色节点都木有，<strong>所以没必要去Dp它</strong>，不是吗？</p>
-<p>观察题目给出的条件，红色点（关键点）的总数是与<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>同阶的，也就是说实际上一次询问中红色的点对于整棵树来说是很稀疏的，所以如果我们能让复杂度由红色点的总数来决定就好了。</p>
+<p>图中只有两个红色的点是<strong>关键点</strong>，而别的黑色的点全都是「非关键点」。一号节点（敌人所在之处）是树顶的那个标了 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的节点。</p>
+<p>对于这题来说，我们只需要保证红色的点无法到达 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 号节点就行了。</p>
+<p>通过肉眼观察可以得出结论——<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 号节点的右子树（虽然实际上可能有多个子树，但这里只有两个子树，所以暂时这么称呼了）一个红色节点都木有，<strong>所以没必要去 DP 它</strong>，不是吗？</p>
+<p>观察题目给出的条件，红色点（关键点）的总数是与 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 同阶的，也就是说实际上一次询问中红色的点对于整棵树来说是很稀疏的，所以如果我们能让复杂度由红色点的总数来决定就好了。</p>
 <p>因此我们需要<strong>浓缩信息，把一整颗大树浓缩成一颗小树</strong>。</p>
-<p>由此我们引出了<strong>“虚树”</strong>这个概念。</p>
+<p>由此我们引出了<strong>「虚树」</strong>这个概念。</p>
 <p>我们先直观地来看看虚树的样子。</p>
 <p>下图中，左边为原树，右边为生成的新的虚树。</p>
 <p><img alt="vtree2" src="../images/vtree2.png" /></p>
@@ -3141,33 +3141,33 @@
 <p><img alt="vtree4" src="../images/vtree4.png" /></p>
 <p><img alt="vtree5" src="../images/vtree5.png" /></p>
 <p>看明白了吗？</p>
-<p>因为任意两个关键点的LCA也是需要保存重要信息的，所以我们需要保存它们的LCA，也就是虚树中不一定只有关键点</p>
-<p>不难发现虚树中祖先-&gt;后代的关系并不会改变（就是不会出现原本<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>是<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>的祖先结果后面<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>变成<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>的后代了之类的鬼事）</p>
-<p>但我们不可能<span><span class="MathJax_Preview">O(k^2)</span><script type="math/tex">O(k^2)</script></span>暴力枚举LCA，所以我们不难想到——首先将关键点按dfs序排序，然后排完序以后相邻的两个关键点（相邻指的是在排序后的序列中下表差值的绝对值等于1）求一下<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>，并把它加入虚树。</p>
-<p>因为可能多个节点的<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>可能是同一个，所以我们不能多次将它加入虚树。</p>
+<p>因为任意两个关键点的 LCA 也是需要保存重要信息的，所以我们需要保存它们的 LCA，也就是虚树中不一定只有关键点。</p>
+<p>不难发现虚树中祖先 -&gt; 后代的关系并不会改变。（就是不会出现原本 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 是 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 的祖先结果后面 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 变成 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 的后代了之类的鬼事）</p>
+<p>但我们不可能 <span><span class="MathJax_Preview">\mathcal{O}(k^2)</span><script type="math/tex">\mathcal{O}(k^2)</script></span> 暴力枚举 LCA，所以我们不难想到——首先将关键点按 DFS 序排序，然后排完序以后相邻的两个关键点（相邻指的是在排序后的序列中下表差值的绝对值等于1）求一下 LCA，并把它加入虚树。</p>
+<p>因为可能多个节点的 LCA 可能是同一个，所以我们不能多次将它加入虚树。</p>
 <p>非常直观的一个方法是：</p>
 <ul>
-<li>将关键点按dfs序排序</li>
-<li>for一遍，任意两个相邻的关键点求一下<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>，并且哈希表判重</li>
-<li>然后根据原树中的祖先-&gt;后代关系建树（然而我并不知道怎么建树）</li>
+<li>将关键点按 DFS 序排序；</li>
+<li><code>for</code> 一遍，任意两个相邻的关键点求一下 LCA，并且哈希表判重；</li>
+<li>然后根据原树中的祖先 -&gt; 后代关系建树（然而我并不知道怎么建树）。</li>
 </ul>
-<p>。。。</p>
+<p>……</p>
 <p>感觉很不可做的样子。&lt;(=┘￣Д￣)┘╧═╧</p>
 <p>所以，这里我们提出一种用单调栈的做法。</p>
-<p>在提出方案之前，我们先确认一个事实——在虚树里，只要保证祖先-&gt;后代的关系没有改变，就可以随意添加节点。</p>
-<p>也就是，如果我们乐意，我们可以把原树中所有的点都加入虚树中，也不会导致WA（虽然会导致TLE）</p>
-<p>因此，我们为了方便，可以首先将<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>号节点加入虚树中，并且并不会影响答案。</p>
-<p>好，开始讲怎么用单调栈来建立一颗虚树吧。</p>
+<p>在提出方案之前，我们先确认一个事实——在虚树里，只要保证祖先 -&gt; 后代的关系没有改变，就可以随意添加节点。</p>
+<p>也就是，如果我们乐意，我们可以把原树中所有的点都加入虚树中，也不会导致 WA（虽然会导致 TLE）。</p>
+<p>因此，我们为了方便，可以首先将 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 号节点加入虚树中，并且并不会影响答案。</p>
+<p>好，开始讲怎么用单调栈来建立一棵虚树吧。</p>
 <p>首先我们要明确一个目的——我们要用单调栈来维护一条虚树上的链。</p>
-<p>也就是一个栈里相邻的两个节点在虚树上也是相邻的，而且栈是从底部到栈首单调递增的（指的是栈中节点Dfs序单调递增），说白了就是某个节点的父亲就是栈中它下面的那个节点。</p>
+<p>也就是一个栈里相邻的两个节点在虚树上也是相邻的，而且栈是从底部到栈首单调递增的（指的是栈中节点 DFS 序单调递增），说白了就是某个节点的父亲就是栈中它下面的那个节点。</p>
 <p><img alt="vtree7" src="../images/vtree7.png" /></p>
-<p>首先我们在栈中添加节点<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span></p>
-<p>然后接下来按照Dfs序从小到达添加关键节点。</p>
-<p>假如当前的节点与栈顶节点的<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>就是栈顶节点的话，则说明它们是在一条链上的。所以直接把当前节点入栈就行了。</p>
+<p>首先我们在栈中添加节点 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
+<p>然后接下来按照 DFS 序从小到达添加关键节点。</p>
+<p>假如当前的节点与栈顶节点的 LCA 就是栈顶节点的话，则说明它们是在一条链上的。所以直接把当前节点入栈就行了。</p>
 <p><img alt="vtree8" src="../images/vtree8.png" /></p>
-<p>假如当前节点与栈顶节点的<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>不是栈顶节点的话，比如这样——</p>
+<p>假如当前节点与栈顶节点的 LCA 不是栈顶节点的话，比如这样——</p>
 <p><img alt="vtree9" src="../images/vtree9.png" /></p>
-<p>那就，，非常尴尬了</p>
+<p>那就……非常尴尬了</p>
 <p>显然，当前单调栈维护的链是：</p>
 <p><img alt="vtree10" src="../images/vtree10.png" /></p>
 <p>而我们需要把链变成：</p>
@@ -3176,31 +3176,31 @@
 <p><img alt="vtree11 (复件)" src="../images/vtree12.png" /></p>
 <p>并且把这两个点从栈中弹出：</p>
 <p><img alt="vtree13" src="../images/vtree13.png" /></p>
-<p>假如弹出以后发现栈首不是<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>的话要让<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>入栈。</p>
+<p>假如弹出以后发现栈首不是 LCA 的话要让 LCA 入栈。</p>
 <p>再把当前节点入栈就行了。</p>
 <p>打个比方吧。</p>
 <p>假如那棵树长这样：</p>
 <p><img alt="vtree6" src="../images/vtree6.png" /></p>
 <p>那么步骤是这样的：</p>
 <ul>
-<li>将3个关键点<span><span class="MathJax_Preview">6,4,7</span><script type="math/tex">6,4,7</script></span>（我故意打乱了）按照dfs序排序，得到序列<span><span class="MathJax_Preview">4,6,7</span><script type="math/tex">4,6,7</script></span></li>
-<li>将点<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>入栈</li>
-<li>取序列第一个作为当前节点，为<span><span class="MathJax_Preview">4​</span><script type="math/tex">4​</script></span>。再取栈顶元素，为<span><span class="MathJax_Preview">1​</span><script type="math/tex">1​</script></span>。求<span><span class="MathJax_Preview">1​</span><script type="math/tex">1​</script></span>和<span><span class="MathJax_Preview">4​</span><script type="math/tex">4​</script></span>的<span><span class="MathJax_Preview">LCA​</span><script type="math/tex">LCA​</script></span>：<span><span class="MathJax_Preview">LCA(1,4)=1​</span><script type="math/tex">LCA(1,4)=1​</script></span>。</li>
-<li>发现<span><span class="MathJax_Preview">LCA(1,4)=</span><script type="math/tex">LCA(1,4)=</script></span>栈顶元素，说明它们在虚树的一条链上，所以直接把当前节点<span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>入栈，当前栈为<span><span class="MathJax_Preview">4,1</span><script type="math/tex">4,1</script></span></li>
-<li>取序列第二个作为当前节点，为<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>。再取栈顶元素，为<span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>。求<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>和<span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>的<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>：<span><span class="MathJax_Preview">LCA(6,4)=1</span><script type="math/tex">LCA(6,4)=1</script></span>。</li>
-<li>发现<span><span class="MathJax_Preview">LCA(6,4)!=</span><script type="math/tex">LCA(6,4)!=</script></span>栈顶元素，进入判断阶段。</li>
-<li>判断阶段：发现栈顶节点<span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>的Dfs序是大于<span><span class="MathJax_Preview">LCA(6,4)</span><script type="math/tex">LCA(6,4)</script></span>的，但是次大节点（栈顶节点下面的那个节点）<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>的Dfs序是等于<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>的（其实Dfs序相等说明节点也相等），说明<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>已经入栈了，所以直接连接<span><span class="MathJax_Preview">1-&gt;4</span><script type="math/tex">1->4</script></span>的边，也就是<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>到栈顶元素的边。并把<span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>从栈中弹出。</li>
-<li>结束了判断阶段，将<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>入栈，当前栈为<span><span class="MathJax_Preview">6,1</span><script type="math/tex">6,1</script></span></li>
-<li>取序列第三个作为当前节点，为<span><span class="MathJax_Preview">7</span><script type="math/tex">7</script></span>。再取栈顶元素，为<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>。求<span><span class="MathJax_Preview">7</span><script type="math/tex">7</script></span>和<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>的<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>：<span><span class="MathJax_Preview">LCA(7,6)=3</span><script type="math/tex">LCA(7,6)=3</script></span>。</li>
-<li>发现<span><span class="MathJax_Preview">LCA(7,6)!=</span><script type="math/tex">LCA(7,6)!=</script></span>栈顶元素，进入判断阶段。</li>
-<li>判断阶段：发现栈顶节点<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>的Dfs序是大于<span><span class="MathJax_Preview">LCA(7,6)</span><script type="math/tex">LCA(7,6)</script></span>的，但是次大节点（栈顶节点下面的那个节点）<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>的Dfs序是小于<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>的，说明<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>还没有入过栈，所以直接连接<span><span class="MathJax_Preview">3-&gt;6</span><script type="math/tex">3->6</script></span>的边，也就是<span><span class="MathJax_Preview">LCA</span><script type="math/tex">LCA</script></span>到栈顶元素的边。把<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>从栈中弹出，并且把<span><span class="MathJax_Preview">LCA(6,7)</span><script type="math/tex">LCA(6,7)</script></span>入栈。</li>
-<li>结束了判断阶段，将<span><span class="MathJax_Preview">7</span><script type="math/tex">7</script></span>入栈，当前栈为<span><span class="MathJax_Preview">3,7</span><script type="math/tex">3,7</script></span></li>
-<li>发现序列里的2个节点已经全部加入过栈了，退出循环。</li>
-<li>此时栈中还有2个节点：<span><span class="MathJax_Preview">3,7</span><script type="math/tex">3,7</script></span>，很明显它们是一条链上的，所以直接链接：<span><span class="MathJax_Preview">3-&gt;7</span><script type="math/tex">3->7</script></span>的边</li>
+<li>将 <span><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 个关键点 <span><span class="MathJax_Preview">6,4,7</span><script type="math/tex">6,4,7</script></span>（我故意打乱了）按照 DFS 序排序，得到序列 <span><span class="MathJax_Preview">4,6,7</span><script type="math/tex">4,6,7</script></span>；</li>
+<li>将点 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 入栈；</li>
+<li>取序列第一个作为当前节点，为 <span><span class="MathJax_Preview">4​</span><script type="math/tex">4​</script></span>，再取栈顶元素，为 <span><span class="MathJax_Preview">1​</span><script type="math/tex">1​</script></span>。求 <span><span class="MathJax_Preview">1​</span><script type="math/tex">1​</script></span> 和 <span><span class="MathJax_Preview">4​</span><script type="math/tex">4​</script></span> 的 LCA​：<span><span class="MathJax_Preview">\text{LCA}(1,4)=1​</span><script type="math/tex">\text{LCA}(1,4)=1​</script></span>；</li>
+<li>发现 <span><span class="MathJax_Preview">\text{LCA}(1,4)</span><script type="math/tex">\text{LCA}(1,4)</script></span> 为栈顶元素，说明它们在虚树的一条链上，所以直接把当前节点 <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 入栈，当前栈为 <span><span class="MathJax_Preview">4,1</span><script type="math/tex">4,1</script></span>；</li>
+<li>取序列第二个作为当前节点，为 <span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>。再取栈顶元素，为 <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>。求 <span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span> 和 <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 的 LCA：<span><span class="MathJax_Preview">\text{LCA}(6,4)=1</span><script type="math/tex">\text{LCA}(6,4)=1</script></span>；</li>
+<li>发现 <span><span class="MathJax_Preview">\text{LCA}(6,4)</span><script type="math/tex">\text{LCA}(6,4)</script></span> 不等于栈顶元素，进入判断阶段；</li>
+<li>判断阶段：发现栈顶节点 <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 的 DFS 序是大于 <span><span class="MathJax_Preview">\text{LCA}(6,4)</span><script type="math/tex">\text{LCA}(6,4)</script></span> 的，但是次大节点（栈顶节点下面的那个节点）<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的 DFS 序是等于 LCA 的（其实 DFS 序相等说明节点也相等），说明 LCA 已经入栈了，所以直接连接 <span><span class="MathJax_Preview">1\to 4</span><script type="math/tex">1\to 4</script></span> 的边，也就是 LCA 到栈顶元素的边。并把 <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 从栈中弹出；</li>
+<li>结束了判断阶段，将 <span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span> 入栈，当前栈为 <span><span class="MathJax_Preview">6,1</span><script type="math/tex">6,1</script></span>；</li>
+<li>取序列第三个作为当前节点，为 <span><span class="MathJax_Preview">7</span><script type="math/tex">7</script></span>。再取栈顶元素，为 <span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>。求 <span><span class="MathJax_Preview">7</span><script type="math/tex">7</script></span> 和 <span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span> 的 LCA ：<span><span class="MathJax_Preview">\text{LCA}(7,6)=3</span><script type="math/tex">\text{LCA}(7,6)=3</script></span>；</li>
+<li>发现 <span><span class="MathJax_Preview">\text{LCA}(7,6)</span><script type="math/tex">\text{LCA}(7,6)</script></span> 不等于栈顶元素，进入判断阶段；</li>
+<li>判断阶段：发现栈顶节点 <span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span> 的 DFS 序是大于 <span><span class="MathJax_Preview">\text{LCA}(7,6)</span><script type="math/tex">\text{LCA}(7,6)</script></span> 的，但是次大节点（栈顶节点下面的那个节点）<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的 DFS 序是小于 LCA 的，说明 LCA 还没有入过栈，所以直接连接 <span><span class="MathJax_Preview">3\to 6</span><script type="math/tex">3\to 6</script></span> 的边，也就是 LCA 到栈顶元素的边。把 <span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span> 从栈中弹出，并且把 <span><span class="MathJax_Preview">\text{LCA}(6,7)</span><script type="math/tex">\text{LCA}(6,7)</script></span> 入栈。</li>
+<li>结束了判断阶段，将 <span><span class="MathJax_Preview">7</span><script type="math/tex">7</script></span> 入栈，当前栈为 <span><span class="MathJax_Preview">3,7</span><script type="math/tex">3,7</script></span>；</li>
+<li>发现序列里的 <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个节点已经全部加入过栈了，退出循环；</li>
+<li>此时栈中还有 <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个节点：<span><span class="MathJax_Preview">3,7</span><script type="math/tex">3,7</script></span>，很明显它们是一条链上的，所以直接链接 <span><span class="MathJax_Preview">3\to 7</span><script type="math/tex">3\to 7</script></span>的边；</li>
 <li>虚树就建完啦！</li>
 </ul>
 <p>其中有很多细节，比如我是用临接表存图的方式存虚树的，所以需要清空临接表。但是直接清空整个临接表是很慢的，所以我们在<strong>有一个从未入栈的元素入栈的时候清空该元素对应的临接表</strong>即可。</p>
-<p>建立虚树的C++代码大概长这样：</p>
+<p>建立虚树的 C++ 代码大概长这样：</p>
 <p><div class="codehilite"><pre><span></span><span class="n">sort</span><span class="p">(</span><span class="n">h</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">h</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">k</span><span class="p">,</span> <span class="n">cmp</span><span class="p">);</span>
 <span class="n">sta</span><span class="p">[</span><span class="n">top</span> <span class="o">=</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">g</span><span class="p">.</span><span class="n">sz</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">g</span><span class="p">.</span><span class="n">head</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 <span class="c1">//1号节点入栈，清空1号节点对应的临接表，设置临接表边数为1</span>
@@ -3221,10 +3221,10 @@
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">top</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="n">g</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">sta</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">sta</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]);</span><span class="c1">//剩余的最后一条链连接一下</span>
 </pre></div>
 于是我们就学会了虚树的建立了！</p>
-<p>对于消耗战这题，直接在虚树上跑最开始讲的那个<span><span class="MathJax_Preview">Dp</span><script type="math/tex">Dp</script></span>就行了，我们等于利用了虚树排除了那些没用的非关键节点！</p>
+<p>对于消耗战这题，直接在虚树上跑最开始讲的那个 DP 就行了，我们等于利用了虚树排除了那些没用的非关键节点！</p>
 <ul>
-<li>若<span><span class="MathJax_Preview">son[i]</span><script type="math/tex">son[i]</script></span>不是关键点：<span><span class="MathJax_Preview">Dp[i]=Dp[i] + min\{Dp[son[i]],w[i,son[i]]\}</span><script type="math/tex">Dp[i]=Dp[i] + min\{Dp[son[i]],w[i,son[i]]\}</script></span></li>
-<li>若<span><span class="MathJax_Preview">son[i]</span><script type="math/tex">son[i]</script></span>是关键点：<span><span class="MathJax_Preview">Dp[i]=Dp[i] + w[i,son[i]]</span><script type="math/tex">Dp[i]=Dp[i] + w[i,son[i]]</script></span></li>
+<li>若 <span><span class="MathJax_Preview">son[i]</span><script type="math/tex">son[i]</script></span> 不是关键点：<span><span class="MathJax_Preview">Dp[i]=Dp[i] + \min \{Dp[son[i]],w[i,son[i]]\}</span><script type="math/tex">Dp[i]=Dp[i] + \min \{Dp[son[i]],w[i,son[i]]\}</script></span></li>
+<li>若 <span><span class="MathJax_Preview">son[i]</span><script type="math/tex">son[i]</script></span> 是关键点：<span><span class="MathJax_Preview">Dp[i]=Dp[i] + w[i,son[i]]</span><script type="math/tex">Dp[i]=Dp[i] + w[i,son[i]]</script></span></li>
 </ul>
 <p>于是这题很简单就过了。</p>
 <p>代码看下面。</p>

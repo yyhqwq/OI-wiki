@@ -2929,11 +2929,11 @@
 <p>时间复杂度用来衡量一个算法的运行时间和输入规模的关系，类似的有空间复杂度，用来描述算法的空间消耗的规模。</p>
 <p>简单计算复杂度的方法一般是统计“简单操作”的执行次数，有时候也可以直接数循环的层数来近似估计。</p>
 <p>时间复杂度分为最坏时间复杂度、平均时间复杂度、最好时间复杂度等等。OI 竞赛中要考虑的一般是最坏时间复杂度，因为它代表的是算法运行水平的下界，在评测中不会出现更差的结果了。</p>
-<p>基于比较的排序算法的时间复杂度是 <span><span class="MathJax_Preview">O(nlogn)</span><script type="math/tex">O(nlogn)</script></span> 的。</p>
-<p>当然也有不是 <span><span class="MathJax_Preview">O(nlogn)</span><script type="math/tex">O(nlogn)</script></span> 的，桶排序的时间复杂度是 <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>，但是它是在“用空间换时间”，它的空间复杂度是 <span><span class="MathJax_Preview">O(所排序的最大数)</span><script type="math/tex">O(所排序的最大数)</script></span></p>
+<p>基于比较的排序算法的时间复杂度是 <span><span class="MathJax_Preview">\mathcal{O}(n\log n)</span><script type="math/tex">\mathcal{O}(n\log n)</script></span> 的。</p>
+<p>当然也有不是 <span><span class="MathJax_Preview">\mathcal{O}(n\log n)</span><script type="math/tex">\mathcal{O}(n\log n)</script></span> 的，桶排序的时间复杂度是 <span><span class="MathJax_Preview">\mathcal{O}(n)</span><script type="math/tex">\mathcal{O}(n)</script></span>，但是它是在「用空间换时间」，它的空间复杂度是 <span><span class="MathJax_Preview">\mathcal{O}(所排序的最大数)</span><script type="math/tex">\mathcal{O}(所排序的最大数)</script></span></p>
 <h2 id="_3">归并排序<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h2 id="_4">快速排序<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>C++ 函数模板库实现了快速排序，可以查阅<a href="https://devdocs.io/cpp/algorithm/sort">std::sort()</a></p>
+<p>C++ 函数模板库实现了快速排序，可以查阅 <a href="https://devdocs.io/cpp/algorithm/sort">std::sort()</a></p>
 <p>用法：
 <div class="codehilite"><pre><span></span><span class="c1">// a[0] .. a[n - 1] 是放了元素的</span>
 <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span>
