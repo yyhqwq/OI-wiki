@@ -2182,7 +2182,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="求法" class="md-nav__link">
+  <a href="#_2" title="性质" class="md-nav__link">
+    性质
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="求法" class="md-nav__link">
     求法
   </a>
   
@@ -2190,15 +2197,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" title="暴力做法" class="md-nav__link">
-    暴力做法
+  <a href="#_4" title="朴素算法" class="md-nav__link">
+    朴素算法
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" title="倍增" class="md-nav__link">
-    倍增
+  <a href="#_5" title="倍增算法" class="md-nav__link">
+    倍增算法
   </a>
   
 </li>
@@ -2213,6 +2220,20 @@
           <li class="md-nav__item">
   <a href="#rmq" title="转化为 RMQ 问题" class="md-nav__link">
     转化为 RMQ 问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="树链剖分" class="md-nav__link">
+    树链剖分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="动态树" class="md-nav__link">
+    动态树
   </a>
   
 </li>
@@ -2894,7 +2915,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="求法" class="md-nav__link">
+  <a href="#_2" title="性质" class="md-nav__link">
+    性质
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="求法" class="md-nav__link">
     求法
   </a>
   
@@ -2902,15 +2930,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" title="暴力做法" class="md-nav__link">
-    暴力做法
+  <a href="#_4" title="朴素算法" class="md-nav__link">
+    朴素算法
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" title="倍增" class="md-nav__link">
-    倍增
+  <a href="#_5" title="倍增算法" class="md-nav__link">
+    倍增算法
   </a>
   
 </li>
@@ -2925,6 +2953,20 @@
           <li class="md-nav__item">
   <a href="#rmq" title="转化为 RMQ 问题" class="md-nav__link">
     转化为 RMQ 问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="树链剖分" class="md-nav__link">
+    树链剖分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="动态树" class="md-nav__link">
+    动态树
   </a>
   
 </li>
@@ -2962,13 +3004,127 @@
                   <h1>最近公共祖先</h1>
                 
                 <h2 id="_1">定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>最近公共祖先简称 LCA（Lowest Common Ancestor）。两个节点的最近公共祖先，就是这两个点的公共祖先里面，离根最远的那个。</p>
-<h2 id="_2">求法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">暴力做法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>可以每次找深度比较大的那个点，让它向上跳。显然在树上，这两个点最后一定会相遇，相遇的位置就是想要求的 LCA。</p>
-<h3 id="_4">倍增<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>最近公共祖先简称 LCA（Lowest Common Ancestor）。两个节点的最近公共祖先，就是这两个点的公共祖先里面，离根最远的那个。<br />
+为了方便，我们记某点集<span><span class="MathJax_Preview">S={v_1,v_2,\ldots,v_n}</span><script type="math/tex">S={v_1,v_2,\ldots,v_n}</script></span>的最近公共祖先为<span><span class="MathJax_Preview">LCA(v_1,v_2,\ldots,v_n)</span><script type="math/tex">LCA(v_1,v_2,\ldots,v_n)</script></span>或<span><span class="MathJax_Preview">LCA(S)</span><script type="math/tex">LCA(S)</script></span></p>
+<h2 id="_2">性质<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li><span><span class="MathJax_Preview">LCA({u})=u</span><script type="math/tex">LCA({u})=u</script></span></li>
+<li><span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>是<span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>的祖先，当且仅当<span><span class="MathJax_Preview">LCA(u,v)=u</span><script type="math/tex">LCA(u,v)=u</script></span></li>
+<li>如果<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>不为<span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>的祖先并且<span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>不为<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>的祖先，那么<span><span class="MathJax_Preview">u,v</span><script type="math/tex">u,v</script></span>分别处于<span><span class="MathJax_Preview">LCA(u,v)</span><script type="math/tex">LCA(u,v)</script></span>的两棵不同子树中</li>
+<li>前序遍历中，<span><span class="MathJax_Preview">LCA(S)</span><script type="math/tex">LCA(S)</script></span>出现在所有<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>中元素之前，后序遍历中<span><span class="MathJax_Preview">LCA(S)</span><script type="math/tex">LCA(S)</script></span>则出现在所有<span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>中元素之后</li>
+<li>两点集并的最近公共祖先为两点集分别的最近公共祖先的最近公共祖先，即<span><span class="MathJax_Preview">LCA(A\cup B)=LCA(LCA(A), LCA(B))</span><script type="math/tex">LCA(A\cup B)=LCA(LCA(A), LCA(B))</script></span></li>
+<li>两点的最近公共祖先必定处在树上两点间的最短路上</li>
+<li><span><span class="MathJax_Preview">d(u,v)=h(u)+h(v)-2h(LCA(u,v))</span><script type="math/tex">d(u,v)=h(u)+h(v)-2h(LCA(u,v))</script></span>，其中<span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>是树上两点间的距离，<span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>代表某点到树根的距离</li>
+</ol>
+<h2 id="_3">求法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">朴素算法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>可以每次找深度比较大的那个点，让它向上跳。显然在树上，这两个点最后一定会相遇，相遇的位置就是想要求的 LCA。<br />
+或者先向上调整深度较大的点，令他们深度相同，然后再共同向上跳转，最后也一定会相遇。</p>
+<h3 id="_5">倍增算法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>倍增算法是最经典的LCA求法，他是朴素算法的改进算法。通过预处理<code>fa[x][i]</code>数组，游标可以快速移动，大幅减少了游标跳转次数。<code>fa[x][i]</code>表示点x的第<span><span class="MathJax_Preview">2^i</span><script type="math/tex">2^i</script></span>个祖先。<code>fa[x][i]</code>数组可以通过dfs预处理出来。</p>
+<p>现在我们看看如何优化这些跳转：<br />
+在调整游标的第一阶段中，我们可以计算出u，v两点的深度之差，设其为y。通过将y进行二进制拆分，我们将y次游标跳转优化为<code>count_one_in_binary_representation(y)</code>次游标跳转。<br />
+在第二阶段中，我们从最大的i开始循环尝试，一直尝试到0(包括0)，如果<code>fa[u][i] != fa[v][i]</code>，则令<code>u = fa[u][i]; v = fa[v][i]</code>，那么最后的LCA为<code>fa[u][0]</code>。</p>
+<div class="admonition 例题">
+<p class="admonition-title">例题</p>
+<p>CODEVS2370 <a href="http://codevs.cn/problem/2370/">小机房的树</a>
+树上最短路查询</p>
+</div>
+<p>可先求出LCA，再结合性质7进行解答。也可以直接在求LCA时求出结果。<br />
+以下代码仅供参考
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cstring&gt;</span><span class="cp"></span>
+<span class="cp">#define MXN 50007</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">[</span><span class="n">MXN</span><span class="p">];</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">w</span><span class="p">[</span><span class="n">MXN</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="n">fa</span><span class="p">[</span><span class="n">MXN</span><span class="p">][</span><span class="mi">31</span><span class="p">],</span> <span class="n">cost</span><span class="p">[</span><span class="n">MXN</span><span class="p">][</span><span class="mi">31</span><span class="p">],</span> <span class="n">dep</span><span class="p">[</span><span class="n">MXN</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fno</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">fa</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">fno</span><span class="p">;</span>
+    <span class="n">dep</span><span class="p">[</span><span class="n">root</span><span class="p">]</span> <span class="o">=</span> <span class="n">dep</span><span class="p">[</span><span class="n">fa</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">31</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fa</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fa</span><span class="p">[</span><span class="n">fa</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]][</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+        <span class="n">cost</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">cost</span><span class="p">[</span><span class="n">fa</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]][</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">cost</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">sz</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="n">root</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">sz</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">fno</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+        <span class="n">cost</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="n">i</span><span class="p">]][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">dfs</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">root</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="n">root</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">lca</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">dep</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dep</span><span class="p">[</span><span class="n">y</span><span class="p">])</span>
+        <span class="n">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">dep</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">-</span> <span class="n">dep</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">tmp</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">,</span> <span class="n">tmp</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">tmp</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">ans</span> <span class="o">+=</span> <span class="n">cost</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="n">fa</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">x</span><span class="p">)</span> <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">y</span> <span class="o">!=</span> <span class="n">x</span><span class="p">;</span> <span class="o">--</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="n">fa</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="p">{</span>
+            <span class="n">ans</span> <span class="o">+=</span> <span class="n">cost</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">cost</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">fa</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">ans</span> <span class="o">+=</span> <span class="n">cost</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">cost</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">memset</span><span class="p">(</span><span class="n">fa</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">fa</span><span class="p">));</span>
+    <span class="n">memset</span><span class="p">(</span><span class="n">cost</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">cost</span><span class="p">));</span>
+    <span class="n">memset</span><span class="p">(</span><span class="n">dep</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">dep</span><span class="p">));</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d %d %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
+        <span class="o">++</span><span class="n">a</span><span class="p">,</span> <span class="o">++</span><span class="n">b</span><span class="p">;</span>
+        <span class="n">v</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+        <span class="n">v</span><span class="p">[</span><span class="n">b</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+        <span class="n">w</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+        <span class="n">w</span><span class="p">[</span><span class="n">b</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">dfs</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+        <span class="o">++</span><span class="n">a</span><span class="p">,</span> <span class="o">++</span><span class="n">b</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">lca</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">));</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
 <h3 id="tarjan">Tarjan 算法<a class="headerlink" href="#tarjan" title="Permanent link">&para;</a></h3>
 <h3 id="rmq">转化为 RMQ 问题<a class="headerlink" href="#rmq" title="Permanent link">&para;</a></h3>
+<p>首先对树进行dfs，<code>dfs(root, 1)</code>，将深度和节点编号按顺序记录到数组中，并记录各个点在dfs序列中第一次出现的位置。
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">depth</span><span class="p">[</span><span class="n">N</span> <span class="o">*</span> <span class="mi">2</span><span class="p">],</span> <span class="n">id</span><span class="p">[</span><span class="n">N</span> <span class="o">*</span> <span class="mi">2</span><span class="p">],</span> <span class="n">loc</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">tot</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dep</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">tot</span><span class="p">;</span>
+    <span class="n">depth</span><span class="p">[</span><span class="n">tot</span><span class="p">]</span> <span class="o">=</span> <span class="n">dep</span><span class="p">;</span>
+    <span class="n">id</span><span class="p">[</span><span class="n">tot</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+    <span class="n">tot</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">v</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">dfs</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="n">dep</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">depth</span><span class="p">[</span><span class="n">tot</span><span class="p">]</span> <span class="o">=</span> <span class="n">dep</span><span class="p">;</span>
+        <span class="n">id</span><span class="p">[</span><span class="n">tot</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+        <span class="n">tot</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+然后对depth数组建立支持RMQ查询的数据结构，需要支持查询最小值所处位置。</p>
+<p>当我们需要查询某点对<code>(u, v)</code>的LCA时，需要先查询区间<code>[min(loc[u], loc[v]), max(loc[u], loc[v])]</code>上最小值的出现位置，设其为<code>pos</code>，则<code>(u, v)</code>的LCA为<code>id[pos]</code>。</p>
+<p>本算法不支持在线修改</p>
+<h3 id="_6">树链剖分<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>LCA为两个游标跳转到同一条重链上时深度较小的那个游标所指向的点。</p>
+<h3 id="_7">动态树<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>本节<strong>性质</strong>部分内容翻译自<a href="http://wcipeg.com/wiki/Lowest_common_ancestor">wcipeg</a>，并做过修改</p>
+</blockquote>
                 
                   
                 
