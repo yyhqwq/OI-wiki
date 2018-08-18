@@ -13,7 +13,7 @@
         <meta name="description" content="OI Wiki">
       
       
-        <link rel="canonical" href="https://oi-wiki.cf/misc/cdq-divide/">
+        <link rel="canonical" href="https://oi-wiki.cf/misc/inandout/">
       
       
         <meta name="author" content="OI Wiki Team">
@@ -42,7 +42,7 @@
     
     
       
-        <title>CDQ 分治 - OI Wiki</title>
+        <title>读入和输出优化 - OI Wiki</title>
       
     
     
@@ -106,6 +106,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -128,7 +132,7 @@
                 OI Wiki
               </span>
               <span class="md-header-nav__topic">
-                CDQ 分治
+                读入和输出优化
               </span>
             
           
@@ -2626,18 +2630,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="CDQ 分治" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../cdq-divide/" title="CDQ 分治" class="md-nav__link">
       CDQ 分治
     </a>
-    
   </li>
 
         
@@ -2789,11 +2786,98 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../inandout/" title="读入和输出优化" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        读入和输出优化
+      </label>
+    
+    <a href="./" title="读入和输出优化" class="md-nav__link md-nav__link--active">
       读入和输出优化
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="读入优化" class="md-nav__link">
+    读入优化
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="原理" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="代码实现" class="md-nav__link">
+    代码实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="输出优化" class="md-nav__link">
+    输出优化
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="原理" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="代码实现" class="md-nav__link">
+    代码实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -2809,17 +2893,150 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="读入优化" class="md-nav__link">
+    读入优化
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="原理" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="代码实现" class="md-nav__link">
+    代码实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="输出优化" class="md-nav__link">
+    输出优化
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="原理" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="代码实现" class="md-nav__link">
+    代码实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/24OI/OI-wiki/blob/master/docs/misc/cdq-divide.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/24OI/OI-wiki/blob/master/docs/misc/inandout.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>CDQ 分治</h1>
+                  <h1>读入和输出优化</h1>
                 
-                
+                <p>众所周知,cin(cout)是极为迟缓的读入(输出)方式，而scanf(printf)比cin(cout)快得多,因此对于大数据，cin和cout是尽量耀避免使用，但同样的，scanf和printf依然有优化的空间，这就是本章所讲的内容——读入和输出优化。</p>
+<ul>
+<li>注意，读入和输出优化均针对整数，不支持其他类型的数据</li>
+</ul>
+<h4 id="_1">读入优化<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h5 id="_2">原理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
+<p>众所周知，getchar()是用来读入char类型，且速度很快，用“读入字符——转换为整形”来代替缓慢的读入</p>
+<p>每个整数由两部分组成——符号和数字</p>
+<p>整数的’+’通常是省略的，且不会对后面数字所代表的值产生影响，而’-’不可省略，因此要进行判定</p>
+<p>10进制整数中是不含空格或除0~9和正负号外的其他字符的，因此在读入不应存在于整数中的字符(通常为空格)时，就可以判定已经读入结束</p>
+<h5 id="_3">代码实现<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">read</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">w</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="kt">char</span> <span class="n">ch</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="c1">//x储存数字部分，w储存符号（正负），ch是每次读入的字符</span>
+<span class="k">while</span><span class="p">(</span><span class="n">ch</span><span class="o">&lt;</span><span class="sc">&#39;0&#39;</span> <span class="o">||</span> <span class="n">ch</span><span class="o">&gt;</span><span class="sc">&#39;9&#39;</span><span class="p">){</span><span class="c1">//ch不是数字时</span>
+<span class="k">if</span><span class="p">(</span><span class="n">ch</span><span class="o">==</span><span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="n">w</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span><span class="c1">//判断是否为负</span>
+<span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">();</span><span class="c1">//继续读入</span>
+<span class="p">}</span>
+<span class="k">while</span><span class="p">(</span><span class="n">ch</span><span class="o">&gt;=</span><span class="sc">&#39;0&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">ch</span><span class="o">&lt;=</span><span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span><span class="c1">//ch是数字时</span>
+<span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">ch</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="c1">//将新读入的数字’加’在x的后面</span>
+<span class="c1">//x&lt;&lt;3==x*8  x&lt;&lt;1==x*2  所以(x&lt;&lt;3)+(x&lt;&lt;1)相当于x*10</span>
+<span class="c1">//x是int 类型，char类型的ch和’0’会被自动转为其ASCII表中序号，相当于将ch转化为对应数字</span>
+<span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">();</span><span class="c1">//继续读入</span>
+<span class="p">}</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">w</span><span class="p">;</span> <span class="c1">//数字*正负号==实际数值</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>举例 </li>
+</ul>
+<p>读入num 可写为 num=read();</p>
+<h4 id="_4">输出优化<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h5 id="_5">原理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<p><sub><sub>同样是众所周知</sub></sub>putchar()是输出单个字符，其速度远快于其它输出方式 </p>
+<p>因此将数字的每一位转化为字符输出以加速</p>
+<p>要注意的是，负号要单独判断输出，并且每次%（mod）取出的是数字末位，因此要倒序输出（递归加速）</p>
+<h5 id="_6">代码实现<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">write</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span><span class="c1">//判负+输出负号+变原数为正数</span>
+            <span class="n">x</span><span class="o">=-</span><span class="n">x</span><span class="p">;</span>
+        <span class="n">putchar</span><span class="p">(</span><span class="sc">&#39;-&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">9</span><span class="p">)</span> <span class="n">write</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">10</span><span class="p">);</span><span class="c1">//递归，将除最后一位外的其他部分放到递归中输出</span>
+    <span class="n">putchar</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">10</span><span class="o">+</span><span class="sc">&#39;0&#39;</span><span class="p">);</span><span class="c1">//已经输出（递归）完x末位前的所有数字，输出末位</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>举例</li>
+</ul>
+<p>输出num可写为write(num);</p>
                 
                   
                 
@@ -2837,7 +3054,7 @@
     <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
     <script>
       const gitment = new Gitmint({
-        id: 'CDQ 分治',
+        id: '读入和输出优化',
         owner: 'Ir1d',
         repo: 'gitment',
         oauth: {
@@ -2861,7 +3078,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../non-traditional/" title="非传统题（提答大法）" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../complexity/" title="复杂度" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2870,25 +3087,11 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                非传统题（提答大法）
+                复杂度
               </span>
             </div>
           </a>
         
-        
-          <a href="../mo-algo/" title="莫队算法" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  前进
-                </span>
-                莫队算法
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
