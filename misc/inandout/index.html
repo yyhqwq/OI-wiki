@@ -2989,13 +2989,13 @@
 <ul>
 <li>注意，读入和输出优化均针对整数，不支持其他类型的数据</li>
 </ul>
-<h4 id="_1">读入优化<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
-<h5 id="_2">原理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
+<h3 id="_1">读入优化<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h4 id="_2">原理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>众所周知，getchar()是用来读入char类型，且速度很快，用“读入字符——转换为整形”来代替缓慢的读入</p>
 <p>每个整数由两部分组成——符号和数字</p>
 <p>整数的’+’通常是省略的，且不会对后面数字所代表的值产生影响，而’-’不可省略，因此要进行判定</p>
 <p>10进制整数中是不含空格或除0~9和正负号外的其他字符的，因此在读入不应存在于整数中的字符(通常为空格)时，就可以判定已经读入结束</p>
-<h5 id="_3">代码实现<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<h4 id="_3">代码实现<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">read</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">w</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="kt">char</span> <span class="n">ch</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="c1">//x储存数字部分，w储存符号（正负），ch是每次读入的字符</span>
@@ -3017,12 +3017,12 @@
 <li>举例 </li>
 </ul>
 <p>读入num 可写为 num=read();</p>
-<h4 id="_4">输出优化<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<h5 id="_5">原理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
-<p><sub><sub>同样是众所周知</sub></sub>putchar()是输出单个字符，其速度远快于其它输出方式 </p>
+<h3 id="_4">输出优化<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">原理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>同样是众所周知，putchar()是输出单个字符，其速度远快于其它输出方式 </p>
 <p>因此将数字的每一位转化为字符输出以加速</p>
 <p>要注意的是，负号要单独判断输出，并且每次%（mod）取出的是数字末位，因此要倒序输出（递归加速）</p>
-<h5 id="_6">代码实现<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<h4 id="_6">代码实现<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">write</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span><span class="c1">//判负+输出负号+变原数为正数</span>
             <span class="n">x</span><span class="o">=-</span><span class="n">x</span><span class="p">;</span>
