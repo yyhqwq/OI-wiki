@@ -2996,19 +2996,17 @@
 <p>整数的’+’通常是省略的，且不会对后面数字所代表的值产生影响，而’-’不可省略，因此要进行判定</p>
 <p>10进制整数中是不含空格或除0~9和正负号外的其他字符的，因此在读入不应存在于整数中的字符(通常为空格)时，就可以判定已经读入结束</p>
 <h4 id="_3">代码实现<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">read</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">w</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="kt">char</span> <span class="n">ch</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="c1">//x储存数字部分，w储存符号（正负），ch是每次读入的字符</span>
-<span class="k">while</span><span class="p">(</span><span class="n">ch</span><span class="o">&lt;</span><span class="sc">&#39;0&#39;</span> <span class="o">||</span> <span class="n">ch</span><span class="o">&gt;</span><span class="sc">&#39;9&#39;</span><span class="p">){</span><span class="c1">//ch不是数字时</span>
-<span class="k">if</span><span class="p">(</span><span class="n">ch</span><span class="o">==</span><span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="n">w</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span><span class="c1">//判断是否为负</span>
-<span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">();</span><span class="c1">//继续读入</span>
-<span class="p">}</span>
-<span class="k">while</span><span class="p">(</span><span class="n">ch</span><span class="o">&gt;=</span><span class="sc">&#39;0&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">ch</span><span class="o">&lt;=</span><span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span><span class="c1">//ch是数字时</span>
-<span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">ch</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="c1">//将新读入的数字’加’在x的后面</span>
-<span class="c1">//x&lt;&lt;3==x*8  x&lt;&lt;1==x*2  所以(x&lt;&lt;3)+(x&lt;&lt;1)相当于x*10</span>
-<span class="c1">//x是int 类型，char类型的ch和’0’会被自动转为其ASCII表中序号，相当于将ch转化为对应数字</span>
-<span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">();</span><span class="c1">//继续读入</span>
-<span class="p">}</span>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">read</span><span class="p">(){</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">ch</span><span class="o">&lt;</span><span class="sc">&#39;0&#39;</span> <span class="o">||</span> <span class="n">ch</span><span class="o">&gt;</span><span class="sc">&#39;9&#39;</span><span class="p">){</span><span class="c1">//ch不是数字时</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">ch</span><span class="o">==</span><span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="n">w</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span><span class="c1">//判断是否为负</span>
+        <span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">();</span><span class="c1">//继续读入</span>
+    <span class="p">}</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">ch</span><span class="o">&gt;=</span><span class="sc">&#39;0&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">ch</span><span class="o">&lt;=</span><span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span><span class="c1">//ch是数字时</span>
+        <span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">3</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">ch</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="c1">//将新读入的数字’加’在x的后面</span>
+        <span class="c1">//x&lt;&lt;3==x*8  x&lt;&lt;1==x*2  所以(x&lt;&lt;3)+(x&lt;&lt;1)相当于x*10</span>
+        <span class="c1">//x是int 类型，char类型的ch和’0’会被自动转为其ASCII表中序号，相当于将ch转化为对应数字</span>
+        <span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">();</span><span class="c1">//继续读入</span>
+    <span class="p">}</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">w</span><span class="p">;</span> <span class="c1">//数字*正负号==实际数值</span>
 <span class="p">}</span>
 </pre></div>
@@ -3026,8 +3024,8 @@
 <div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">write</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span><span class="c1">//判负+输出负号+变原数为正数</span>
             <span class="n">x</span><span class="o">=-</span><span class="n">x</span><span class="p">;</span>
-        <span class="n">putchar</span><span class="p">(</span><span class="sc">&#39;-&#39;</span><span class="p">);</span>
-    <span class="p">}</span>
+            <span class="n">putchar</span><span class="p">(</span><span class="sc">&#39;-&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">9</span><span class="p">)</span> <span class="n">write</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">10</span><span class="p">);</span><span class="c1">//递归，将除最后一位外的其他部分放到递归中输出</span>
     <span class="n">putchar</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">10</span><span class="o">+</span><span class="sc">&#39;0&#39;</span><span class="p">);</span><span class="c1">//已经输出（递归）完x末位前的所有数字，输出末位</span>
 <span class="p">}</span>
