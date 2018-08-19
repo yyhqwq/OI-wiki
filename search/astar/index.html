@@ -2824,13 +2824,13 @@
 <p>从起点开始的距离函数 <span><span class="MathJax_Preview">g(x)</span><script type="math/tex">g(x)</script></span></p>
 <p>到终点的距离函数 <span><span class="MathJax_Preview">h(x), h*(x)</span><script type="math/tex">h(x), h*(x)</script></span></p>
 <p>定义每个点的估价函数 <span><span class="MathJax_Preview">f(x)=g(x)+h(x)</span><script type="math/tex">f(x)=g(x)+h(x)</script></span></p>
-<p>A* 算法每次从队列中取出一个 f 最小的，然后更新相邻的状态</p>
+<p>A* 算法每次从队列中取出一个 <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 最小的，然后更新相邻的状态</p>
 <p>如果 <span><span class="MathJax_Preview">h\leq h*</span><script type="math/tex">h\leq h*</script></span>，则 A* 算法能找到最优解</p>
-<p>上述条件下，如果 h 满足三角形不等式，则 A* 算法不会将重复结点扔进队列</p>
+<p>上述条件下，如果 <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 满足三角形不等式，则 A* 算法不会将重复结点扔进队列</p>
 <p>其实…… <span><span class="MathJax_Preview">h=0</span><script type="math/tex">h=0</script></span> 时就是 <a href="/search/dfs">DFS</a> 算法，<span><span class="MathJax_Preview">h=0</span><script type="math/tex">h=0</script></span> 并且边权为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 时就是 <a href="/search/BFS">BFS</a></p>
 <p>一个很好的例子是八数码</p>
-<p>h 可以定义为，不在应该在的位置的数字个数</p>
-<p>容易发现 h 满足以上两个性质</p>
+<p><span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 可以定义为，不在应该在的位置的数字个数</p>
+<p>容易发现 <span><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 满足以上两个性质</p>
                 
                   
                 

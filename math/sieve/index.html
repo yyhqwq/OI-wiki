@@ -2948,9 +2948,9 @@
                   <h1>筛法</h1>
                 
                 <h2 id="_1">素数筛法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>如果我们想要知道小于等于 n 有多少个素数呢？</p>
-<p>一个自然的想法是我们对于小于等于 n 的每个数进行一次判定。这种暴力的做法显然不能达到最优复杂度，考虑如何优化呢。</p>
-<p>考虑这样一件事情：如果 x 是合数，那么 x 的倍数也一定是合数。利用这个结论，我们可以避免很多次不必要的检测。</p>
+<p>如果我们想要知道小于等于 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 有多少个素数呢？</p>
+<p>一个自然的想法是我们对于小于等于 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的每个数进行一次判定。这种暴力的做法显然不能达到最优复杂度，考虑如何优化呢。</p>
+<p>考虑这样一件事情：如果 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 是合数，那么 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的倍数也一定是合数。利用这个结论，我们可以避免很多次不必要的检测。</p>
 <p>如果我们从小到大考虑每个数，然后同时把当前这个数的所有（比自己大的）倍数记为合数，那么运行结束的时候没有被标记的数就是素数了。</p>
 <div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">genPrimes</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
@@ -2992,25 +2992,25 @@
 <span class="p">}</span>
 </pre></div>
 
-<p>上面代码中的 phi 数组，会在下面提到。</p>
+<p>上面代码中的 <span><span class="MathJax_Preview">phi</span><script type="math/tex">phi</script></span> 数组，会在下面提到。</p>
 <p>这种线性筛也称为欧拉筛法</p>
 <h2 id="_2">筛法求欧拉函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>注意到在线性筛中，每一个合数都是被最小的质因子筛掉。比如设 <span><span class="MathJax_Preview">p_1</span><script type="math/tex">p_1</script></span> 是 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的最小质因子，<span><span class="MathJax_Preview">n' = \frac{n}{p_1}</span><script type="math/tex">n' = \frac{n}{p_1}</script></span>，那么线性筛的过程中 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 通过 <span><span class="MathJax_Preview">n' * p_1</span><script type="math/tex">n' * p_1</script></span> 筛掉。</p>
+<p>注意到在线性筛中，每一个合数都是被最小的质因子筛掉。比如设 <span><span class="MathJax_Preview">p_1</span><script type="math/tex">p_1</script></span> 是 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的最小质因子，<span><span class="MathJax_Preview">n' = \frac{n}{p_1}</span><script type="math/tex">n' = \frac{n}{p_1}</script></span>，那么线性筛的过程中 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 通过 <span><span class="MathJax_Preview">n' \times p_1</span><script type="math/tex">n' \times p_1</script></span> 筛掉。</p>
 <p>观察线性筛的过程，我们还需要处理两个部分，下面对<span><span class="MathJax_Preview">n' \bmod p_1</span><script type="math/tex">n' \bmod p_1</script></span> 分情况讨论。</p>
 <p>如果 <span><span class="MathJax_Preview">n' \bmod p_1 = 0</span><script type="math/tex">n' \bmod p_1 = 0</script></span>，那么 <span><span class="MathJax_Preview">n'</span><script type="math/tex">n'</script></span> 包含了 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的所有质因子。</p>
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\varphi(n) &amp; = n * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
-&amp; = p_1 * n' * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
-&amp; = p_1 * \varphi(n')
+\varphi(n) &amp; = n \times \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
+&amp; = p_1 \times n' \times \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
+&amp; = p_1 \times \varphi(n')
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\varphi(n) & = n * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
-& = p_1 * n' * \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
-& = p_1 * \varphi(n')
+\varphi(n) & = n \times \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
+& = p_1 \times n' \times \prod_{i = 1}^s{\frac{p_i - 1}{p_i}} \\\\
+& = p_1 \times \varphi(n')
 \end{aligned}
 </script>
 </div>
@@ -3018,14 +3018,14 @@
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\varphi(n) &amp; = \varphi(p_1) * \varphi(n') \\\\
-&amp; = (p_1 - 1) * \varphi(n')
+\varphi(n) &amp; = \varphi(p_1) \times \varphi(n') \\\\
+&amp; = (p_1 - 1) \times \varphi(n')
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\varphi(n) & = \varphi(p_1) * \varphi(n') \\\\
-& = (p_1 - 1) * \varphi(n')
+\varphi(n) & = \varphi(p_1) \times \varphi(n') \\\\
+& = (p_1 - 1) \times \varphi(n')
 \end{aligned}
 </script>
 </div>

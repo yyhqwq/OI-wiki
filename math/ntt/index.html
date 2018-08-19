@@ -2965,39 +2965,39 @@
 <p>但是它比较方便呀毕竟没有复数部分 qwq</p>
 <h2 id="ntt">学习 NTT 之前...<a class="headerlink" href="#ntt" title="Permanent link">&para;</a></h2>
 <h3 id="_2">生成子群<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>子群：群 (S,⊕), (S′,⊕), 满足 S′⊂S，则(S′,⊕) 是(S,⊕)的子群</p>
-<p>拉格朗日定理:|S′|∣|S | 证明需要用到陪集，得到陪集大小等于子群大小，每个陪集要么不想交要么相等，所有陪集的并是集合 S，那么显然成立。</p>
-<p>生成子群：<span><span class="MathJax_Preview">a \in S</span><script type="math/tex">a \in S</script></span> ​的生成子群 <span><span class="MathJax_Preview">&lt;a&gt; = \{a^{(k)}, k \geq 1 \}</span><script type="math/tex"><a> = \{a^{(k)}, k \geq 1 \}</script></span> ​，a 是 <span><span class="MathJax_Preview">&lt; a &gt;</span><script type="math/tex">< a ></script></span> 的生成元</p>
-<p>阶：群 S 中 a 的阶是满足 <span><span class="MathJax_Preview">a^r=e</span><script type="math/tex">a^r=e</script></span></p>
-<p>​的最小的 r, 符号 <span><span class="MathJax_Preview">ord(a)</span><script type="math/tex">ord(a)</script></span> ​, 有 <span><span class="MathJax_Preview">ord(a) = |&lt; a &gt;|</span><script type="math/tex">ord(a) = |< a >|</script></span>​，显然成立。</p>
-<p>考虑群 <span><span class="MathJax_Preview">Z_n^*=\{[a], n \in Z_n : gcd(a, n) = 1\}, |Z_n^*| = \phi(n)</span><script type="math/tex">Z_n^*=\{[a], n \in Z_n : gcd(a, n) = 1\}, |Z_n^*| = \phi(n)</script></span></p>
-<p>阶就是满足 <span><span class="MathJax_Preview">a^r \equiv 1 (\bmod n)</span><script type="math/tex">a^r \equiv 1 (\bmod n)</script></span> ​的最小的 <span><span class="MathJax_Preview">r, ord(a)=r</span><script type="math/tex">r, ord(a)=r</script></span></p>
+<p>子群：群 <span><span class="MathJax_Preview">(S,⊕), (S′,⊕)</span><script type="math/tex">(S,⊕), (S′,⊕)</script></span>, 满足 <span><span class="MathJax_Preview">S′⊂S</span><script type="math/tex">S′⊂S</script></span>，则 <span><span class="MathJax_Preview">(S′,⊕)</span><script type="math/tex">(S′,⊕)</script></span> 是 <span><span class="MathJax_Preview">(S,⊕)</span><script type="math/tex">(S,⊕)</script></span> 的子群</p>
+<p>拉格朗日定理:<span><span class="MathJax_Preview">|S′|∣|S |</span><script type="math/tex">|S′|∣|S |</script></span> 证明需要用到陪集，得到陪集大小等于子群大小，每个陪集要么不想交要么相等，所有陪集的并是集合 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>，那么显然成立。</p>
+<p>生成子群：<span><span class="MathJax_Preview">a \in S</span><script type="math/tex">a \in S</script></span> ​的生成子群 <span><span class="MathJax_Preview">&lt;a&gt; = \{a^{(k)}, k \geq 1 \}</span><script type="math/tex"><a> = \{a^{(k)}, k \geq 1 \}</script></span> ​，<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 是 <span><span class="MathJax_Preview">&lt; a &gt;</span><script type="math/tex">< a ></script></span> 的生成元</p>
+<p>阶：群 <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 中 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的阶是满足 <span><span class="MathJax_Preview">a^r=e</span><script type="math/tex">a^r=e</script></span></p>
+<p>​的最小的 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>, 符号 $ \operatorname{ord}(a)$ ​, 有 $ \operatorname{ord}(a) = |&lt; a &gt;|$​，显然成立。</p>
+<p>考虑群 <span><span class="MathJax_Preview">Z_n^ \times =\{[a], n \in Z_n : \gcd(a, n) = 1\}, |Z_n^ \times | = \phi(n)</span><script type="math/tex">Z_n^ \times =\{[a], n \in Z_n : \gcd(a, n) = 1\}, |Z_n^ \times | = \phi(n)</script></span></p>
+<p>阶就是满足 <span><span class="MathJax_Preview">a^r \equiv 1 (\bmod n)</span><script type="math/tex">a^r \equiv 1 (\bmod n)</script></span> ​的最小的 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>，  <span><span class="MathJax_Preview">\operatorname{ord}(a)=r</span><script type="math/tex">\operatorname{ord}(a)=r</script></span></p>
 <h3 id="_3"><a href="/math/primitive-root">原根</a><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>g 满足 <span><span class="MathJax_Preview">ord_n(g) = |Z_n^*| = \phi(n)</span><script type="math/tex">ord_n(g) = |Z_n^*| = \phi(n)</script></span>  ​，对于质数 p，也就是说 <span><span class="MathJax_Preview">g^i \bmod p, 0 \leq i &lt; p</span><script type="math/tex">g^i \bmod p, 0 \leq i < p</script></span> ​结果互不相同.</p>
-<p>模 n 有原根的充要条件 : <span><span class="MathJax_Preview">n = 2, 4, p^e, 2*p^e</span><script type="math/tex">n = 2, 4, p^e, 2*p^e</script></span></p>
+<p><span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 满足 $ \operatorname{ord}_n(g) = |Z_n^ \times | = \phi(n)$  ​，对于质数 <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，也就是说 <span><span class="MathJax_Preview">g^i \bmod p, 0 \leq i &lt; p</span><script type="math/tex">g^i \bmod p, 0 \leq i < p</script></span> ​结果互不相同.</p>
+<p>模 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 有原根的充要条件 : <span><span class="MathJax_Preview">n = 2, 4, p^e, 2 \times p^e</span><script type="math/tex">n = 2, 4, p^e, 2 \times p^e</script></span></p>
 <p>离散对数:<span><span class="MathJax_Preview">g^t \equiv a (\bmod n)，ind_{n,g}{(a)}=t</span><script type="math/tex">g^t \equiv a (\bmod n)，ind_{n,g}{(a)}=t</script></span></p>
-<p>​因为 g 是原根，所以 gt 每 <span><span class="MathJax_Preview">\phi(n)</span><script type="math/tex">\phi(n)</script></span> 是一个周期，可以取到 | Z∗n | 的所有元素
-对于 n 是质数时，就是得到 [1,n−1] 的所有数，就是 [0,n−2] 到[1,n−1]的映射
+<p>​因为 <span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 是原根，所以 <span><span class="MathJax_Preview">gt</span><script type="math/tex">gt</script></span> 每 <span><span class="MathJax_Preview">\phi(n)</span><script type="math/tex">\phi(n)</script></span> 是一个周期，可以取到 <span><span class="MathJax_Preview">| Z \times n |</span><script type="math/tex">| Z \times n |</script></span> 的所有元素
+对于 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 是质数时，就是得到 <span><span class="MathJax_Preview">[1,n−1]</span><script type="math/tex">[1,n−1]</script></span> 的所有数，就是 <span><span class="MathJax_Preview">[0,n−2]</span><script type="math/tex">[0,n−2]</script></span> 到 <span><span class="MathJax_Preview">[1,n−1]</span><script type="math/tex">[1,n−1]</script></span> 的映射
 离散对数满足对数的相关性质，如</p>
 <p>求原根可以证明满足 <span><span class="MathJax_Preview">g^r \equiv 1(\bmod p)</span><script type="math/tex">g^r \equiv 1(\bmod p)</script></span></p>
-<p>​的最小的 r 一定是 p−1 的约数
-对于质数 p，质因子分解 p−1，若 <span><span class="MathJax_Preview">g^{(p-1)/pi} \neq 1 (\bmod p)</span><script type="math/tex">g^{(p-1)/pi} \neq 1 (\bmod p)</script></span></p>
-<p>​恒成立，g 为 p 的原根</p>
+<p>​的最小的 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 一定是 <span><span class="MathJax_Preview">p−1</span><script type="math/tex">p−1</script></span> 的约数
+对于质数 <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，质因子分解 <span><span class="MathJax_Preview">p−1</span><script type="math/tex">p−1</script></span>，若 <span><span class="MathJax_Preview">g^{(p-1)/pi} \neq 1 (\bmod p)</span><script type="math/tex">g^{(p-1)/pi} \neq 1 (\bmod p)</script></span></p>
+<p>​恒成立，<span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 为 <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的原根</p>
 <h2 id="ntt_1">NTT<a class="headerlink" href="#ntt_1" title="Permanent link">&para;</a></h2>
-<p>对于质数 <span><span class="MathJax_Preview">p=qn+1, (n=2^m)</span><script type="math/tex">p=qn+1, (n=2^m)</script></span> ​, 原根 g 满足 <span><span class="MathJax_Preview">g^{qn} \equiv 1 (\bmod p)</span><script type="math/tex">g^{qn} \equiv 1 (\bmod p)</script></span>​, 将 <span><span class="MathJax_Preview">g_n=g^p(\bmod q)</span><script type="math/tex">g_n=g^p(\bmod q)</script></span> 看做 <span><span class="MathJax_Preview">\omega_n</span><script type="math/tex">\omega_n</script></span> 的等价，择其满足相似的性质，比如 <span><span class="MathJax_Preview">g_n^n \equiv 1 (\bmod p), g_n^{n/2} \equiv -1 (\bmod p)</span><script type="math/tex">g_n^n \equiv 1 (\bmod p), g_n^{n/2} \equiv -1 (\bmod p)</script></span></p>
-<p>然后因为这里涉及到数论变化，所以这里的 N（为了区分 FFT 中的 n，我们把这里的 n 称为 N）可以比 FFT 中的 n 大，但是只要把 <span><span class="MathJax_Preview">\frac{qN}{n}</span><script type="math/tex">\frac{qN}{n}</script></span></p>
-<p>看做这里的 q 就行了，能够避免大小问题。。。</p>
+<p>对于质数 <span><span class="MathJax_Preview">p=qn+1, (n=2^m)</span><script type="math/tex">p=qn+1, (n=2^m)</script></span> ​, 原根 <span><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 满足 <span><span class="MathJax_Preview">g^{qn} \equiv 1 (\bmod p)</span><script type="math/tex">g^{qn} \equiv 1 (\bmod p)</script></span>​, 将 <span><span class="MathJax_Preview">g_n=g^p(\bmod q)</span><script type="math/tex">g_n=g^p(\bmod q)</script></span> 看做 <span><span class="MathJax_Preview">\omega_n</span><script type="math/tex">\omega_n</script></span> 的等价，择其满足相似的性质，比如 <span><span class="MathJax_Preview">g_n^n \equiv 1 (\bmod p), g_n^{n/2} \equiv -1 (\bmod p)</span><script type="math/tex">g_n^n \equiv 1 (\bmod p), g_n^{n/2} \equiv -1 (\bmod p)</script></span></p>
+<p>然后因为这里涉及到数论变化，所以这里的 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>（为了区分 FFT 中的 n，我们把这里的 n 称为 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>）可以比 FFT 中的 n 大，但是只要把 <span><span class="MathJax_Preview">\frac{qN}{n}</span><script type="math/tex">\frac{qN}{n}</script></span></p>
+<p>看做这里的 <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 就行了，能够避免大小问题。。。</p>
 <p>常见的有</p>
 <div>
-<div class="MathJax_Preview">p = 1004535809 = 479*2^21, g=3</div>
-<script type="math/tex; mode=display">p = 1004535809 = 479*2^21, g=3</script>
+<div class="MathJax_Preview">p = 1004535809 = 479 \times 2^21, g=3</div>
+<script type="math/tex; mode=display">p = 1004535809 = 479 \times 2^21, g=3</script>
 </div>
 <div>
-<div class="MathJax_Preview">p=998244353=2*17*2^23+1, g=3</div>
-<script type="math/tex; mode=display">p=998244353=2*17*2^23+1, g=3</script>
+<div class="MathJax_Preview">p=998244353=2 \times 17 \times 2^23+1, g=3</div>
+<script type="math/tex; mode=display">p=998244353=2 \times 17 \times 2^23+1, g=3</script>
 </div>
 <p>就是 <span><span class="MathJax_Preview">g^{qn}</span><script type="math/tex">g^{qn}</script></span> 的等价 <span><span class="MathJax_Preview">e^{2\pi n}</span><script type="math/tex">e^{2\pi n}</script></span></p>
-<p>迭代到长度 l 时 <span><span class="MathJax_Preview">g_l = g^{\frac{p-1}{l}}</span><script type="math/tex">g_l = g^{\frac{p-1}{l}}</script></span>, 或者 <span><span class="MathJax_Preview">\omega_n = g_l = g_N^{\frac{N}{l}} = g_N^{\frac{p-1}{l}}</span><script type="math/tex">\omega_n = g_l = g_N^{\frac{N}{l}} = g_N^{\frac{p-1}{l}}</script></span></p>
+<p>迭代到长度 <span><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 时 <span><span class="MathJax_Preview">g_l = g^{\frac{p-1}{l}}</span><script type="math/tex">g_l = g^{\frac{p-1}{l}}</script></span>, 或者 <span><span class="MathJax_Preview">\omega_n = g_l = g_N^{\frac{N}{l}} = g_N^{\frac{p-1}{l}}</span><script type="math/tex">\omega_n = g_l = g_N^{\frac{N}{l}} = g_N^{\frac{p-1}{l}}</script></span></p>
 <p>接下来放一个大数相乘的模板</p>
 <p>参考网址如下 <a href="https://blog.csdn.net/blackjack_/article/details/79346433">https://blog.csdn.net/blackjack_/article/details/79346433</a></p>
 <div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>

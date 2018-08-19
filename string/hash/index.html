@@ -2938,15 +2938,15 @@
 <p>Hash 的核心思想在于，暴力算法中，单次比较的时间太长了，应当如何才能缩短一些呢？</p>
 <p>如果要求每次只能比较 <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 个字符，应该怎样操作呢？</p>
 <p>是比较第一个？最后一个？随便选一个？求所有字符的和？</p>
-<p>我们定义一个把 string 映射成 int 的函数 f，这个 f 称为是 Hash 函数。</p>
-<p>我们希望这个函数 f 可以方便地帮我们判断两个字符串是否相等。</p>
+<p>我们定义一个把 string 映射成 int 的函数 <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>，这个 <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 称为是 Hash 函数。</p>
+<p>我们希望这个函数 <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 可以方便地帮我们判断两个字符串是否相等。</p>
 <p>具体来说，我们希望在 Hash 函数值不一样的时候，两个字符串一定不一样。</p>
 <p>另外，反过来不需要成立。我们把这种条件称为是单侧错误。</p>
 <p>我们需要关注的是什么？</p>
 <p>时间复杂度和 Hash 的准确率。</p>
-<p>通常我们采用的是多项式 Hash 的方法，即 <code>f(s) = sum(s[i] * b^i) % M</code></p>
-<p>这里面的 b 和 M 需要选取得足够合适才行，以使得 Hash 的冲突尽量均匀。</p>
-<p>如果 b 和 M 互质，在输入随机的情况下，这个 Hash 函数在 <span><span class="MathJax_Preview">[0,M)</span><script type="math/tex">[0,M)</script></span> 上每个值概率相等</p>
+<p>通常我们采用的是多项式 Hash 的方法，即 <span><span class="MathJax_Preview">\operatorname{f}(s) = \sum s[i] \times b^i \pmod M</span><script type="math/tex">\operatorname{f}(s) = \sum s[i] \times b^i \pmod M</script></span></p>
+<p>这里面的 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 和 <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 需要选取得足够合适才行，以使得 Hash 的冲突尽量均匀。</p>
+<p>如果 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 和 <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 互质，在输入随机的情况下，这个 Hash 函数在 <span><span class="MathJax_Preview">[0,M)</span><script type="math/tex">[0,M)</script></span> 上每个值概率相等</p>
 <p>此时错误率为 <span><span class="MathJax_Preview">\frac1M</span><script type="math/tex">\frac1M</script></span> （单次比较）</p>
 <p>在输入不是随机的情况下，效果也很好。</p>
 <h2 id="hash_1">Hash 的实现<a class="headerlink" href="#hash_1" title="Permanent link">&para;</a></h2>
@@ -2981,12 +2981,12 @@ match(char *a, char *b, int n, int m) {
 <p>我们来分析错误率</p>
 <p>由于 <span><span class="MathJax_Preview">n &gt;&gt; m</span><script type="math/tex">n >> m</script></span>，要进行约 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 次比较，每次错误率 <span><span class="MathJax_Preview">\frac1{M}</span><script type="math/tex">\frac1{M}</script></span> ，那么总错误率是？</p>
 <p>先补充一些随机数学的知识（非严格地）</p>
-<p>现在考虑这 n 次比较，如果看成独立的，总错误率 <span><span class="MathJax_Preview">1-(1-1/M)^n</span><script type="math/tex">1-(1-1/M)^n</script></span></p>
-<p>当 M &gt;&gt; n 时，总错误率接近于<span><span class="MathJax_Preview">\frac{n}{M}</span><script type="math/tex">\frac{n}{M}</script></span></p>
-<p>当 M = n 时，接近于 <span><span class="MathJax_Preview">1-1/e (≈0.63)</span><script type="math/tex">1-1/e (≈0.63)</script></span></p>
+<p>现在考虑这 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 次比较，如果看成独立的，总错误率 <span><span class="MathJax_Preview">1-(1-1/M)^n</span><script type="math/tex">1-(1-1/M)^n</script></span></p>
+<p>当 <span><span class="MathJax_Preview">M &gt;&gt; n</span><script type="math/tex">M >> n</script></span> 时，总错误率接近于<span><span class="MathJax_Preview">\frac{n}{M}</span><script type="math/tex">\frac{n}{M}</script></span></p>
+<p>当 <span><span class="MathJax_Preview">M = n</span><script type="math/tex">M = n</script></span> 时，接近于 <span><span class="MathJax_Preview">1-1/e (≈0.63)</span><script type="math/tex">1-1/e (≈0.63)</script></span></p>
 <p>如果不是独立的，最坏情况也就是全部加起来，等于 <span><span class="MathJax_Preview">\frac{n}{M}</span><script type="math/tex">\frac{n}{M}</script></span></p>
-<p>要改进错误率，可以增加 M</p>
-<p>选取一个大的M，或者两个互质的小的 M</p>
+<p>要改进错误率，可以增加 <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span></p>
+<p>选取一个大的M，或者两个互质的小的 <span><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span></p>
 <p>时间复杂度不变，单次错误率平方</p>
 <h2 id="hash_3">Hash 的应用<a class="headerlink" href="#hash_3" title="Permanent link">&para;</a></h2>
 <p>不只是字符串中，在其他情况也可以用。</p>

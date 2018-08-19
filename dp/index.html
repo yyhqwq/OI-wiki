@@ -3295,7 +3295,7 @@
 
 <ol>
 <li>要去刻画最优解的结构特征；</li>
-<li>尝试递归地定义最优解的值（就是我们常说的考虑从 <code>i - 1</code> 转移到 <code>i</code>）；</li>
+<li>尝试递归地定义最优解的值（就是我们常说的考虑从 <span><span class="MathJax_Preview">i - 1</span><script type="math/tex">i - 1</script></span> 转移到 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>）；</li>
 <li>计算最优解；</li>
 <li>利用计算出的信息构造一个最优解。</li>
 </ol>
@@ -3349,15 +3349,15 @@
 <p>存表记录最优分割的位置，就不用重新按照代价来重构。</p>
 <h2 id="_6">最长公共子序列<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>子序列允许不连续。</p>
-<p>每个 <code>c[i][j]</code> 只依赖于 <code>c[i - 1][j]</code>、<code>c[i][j - 1]</code> 和 <code>c[i - 1][j - 1]</code>。</p>
-<p>记录最优方案的时候可以不需要额外建表（优化空间），因为重新选择一遍（转移过程）也是 <span><span class="MathJax_Preview">\mathcal{O}(1)</span><script type="math/tex">\mathcal{O}(1)</script></span> 的。</p>
+<p>每个 <span><span class="MathJax_Preview">c[i][j]</span><script type="math/tex">c[i][j]</script></span> 只依赖于 <span><span class="MathJax_Preview">c[i - 1][j]</span><script type="math/tex">c[i - 1][j]</script></span>、<span><span class="MathJax_Preview">c[i][j - 1]</span><script type="math/tex">c[i][j - 1]</script></span> 和 <span><span class="MathJax_Preview">c[i - 1][j - 1]</span><script type="math/tex">c[i - 1][j - 1]</script></span>。</p>
+<p>记录最优方案的时候可以不需要额外建表（优化空间），因为重新选择一遍（转移过程）也是 <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 的。</p>
 <h2 id="_7">最优二叉搜索树<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>给二叉搜索树的每个节点定义一个权值，问如何安排使得权值和深度的乘积最小。</p>
 <p>考虑当一棵子树成为了一个节点的子树时，答案（期望搜索代价）有何变化？</p>
 <p>由于每个节点的深度都增加了1，这棵子树的期望搜索代价的增加值应为所有概率之和。</p>
 <blockquote>
 <p>tD / eD 动态规划：
-状态空间是 <span><span class="MathJax_Preview">\mathcal{O}(n^t)</span><script type="math/tex">\mathcal{O}(n^t)</script></span> 的，每一项依赖其他 <span><span class="MathJax_Preview">\mathcal{O}(n^e)</span><script type="math/tex">\mathcal{O}(n^e)</script></span> 项。</p>
+状态空间是 <span><span class="MathJax_Preview">O(n^t)</span><script type="math/tex">O(n^t)</script></span> 的，每一项依赖其他 <span><span class="MathJax_Preview">O(n^e)</span><script type="math/tex">O(n^e)</script></span> 项。</p>
 </blockquote>
 <h2 id="_8">经典问题（来自习题）<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <h3 id="dag">DAG 中的最长简单路径<a class="headerlink" href="#dag" title="Permanent link">&para;</a></h3>
@@ -3367,14 +3367,14 @@
 <div class="MathJax_Preview">
 dp[i][i + len] =
 \begin{cases}
-dp[i + 1][i + len - 1] + 2,  &amp; \text{if $s[i] == s[i + len]$} \\[2ex]
+dp[i + 1][i + len - 1] + 2,  &amp; \text{if $s[i] = s[i + len]$} \\[2ex]
 \max(dp[i + 1][i + len], dp[i][i + len - 1]), &amp; \text{else}
 \end{cases}
 </div>
 <script type="math/tex; mode=display">
 dp[i][i + len] =
 \begin{cases}
-dp[i + 1][i + len - 1] + 2,  & \text{if $s[i] == s[i + len]$} \\[2ex]
+dp[i + 1][i + len - 1] + 2,  & \text{if $s[i] = s[i + len]$} \\[2ex]
 \max(dp[i + 1][i + len], dp[i][i + len - 1]), & \text{else}
 \end{cases}
 </script>
@@ -3385,8 +3385,8 @@ dp[i + 1][i + len - 1] + 2,  & \text{if $s[i] == s[i + len]$} \\[2ex]
 <p>证明在<a href="https://www.zhihu.com/question/34580085/answer/59539708">这里</a>。</p>
 <p>注意区分子串（要求连续）的问题。</p>
 <h3 id="_10">最长回文子串<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<p><span><span class="MathJax_Preview">\mathcal{O}(n^2)</span><script type="math/tex">\mathcal{O}(n^2)</script></span>：<span><span class="MathJax_Preview">dp[i] = \max(dp[j] + 1), s(j + 1 .. i) 是回文</span><script type="math/tex">dp[i] = \max(dp[j] + 1), s(j + 1 .. i) 是回文</script></span></p>
-<p><span><span class="MathJax_Preview">\mathcal{O}(n)</span><script type="math/tex">\mathcal{O}(n)</script></span>： Manacher</p>
+<p><span><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>：<span><span class="MathJax_Preview">dp[i] = \max(dp[j] + 1), s(j + 1 .. i)</span><script type="math/tex">dp[i] = \max(dp[j] + 1), s(j + 1 .. i)</script></span> 是回文</p>
+<p><span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>： Manacher</p>
 <blockquote>
 <p>Manacher</p>
 </blockquote>
@@ -3394,11 +3394,11 @@ dp[i + 1][i + len - 1] + 2,  & \text{if $s[i] == s[i + len]$} \\[2ex]
 <p>为了处理方便，我们把原串每两个字符之间加一个（不包含在原串中的）<code>#</code>，开头加一个 <code>$</code>。</p>
 <p>这样得到的回文串长度就保证是奇数了</p>
 <p>考虑如果按顺序得到了 <span><span class="MathJax_Preview">p[1 .. i - 1]</span><script type="math/tex">p[1 .. i - 1]</script></span>，如何计算 <span><span class="MathJax_Preview">p[i]</span><script type="math/tex">p[i]</script></span> 的值？</p>
-<p>如果之前有一个位置比如说是 <code>id</code>，有 <code>p[id] + id &gt; i</code> 那么 <code>i</code> 这个位置是被覆盖了的，根据 <code>id</code> 处的对称性，我们找 <code>p[id * 2 - i]</code> 延伸的部分被 <code>p[id]</code> 延伸的部分所覆盖的那段，显然这段对称回去之后是可以从 <code>i</code> 处延伸出去的长度。</p>
-<p>如果找不到呢？就先让 <code>p[i] = 1</code> 吧。</p>
+<p>如果之前有一个位置比如说是 <span><span class="MathJax_Preview">id</span><script type="math/tex">id</script></span>，有 <span><span class="MathJax_Preview">p[id] + id &gt; i</span><script type="math/tex">p[id] + id > i</script></span> 那么 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 这个位置是被覆盖了的，根据 <span><span class="MathJax_Preview">id</span><script type="math/tex">id</script></span> 处的对称性，我们找 <span><span class="MathJax_Preview">p[id * 2 - i]</span><script type="math/tex">p[id * 2 - i]</script></span> 延伸的部分被 <span><span class="MathJax_Preview">p[id]</span><script type="math/tex">p[id]</script></span> 延伸的部分所覆盖的那段，显然这段对称回去之后是可以从 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 处延伸出去的长度。</p>
+<p>如果找不到呢？就先让 <span><span class="MathJax_Preview">p[i] = 1</span><script type="math/tex">p[i] = 1</script></span> 吧。</p>
 <p>之后再暴力延伸一下。</p>
-<p>可以证明是 <span><span class="MathJax_Preview">\mathcal{O}(n)</span><script type="math/tex">\mathcal{O}(n)</script></span> 的。</p>
-<p>至于如何找是否有这么一个 <code>id</code> 呢？递推的时候存一个 <code>max</code> 就好了。</p>
+<p>可以证明是 <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 的。</p>
+<p>至于如何找是否有这么一个 <span><span class="MathJax_Preview">id</span><script type="math/tex">id</script></span> 呢？递推的时候存一个 <span><span class="MathJax_Preview">max</span><script type="math/tex">max</script></span> 就好了。</p>
 <p>代码在：<a href="https://github.com/Ir1d/Fantasy/blob/master/HDU/3068.cpp">https://github.com/Ir1d/Fantasy/blob/master/HDU/3068.cpp</a></p>
 <h3 id="_11">双调欧几里得旅行商问题<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>好像出成了某一年程设期末。</p>
@@ -3423,8 +3423,8 @@ dp[i + 1][i + len - 1] + 2,  & \text{if $s[i] == s[i + len]$} \\[2ex]
 <p>把 <span><span class="MathJax_Preview">dp[i][j]</span><script type="math/tex">dp[i][j]</script></span> 定义反过来，不是 <span><span class="MathJax_Preview">1..i</span><script type="math/tex">1..i</script></span> 和 <span><span class="MathJax_Preview">1..j</span><script type="math/tex">1..j</script></span>。</p>
 <p>改成是 <span><span class="MathJax_Preview">i..n</span><script type="math/tex">i..n</script></span> 和 <span><span class="MathJax_Preview">j..n</span><script type="math/tex">j..n</script></span>，不要求哪个更快。</p>
 <p>这样的转移更好写：</p>
-<p>我们记 <code>k = max(i, j) + 1</code></p>
-<p><code>k</code> 这个点肯定在两条路中的一个上，<span><span class="MathJax_Preview">dp[i][j]</span><script type="math/tex">dp[i][j]</script></span> 取两种情况的最小值即可。</p>
+<p>我们记 <span><span class="MathJax_Preview">k = \max(i, j) + 1</span><script type="math/tex">k = \max(i, j) + 1</script></span></p>
+<p><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 这个点肯定在两条路中的一个上，<span><span class="MathJax_Preview">dp[i][j]</span><script type="math/tex">dp[i][j]</script></span> 取两种情况的最小值即可。</p>
 <p><span><span class="MathJax_Preview">dp[i][j] = \min(dp[i][k] + dis[k][j], dp[k][j] + dis[i][k])</span><script type="math/tex">dp[i][j] = \min(dp[i][k] + dis[k][j], dp[k][j] + dis[i][k])</script></span></p>
 <p>边界是：<span><span class="MathJax_Preview">dp[i][n] = dp[n][i] = dis[n][i]</span><script type="math/tex">dp[i][n] = dp[n][i] = dis[n][i]</script></span>。</p>
 <p>答案是 <span><span class="MathJax_Preview">dp[1][1]</span><script type="math/tex">dp[1][1]</script></span>。</p>
@@ -3432,7 +3432,7 @@ dp[i + 1][i + len - 1] + 2,  & \text{if $s[i] == s[i + len]$} \\[2ex]
 <p>希望最小化所有行的额外空格数的立方之和。</p>
 <p>注意到实际问题要求单词不能打乱顺序，所以就好做了起来。</p>
 <p><code>## 论不要把题目看复杂</code></p>
-<p><span><span class="MathJax_Preview">dp[i] = min(dp[j] + cost[j][i])</span><script type="math/tex">dp[i] = min(dp[j] + cost[j][i])</script></span></p>
+<p><span><span class="MathJax_Preview">dp[i] = \min(dp[j] + cost[j][i])</span><script type="math/tex">dp[i] = \min(dp[j] + cost[j][i])</script></span></p>
 <hr />
 <p>不知道这样可不可做= =</p>
 <p>有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个单词，可以不按顺序打印，问怎么安排，使得把他们打印成 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 行之后，每行的空格之和最小。</p>
@@ -3451,7 +3451,7 @@ insert  : -2
 
 <h3 id="_17">公司聚会计划<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>没有上司的舞会。</p>
-<p><code>dp[x][0]</code> 是没去，<code>dp[x][1]</code> 是去了。</p>
+<p><span><span class="MathJax_Preview">dp[x][0]</span><script type="math/tex">dp[x][0]</script></span> 是没去，<span><span class="MathJax_Preview">dp[x][1]</span><script type="math/tex">dp[x][1]</script></span> 是去了。</p>
 <p><span><span class="MathJax_Preview">dp[u][0] = \max(dp[v][0], dp[v][1]), v \in son(u)</span><script type="math/tex">dp[u][0] = \max(dp[v][0], dp[v][1]), v \in son(u)</script></span></p>
 <p><span><span class="MathJax_Preview">dp[u][1] = w[u] + dp[v][0], v \in son(u)</span><script type="math/tex">dp[u][1] = w[u] + dp[v][0], v \in son(u)</script></span></p>
 <h3 id="_18">译码算法<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
@@ -3469,7 +3469,7 @@ insert  : -2
 <p>相当于问怎么按顺序拼起来使得总代价最小。</p>
 <p>等价于之前那个最优二叉搜索树。</p>
 <p><span><span class="MathJax_Preview">dp[i][j] = \min(dp[i][k] + dp[k][j]) + l[j] - l[i] + 1,\ k = i + 1\ ..\ j - 1</span><script type="math/tex">dp[i][j] = \min(dp[i][k] + dp[k][j]) + l[j] - l[i] + 1,\ k = i + 1\ ..\ j - 1</script></span></p>
-<p>注意<code>l[i]</code>表示的是第i个切分点的位置。</p>
+<p>注意 <span><span class="MathJax_Preview">l[i]</span><script type="math/tex">l[i]</script></span> 表示的是第i个切分点的位置。</p>
 <p>边界：<span><span class="MathJax_Preview">dp[i][i] = 0</span><script type="math/tex">dp[i][i] = 0</script></span>。</p>
 <p>就按照区间 dp 的姿势来写就好了。</p>
 <h3 id="_21">投资策略规划<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>

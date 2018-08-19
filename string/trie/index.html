@@ -2911,9 +2911,9 @@
 <p>空间 <span><span class="MathJax_Preview">O(len)</span><script type="math/tex">O(len)</script></span> （如果假设 <span><span class="MathJax_Preview">|∑|</span><script type="math/tex">|∑|</script></span> 为常数）</p>
 <p>要判断某个串是否等于某个模式串，只要在 Trie 上走一遍（线性的）</p>
 <h2 id="trie-kmp">在 Trie 上 KMP<a class="headerlink" href="#trie-kmp" title="Permanent link">&para;</a></h2>
-<p>实际上要做的事情是求出 Trie 的每个节点的 next 值</p>
-<p>当然，这里的 next 不再是一个值，而是相当于是一个指针 —— 它可能指向其他分支的节点。</p>
-<p>这时 next 的定义：最长的等于同长度的后缀的从根开始的路径的长度</p>
+<p>实际上要做的事情是求出 Trie 的每个节点的 <span><span class="MathJax_Preview">next</span><script type="math/tex">next</script></span> 值</p>
+<p>当然，这里的 <span><span class="MathJax_Preview">next</span><script type="math/tex">next</script></span> 不再是一个值，而是相当于是一个指针 —— 它可能指向其他分支的节点。</p>
+<p>这时 <span><span class="MathJax_Preview">next</span><script type="math/tex">next</script></span> 的定义：最长的等于同长度的后缀的从根开始的路径的长度</p>
 <p>求法跟 <a href="/string/kmp">KMP</a> 中的一样，只是要改成在 Trie 上 <a href="/search/bfs">BFS</a></p>
 <p>复杂度：均摊分析失效了，其实只能在每条链上均摊分析，于是总复杂度为模式串长总和</p>
                 

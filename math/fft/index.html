@@ -3059,10 +3059,10 @@
 <h2 id="fft">为什么要使用 FFT？<a class="headerlink" href="#fft" title="Permanent link">&para;</a></h2>
 <p>我们在这里引入一个例子：求多项式乘积的朴素算法。</p>
 <p>大家平时求 <span><span class="MathJax_Preview">f(x)=a_1x^2+b_1x+c_1</span><script type="math/tex">f(x)=a_1x^2+b_1x+c_1</script></span> 与 <span><span class="MathJax_Preview">g(x) = a_2x^2+b_2x+c_2</span><script type="math/tex">g(x) = a_2x^2+b_2x+c_2</script></span> 的乘积时候，是怎么进行的呢？</p>
-<p>我们令 </p>
+<p>我们令</p>
 <div>
-<div class="MathJax_Preview">K(x) = f(x) * g(x) = a_1x^2*a_2x^2+a_1x^2*b_2x+a_1x^2*c_2+b_1x*b_2x^2+b_1x*b_2x+b_1x*c_2+c_1*a_2x^2+c_1*b_2x+c_1*c_2</div>
-<script type="math/tex; mode=display">K(x) = f(x) * g(x) = a_1x^2*a_2x^2+a_1x^2*b_2x+a_1x^2*c_2+b_1x*b_2x^2+b_1x*b_2x+b_1x*c_2+c_1*a_2x^2+c_1*b_2x+c_1*c_2</script>
+<div class="MathJax_Preview">K(x) = f(x)  \times  g(x) = a_1x^2 \times a_2x^2+a_1x^2 \times b_2x+a_1x^2 \times c_2+b_1x \times b_2x^2+b_1x \times b_2x+b_1x \times c_2+c_1 \times a_2x^2+c_1 \times b_2x+c_1 \times c_2</div>
+<script type="math/tex; mode=display">K(x) = f(x)  \times  g(x) = a_1x^2 \times a_2x^2+a_1x^2 \times b_2x+a_1x^2 \times c_2+b_1x \times b_2x^2+b_1x \times b_2x+b_1x \times c_2+c_1 \times a_2x^2+c_1 \times b_2x+c_1 \times c_2</script>
 </div>
 <p>那么很显然我们进行了 9 次运算，复杂度是 <span><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span> （具体代码实现不再展开）</p>
 <p>但是如果数字足够大呢？比如 100000？那朴素算法可太慢啦(；′⌒`),</p>
@@ -3076,7 +3076,7 @@
 <div class="MathJax_Preview">f(x) = a_1x^2+b_1x+c_1 \Leftrightarrow f(x) = \{a_1, b_1, c_1\}</div>
 <script type="math/tex; mode=display">f(x) = a_1x^2+b_1x+c_1 \Leftrightarrow f(x) = \{a_1, b_1, c_1\}</script>
 </div>
-<p>点值表示法是把这个多项式看成一个函数，从上面选取 n+1 个点，从而利用这 n+1 个点来唯一的表示这个函数。为什么用（n+1）个点就能唯一的表示这个函数了呢？想一下高斯消元法，两点确定一条直线。再来一个点，能确定这个直线中的另一个参数，那么也就是说（n+1）个点能确定 n 个参数（不考虑倍数点之类的没用点）。如下：</p>
+<p>点值表示法是把这个多项式看成一个函数，从上面选取 <span><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span> 个点，从而利用这 <span><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span> 个点来唯一的表示这个函数。为什么用 <span><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span> 个点就能唯一的表示这个函数了呢？想一下高斯消元法，两点确定一条直线。再来一个点，能确定这个直线中的另一个参数，那么也就是说 <span><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span> 个点能确定 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个参数（不考虑倍数点之类的没用点）。如下：</p>
 <div>
 <div class="MathJax_Preview">f_1(x) = y_1 = a_0 + a_1x_1+a_2x_1^2+a_3x_1^3+ \cdots + a_nx_1^n</div>
 <script type="math/tex; mode=display">f_1(x) = y_1 = a_0 + a_1x_1+a_2x_1^2+a_3x_1^3+ \cdots + a_nx_1^n</script>
@@ -3108,13 +3108,13 @@
 <p>一个非常通俗易懂的解释：</p>
 <p>多项式由系数表示法转为点值表示法的过程，就成为 DFT；</p>
 <p>相对地，把一个多项式的点值表示法转化为系数表示法的过程，就是 IDFT。</p>
-<p>而 FFT 就是通过取某些特殊的 x 的点值来加速 DFT 和 FFT 的过程。</p>
+<p>而 FFT 就是通过取某些特殊的 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的点值来加速 DFT 和 FFT 的过程。</p>
 <h3 id="_2">复数的引入<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>复数分为实数和虚数。实数就是我们日常最常用的有理数和无理数。大家记得我们在开始学平方的时候，老师会说所有数的平方大于等于 0 对不对，那么虚数就引入了。虚数一般用 i 表示，对于虚数 i，有 <span><span class="MathJax_Preview">i=\sqrt{-1}</span><script type="math/tex">i=\sqrt{-1}</script></span></p>
-<p>。另外，i 对于虚数的意义，与 1 对于实数的意义是一样的。如果我说得不够明确，你可以看下面我引用的百科说明。</p>
+<p>复数分为实数和虚数。实数就是我们日常最常用的有理数和无理数。大家记得我们在开始学平方的时候，老师会说所有数的平方大于等于 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 对不对，那么虚数就引入了。虚数一般用 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 表示，对于虚数 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，有 <span><span class="MathJax_Preview">i=\sqrt{-1}</span><script type="math/tex">i=\sqrt{-1}</script></span></p>
+<p>。另外，<span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 对于虚数的意义，与 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 对于实数的意义是一样的。如果我说得不够明确，你可以看下面我引用的百科说明。</p>
 <blockquote>
-<p>在数学中，虚数就是形如 <span><span class="MathJax_Preview">a+b*i</span><script type="math/tex">a+b*i</script></span> 的数，其中 a,b 是实数，且 <span><span class="MathJax_Preview">b \neq 0</span><script type="math/tex">b \neq 0</script></span>,<span><span class="MathJax_Preview">i^2 = - 1</span><script type="math/tex">i^2 = - 1</script></span>。虚数这个名词是 17 世纪著名数学家笛卡尔创立，因为当时的观念认为这是真实不存在的数字。后来发现虚数 a+b<em>i 的实部 a 可对应平面上的横轴，虚部 b 与对应平面上的纵轴，这样虚数 a+b</em>i 可与平面内的点 (a,b) 对应。</p>
-<p>可以将虚数 bi 添加到实数 a 以形成形式 a + bi 的复数，其中实数 a 和 b 分别被称为复数的实部和虚部。一些作者使用术语纯虚数来表示所谓的虚数，虚数表示具有非零虚部的任何复数。 ——百度百科 </p>
+<p>在数学中，虚数就是形如 <span><span class="MathJax_Preview">a+b \times i</span><script type="math/tex">a+b \times i</script></span> 的数，其中 <span><span class="MathJax_Preview">a,b</span><script type="math/tex">a,b</script></span> 是实数，且 <span><span class="MathJax_Preview">b \neq 0</span><script type="math/tex">b \neq 0</script></span>,<span><span class="MathJax_Preview">i^2 = - 1</span><script type="math/tex">i^2 = - 1</script></span>。虚数这个名词是 17 世纪著名数学家笛卡尔创立，因为当时的观念认为这是真实不存在的数字。后来发现虚数 <span><span class="MathJax_Preview">a+b \times i</span><script type="math/tex">a+b \times i</script></span> 的实部 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 可对应平面上的横轴，虚部 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 与对应平面上的纵轴，这样虚数 <span><span class="MathJax_Preview">a+b \times i</span><script type="math/tex">a+b \times i</script></span> 可与平面内的点 <span><span class="MathJax_Preview">(a,b)</span><script type="math/tex">(a,b)</script></span> 对应。</p>
+<p>可以将虚数 <span><span class="MathJax_Preview">bi</span><script type="math/tex">bi</script></span> 添加到实数 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 以形成形式 <span><span class="MathJax_Preview">a + bi</span><script type="math/tex">a + bi</script></span> 的复数，其中实数 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 分别被称为复数的实部和虚部。一些作者使用术语纯虚数来表示所谓的虚数，虚数表示具有非零虚部的任何复数。 ——百度百科</p>
 </blockquote>
 <p>我们用一幅图来表示复数与复平面的关系（图源百度百科）</p>
 <p><img alt="img" src="https://pic4.zhimg.com/80/v2-e125064117654ee3b0764ff3819194c4_hd.jpg" /></p>
@@ -3123,18 +3123,18 @@
 <p>接下来思考两个复数相乘是什么意义：</p>
 <ol>
 <li>
-<p><span><span class="MathJax_Preview">(a+bi)*(c+di) = (ac-bd) + (ad+bc)i</span><script type="math/tex">(a+bi)*(c+di) = (ac-bd) + (ad+bc)i</script></span></p>
+<p><span><span class="MathJax_Preview">(a+bi) \times (c+di) = (ac-bd) + (ad+bc)i</span><script type="math/tex">(a+bi) \times (c+di) = (ac-bd) + (ad+bc)i</script></span></p>
 </li>
 <li>
-<p>长度相乘，角度相加： <span><span class="MathJax_Preview">(r_1, \theta_1) * (r_2, \theta_2) = (r_1*r_2, \theta_1+\theta_2)</span><script type="math/tex">(r_1, \theta_1) * (r_2, \theta_2) = (r_1*r_2, \theta_1+\theta_2)</script></span></p>
+<p>长度相乘，角度相加： <span><span class="MathJax_Preview">(r_1, \theta_1)  \times  (r_2, \theta_2) = (r_1 \times r_2, \theta_1+\theta_2)</span><script type="math/tex">(r_1, \theta_1)  \times  (r_2, \theta_2) = (r_1 \times r_2, \theta_1+\theta_2)</script></span></p>
 </li>
 </ol>
-<p>这么一看的话，我们很容易想到如果两个长度为 1 的不同方向向量相乘，结果向量是不是一个长度依然为 1 的新向量呢？</p>
+<p>这么一看的话，我们很容易想到如果两个长度为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的不同方向向量相乘，结果向量是不是一个长度依然为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的新向量呢？</p>
 <h3 id="_3">单位复根的引入<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>我们回到之前的问题：多项式（点值表示法）的乘积。</p>
 <p>考虑这样一个问题：</p>
-<p>刚刚说到了 DFT 是把多项式从系数表示转到了点值表示（复杂度为 O(n)），那么我们把点值相乘之后（选取相应位置，并且复杂度为 O(n)），如果能够快速还原成系数表示，是不是就完美解决我们的问题了呢？上述过程如下：</p>
-<p>假设我们 DFT 过程对于两个多项式选取的 x 序列相同，那么可以得到</p>
+<p>刚刚说到了 DFT 是把多项式从系数表示转到了点值表示（复杂度为 <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>），那么我们把点值相乘之后（选取相应位置，并且复杂度为 <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>），如果能够快速还原成系数表示，是不是就完美解决我们的问题了呢？上述过程如下：</p>
+<p>假设我们 DFT 过程对于两个多项式选取的 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 序列相同，那么可以得到</p>
 <div>
 <div class="MathJax_Preview">f(x)={(x_0, f(x_0), (x_1, f(x_1)), (x_2, f(x_2), \cdots, (x_n, f(x_n)))}</div>
 <script type="math/tex; mode=display">f(x)={(x_0, f(x_0), (x_1, f(x_1)), (x_2, f(x_2), \cdots, (x_n, f(x_n)))}</script>
@@ -3143,21 +3143,21 @@
 <div class="MathJax_Preview">g(x)={(x_0, g(x_0), (x_1, g(x_1)), (x_2, g(x_2), \cdots, (x_n, g(x_n)))}</div>
 <script type="math/tex; mode=display">g(x)={(x_0, g(x_0), (x_1, g(x_1)), (x_2, g(x_2), \cdots, (x_n, g(x_n)))}</script>
 </div>
-<p>如果我们设 <span><span class="MathJax_Preview">F(x) = f(x)*g(x0</span><script type="math/tex">F(x) = f(x)*g(x0</script></span></p>
+<p>如果我们设 <span><span class="MathJax_Preview">F(x) = f(x) \times g(x0</span><script type="math/tex">F(x) = f(x) \times g(x0</script></span></p>
 <p>那么很容易得到 <span><span class="MathJax_Preview">F(x)</span><script type="math/tex">F(x)</script></span> 的点值表达式：</p>
 <div>
-<div class="MathJax_Preview">F(x) = {(x_0, f(x_0) * g(x_0), (x_1, f(x_1) * g(x_1)), (x_2, f(x_2) * g(x_2), \cdots, (x_n, f(x_n) * g(x_n)))}</div>
-<script type="math/tex; mode=display">F(x) = {(x_0, f(x_0) * g(x_0), (x_1, f(x_1) * g(x_1)), (x_2, f(x_2) * g(x_2), \cdots, (x_n, f(x_n) * g(x_n)))}</script>
+<div class="MathJax_Preview">F(x) = {(x_0, f(x_0)  \times  g(x_0), (x_1, f(x_1)  \times  g(x_1)), (x_2, f(x_2)  \times  g(x_2), \cdots, (x_n, f(x_n)  \times  g(x_n)))}</div>
+<script type="math/tex; mode=display">F(x) = {(x_0, f(x_0)  \times  g(x_0), (x_1, f(x_1)  \times  g(x_1)), (x_2, f(x_2)  \times  g(x_2), \cdots, (x_n, f(x_n)  \times  g(x_n)))}</script>
 </div>
-<p>但是我们要的是系数表达式，接下来问题变成了从点值回到系数。如果我们带入到高斯消元法的方程组中去，会把复杂度变得非常高。光是计算 <span><span class="MathJax_Preview">x^i(0 \leq i \leq n)</span><script type="math/tex">x^i(0 \leq i \leq n)</script></span> 就是 n 项, 这就已经 <span><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span> 了，更别说还要把（n+1）个方程进行消元。。。。。。。。。</p>
-<p>这里会不会觉得我们不去计算 <span><span class="MathJax_Preview">x^i</span><script type="math/tex">x^i</script></span> 比较好呢？1 和 - 1 的幂都很好算，但是也仅仅有两个不够啊，我们至少需要（n+1）个 o(╥﹏╥)o 那怎么办呢！想到我们刚刚学的长度为 1 的虚数了吗？不管怎么乘长度都是 1！对就是它！我们需要的是 <span><span class="MathJax_Preview">\omega^k=1</span><script type="math/tex">\omega^k=1</script></span> 中的 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>，很容易想到 - i 和 1 是符合的。那其他的呢？</p>
+<p>但是我们要的是系数表达式，接下来问题变成了从点值回到系数。如果我们带入到高斯消元法的方程组中去，会把复杂度变得非常高。光是计算 <span><span class="MathJax_Preview">x^i(0 \leq i \leq n)</span><script type="math/tex">x^i(0 \leq i \leq n)</script></span> 就是 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 项, 这就已经 <span><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span> 了，更别说还要把 <span><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span> 个方程进行消元。。。。。。。。。</p>
+<p>这里会不会觉得我们不去计算 <span><span class="MathJax_Preview">x^i</span><script type="math/tex">x^i</script></span> 比较好呢？<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 和 <span><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span> 的幂都很好算，但是也仅仅有两个不够啊，我们至少需要 <span><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span> 个 o(╥﹏╥)o 那怎么办呢！想到我们刚刚学的长度为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的虚数了吗？不管怎么乘长度都是 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>！对就是它！我们需要的是 <span><span class="MathJax_Preview">\omega^k=1</span><script type="math/tex">\omega^k=1</script></span> 中的 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span>，很容易想到 <span><span class="MathJax_Preview">-i</span><script type="math/tex">-i</script></span> 和 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 是符合的。那其他的呢？</p>
 <p><img alt="img" src="https://pic4.zhimg.com/80/v2-04ee497b8ac007ce8fff9ce9a04373fb_hd.jpg" /></p>
-<p>现在我们看上图的圆圈。容易发现这是一个单位圆（圆心为原点，半径为 1），所有在圆上的复数的长度均为 1，也就是说它不管做多少次方 r 永远为 1，结果也仅仅角度的变化而已。但是！！！进过旋转总会让角度 %360 == 0 成立的，也就是结果为 1. 我们把符合以上条件的复数成为复根，用 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 表示。如果 <span><span class="MathJax_Preview">\omega^k=1</span><script type="math/tex">\omega^k=1</script></span> 那么我们把<span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 称为 1 的 k 次复根，记作 <span><span class="MathJax_Preview">\omega_k^n</span><script type="math/tex">\omega_k^n</script></span> (因为符合这个 k 次之后等于 1 的复数有很多，比如 i 的 4k 次幂永远为 1，所以，这个 n 是一个编号，表示这是角度从小到大的第几个（从 x 的正半轴开始逆时针）)</p>
+<p>现在我们看上图的圆圈。容易发现这是一个单位圆（圆心为原点，半径为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>），所有在圆上的复数的长度均为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，也就是说它不管做多少次方 <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 永远为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，结果也仅仅角度的变化而已。但是！！！进过旋转总会让角度 <span><span class="MathJax_Preview">\bmod 360 = 0</span><script type="math/tex">\bmod 360 = 0</script></span> 成立的，也就是结果为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。 我们把符合以上条件的复数成为复根，用 <span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 表示。如果 <span><span class="MathJax_Preview">\omega^k=1</span><script type="math/tex">\omega^k=1</script></span> 那么我们把<span><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 称为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 次复根，记作 <span><span class="MathJax_Preview">\omega_k^n</span><script type="math/tex">\omega_k^n</script></span> (因为符合这个 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 次之后等于 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的复数有很多，比如 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的 <span><span class="MathJax_Preview">4k</span><script type="math/tex">4k</script></span> 次幂永远为 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，所以，这个 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 是一个编号，表示这是角度从小到大的第几个（从 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的正半轴开始逆时针）)</p>
 <p>是不是有点雾啊(￣▽￣)／没事没事接下来我们举个栗子：</p>
 <p><img alt="img" src="https://pic4.zhimg.com/80/v2-9f81f6f445b2420d3871b1b024db5197_hd.jpg" /></p>
-<p>那么很容易发现当 K = 4 的时候，相当于把单位圆等分 K= 4 份。然后每一份按照极角编号。那么是不是（在 K = 4 的时候）我们只要知道 <span><span class="MathJax_Preview">\omega_4^1</span><script type="math/tex">\omega_4^1</script></span></p>
+<p>那么很容易发现当 <span><span class="MathJax_Preview">K = 4</span><script type="math/tex">K = 4</script></span> 的时候，相当于把单位圆等分 <span><span class="MathJax_Preview">K= 4</span><script type="math/tex">K= 4</script></span> 份。然后每一份按照极角编号。那么是不是（在 <span><span class="MathJax_Preview">K = 4</span><script type="math/tex">K = 4</script></span> 的时候）我们只要知道 <span><span class="MathJax_Preview">\omega_4^1</span><script type="math/tex">\omega_4^1</script></span></p>
 <p>（因为他的角度是相当于单位角度）, 就能知道 <span><span class="MathJax_Preview">\omega_4^0, \omega_4^1, \omega_4^2, \omega_4^3</span><script type="math/tex">\omega_4^0, \omega_4^1, \omega_4^2, \omega_4^3</script></span> 了呢？当然是这样的。。。</p>
-<p><span><span class="MathJax_Preview">\omega_4^0</span><script type="math/tex">\omega_4^0</script></span> 恒等于 1，<span><span class="MathJax_Preview">\omega_4^2</span><script type="math/tex">\omega_4^2</script></span> 的角度是 <span><span class="MathJax_Preview">\omega_4^0</span><script type="math/tex">\omega_4^0</script></span> 的两倍，所以 <span><span class="MathJax_Preview">\omega_4^2 = (\omega_4^1)^2 = i^2=-1</span><script type="math/tex">\omega_4^2 = (\omega_4^1)^2 = i^2=-1</script></span>, 依次以此类推。</p>
+<p><span><span class="MathJax_Preview">\omega_4^0</span><script type="math/tex">\omega_4^0</script></span> 恒等于 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，<span><span class="MathJax_Preview">\omega_4^2</span><script type="math/tex">\omega_4^2</script></span> 的角度是 <span><span class="MathJax_Preview">\omega_4^0</span><script type="math/tex">\omega_4^0</script></span> 的两倍，所以 <span><span class="MathJax_Preview">\omega_4^2 = (\omega_4^1)^2 = i^2=-1</span><script type="math/tex">\omega_4^2 = (\omega_4^1)^2 = i^2=-1</script></span>, 依次以此类推。</p>
 <p>因此，我们只要知道 <span><span class="MathJax_Preview">\omega_k^1</span><script type="math/tex">\omega_k^1</script></span> ，就能求出 <span><span class="MathJax_Preview">\omega_k^n</span><script type="math/tex">\omega_k^n</script></span>。所以我们把 <span><span class="MathJax_Preview">\omega_k^1</span><script type="math/tex">\omega_k^1</script></span> 称为单位复根，简写为 <span><span class="MathJax_Preview">\omega_k</span><script type="math/tex">\omega_k</script></span></p>
 <h2 id="fft_2">FFT 的流程<a class="headerlink" href="#fft_2" title="Permanent link">&para;</a></h2>
 <p>qwq 终于写到核心部分了，也就是，FFT 到底怎么来写呢？</p>
@@ -3165,12 +3165,12 @@
 <p>FFT 之所以快，是因为他采用了分治的思想。</p>
 <p>就 DFT（将系数表达转换成点值表达）来说，它分治的来求当当前的 <span><span class="MathJax_Preview">x=\omega_n^k</span><script type="math/tex">x=\omega_n^k</script></span></p>
 <p>的时候整个式子的值。他的分治思想体现在将多项式分为奇次项和偶次项处理。</p>
-<p>对于一共 8 项的多项式</p>
+<p>对于一共 <span><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span> 项的多项式</p>
 <div>
 <div class="MathJax_Preview">f(x0) = y_1 = a_0 + a_1x + a_2x^2+a_3x^3+a_4x^4+a_5x^5+a_6x^6+a_7x^7</div>
 <script type="math/tex; mode=display">f(x0) = y_1 = a_0 + a_1x + a_2x^2+a_3x^3+a_4x^4+a_5x^5+a_6x^6+a_7x^7</script>
 </div>
-<p>按照次数的奇偶来分成两组, 然后右边提出来一个 x</p>
+<p>按照次数的奇偶来分成两组, 然后右边提出来一个 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span></p>
 <div>
 <div class="MathJax_Preview">f(x) = (a_0+a_2x^2+a_4x^4+a_6x^6) + (a_1x+a_3x^3+a_5x^5+a_7x^7)</div>
 <script type="math/tex; mode=display">f(x) = (a_0+a_2x^2+a_4x^4+a_6x^6) + (a_1x+a_3x^3+a_5x^5+a_7x^7)</script>
@@ -3188,24 +3188,24 @@
 <div class="MathJax_Preview">H(x)=a_1+a_3x+a_5x^2+a_7x^3</div>
 <script type="math/tex; mode=display">H(x)=a_1+a_3x+a_5x^2+a_7x^3</script>
 </div>
-<p>那么原来的 f（x）由新函数来表示(是不是我们二分了一个多项式呢~)</p>
+<p>那么原来的 <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 由新函数来表示(是不是我们二分了一个多项式呢~)</p>
 <div>
-<div class="MathJax_Preview">F(x)=G(x^2) + x * H(x^2)</div>
-<script type="math/tex; mode=display">F(x)=G(x^2) + x * H(x^2)</script>
+<div class="MathJax_Preview">F(x)=G(x^2) + x  \times  H(x^2)</div>
+<script type="math/tex; mode=display">F(x)=G(x^2) + x  \times  H(x^2)</script>
 </div>
 <p>给函数带个帽子表示此时在进行的是 DFT 过程，把 x 代进去，即有</p>
 <div>
-<div class="MathJax_Preview">DFT(f(\omega_n^k))=DFT(G((\omega_n^k)^2)) + \omega_n^k * DFT(H((\omega_n^k)^2))</div>
-<script type="math/tex; mode=display">DFT(f(\omega_n^k))=DFT(G((\omega_n^k)^2)) + \omega_n^k * DFT(H((\omega_n^k)^2))</script>
+<div class="MathJax_Preview">DFT(f(\omega_n^k))=DFT(G((\omega_n^k)^2)) + \omega_n^k  \times  DFT(H((\omega_n^k)^2))</div>
+<script type="math/tex; mode=display">DFT(f(\omega_n^k))=DFT(G((\omega_n^k)^2)) + \omega_n^k  \times  DFT(H((\omega_n^k)^2))</script>
 </div>
 <p>！！！前方高能：</p>
-<p>这个函数能处理的多项式长度只能是 <span><span class="MathJax_Preview">2^m(m \in N^*)</span><script type="math/tex">2^m(m \in N^*)</script></span> , 否则在分治的时候左右不一样长，右边取不到系数了，程序没法进行。所以要在第一次 DFT 之前就把序列向上补成长度为 <span><span class="MathJax_Preview">2^m(m \in N^*)</span><script type="math/tex">2^m(m \in N^*)</script></span>（高次系数补 0）、最高项次数为（n-1）的多项式。一定要预处理哦 qaq</p>
-<p>然后我在代入值的时候，因为要代入 n 个不同值，所以我们就代入 <span><span class="MathJax_Preview">\omega_n^0,\omega_n^1,\omega_n^2,\cdots, \omega_n^{n-1} (n=2^m(m \in N^*))</span><script type="math/tex">\omega_n^0,\omega_n^1,\omega_n^2,\cdots, \omega_n^{n-1} (n=2^m(m \in N^*))</script></span></p>
+<p>这个函数能处理的多项式长度只能是 <span><span class="MathJax_Preview">2^m(m \in N^ \times )</span><script type="math/tex">2^m(m \in N^ \times )</script></span> , 否则在分治的时候左右不一样长，右边取不到系数了，程序没法进行。所以要在第一次 DFT 之前就把序列向上补成长度为 <span><span class="MathJax_Preview">2^m(m \in N^ \times )</span><script type="math/tex">2^m(m \in N^ \times )</script></span>（高次系数补 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>）、最高项次数为 <span><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 的多项式。一定要预处理哦 qaq</p>
+<p>然后我在代入值的时候，因为要代入 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个不同值，所以我们就代入 <span><span class="MathJax_Preview">\omega_n^0,\omega_n^1,\omega_n^2,\cdots, \omega_n^{n-1} (n=2^m(m \in N^ \times ))</span><script type="math/tex">\omega_n^0,\omega_n^1,\omega_n^2,\cdots, \omega_n^{n-1} (n=2^m(m \in N^ \times ))</script></span></p>
 <p>一共 <span><span class="MathJax_Preview">2^m</span><script type="math/tex">2^m</script></span> 个不同值。</p>
 <div class="codehilite"><pre><span></span><span class="cm">/*</span>
-<span class="cm">* 做 FFT </span>
-<span class="cm">*len 必须是 2^k 形式 </span>
-<span class="cm">*on == 1 时是 DFT，on == -1 时是 IDFT </span>
+<span class="cm">* 做 FFT</span>
+<span class="cm">*len 必须是 2^k 形式</span>
+<span class="cm">*on == 1 时是 DFT，on == -1 时是 IDFT</span>
 <span class="cm">*/</span>
 <span class="kt">void</span> <span class="nf">fft</span><span class="p">(</span><span class="n">Complex</span> <span class="n">y</span><span class="p">[],</span><span class="kt">int</span> <span class="n">len</span><span class="p">){</span>
     <span class="n">change</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">len</span><span class="p">);</span>
@@ -3233,10 +3233,10 @@
 <p>有啥规律呢？其实就是原来的那个序列，每个数用二进制表示，然后把二进制翻转对称一下，就是最终那个位置的下标。比如 <span><span class="MathJax_Preview">x_1</span><script type="math/tex">x_1</script></span> 是 001，翻转是 100，也就是 4，而且最后那个位置确实是 4，是不是很神奇啊<sub>~</sub></p>
 <p>这里附上代码
 <div class="codehilite"><pre><span></span><span class="cm">/*</span>
-<span class="cm">* 进行 FFT 和 IFFT 前的反置变换 </span>
-<span class="cm">* 位置 i 和 i 的二进制反转后的位置互换 </span>
-<span class="cm">*len 必须为 2 的幂 </span>
-<span class="cm">*/</span> 
+<span class="cm">* 进行 FFT 和 IFFT 前的反置变换</span>
+<span class="cm">* 位置 i 和 i 的二进制反转后的位置互换</span>
+<span class="cm">*len 必须为 2 的幂</span>
+<span class="cm">*/</span>
 <span class="kt">void</span> <span class="nf">change</span><span class="p">(</span><span class="n">Complex</span> <span class="n">y</span><span class="p">[],</span><span class="kt">int</span> <span class="n">len</span><span class="p">){</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">;</span>
     <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="n">len</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -3247,7 +3247,7 @@
         <span class="k">while</span><span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="n">k</span><span class="p">){</span>
             <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="n">k</span><span class="p">;</span>
             <span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-        <span class="p">}</span> 
+        <span class="p">}</span>
         <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">)</span>   <span class="n">j</span><span class="o">+=</span><span class="n">k</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -3255,24 +3255,24 @@
 <h3 id="fft-idft">FFT 流程第二步之 IDFT（共两步）<a class="headerlink" href="#fft-idft" title="Permanent link">&para;</a></h3>
 <p>这一步 IDFT（傅里叶反变换）的作用我说的已经很清楚啦，就是把上一步获得的目标多项式的点值形式转换成系数形式。但是似乎并不简单呢（雾）。。。但是，我们把单位复根代入多项式之后，就是下面这个样子（矩阵表示方程组）</p>
 <p><img alt="img" src="https://pic4.zhimg.com/80/v2-74756f9edea1e47bb965a9371a478a92_hd.jpg" /></p>
-<p>而且现在我们已经得到最左边的结果了，中间的 x 值在目标多项式的点值表示中也是一一对应的，所以，根据矩阵的基础知识，我们只要在式子两边左乘中间那个大矩阵的逆矩阵就行了。由于这个矩阵的元素非常特殊，他的逆矩阵也有特殊的性质，就是每一项取倒数，再除以 n，就能得到他的逆矩阵（这边根据的是单位原根的两个特殊性质推出来的，具体比较麻烦。如果想知道的话私我吧。）</p>
-<p>如何改变我们的操作才能使计算的结果文原来的倒数呢？我们当然可以重新写一遍，但是这里有更简单的实现。这就要看我们求 “单位复根的过程了”：根据“欧拉函数”<span><span class="MathJax_Preview">e^{i\pi}=-1</span><script type="math/tex">e^{i\pi}=-1</script></span>，我么可以得到 <span><span class="MathJax_Preview">e^{2\pi i}=1</span><script type="math/tex">e^{2\pi i}=1</script></span>。如果我要找到一个数，它的 k 次方 = 1，那么这个数<span><span class="MathJax_Preview">\omega[k]=e^{2\pi i/k}</span><script type="math/tex">\omega[k]=e^{2\pi i/k}</script></span>（因为<span><span class="MathJax_Preview">(e^{2\pi i/k})^k=e^{2\pi i}=1</span><script type="math/tex">(e^{2\pi i/k})^k=e^{2\pi i}=1</script></span>）。而如果我要使这个数值变成“<span><span class="MathJax_Preview">1/\omega[k]</span><script type="math/tex">1/\omega[k]</script></span>” 也就是 “<span><span class="MathJax_Preview">(\omega[k])^-1</span><script type="math/tex">(\omega[k])^-1</script></span>”，我们可以尝试着把π取成 - 3.14159…，这样我们的计算结果就会变成原来的倒数，而其它的操作过程与 DFT 是完全相同的（这真是极好的）。我们可以定义一个函数，向里面掺一个参数“1” 或者是 “-1”，然后把它乘到“π” 的身上。传入 “1” 就是 DFT，传入 “-1” 就是 IDFT，十分的智能。</p>
+<p>而且现在我们已经得到最左边的结果了，中间的 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 值在目标多项式的点值表示中也是一一对应的，所以，根据矩阵的基础知识，我们只要在式子两边左乘中间那个大矩阵的逆矩阵就行了。由于这个矩阵的元素非常特殊，他的逆矩阵也有特殊的性质，就是每一项取倒数，再除以 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，就能得到他的逆矩阵（这边根据的是单位原根的两个特殊性质推出来的，具体比较麻烦。如果想知道的话私我吧。）</p>
+<p>如何改变我们的操作才能使计算的结果文原来的倒数呢？我们当然可以重新写一遍，但是这里有更简单的实现。这就要看我们求 “单位复根的过程了”：根据“欧拉函数” <span><span class="MathJax_Preview">e^{i\pi}=-1</span><script type="math/tex">e^{i\pi}=-1</script></span>，我么可以得到 <span><span class="MathJax_Preview">e^{2\pi i}=1</span><script type="math/tex">e^{2\pi i}=1</script></span>。如果我要找到一个数，它的 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 次方 <span><span class="MathJax_Preview">= 1</span><script type="math/tex">= 1</script></span>，那么这个数 <span><span class="MathJax_Preview">\omega[k]=e^{2\pi \frac{i}{k}}</span><script type="math/tex">\omega[k]=e^{2\pi \frac{i}{k}}</script></span>（因为 <span><span class="MathJax_Preview">(e^{2\pi \frac{i}{k}})^k=e^{2\pi i}=1</span><script type="math/tex">(e^{2\pi \frac{i}{k}})^k=e^{2\pi i}=1</script></span>）。而如果我要使这个数值变成<span><span class="MathJax_Preview">\frac{1}{\omega[k]}</span><script type="math/tex">\frac{1}{\omega[k]}</script></span> 也就是 <span><span class="MathJax_Preview">(\omega[k])^-1</span><script type="math/tex">(\omega[k])^-1</script></span>，我们可以尝试着把$<span><span class="MathJax_Preview">π</span><script type="math/tex">π</script></span> 取成 - 3.14159…，这样我们的计算结果就会变成原来的倒数，而其它的操作过程与 DFT 是完全相同的（这真是极好的）。我们可以定义一个函数，向里面掺一个参数 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 或者是 <span><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>，然后把它乘到 <span><span class="MathJax_Preview">π</span><script type="math/tex">π</script></span> 的身上。传入 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 就是 DFT，传入 <span><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span> 就是 IDFT，十分的智能。</p>
 <p>所以我们 fft 函数可以集 DFT 和 IDFT 于一身。见下</p>
 <p><div class="codehilite"><pre><span></span><span class="cm">/*</span>
-<span class="cm">* 做 FFT </span>
-<span class="cm">*len 必须是 2^k 形式 </span>
-<span class="cm">*on == 1 时是 DFT，on == -1 时是 IDFT </span>
+<span class="cm">* 做 FFT</span>
+<span class="cm">*len 必须是 2^k 形式</span>
+<span class="cm">*on == 1 时是 DFT，on == -1 时是 IDFT</span>
 <span class="cm">*/</span>
 <span class="kt">void</span> <span class="nf">fft</span><span class="p">(</span><span class="n">Complex</span> <span class="n">y</span><span class="p">[],</span><span class="kt">int</span> <span class="n">len</span><span class="p">,</span><span class="kt">int</span> <span class="n">on</span><span class="p">){</span>
     <span class="n">change</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">len</span><span class="p">);</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span><span class="n">h</span> <span class="o">&lt;=</span> <span class="n">len</span><span class="p">;</span><span class="n">h</span><span class="o">&lt;&lt;=</span><span class="mi">1</span><span class="p">){</span><span class="c1">// 模拟合并过程 </span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span><span class="n">h</span> <span class="o">&lt;=</span> <span class="n">len</span><span class="p">;</span><span class="n">h</span><span class="o">&lt;&lt;=</span><span class="mi">1</span><span class="p">){</span><span class="c1">// 模拟合并过程</span>
         <span class="n">Complex</span> <span class="n">wn</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="o">-</span><span class="n">on</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="n">h</span><span class="p">),</span><span class="n">sin</span><span class="p">(</span><span class="o">-</span><span class="n">on</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">PI</span><span class="o">/</span><span class="n">h</span><span class="p">));</span><span class="c1">// 计算当前单位复根</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span><span class="n">j</span> <span class="o">+=</span> <span class="n">h</span><span class="p">){</span>
             <span class="n">Complex</span> <span class="n">w</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="c1">// 计算当前单位复根</span>
             <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span><span class="n">k</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">k</span><span class="o">++</span><span class="p">){</span>
                 <span class="n">Complex</span> <span class="n">u</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
                 <span class="n">Complex</span> <span class="n">t</span> <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="n">k</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">];</span>
-                <span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span> <span class="o">+</span> <span class="n">t</span><span class="p">;</span><span class="c1">// 这就是吧两部分分治的结果加起来 </span>
+                <span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span> <span class="o">+</span> <span class="n">t</span><span class="p">;</span><span class="c1">// 这就是吧两部分分治的结果加起来</span>
                 <span class="n">y</span><span class="p">[</span><span class="n">k</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span> <span class="o">-</span> <span class="n">t</span><span class="p">;</span>
                 <span class="c1">// 后半个 “step” 中的ω一定和 “前半个” 中的成相反数</span>
                 <span class="c1">//“红圈”上的点转一整圈“转回来”，转半圈正好转成相反数</span>
@@ -3314,10 +3314,10 @@
     <span class="p">}</span>
 <span class="p">};</span>
 <span class="cm">/*</span>
-<span class="cm">* 进行 FFT 和 IFFT 前的反置变换 </span>
-<span class="cm">* 位置 i 和 i 的二进制反转后的位置互换 </span>
-<span class="cm">*len 必须为 2 的幂 </span>
-<span class="cm">*/</span> 
+<span class="cm">* 进行 FFT 和 IFFT 前的反置变换</span>
+<span class="cm">* 位置 i 和 i 的二进制反转后的位置互换</span>
+<span class="cm">*len 必须为 2 的幂</span>
+<span class="cm">*/</span>
 <span class="kt">void</span> <span class="nf">change</span><span class="p">(</span><span class="n">Complex</span> <span class="n">y</span><span class="p">[],</span><span class="kt">int</span> <span class="n">len</span><span class="p">){</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">;</span>
     <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="n">len</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -3328,14 +3328,14 @@
         <span class="k">while</span><span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="n">k</span><span class="p">){</span>
             <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="n">k</span><span class="p">;</span>
             <span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-        <span class="p">}</span> 
+        <span class="p">}</span>
         <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">)</span>   <span class="n">j</span><span class="o">+=</span><span class="n">k</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="p">}</span> 
+<span class="p">}</span>
 <span class="cm">/*</span>
-<span class="cm">* 做 FFT </span>
-<span class="cm">*len 必须是 2^k 形式 </span>
-<span class="cm">*on == 1 时是 DFT，on == -1 时是 IDFT </span>
+<span class="cm">* 做 FFT</span>
+<span class="cm">*len 必须是 2^k 形式</span>
+<span class="cm">*on == 1 时是 DFT，on == -1 时是 IDFT</span>
 <span class="cm">*/</span>
 <span class="kt">void</span> <span class="nf">fft</span><span class="p">(</span><span class="n">Complex</span> <span class="n">y</span><span class="p">[],</span><span class="kt">int</span> <span class="n">len</span><span class="p">,</span><span class="kt">int</span> <span class="n">on</span><span class="p">){</span>
     <span class="n">change</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">len</span><span class="p">);</span>
@@ -3357,7 +3357,7 @@
             <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">x</span> <span class="o">/=</span> <span class="n">len</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span> 
+<span class="p">}</span>
 
 <span class="k">const</span> <span class="kt">int</span> <span class="n">MAXN</span> <span class="o">=</span> <span class="mi">200020</span><span class="p">;</span>
 <span class="n">Complex</span> <span class="n">x1</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="n">x2</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>

@@ -2964,11 +2964,11 @@
 <p>一组数的公约数，是指同时是这组数中每一个数的约数的数。而最大公约数，则是指所有公约数里面最大的一个。</p>
 <p>那么如何求最大公约数呢？我们先考虑两个数的情况。</p>
 <h3 id="_1">两个数的<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<p>如果我们已知两个数 a 和 b，如何求出二者的最大公约数呢？</p>
+<p>如果我们已知两个数 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>，如何求出二者的最大公约数呢？</p>
 <p>不妨设 <span><span class="MathJax_Preview">a &gt; b</span><script type="math/tex">a > b</script></span></p>
 <p>我们发现如果 b 是 a 的约数，那么 b 就是二者的最大公约数。
-下面讨论不能整除的情况， <span><span class="MathJax_Preview">a = b * q + r</span><script type="math/tex">a = b * q + r</script></span>，其中 <span><span class="MathJax_Preview">r &lt; b</span><script type="math/tex">r < b</script></span>。</p>
-<p>不难证明，<span><span class="MathJax_Preview">gcd(a, b) == gcd(b, r)</span><script type="math/tex">gcd(a, b) == gcd(b, r)</script></span>，这里两个数的大小是不会增大的，我们得到了关于两个数的最大公约数的一个递归求法。</p>
+下面讨论不能整除的情况， <span><span class="MathJax_Preview">a = b \times q + r</span><script type="math/tex">a = b \times q + r</script></span>，其中 <span><span class="MathJax_Preview">r &lt; b</span><script type="math/tex">r < b</script></span>。</p>
+<p>不难证明，<span><span class="MathJax_Preview">\gcd(a, b) = \gcd(b, r)</span><script type="math/tex">\gcd(a, b) = \gcd(b, r)</script></span>，这里两个数的大小是不会增大的，我们得到了关于两个数的最大公约数的一个递归求法。</p>
 <h3 id="_2">多个数的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>那怎么求多个书的最大公约数呢？显然答案一定是每个数的约数，那么也一定是每相邻两个数的约数。我们采用归纳法，可以证明，每次取出两个数求出答案后再放回去，不会对所需要的答案造成影响。</p>
 <h2 id="_3">最小公倍数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
@@ -2982,23 +2982,23 @@
 <p>我们发现，对于 a 和 b 的情况，二者的最大公约数等于</p>
 <div>
 <div class="MathJax_Preview">
-p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}
+p_1^{k_{\min(a_1, b_1)}}p_2^{k_{\min(a_2, b_2)}} \cdots p_s^{k_{\min(a_s, b_s)}}
 </div>
 <script type="math/tex; mode=display">
-p_1^{k_{min\{a_1, b_1\}}}p_2^{k_{min\{a_2, b_2\}}} \cdots p_s^{k_{min\{a_s, b_s\}}}
+p_1^{k_{\min(a_1, b_1)}}p_2^{k_{\min(a_2, b_2)}} \cdots p_s^{k_{\min(a_s, b_s)}}
 </script>
 </div>
 <p>最小公倍数等于</p>
 <div>
 <div class="MathJax_Preview">
-p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}
+p_1^{k_{\max(a_1, b_1)}}p_2^{k_{\max(a_2, b_2)}} \cdots p_s^{k_{\max(a_s, b_s)}}
 </div>
 <script type="math/tex; mode=display">
-p_1^{k_{max\{a_1, b_1\}}}p_2^{k_{max\{a_2, b_2\}}} \cdots p_s^{k_{max\{a_s, b_s\}}}
+p_1^{k_{\max(a_1, b_1)}}p_2^{k_{\max(a_2, b_2)}} \cdots p_s^{k_{\max(a_s, b_s)}}
 </script>
 </div>
-<p>由于 <span><span class="MathJax_Preview">a + b = max\{a, b\} + min\{a, b\}</span><script type="math/tex">a + b = max\{a, b\} + min\{a, b\}</script></span></p>
-<p>所以得到结论是 <span><span class="MathJax_Preview">gcd(a, b) * lcm(a, b) = a * b</span><script type="math/tex">gcd(a, b) * lcm(a, b) = a * b</script></span></p>
+<p>由于 <span><span class="MathJax_Preview">a + b = \max(a, b) + \min(a, b)</span><script type="math/tex">a + b = \max(a, b) + \min(a, b)</script></span></p>
+<p>所以得到结论是 <span><span class="MathJax_Preview">\gcd(a, b) \times \operatorname{lcm}(a, b) = a \times b</span><script type="math/tex">\gcd(a, b) \times \operatorname{lcm}(a, b) = a \times b</script></span></p>
 <p>要求两个数的最小公倍数，先求出最大公约数即可。</p>
 <h3 id="_5">多个数的<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
                 

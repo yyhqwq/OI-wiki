@@ -2923,14 +2923,29 @@
 <p>为了介绍 AC 自动机这种神奇的算法，先介绍自动机和 KMP 自动机</p>
 <p>有限状态自动机(DFA)：字符集，有限状态控制，初始状态，接受状态</p>
 <p>KMP 自动机：一个不断读入待匹配串，每次匹配时走到接受状态的 DFA</p>
-<p>共有 m 个状态，第 i 个状态表示已经匹配了前 i 个字符</p>
-<p><code>trans[i][x] = b[i] == x ? i + 1 : trans[next[i]][x]</code></p>
-<p>（约定 next[0]=0）</p>
-<p>我们发现trans[i] 只依赖于之前的值，所以可以跟 <a href="/string/kmp">KMP</a> 一起求出来</p>
+<p>共有 <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个状态，第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个状态表示已经匹配了前 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个字符</p>
+<div>
+<div class="MathJax_Preview">
+trans[i][x] =
+\begin{cases}
+i + 1,  &amp; \text{if $b[i] = x$} \\[2ex]
+trans[next[i]][x], &amp; \text{else}
+\end{cases}
+</div>
+<script type="math/tex; mode=display">
+trans[i][x] =
+\begin{cases}
+i + 1,  & \text{if $b[i] = x$} \\[2ex]
+trans[next[i]][x], & \text{else}
+\end{cases}
+</script>
+</div>
+<p>（约定 <span><span class="MathJax_Preview">next[0]=0</span><script type="math/tex">next[0]=0</script></span>）</p>
+<p>我们发现 <span><span class="MathJax_Preview">trans[i]</span><script type="math/tex">trans[i]</script></span> 只依赖于之前的值，所以可以跟 <a href="/string/kmp">KMP</a> 一起求出来</p>
 <p>时间和空间复杂度：<span><span class="MathJax_Preview">O(m|∑|)</span><script type="math/tex">O(m|∑|)</script></span></p>
-<p>一些细节：走到接受状态之后立即转移到该状态的 next</p>
+<p>一些细节：走到接受状态之后立即转移到该状态的 <span><span class="MathJax_Preview">next</span><script type="math/tex">next</script></span></p>
 <h2 id="actrie">AC算法就是Trie上的自动机<a class="headerlink" href="#actrie" title="Permanent link">&para;</a></h2>
-<p>注意在 <a href="/search/bfs">BFS</a> 的同时求出 trans 即可</p>
+<p>注意在 <a href="/search/bfs">BFS</a> 的同时求出 <span><span class="MathJax_Preview">trans</span><script type="math/tex">trans</script></span> 即可</p>
 <p>可以解决多串匹配问题</p>
 <p>注意细节：<span><span class="MathJax_Preview">O(n+匹配次数)</span><script type="math/tex">O(n+匹配次数)</script></span> 还是 <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span></p>
 <p>前者能找到每次匹配，后者只能求出匹配次数（通过合并接受状态）</p>
