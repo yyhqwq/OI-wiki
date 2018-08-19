@@ -2945,8 +2945,8 @@
 <p>当然也有不是 <span><span class="MathJax_Preview">O(n\log n)</span><script type="math/tex">O(n\log n)</script></span> 的，桶排序的时间复杂度是 <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>，但是它是在「用空间换时间」，它的空间复杂度是 <span><span class="MathJax_Preview">O(所排序的最大数)</span><script type="math/tex">O(所排序的最大数)</script></span></p>
 <h2 id="_3">归并排序<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h2 id="_4">快速排序<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>C++ 函数模板库实现了快速排序，可以查阅 <a href="https://devdocs.io/cpp/algorithm/sort">std::sort()</a></p>
-<p>用法：
+<p>C函数模板库实现了快速排序，即<code>stdlib.h</code>当中的<code>qsort</code>。但在OI相关比赛当中，更为常见的库排序函数是C++ <code>algorithm</code>库中的<code>std::sort</code>函数。C++标准并未严格要求此函数的实现算法，具体实现取决于编译器，但他的时间复杂度是<span><span class="MathJax_Preview">O(N\log N)</span><script type="math/tex">O(N\log N)</script></span>的。可以查阅 <a href="http://www.cplusplus.com/reference/list/list/sort/">std::sort()</a></p>
+<p>快速用法：
 <div class="codehilite"><pre><span></span><span class="c1">// a[0] .. a[n - 1] 是放了元素的</span>
 <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span>
 <span class="c1">// 这句代码直接修改 a 数组里的元素顺序，使得现在它是从小到大排列的</span>
