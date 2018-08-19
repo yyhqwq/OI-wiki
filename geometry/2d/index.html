@@ -3501,7 +3501,7 @@ S=\frac{1}{2}\sum_{i=1}^n |\vec {v_i}\times \overrightarrow{v_{i\bmod n+1}}|
 <p>我们先将一圆圆心与交点相连，求出两圆心连线与该连线所成角。这样，将两圆心连线的方向向量旋转这个角度，就是圆心与交点相连形成的半径的方向向量了。</p>
 <p>最后还是老套路——沿方向向量方向将圆心平移半径长度。</p>
 <h3 id="37">3.7. 极角序<a class="headerlink" href="#37" title="Permanent link">&para;</a></h3>
-<p>!!! 例题 「JOI Spring Camp 2014 Day4」两个人的星座
+<p>!!! 例题：「JOI Spring Camp 2014 Day4」两个人的星座
     平面内有 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个点，每个点有三种颜色，求不相交的三色三角形对数。<span><span class="MathJax_Preview">6\le n\le 3000</span><script type="math/tex">6\le n\le 3000</script></span>。</p>
 <p>如果两个三角形不相交，则一定可以做出两条内公切线，如果相交或内含是做不出公切线的。三角形的公切线可以类比圆的公切线。</p>
 <p>先枚举一个原点，记为 <span><span class="MathJax_Preview">O</span><script type="math/tex">O</script></span>，以这个点为极点，过这个点且与 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 轴平行的直线作为极轴，建立极坐标系，把剩余点按极角由小到大排序。然后统计出在极轴上方和下方的每种点的个数。</p>
