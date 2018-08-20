@@ -2,867 +2,867 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://oi-wiki.cf/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/introduction/mode/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/introduction/resources/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/introduction/softwares/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/introduction/faq/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/basic/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/basic/enumerate/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/basic/simulate/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/basic/divide-and-conquer/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/basic/greedy/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/basic/sort/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/basic/expression/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/basic/binary/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/basic/construction/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/search/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/search/dfs/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/search/bfs/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/search/dbfs/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/search/heuristic/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/search/astar/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/search/idastar/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/search/iterative/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/search/backtracking/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/search/dlx/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/memo/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/backpack/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/interval/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/dag/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/tree/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/state/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/number/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/plug/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/optimization/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/dp/misc/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/stl/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/match/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/hash/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/kmp/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/trie/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/pam/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/palindrome-tree/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/sa/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/ac-automaton/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/sam/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/suffix-tree/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/manacher/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/string/minimal-string/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/base/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/prime/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/gcd/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/euler/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/sieve/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/mobius/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/fermat/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/quick-pow/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/crt/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/dictionary/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/matrix/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/bit/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/inverse/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/primitive-root/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/bsgs/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/game/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/poly/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/combination/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/catalan/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/stirling/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/cantor/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/expectation/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/permutation-group/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/gauss/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/linear-equations/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/inclusion-exclusion-principle/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/drawer-principle/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/integral/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/fft/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/ntt/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/fwt/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/linear-programming/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/complex/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/bignum/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/math/misc/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/stl/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/pb-ds/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/novice/linked-list/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/novice/hash/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/novice/dsu/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/novice/heap/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/novice/square-root-decomposition/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/novice/monotonous-stack/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/novice/monotonous-queue/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/intermediate/sparse-table/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/intermediate/block-list/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/intermediate/block-array/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/intermediate/bit/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/intermediate/segment/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/intermediate/treap/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/intermediate/sbt/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/intermediate/splay/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/intermediate/scapegoat/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/intermediate/virtual-tree/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/seg-in-seg/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/seg-in-balanced/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/balanced-in-seg/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/avl/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/dividin/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/k-dtree/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/persistent-seg/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/persistent-block-array/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/persistent-balanced/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/persistent-trie/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/lct/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/ett/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/data-structure/advanced/tree-decompose/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/basic/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/tree-basic/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/traverse/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/mst/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/lca/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/heavy-light-decomposition/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/tree-divide/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/tree-misc/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/topo/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/dynamic-tree-divide/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/2-sat/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/euler/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/scc/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/bcc/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/bridge/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/differential-constraints/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/dag/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/bi-graph/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/shortest-path/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/min-circle/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/kth-path/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/euler/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/flow/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/flow/node/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/flow/max-flow/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/flow/min-cut/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/flow/min-cost/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/graph/flow/bound/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/geometry/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/geometry/2d/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/geometry/3d/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/geometry/pick/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/geometry/triangulation/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/geometry/convex-hull/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/geometry/scanning/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/geometry/rotating-calipers/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/geometry/half-plane-intersection/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/geometry/magic/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/non-traditional/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/cdq-divide/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/mo-algo/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/hill-climbing/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/fractional-programming/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/simulated-annealing/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/zhu-liu-algorithm/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/matrix-tree/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/random-incremental/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/random/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/offline/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/distance/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/endianness/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/complexity/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://oi-wiki.cf/misc/io/</loc>
-     <lastmod>2018-08-19</lastmod>
+     <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

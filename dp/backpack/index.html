@@ -106,6 +106,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -798,9 +802,63 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        背包 DP
+      </label>
+    
     <a href="./" title="背包 DP" class="md-nav__link md-nav__link--active">
       背包 DP
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="例题" class="md-nav__link">
+    例题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1" title="0-1背包" class="md-nav__link">
+    0-1背包
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="完全背包" class="md-nav__link">
+    完全背包
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="多重背包" class="md-nav__link">
+    多重背包
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2809,6 +2867,62 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="例题" class="md-nav__link">
+    例题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1" title="0-1背包" class="md-nav__link">
+    0-1背包
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="完全背包" class="md-nav__link">
+    完全背包
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="多重背包" class="md-nav__link">
+    多重背包
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2819,7 +2933,40 @@
                 
                   <h1>背包 DP</h1>
                 
-                
+                <p>在学习本章前请确认你已经学习了<a href="https://oi-wiki.cf/dp/">动态规划部分简介</a></p>
+<p>在具体讲何为"背包dp"前，先来看如下的例题</p>
+<h4 id="_1">例题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p><a href="https://www.luogu.org/problemnew/show/P2871">[USACO07DEC]手链Charm Bracelet</a></p>
+<p>本题题意可概括为——N物体，放入容量为M的背包，要求使总价值最大</p>
+<p>由于每个物体只有2种情况——取与不取，正如二进制中的0和1——这类问题便被称为"0-1背包问题"</p>
+<h4 id="0-1">0-1背包<a class="headerlink" href="#0-1" title="Permanent link">&para;</a></h4>
+<p>例题中已知条件有第i个物体的体积v[i]和价值w[i],背包总容量</p>
+<p>显而易见的是，可以计算总价值的，只有已经放入背包的物体，因此该题中对"是否为最大值"的判断是建立在"已经放入背包之中"的基础之上的</p>
+<p>已知对于一个容量为v1，可以放置第1到第i件物体的背包，其最大总价值很明显等于容量为v1的背包，放有第1到第(i-1)件物体时的最大值(第i件物体不取时)或者是容量为v1-v[i]的背包，放有第1到第(i-1)件物体时的最大值+w<a href="第i件物体取时">i</a></p>
+<p>由此可以得出状态转移方程</p>
+<ul>
+<li>dp[v1][i]=max(dp[v1][i-1],dp[v1-v[i]][i-1]+w[i])</li>
+</ul>
+<p>有了这样的思路，就可以顺利地写出代码了</p>
+<p><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">v1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">l</span><span class="o">&lt;=</span><span class="n">v1</span><span class="o">-</span><span class="n">i</span><span class="p">;</span><span class="n">l</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">dp</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="n">i</span><span class="p">]);</span>
+</pre></div>
+按照正确的思路，写出了这样的核心代码，然后就可以提交......</p>
+<p>错！</p>
+<p>让我们再回头看一下代码，i表示当前判断的是第i个物体，l则穷举体积，可是注意一个地方——l是从0到v1-v[i]</p>
+<p>这意味着什么呢？举个栗子，可能在体积为(l)处取物体i新的dp值存到体积为(l+v[i])处,而在体积为(l+v[i])处，物体i再次被取</p>
+<p>所以，当以0~v1-v[i]的顺序穷举时，物体实际上可能被加入多遍，这显然与题意不符</p>
+<p>因此为了避免多取，穷举顺序应为v1-v[i]~0</p>
+<p>因此实际核心代码为
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">v1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="o">=</span><span class="n">v1</span><span class="o">-</span><span class="n">i</span><span class="p">;</span><span class="n">l</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">l</span><span class="o">--</span><span class="p">)</span>
+        <span class="n">dp</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="n">i</span><span class="p">]);</span>
+</pre></div></p>
+<p><a href="https://www.luogu.org/paste/2mb5d46q">例题代码</a></p>
+<p>Ps.事实上，由到大穷举是另一种背包问题的解法，稍后会提到</p>
+<h4 id="_2">完全背包<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="_3">多重背包<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
                 
                   
                 
