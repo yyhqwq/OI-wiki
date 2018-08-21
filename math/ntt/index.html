@@ -2987,12 +2987,12 @@
 <p>然后因为这里涉及到数论变化，所以这里的 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>（为了区分 FFT 中的 n，我们把这里的 n 称为 <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>）可以比 FFT 中的 n 大，但是只要把 <span><span class="MathJax_Preview">\frac{qN}{n}</span><script type="math/tex">\frac{qN}{n}</script></span> 看做这里的 <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 就行了，能够避免大小问题。。。</p>
 <p>常见的有</p>
 <div>
-<div class="MathJax_Preview">p = 1004535809 = 479 \times 2^21, g=3</div>
-<script type="math/tex; mode=display">p = 1004535809 = 479 \times 2^21, g=3</script>
+<div class="MathJax_Preview">p = 1004535809 = 479 \times 2^{21}, g=3</div>
+<script type="math/tex; mode=display">p = 1004535809 = 479 \times 2^{21}, g=3</script>
 </div>
 <div>
-<div class="MathJax_Preview">p=998244353=2 \times 17 \times 2^23+1, g=3</div>
-<script type="math/tex; mode=display">p=998244353=2 \times 17 \times 2^23+1, g=3</script>
+<div class="MathJax_Preview">p=998244353=2 \times 17 \times 2^{23}+1, g=3</div>
+<script type="math/tex; mode=display">p=998244353=2 \times 17 \times 2^{23}+1, g=3</script>
 </div>
 <p>就是 <span><span class="MathJax_Preview">g^{qn}</span><script type="math/tex">g^{qn}</script></span> 的等价 <span><span class="MathJax_Preview">e^{2\pi n}</span><script type="math/tex">e^{2\pi n}</script></span></p>
 <p>迭代到长度 <span><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 时 <span><span class="MathJax_Preview">g_l = g^{\frac{p-1}{l}}</span><script type="math/tex">g_l = g^{\frac{p-1}{l}}</script></span>, 或者 <span><span class="MathJax_Preview">\omega_n = g_l = g_N^{\frac{N}{l}} = g_N^{\frac{p-1}{l}}</span><script type="math/tex">\omega_n = g_l = g_N^{\frac{N}{l}} = g_N^{\frac{p-1}{l}}</script></span></p>
