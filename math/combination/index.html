@@ -3364,6 +3364,29 @@
     <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
     <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
     <script>
+      const myTheme = {
+        render(state, instance) {
+          const container = document.createElement('div')
+          container.lang = "zh-CN"
+          container.className = 'gitment-container gitment-root-container'
+          const divv = document.createElement('form')
+          container.appendChild(instance.renderSomething(state, instance))
+          container.appendChild(instance.renderHeader(state, instance))
+          divv.appendChild(instance.renderEditor(state, instance))
+          container.appendChild(divv)
+          container.appendChild(instance.renderComments(state, instance))
+          container.appendChild(instance.renderFooter(state, instance))
+          return container
+        },
+        renderSomething(state, instance) {
+          const container = document.createElement('div')
+          container.lang = "zh-CN"
+          if (state.user.login) {
+            container.innerText = `Hello, ${state.user.login}`
+          }
+          return container
+        }
+      }
       const gitment = new Gitmint({
         id: '排列组合',
         owner: 'Ir1d',
@@ -3372,6 +3395,8 @@
           client_id: 'd6a911c8fba0194626d4',
           client_secret: '867ec7e13cc99b420bd147cbb62d5cfec271ba81',
         },
+        lang: 'zh-CN',
+        theme: myTheme,
       })
       gitment.render('gitment_container')
     </script>

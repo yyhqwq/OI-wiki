@@ -106,7 +106,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#_1" tabindex="1" class="md-skip">
+      <a href="../../#a_ia_i" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -2838,7 +2838,8 @@
                   <a href="https://github.com/24OI/OI-wiki/blob/master/docs/introduction/faq.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">交流方式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+                <h1 id="a_ia_i"><span><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span><a class="headerlink" href="#a_ia_i" title="Permanent link">&para;</a></h1>
+<h1 id="_1">交流方式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>本项目主要使用 Issues / <a href="https://jq.qq.com/?_wv=1027&amp;k=5EfkM6K">QQ</a> / <a href="https://t.me/OIwiki">Telegram</a> 进行交流沟通。</p>
 <p>Telegram 群组链接为 <a href="https://t.me/OIwiki">@OIwiki</a> ， QQ 群号码为 <a href="https://jq.qq.com/?_wv=1027&amp;k=5EfkM6K"><code>588793226</code></a>，欢迎加入。</p>
 <h1 id="_2">贡献方式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
@@ -2980,6 +2981,29 @@ $$ a_i $$
     <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
     <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
     <script>
+      const myTheme = {
+        render(state, instance) {
+          const container = document.createElement('div')
+          container.lang = "zh-CN"
+          container.className = 'gitment-container gitment-root-container'
+          const divv = document.createElement('form')
+          container.appendChild(instance.renderSomething(state, instance))
+          container.appendChild(instance.renderHeader(state, instance))
+          divv.appendChild(instance.renderEditor(state, instance))
+          container.appendChild(divv)
+          container.appendChild(instance.renderComments(state, instance))
+          container.appendChild(instance.renderFooter(state, instance))
+          return container
+        },
+        renderSomething(state, instance) {
+          const container = document.createElement('div')
+          container.lang = "zh-CN"
+          if (state.user.login) {
+            container.innerText = `Hello, ${state.user.login}`
+          }
+          return container
+        }
+      }
       const gitment = new Gitmint({
         id: 'F.A.Q.',
         owner: 'Ir1d',
@@ -2988,6 +3012,8 @@ $$ a_i $$
           client_id: 'd6a911c8fba0194626d4',
           client_secret: '867ec7e13cc99b420bd147cbb62d5cfec271ba81',
         },
+        lang: 'zh-CN',
+        theme: myTheme,
       })
       gitment.render('gitment_container')
     </script>
