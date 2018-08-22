@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../..">
-      <meta name="generator" content="mkdocs-1.0.1, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.2, mkdocs-material-3.0.3">
     
     
       
@@ -1029,8 +1029,6 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
-    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         后缀数组（SA）
@@ -1044,23 +1042,61 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1" title="1. 前言" class="md-nav__link">
+    1. 前言
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" title="后缀数组和后缀树" class="md-nav__link">
     后缀数组和后缀树
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_2" title="各种定义" class="md-nav__link">
     各种定义
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" title="2. 一些构造方法" class="md-nav__link">
+    2. 一些构造方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="最简单的暴力" class="md-nav__link">
+    最简单的暴力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="倍增" class="md-nav__link">
+    倍增
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2864,23 +2900,61 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1" title="1. 前言" class="md-nav__link">
+    1. 前言
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" title="后缀数组和后缀树" class="md-nav__link">
     后缀数组和后缀树
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_2" title="各种定义" class="md-nav__link">
     各种定义
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" title="2. 一些构造方法" class="md-nav__link">
+    2. 一些构造方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="最简单的暴力" class="md-nav__link">
+    最简单的暴力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="倍增" class="md-nav__link">
+    倍增
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2909,20 +2983,22 @@
                   <a href="https://github.com/24OI/OI-wiki/blob/master/docs/string/sa.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="1">1.前言<a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
-<h2 id="_1">后缀数组和后缀树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+                  <h1>后缀数组（SA）</h1>
+                
+                <h2 id="1">1. 前言<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="_1">后缀数组和后缀树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>在字符串处理当中，后缀树和后缀数组都是非常有力的工具。其实后缀数组是后缀树的一个非常精巧的替代品，它比后缀树容易编程实现，能够实现后缀树的很多功能而时间复杂度也不太逊色，并且，它比后缀树所占用的空间小很多。可以说，在信息学竞赛中后缀数组比后缀树要更为实用。——百度百科</p>
 </blockquote>
-<h2 id="_2">各种定义<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><code>子串</code>： 就是子串[捂脸]</p>
+<h3 id="_2">各种定义<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><code>子串</code>： 就是子串 [捂脸]</p>
 <p><code>后缀</code>： 就是从 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 这个位置开始到该字符串的末尾的一个子串</p>
-<p><code>字符串大小</code>： <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 这两个串，从头开始逐个字符按照ASSIC码进行比较</p>
-<p><code>后缀数组</code>： <span><span class="MathJax_Preview">sa[i]</span><script type="math/tex">sa[i]</script></span>代表该字符串的<span><span class="MathJax_Preview">len</span><script type="math/tex">len</script></span>个后缀中，排名为 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的后缀是第<span><span class="MathJax_Preview">sa[i]</span><script type="math/tex">sa[i]</script></span>个后缀</p>
-<p><code>名词数组</code>： <span><span class="MathJax_Preview">rank[i]</span><script type="math/tex">rank[i]</script></span>代表第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个后缀排名为<span><span class="MathJax_Preview">rank[i]</span><script type="math/tex">rank[i]</script></span></p>
-<h1 id="2">2.一些构造方法<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
-<h2 id="_3">最简单的暴力<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>把所有的后缀拆出来，然后sort</p>
+<p><code>字符串大小</code>： <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 这两个串，从头开始逐个字符按照 ASSIC 码进行比较</p>
+<p><code>后缀数组</code>： <span><span class="MathJax_Preview">sa[i]</span><script type="math/tex">sa[i]</script></span> 代表该字符串的 <span><span class="MathJax_Preview">len</span><script type="math/tex">len</script></span> 个后缀中，排名为 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的后缀是第 <span><span class="MathJax_Preview">sa[i]</span><script type="math/tex">sa[i]</script></span> 个后缀</p>
+<p><code>名词数组</code>： <span><span class="MathJax_Preview">rank[i]</span><script type="math/tex">rank[i]</script></span> 代表第 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个后缀排名为 <span><span class="MathJax_Preview">rank[i]</span><script type="math/tex">rank[i]</script></span></p>
+<h2 id="2">2. 一些构造方法<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">最简单的暴力<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>把所有的后缀拆出来，然后 sort</p>
 <p>思想较为简单，可自行尝试实现</p>
 <div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -2959,22 +3035,22 @@
 <span class="p">}</span>
 </pre></div>
 
-<h2 id="_4">倍增<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_4">倍增<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>这个就是一般人写后缀数组用的方法</p>
 <p>复杂度是 <span><span class="MathJax_Preview">O(nlogn)</span><script type="math/tex">O(nlogn)</script></span> </p>
-<p>前提是你要先会<strong>基数排序</strong></p>
+<p>前提是你要先会 <strong> 基数排序 </strong></p>
 <p>假设我们有这样一个字符串 <code>aabaaaab</code></p>
 <p>然后我们把所有的后缀列举出来：</p>
 <p><img alt="" src="../images/sa1.png" /></p>
 <p>然后用基数排序的方式，按照每个后缀的第一个字母进行排序，呈现这样子的效果：</p>
 <p><img alt="" src="../images/sa2.png" /></p>
 <p>接着我们以第二个字母为关键字，在首字母有序的基础上进行排序，这个时候，我们把首字母相同的后缀拿出来单看</p>
-<p>对于每一组首字母相同的后缀，首字母是对排序没有影响的，所以可以直接按照第二个字母进行基数排序，同样，对于首字母不同的后缀，由于按照首字母排序时，他们的相对大小已经确定，当按照第二个字母排序时，不会出现<code>原来a&gt;b，现在b&gt;a</code>的现象，所以我们可以看成一直在做区域内的排序，这之后变成这样：</p>
+<p>对于每一组首字母相同的后缀，首字母是对排序没有影响的，所以可以直接按照第二个字母进行基数排序，同样，对于首字母不同的后缀，由于按照首字母排序时，他们的相对大小已经确定，当按照第二个字母排序时，不会出现 <code>原来 a&gt;b，现在 b&gt;a</code> 的现象，所以我们可以看成一直在做区域内的排序，这之后变成这样：</p>
 <p><img alt="" src="../images/sa3.png" /></p>
 <p>第三字母同理........</p>
 <p>这样子我们可以处理这个问题，可是复杂度还是没有到达一个我们可以接受的范围</p>
-<p>所以我们引入<strong>倍增</strong></p>
-<p>当我们按照每个后缀的前 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span>个字母进行完排序后，那么我们把后缀的前 <span><span class="MathJax_Preview">2^{k+1}</span><script type="math/tex">2^{k+1}</script></span>看做前后两个 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span>,这样我们就可以把这前后两个 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span>作为之前说的<code>首字母</code>和<code>第二个字母</code>了，然后进行上述过程，就可以在 <span><span class="MathJax_Preview">O(nlogn)</span><script type="math/tex">O(nlogn)</script></span> 的复杂度内处理这个问题了</p>
+<p>所以我们引入 <strong> 倍增 </strong></p>
+<p>当我们按照每个后缀的前 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> 个字母进行完排序后，那么我们把后缀的前 <span><span class="MathJax_Preview">2^{k+1}</span><script type="math/tex">2^{k+1}</script></span> 看做前后两个 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span>, 这样我们就可以把这前后两个 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> 作为之前说的 <code>首字母</code> 和 <code>第二个字母</code> 了，然后进行上述过程，就可以在 <span><span class="MathJax_Preview">O(nlogn)</span><script type="math/tex">O(nlogn)</script></span> 的复杂度内处理这个问题了</p>
 <div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -3020,15 +3096,15 @@
     <span class="n">SA</span> <span class="p">();</span>
 
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> 
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
     <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
 <p>代码里 <span><span class="MathJax_Preview">x[i]</span><script type="math/tex">x[i]</script></span> 就是 <span><span class="MathJax_Preview">rank[i]</span><script type="math/tex">rank[i]</script></span> </p>
-<p><span><span class="MathJax_Preview">y[i]</span><script type="math/tex">y[i]</script></span> ：假设 <span><span class="MathJax_Preview">y[i]=a\ ,\  y[i+1]=b</span><script type="math/tex">y[i]=a\ ,\  y[i+1]=b</script></span> 那么在原串中 从<span><span class="MathJax_Preview">a+2^k</span><script type="math/tex">a+2^k</script></span>开始的<span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span>个字符组成的子串 <strong>小于等于</strong> 从<span><span class="MathJax_Preview">b+2^k</span><script type="math/tex">b+2^k</script></span>开始的<span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span>个字符组成的子串</p>
+<p><span><span class="MathJax_Preview">y[i]</span><script type="math/tex">y[i]</script></span> ：假设 <span><span class="MathJax_Preview">y[i]=a\ ,\  y[i+1]=b</span><script type="math/tex">y[i]=a\ ,\  y[i+1]=b</script></span> 那么在原串中 从 <span><span class="MathJax_Preview">a+2^k</span><script type="math/tex">a+2^k</script></span> 开始的 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> 个字符组成的子串 <strong> 小于等于 </strong> 从 <span><span class="MathJax_Preview">b+2^k</span><script type="math/tex">b+2^k</script></span> 开始的 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> 个字符组成的子串</p>
 <p>最好理解这个代码时，每一步都结合这基数排序来考虑</p>
-<p><strong>by 周运沛</strong></p>
+<p><strong>by 周运沛 </strong></p>
                 
                   
                 
@@ -3168,7 +3244,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.1",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.2",url:{base:"../.."}})</script>
       
         <script src="../../_static/js/extra.js"></script>
       
