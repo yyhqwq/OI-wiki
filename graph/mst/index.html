@@ -3161,13 +3161,13 @@ for (i = 1; i &lt;= n; i++) {
 
 <h2 id="__comments">评论</h2>
 <div id="gitment_container">
-    <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-    <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    <link rel="stylesheet" href="https://www.kymjs.com/qiniu/static/css/gitment.css">
+    <script src="https://www.kymjs.com/qiniu/static/js/gitment.js"></script>
     <script>
       const myTheme = {
         render(state, instance) {
           const container = document.createElement('div')
-          container.lang = "zh-CN"
+          container.lang = "en-US"
           container.className = 'gitment-container gitment-root-container'
           const divv = document.createElement('form')
           container.appendChild(instance.renderSomething(state, instance))
@@ -3180,23 +3180,22 @@ for (i = 1; i &lt;= n; i++) {
         },
         renderSomething(state, instance) {
           const container = document.createElement('div')
-          container.lang = "zh-CN"
+          container.lang = "en-US"
           if (state.user.login) {
-            container.innerText = `Hello, ${state.user.login}`
+            container.innerText = `Hello, ${state.user.login}, 来说点什么吧？`
           }
           return container
         }
       }
-      const gitment = new Gitmint({
+      const gitment = new Gitment({
         id: '最小生成树',
+        theme: myTheme,
         owner: 'Ir1d',
         repo: 'gitment',
         oauth: {
           client_id: 'd6a911c8fba0194626d4',
           client_secret: '867ec7e13cc99b420bd147cbb62d5cfec271ba81',
         },
-        lang: 'zh-CN',
-        theme: myTheme,
       })
       gitment.render('gitment_container')
     </script>
