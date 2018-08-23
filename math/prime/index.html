@@ -1745,6 +1745,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2908,6 +2932,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3045,26 +3081,40 @@
 <p>我们自然地会想到，如何用计算机来判断一个数是不是素数呢？</p>
 <h3 id="_2">暴力做法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>自然可以枚举从小到大的每个数看是否能整除</p>
-<div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">isPrime</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">isPrime</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
   <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>这样做是十分稳妥了，但是真的有必要每个数都去判断吗？</p>
 <p>很容易发现这样一个事实：如果 <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 是 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的约数，那么 <span><span class="MathJax_Preview">\frac{a}{x}</span><script type="math/tex">\frac{a}{x}</script></span> 也是 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的约数。</p>
 <p>这个结论告诉我们，对于每一对 <span><span class="MathJax_Preview">(x, \frac{a}{x} )</span><script type="math/tex">(x, \frac{a}{x} )</script></span>，只需要检验其中的一个就好了。为了方便起见，我们之考察每一对里面小的那个数。不难发现，所有这些较小数就是 <span><span class="MathJax_Preview">[1 \cdots \sqrt(a)]</span><script type="math/tex">[1 \cdots \sqrt(a)]</script></span> 这个区间里的数。</p>
 <p>由于 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 肯定是约数，所以不检验它。</p>
-<div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">isPrime</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">isPrime</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">a</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
   <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="miller-rabbin">Miller-Rabbin<a class="headerlink" href="#miller-rabbin" title="Permanent link">&para;</a></h3>
 <p>Miller-Rabbin 算法是进阶的素数判定方法，具有比暴力做法更好的时间复杂度。但是代码复杂度较高，在比赛中使用较少。</p>
 <p>它的基本思想是不断地选取不超过 <span><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 的基 <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>，并检验是否每次都有 <span><span class="MathJax_Preview">b^{n-1} \equiv 1 \pmod n</span><script type="math/tex">b^{n-1} \equiv 1 \pmod n</script></span></p>
-<div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">millerRabbin</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">millerRabbin</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">quickPow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -3072,6 +3122,7 @@
   <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="_3">反素数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="_4">定义<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
@@ -3134,7 +3185,37 @@
 <p>题目链接：<a href="http://codeforces.com/problemset/problem/27/E">http://codeforces.com/problemset/problem/27/E</a></p>
 <p>对于这种题，我么只要以因子数为 dfs 的返回条件基准，不断更新找到的最小值就可以了</p>
 <p>上代码：</p>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#define ULL unsigned long long</span>
 <span class="cp">#define INF ~0ULL</span>
 <span class="kt">int</span> <span class="n">p</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">47</span><span class="p">,</span><span class="mi">53</span><span class="p">};</span>
@@ -3166,11 +3247,43 @@
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="n-n">给定一个 n，求 n 以内因子数最多的数<a class="headerlink" href="#n-n" title="Permanent link">&para;</a></h4>
 <p><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemId=1562">http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemId=1562</a></p>
 <p>思路同上，只不过要改改 dfs 的返回条件。注意这样的题目的数据范围，我一开始用了 int，应该是溢出了，在循环里可能就出不来了就超时了。上代码，0ms 过。注释就没必要写了上面写的很清楚了。</p>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#define ULL unsigned long long</span>
 
@@ -3203,6 +3316,7 @@
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

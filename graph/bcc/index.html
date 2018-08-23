@@ -1629,6 +1629,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2861,6 +2885,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2959,7 +2995,28 @@
 <p>low(x)：节点 x 所能访问到的点的 dfn 值的最小值。</p>
 <p>AP：Articulation Point，割点 【也叫 Cut Vertex】。</p>
 <p>（伪代码）</p>
-<div class="codehilite"><pre><span></span>dfs(u, fa) {
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dfs(u, fa) {
     dfn[u] = low[u] = ++index;
     int n_childs = 0;
     for each edge(u, v) {
@@ -2982,6 +3039,7 @@
     }
 }
 </pre></div>
+</td></tr></table>
 
 <p>使劲脑补一下，应该就能知道为啥是对的了。</p>
 <h2 id="_3">应用<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>

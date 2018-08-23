@@ -1629,6 +1629,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2868,6 +2892,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2973,7 +3009,26 @@
 <details class="question"><summary>这里入度为 0 的点应该如何选取呢？</summary><p>随便选就好啦！找到一个就可以直接用！</p><p>为什么会这样呢？
 是因为某个点既然在新图中入度为 0 了，那么它就没有依赖的东西了（或者依赖的都已经被完成了）。</p></details><h3 id="_4">实现<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>伪代码：</p>
-<div class="codehilite"><pre><span></span>bool toposort() {
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bool toposort() {
     q = new queue();
     for (i = 0; i &lt; n; i++)
         if (in_deg[i] == 0) q.push(i);
@@ -2994,8 +3049,26 @@
     }
 }
 </pre></div>
+</td></tr></table>
 
-<div class="codehilite"><pre><span></span><span class="c1">// dfs 版本</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// dfs 版本</span>
 <span class="kt">bool</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">){</span>
   <span class="n">c</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">v</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">v</span><span class="o">++</span><span class="p">)</span> <span class="k">if</span><span class="p">(</span><span class="n">G</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">v</span><span class="p">])</span> <span class="p">{</span>
@@ -3014,6 +3087,7 @@
   <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>时间复杂度：<span><span class="MathJax_Preview">O(n+m)</span><script type="math/tex">O(n+m)</script></span>
 空间复杂度：<span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span></p>

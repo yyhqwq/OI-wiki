@@ -1685,6 +1685,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2848,6 +2872,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2939,22 +2975,36 @@
 <p>一个数组中的数互不相同，求其中和为 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 的数对的个数</p>
 </div>
 <p>枚举两个数的代码很容易就可以写出来。</p>
-<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">++</span><span class="n">ans</span><span class="p">;</span>
 </pre></div>
+</td></tr></table>
 
 <p>我们来看看枚举的范围如何优化。原问题的答案由两部分构成，两个数相等的情况和不相等的情况。相等的情况只需要枚举每一个数判断一下是否合法。至于不相等的情况，由于题中没要求数对是有序的，答案就是有序的情况的两倍（考虑如果 <code>(a, b)</code> 是答案，那么 <code>(b, a)</code> 也是答案）。我们对于这种情况只需统计人为要求有顺序之后的答案，最后再乘上 <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 就好了。</p>
 <p>我们不妨要求第一个数要出现在靠前的位置。代码如下：</p>
-<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">++</span><span class="n">ans</span><span class="p">;</span>
 </pre></div>
+</td></tr></table>
 
 <p>不难发现这里已经减少了 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 的枚举范围，减少了这段代码的时间开销。</p>
 <p>然而这并不是最优的结果。</p>
 <p>两个数是否都一定要枚举出来呢？这里我们发现枚举其中一个数之后，题目的条件已经帮我们确定了其他的要素（另一个数），如果能找到一种方法直接判断题目要求的那个数是否存在，就可以省掉枚举后一个数的时间了。</p>
-<div class="codehilite"><pre><span></span><span class="c1">// 要求 a 数组中的数的绝对值都小于 MAXN</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// 要求 a 数组中的数的绝对值都小于 MAXN</span>
 <span class="kt">bool</span> <span class="n">met</span><span class="p">[</span><span class="n">MAXN</span> <span class="o">*</span> <span class="mi">2</span><span class="p">];</span>
 <span class="c1">// 初始化 met 数组为 0；</span>
 <span class="n">memset</span><span class="p">(</span><span class="n">met</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">met</span><span class="p">));</span>
@@ -2964,6 +3014,7 @@
   <span class="n">met</span><span class="p">[</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">MAXN</span> <span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="_3">选择合适的枚举顺序<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>比如第一个例题中要求的是最大的符合条件的素数。自然是从大到小枚举比较合适。</p>

@@ -1634,6 +1634,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2797,6 +2821,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2849,7 +2885,17 @@ a^b \bmod p & = (a^{a_t 2^t + \cdots + a_0 2^0}) \bmod p \\\\
 <p>根据上式我们发现，原问题被我们转化成了形式相同的子问题的乘积。</p>
 <p>最重要的是，我们注意到，<span><span class="MathJax_Preview">a^{2^{i+1}} \bmod c = (a^{2^i})^2 \bmod c</span><script type="math/tex">a^{2^{i+1}} \bmod c = (a^{2^i})^2 \bmod c</script></span>，可以再常数时间内从 <span><span class="MathJax_Preview">2^i</span><script type="math/tex">2^i</script></span> 项推出 <span><span class="MathJax_Preview">2^{i+1}</span><script type="math/tex">2^{i+1}</script></span> 项。于是，原问题总的复杂度就是 <span><span class="MathJax_Preview">O(logb)</span><script type="math/tex">O(logb)</script></span></p>
 <p>在算法竞赛中，快速幂的思想不仅用于整数乘法，也可用于大整数加法，矩阵幂运算等场合中。</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">quickPow</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">quickPow</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// calculates a^b mod c</span>
   <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">bas</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
   <span class="k">while</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
@@ -2861,6 +2907,7 @@ a^b \bmod p & = (a^{a_t 2^t + \cdots + a_0 2^0}) \bmod p \\\\
   <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

@@ -1631,6 +1631,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2939,6 +2963,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3127,7 +3163,19 @@
 <img alt="" src="../images/segt3.png" />
 <img alt="" src="../images/segt4.png" /></p>
 <p>那么就这样写代码：</p>
-<div class="codehilite"><pre><span></span><span class="err">建树</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">建树</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="err">如果</span><span class="p">(</span><span class="n">s</span><span class="o">==</span><span class="n">t</span><span class="p">)</span>
     <span class="p">{</span>
@@ -3141,9 +3189,16 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>具体代码实现 (C++)：</p>
-<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">build</span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">build</span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="o">==</span><span class="n">t</span><span class="p">){</span><span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">s</span><span class="p">];</span><span class="k">return</span><span class="p">;}</span>
     <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
@@ -3151,6 +3206,7 @@
     <span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="o">*</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="n">d</span><span class="p">[(</span><span class="n">p</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>上面那短短 <span><span class="MathJax_Preview">7</span><script type="math/tex">7</script></span> 行代码就能建立一个线段树。</p>
 <p>其实还有一个比较严重的问题：数组 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 到底开多大？如果 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 数组中元素个数是 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，那 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 数组的元素个数应该定为多少？保险起见，为了防止你的 <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 数组越界、程序爆炸的话，<span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 数组大小应该为 <span><span class="MathJax_Preview">n\times 4</span><script type="math/tex">n\times 4</script></span>，再保险一点的话定为<span><span class="MathJax_Preview">n\times 4+5</span><script type="math/tex">n\times 4+5</script></span>吧。为啥是 <span><span class="MathJax_Preview">n\times 4</span><script type="math/tex">n\times 4</script></span> 呢？这里我转载一下一篇博客，里面有详细的讲解，我就不讲了（我懒行了吧）……</p>
@@ -3169,7 +3225,26 @@
 <p><strong>&lt;(￣ˇ￣)/</strong></p>
 <p>你要查的不是 <span><span class="MathJax_Preview">[3,5]</span><script type="math/tex">[3,5]</script></span> 吗？我把 <span><span class="MathJax_Preview">[3,5]</span><script type="math/tex">[3,5]</script></span> 拆成 <span><span class="MathJax_Preview">[3,3]</span><script type="math/tex">[3,3]</script></span> 和 <span><span class="MathJax_Preview">[4,5]</span><script type="math/tex">[4,5]</script></span> 不就行了吗？</p>
 <p>具体思路见代码：</p>
-<div class="codehilite"><pre><span></span><span class="err">求和（查询区间的左端点</span><span class="n">l</span><span class="p">,</span><span class="err">查询区间的右端点</span><span class="n">r</span><span class="p">,</span><span class="err">当前节点表示的区间左端点</span><span class="n">s</span><span class="p">,</span><span class="err">当前节点表示的区间</span><span class="n">t</span><span class="p">,</span><span class="err">当前访问的节点编号</span><span class="n">p</span><span class="err">）</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">求和（查询区间的左端点</span><span class="n">l</span><span class="p">,</span><span class="err">查询区间的右端点</span><span class="n">r</span><span class="p">,</span><span class="err">当前节点表示的区间左端点</span><span class="n">s</span><span class="p">,</span><span class="err">当前节点表示的区间</span><span class="n">t</span><span class="p">,</span><span class="err">当前访问的节点编号</span><span class="n">p</span><span class="err">）</span>
 <span class="p">{</span>
     <span class="err">如果（</span><span class="n">l</span><span class="o">&lt;=</span><span class="n">s</span><span class="o">&amp;&amp;</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">r</span><span class="err">）</span><span class="c1">//当前访问的节点表示的区间包含在查询区间内</span>
     <span class="p">{</span>
@@ -3190,9 +3265,17 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>怎么样，代码很丑吧？废话，用中文写的能不丑吗？现在搞个英(da)文(xin)的(wen)：</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">getsum</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">getsum</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span>
 <span class="p">{</span>
         <span class="k">if</span><span class="p">(</span><span class="n">l</span><span class="o">&lt;=</span><span class="n">s</span><span class="o">&amp;&amp;</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">r</span><span class="p">)</span><span class="k">return</span> <span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="p">];</span>
         <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
@@ -3201,6 +3284,7 @@
         <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>还是挺短的吧？这里用到的主要思路就是把一个区间拆成左右两个区间，再分别处理左右区间。也是二分的思想。</p>
 <h3 id="3_1">(3) 线段树的区间修改与懒惰标记<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
@@ -3236,7 +3320,17 @@
 <p>由此我们可以得到，区间 <span><span class="MathJax_Preview">[1,1]</span><script type="math/tex">[1,1]</script></span> 的区间和就是 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 啦！O(∩_∩)O哈哈~！</p>
 <p>代码如下（下面代码不知道为什么显示出来很丑，建议复制到自己的 C++ 编辑器里看……）：</p>
 <p>区间修改（区间加上某个值）：</p>
-<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">update</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">c</span><span class="p">,</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span><span class="c1">//l是查询的区间左端点，r是右端点，c表示区间每个元素加上的值，s是当前节点所表示的区间的左端点，t是右端点，p是当前节点的编号(根节点标号为1)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">update</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">c</span><span class="p">,</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span><span class="c1">//l是查询的区间左端点，r是右端点，c表示区间每个元素加上的值，s是当前节点所表示的区间的左端点，t是右端点，p是当前节点的编号(根节点标号为1)</span>
 <span class="p">{</span>
     <span class="k">if</span><span class="p">(</span><span class="n">l</span><span class="o">&lt;=</span><span class="n">s</span><span class="o">&amp;&amp;</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">r</span><span class="p">){</span><span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">+=</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">c</span><span class="p">,</span><span class="n">b</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">+=</span><span class="n">c</span><span class="p">;</span><span class="k">return</span><span class="p">;}</span><span class="c1">//如果当前节点表示的区间完全包含在查询区间内，直接修改当前节点的值，然后做上标记，结束修改</span>
     <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="c1">//计算左右节点表示区间的分割线</span>
@@ -3248,9 +3342,20 @@
     <span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="o">*</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>区间查询（求和）：</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">getsum</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span><span class="c1">//l是查询的区间左端点，r是右端点，s是当前节点所表示的区间的左端点，t是右端点，p是当前节点的编号（根节点标号为1）</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">getsum</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span><span class="c1">//l是查询的区间左端点，r是右端点，s是当前节点所表示的区间的左端点，t是右端点，p是当前节点的编号（根节点标号为1）</span>
 <span class="p">{</span>
     <span class="k">if</span><span class="p">(</span><span class="n">l</span><span class="o">&lt;=</span><span class="n">s</span><span class="o">&amp;&amp;</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">r</span><span class="p">)</span><span class="k">return</span> <span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="p">];</span><span class="c1">//如果当前节点表示的区间完全包含在查询区间内，返回当前节点的值</span>
     <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="c1">//计算左右节点表示区间的分割线</span>
@@ -3262,11 +3367,33 @@
     <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>你有没有发现区间查询和区间修改很像吗？(...<sup>__</sup>...)</p>
 <p>嘻嘻……其实平时我打线段树区间修改和查询我都是打一份，另一份复制黏贴以后再稍作修改就行了。</p>
 <p>如果你是要实现区间修改为某一个值而不是加上某一个值的话，很简单，把上面的代码中所有的 <code>+=</code> 替换成 <code>=</code> 即可（除了 <code>sum+=getsum(l,r,m+1,t,p*2+1)</code> 这一句）。代码如下：</p>
-<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">update</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">c</span><span class="p">,</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">update</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">c</span><span class="p">,</span><span class="kt">int</span> <span class="n">s</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span><span class="p">(</span><span class="n">l</span><span class="o">&lt;=</span><span class="n">s</span><span class="o">&amp;&amp;</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">r</span><span class="p">){</span><span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">c</span><span class="p">,</span><span class="n">b</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="n">c</span><span class="p">;</span><span class="k">return</span><span class="p">;}</span>
     <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
@@ -3289,6 +3416,7 @@
     <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="5">5. 一些优化<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>上面的代码为了简单易懂，所以呢我写的比较不优美。</p>
@@ -3298,11 +3426,15 @@
 <li>建树时记录每个节点所对应的区间，就不需要每次计算当前节点的左右端点了，减小代码复杂度。</li>
 <li>因为下标为 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的节点的左儿子下标为 <span><span class="MathJax_Preview">a\times 2</span><script type="math/tex">a\times 2</script></span>，右儿子下标为 <span><span class="MathJax_Preview">a\times 2+1</span><script type="math/tex">a\times 2+1</script></span>，所以可以：</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="cp">#define LS(a) (a&lt;&lt;1)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define LS(a) (a&lt;&lt;1)</span>
 <span class="c1">//a&lt;&lt;1等同于a*2</span>
 <span class="cp">#define RS(a) (a&lt;&lt;1|1)</span>
 <span class="c1">//a&lt;&lt;1|1等同于a*2+1</span>
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>因为递归到叶子节点（左端点等于右端点的节点）的时候叶子节点一定包含在查询的区间内，所以一定会在懒惰标记下放前就处理完了 return 掉了，所以不用担心会出现叶子节点懒惰标记下放导致数组越界，也不用懒惰标记下方每次还检查当前节点是否为叶子节点了。（代码中的 <code>s!=t</code> 可以去掉）减小代码复杂度。</li>
@@ -3313,7 +3445,54 @@
 <h3 id="1-luogu-p3372-1">(1) LUOGU P3372 【模板】线段树 1<a class="headerlink" href="#1-luogu-p3372-1" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.luogu.org/problem/show?pid=3372">传送门=￣ω￣=</a></p>
 <p>代码：</p>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">LL</span><span class="p">;</span>
 <span class="n">LL</span> <span class="n">n</span><span class="p">,</span><span class="n">a</span><span class="p">[</span><span class="mi">100005</span><span class="p">],</span><span class="n">d</span><span class="p">[</span><span class="mi">270000</span><span class="p">],</span><span class="n">b</span><span class="p">[</span><span class="mi">270000</span><span class="p">];</span>
@@ -3362,11 +3541,108 @@
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="2-luogu-p3373-2">(2) LUOGU P3373 【模板】线段树 2<a class="headerlink" href="#2-luogu-p3373-2" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.luogu.org/problem/show?pid=3372">传送门=￣ω￣=</a></p>
 <p>代码：
-<div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="cpf">&lt;cstring&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="cpf">&lt;climits&gt;</span><span class="cp"></span>
@@ -3463,7 +3739,8 @@
     <span class="p">}</span>
        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div></p>
+</pre></div>
+</td></tr></table></p>
 <h3 id="3-codevs">(3) CODEVS 线段树练习 （这是一个系列）<a class="headerlink" href="#3-codevs" title="Permanent link">&para;</a></h3>
 <p><a href="http://codevs.cn/problem/?q=%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%83%E4%B9%A0">传送门=￣ω￣=</a></p>
 <p>具体题解去我的博客里搜索吧。</p>
@@ -3471,7 +3748,54 @@
 <h3 id="4-hihocoder-1078">(4) HihoCoder 1078 线段树的区间修改<a class="headerlink" href="#4-hihocoder-1078" title="Permanent link">&para;</a></h3>
 <p><a href="https://cn.vjudge.net/problem/HihoCoder-1078">传送门=￣ω￣=</a></p>
 <p>代码：
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">a</span><span class="p">[</span><span class="mi">100005</span><span class="p">],</span><span class="n">d</span><span class="p">[</span><span class="mi">270000</span><span class="p">],</span><span class="n">b</span><span class="p">[</span><span class="mi">270000</span><span class="p">];</span>
 <span class="kt">void</span> <span class="nf">build</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span>
@@ -3519,7 +3843,8 @@
     <span class="p">}</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div></p>
+</pre></div>
+</td></tr></table></p>
 <h3 id="5-2018-multi-university-training-contest-5-problem-g-glad-you-came">(5) 2018 Multi-University Training Contest 5 Problem G. Glad You Came<a class="headerlink" href="#5-2018-multi-university-training-contest-5-problem-g-glad-you-came" title="Permanent link">&para;</a></h3>
 <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6356">传送门</a></p>
 <p>维护一下每个区间的永久标记就可以了，最后在线段树上跑一边 dfs 统计结果即可。注意打标记的时候加个剪枝优化，否则会 T。</p>

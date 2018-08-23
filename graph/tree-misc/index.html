@@ -1629,6 +1629,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2868,6 +2892,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2976,7 +3012,35 @@
 </ol>
 <p>实际上这两步操作可以在一次遍历中解决。对结点 u 的每一个儿子 v，递归的处理 v，求出 sz[v]，然后判断是否是结点数最多的子树，处理完所有子结点后，判断 u 是否为重心。</p>
 <p>（代码来自叉姐）
-<div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">CenterTree</span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">CenterTree</span><span class="p">{</span>
     <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">ans</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">siz</span><span class="p">;</span>
@@ -3005,7 +3069,8 @@
         <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></p>
+</pre></div>
+</td></tr></table></p>
 <h2 id="_5">参考<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p><a href="http://fanhq666.blog.163.com/blog/static/81943426201172472943638/">http://fanhq666.blog.163.com/blog/static/81943426201172472943638/</a></p>
 <p><a href="https://www.cnblogs.com/zinthos/p/3899075.html">https://www.cnblogs.com/zinthos/p/3899075.html</a></p>

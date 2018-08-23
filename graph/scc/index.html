@@ -1629,6 +1629,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2896,6 +2920,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3043,7 +3079,26 @@
 <p>注意：横叉边只会往 dfn 减小的方向连接</p>
 <p>注意：在无向图中，没有横叉边（为什么？）</p>
 <h3 id="_3">实现<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>dfs(x) {
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>dfs(x) {
     dfn[x] = low[x] = ++index;
     S.push(x);
     instack[x] = true;
@@ -3064,6 +3119,7 @@
     }
 }
 </pre></div>
+</td></tr></table>
 
 <p>（转自维基：<a href="https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm">https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm</a>）</p>
 <p>时间复杂度 <span><span class="MathJax_Preview">O(n+m)</span><script type="math/tex">O(n+m)</script></span></p>

@@ -1678,6 +1678,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2841,6 +2865,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2910,7 +2946,22 @@
 <p>以在一个升序数组中查找一个数为例。</p>
 <p>它每次考察数组当前部分的中间元素，如果中间元素刚好是要找的，就结束搜索过程；如果中间元素小于所查找的值，那么左侧的只会更小，不会有所查找的元素，只需要到右侧去找就好了；如果中间元素大于所查找的值，同理，右侧的只会更大而不会有所查找的元素，所以只需要到左侧去找。</p>
 <p>在二分搜索过程中，每次都把查询的区间减半，因此对于一个长度为 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的数组，至多会进行 <span><span class="MathJax_Preview">\mathcal {O}(\log n)</span><script type="math/tex">\mathcal {O}(\log n)</script></span> 次查找。</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">binary_search</span><span class="p">(</span><span class="kt">int</span> <span class="n">start</span><span class="p">,</span> <span class="kt">int</span> <span class="n">end</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">binary_search</span><span class="p">(</span><span class="kt">int</span> <span class="n">start</span><span class="p">,</span> <span class="kt">int</span> <span class="n">end</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>       <span class="c1">// 未搜索到数据返回-1下标  </span>
     <span class="kt">int</span> <span class="n">mid</span><span class="p">;</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">start</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">)</span> <span class="p">{</span>
@@ -2927,6 +2978,7 @@
     <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>     <span class="c1">// 单一出口</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>注意，这里的有序是广义的有序，如果一个数组中的左侧或者右侧都满足某一种条件，而另一侧都不满足这种条件，也可以看作是一种有序（如果把满足条件看做 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，不满足看做 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，至少对于这个条件的这一维度是有序的）。换言之，二分搜索法可以用来查找满足某种条件的最大（最小）的值。</p>
 <p>如果我们要求满足某种条件的最大值的最小可能情况（最大值最小化）呢？首先的想法是从小到大枚举这个作为答案的「最大值」，然后去判断是否合法。要是这个答案是单调的就好了，那样就可以使用二分搜索法来更快地找到答案。</p>
@@ -2939,13 +2991,19 @@
 <p>当然，最小值最大化是同理的。</p>
 <p>二分法把一个寻找极值的问题转化成一个判定的问题（用二分搜索来找这个极值）。类比枚举法，我们当时是枚举答案的可能情况，现在由于单调性，我们不再需要一个个枚举，利用二分的思路，就可以用更优的方法解决「最大值最小」、「最小值最大」。这种解法也成为是「二分答案」，常见于解题报告中。</p>
 <h2 id="_2">三分法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 <span class="n">midmid</span> <span class="o">=</span> <span class="p">(</span><span class="n">mid</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 对右侧区间取半</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">cal</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">cal</span><span class="p">(</span><span class="n">midmid</span><span class="p">))</span>
   <span class="n">right</span> <span class="o">=</span> <span class="n">midmid</span><span class="p">;</span>
 <span class="k">else</span>
   <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
 </pre></div>
+</td></tr></table>
 
 <p>三分法可以用来查找凸函数的最大（小）值。</p>
 <p>画一下图好理解一些（图待补）</p>

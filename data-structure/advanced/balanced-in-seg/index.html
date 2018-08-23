@@ -1631,6 +1631,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2884,6 +2908,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3003,7 +3039,19 @@
 <h3 id="_7">示例代码<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>平衡树部分代码请参考 Splay 等其他条目。<a href="/data-structure/intermediate/splay/">传送至 Splay 条目</a></p>
 <p>操作一
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">vec_rank</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">vec_rank</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">l</span> <span class="o">&amp;&amp;</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span> 
     <span class="p">{</span>
@@ -3017,8 +3065,16 @@
     <span class="k">return</span> <span class="n">res</span><span class="p">;</span> 
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 操作二
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">el</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">er</span> <span class="o">=</span> <span class="mi">100000001</span><span class="p">,</span><span class="n">emid</span><span class="p">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">el</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">er</span> <span class="o">=</span> <span class="mi">100000001</span><span class="p">,</span><span class="n">emid</span><span class="p">;</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">el</span> <span class="o">!=</span> <span class="n">er</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">emid</span> <span class="o">=</span> <span class="n">el</span> <span class="o">+</span> <span class="n">er</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
@@ -3027,8 +3083,18 @@
 <span class="p">}</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">el</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
 </pre></div>
+</td></tr></table>
 操作三
-<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">vec_chg</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">loc</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">vec_chg</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">loc</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="n">spy</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">find</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="n">loc</span><span class="p">]);</span>
     <span class="n">spy</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">dele</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
@@ -3039,8 +3105,17 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">loc</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="p">)</span> <span class="n">vec_chg</span><span class="p">(</span><span class="n">k</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">1</span><span class="p">,</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">loc</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 操作四
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">vec_front</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">vec_front</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">,</span><span class="kt">int</span> <span class="n">t</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">l</span> <span class="o">&amp;&amp;</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="n">spy</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">chk_front</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
     <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
@@ -3049,7 +3124,8 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="p">)</span> <span class="n">res</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">vec_front</span><span class="p">(</span><span class="n">k</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">1</span><span class="p">,</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">t</span><span class="p">));</span>
     <span class="k">return</span> <span class="n">res</span><span class="p">;</span> 
 <span class="p">}</span>
-</pre></div></p>
+</pre></div>
+</td></tr></table></p>
 <h3 id="_8">相关算法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>面对多维度信息的题目时，如果题目没有要求强制在线，我们还可以考虑 <strong>CDQ 分治</strong>，或者<strong>整体二分</strong>等分治算法，来避免使用高级数据结构，减少代码实现难度。</p>
                 

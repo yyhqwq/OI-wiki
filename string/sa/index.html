@@ -1718,6 +1718,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2881,6 +2905,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3000,7 +3036,39 @@
 <h3 id="_3">最简单的暴力<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>把所有的后缀拆出来，然后 sort</p>
 <p>思想较为简单，可自行尝试实现</p>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="n">rank</span><span class="p">[</span><span class="mi">123</span><span class="p">],</span> <span class="n">sa</span><span class="p">[</span><span class="mi">123</span><span class="p">];</span>
@@ -3034,6 +3102,7 @@
     <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_4">倍增<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>这个就是一般人写后缀数组用的方法</p>
@@ -3051,7 +3120,54 @@
 <p>这样子我们可以处理这个问题，可是复杂度还是没有到达一个我们可以接受的范围</p>
 <p>所以我们引入 <strong> 倍增 </strong></p>
 <p>当我们按照每个后缀的前 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> 个字母进行完排序后，那么我们把后缀的前 <span><span class="MathJax_Preview">2^{k+1}</span><script type="math/tex">2^{k+1}</script></span> 看做前后两个 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span>, 这样我们就可以把这前后两个 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> 作为之前说的 <code>首字母</code> 和 <code>第二个字母</code> 了，然后进行上述过程，就可以在 <span><span class="MathJax_Preview">O(nlogn)</span><script type="math/tex">O(nlogn)</script></span> 的复杂度内处理这个问题了</p>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
@@ -3100,6 +3216,7 @@
     <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>代码里 <span><span class="MathJax_Preview">x[i]</span><script type="math/tex">x[i]</script></span> 就是 <span><span class="MathJax_Preview">rank[i]</span><script type="math/tex">rank[i]</script></span> </p>
 <p><span><span class="MathJax_Preview">y[i]</span><script type="math/tex">y[i]</script></span> ：假设 <span><span class="MathJax_Preview">y[i]=a\ ,\  y[i+1]=b</span><script type="math/tex">y[i]=a\ ,\  y[i+1]=b</script></span> 那么在原串中 从 <span><span class="MathJax_Preview">a+2^k</span><script type="math/tex">a+2^k</script></span> 开始的 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> 个字符组成的子串 <strong> 小于等于 </strong> 从 <span><span class="MathJax_Preview">b+2^k</span><script type="math/tex">b+2^k</script></span> 开始的 <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> 个字符组成的子串</p>

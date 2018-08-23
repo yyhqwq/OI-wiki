@@ -1629,6 +1629,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2922,6 +2946,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3077,10 +3113,13 @@
 <p>tie是将两个stream绑定的函数，空参数的话返回当前的输出流指针。</p>
 <p>在默认的情况下cin绑定的是cout，每次执行 &lt;&lt; 操作符的时候都要调用flush，这样会增加IO负担。可以通过tie(0)（0表示NULL）来解除cin与cout的绑定，进一步加快执行效率。</p>
 <h3 id="_2">代码实现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
 
 <span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="_3">读入优化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>scanf和printf依然有优化的空间，这就是本章所介绍的内容——读入和输出优化。</p>
@@ -3093,7 +3132,27 @@
 <p>整数的’+’通常是省略的，且不会对后面数字所代表的值产生影响，而’-’不可省略，因此要进行判定</p>
 <p>10进制整数中是不含空格或除0~9和正负号外的其他字符的，因此在读入不应存在于整数中的字符(通常为空格)时，就可以判定已经读入结束</p>
 <h3 id="_5">代码实现<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">read</span><span class="p">(){</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">read</span><span class="p">(){</span>
 
     <span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">w</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="kt">char</span> <span class="n">ch</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 
@@ -3115,6 +3174,7 @@
     <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">w</span><span class="p">;</span> <span class="c1">//数字*正负号==实际数值</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>举例 </li>
@@ -3126,7 +3186,20 @@
 <p>因此将数字的每一位转化为字符输出以加速</p>
 <p>要注意的是，负号要单独判断输出，并且每次%（mod）取出的是数字末位，因此要倒序输出（递归加速）</p>
 <h3 id="_8">代码实现<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">write</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">write</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span><span class="c1">//判负+输出负号+变原数为正数</span>
 
@@ -3141,6 +3214,7 @@
     <span class="n">putchar</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">10</span><span class="o">+</span><span class="sc">&#39;0&#39;</span><span class="p">);</span><span class="c1">//已经输出（递归）完x末位前的所有数字，输出末位</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>举例</li>
@@ -3229,6 +3303,20 @@
             </div>
           </a>
         
+        
+          <a href="../discrete/" title="离散化" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                离散化
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>

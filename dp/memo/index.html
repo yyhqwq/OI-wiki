@@ -1716,6 +1716,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2879,6 +2903,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2984,7 +3020,26 @@
 <ul>
 <li>注: 为了方便食用, 本文中所有代码省略头文件 *</li>
 </ul>
-<p><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">;</span>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">tcost</span><span class="p">[</span><span class="mi">103</span><span class="p">],</span><span class="n">mget</span><span class="p">[</span><span class="mi">103</span><span class="p">];</span>
 <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span> <span class="kt">int</span> <span class="n">pos</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">tleft</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">tans</span> <span class="p">){</span>
@@ -3005,6 +3060,7 @@
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 这就是个十分智障的大暴搜是吧......</p>
 <p>emmmmmm....... <span><span class="MathJax_Preview">\color{Red}30</span><script type="math/tex">\color{Red}30</script></span> 分</p>
 <p>然后我心血来潮, 想不借助任何 "外部变量"(就是 dfs 函数外且 <strong> 值随 dfs 运行而改变的变量 </strong>), 比如 ans</p>
@@ -3013,7 +3069,24 @@
 <p><strong> 返回值!</strong></p>
 <p>此时 <span><span class="MathJax_Preview">dfs(pos,tleft)</span><script type="math/tex">dfs(pos,tleft)</script></span> 返回在时间 <span><span class="MathJax_Preview">tleft</span><script type="math/tex">tleft</script></span> 内采集 <strong> 后 </strong><span><span class="MathJax_Preview">pos</span><script type="math/tex">pos</script></span> 个草药, 能获得的最大收益</p>
 <p>不理解就看看代码吧:</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">time</span><span class="p">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">time</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">tcost</span><span class="p">[</span><span class="mi">103</span><span class="p">],</span><span class="n">mget</span><span class="p">[</span><span class="mi">103</span><span class="p">];</span>
 <span class="kt">int</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">,</span><span class="kt">int</span> <span class="n">tleft</span><span class="p">){</span>
     <span class="k">if</span><span class="p">(</span><span class="n">pos</span> <span class="o">==</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
@@ -3032,6 +3105,7 @@
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><del>emmmmmm....... 还是 <span><span class="MathJax_Preview">\color{Red}30</span><script type="math/tex">\color{Red}30</script></span> 分</del></p>
 <p>但这个时候, 我们的程序已经不依赖任何外部变量了.</p>
@@ -3042,7 +3116,27 @@
 <p>然后?</p>
 <p>开个数组 <span><span class="MathJax_Preview">mem</span><script type="math/tex">mem</script></span> , 记录下来每个 <span><span class="MathJax_Preview">dfs(pos,tleft)</span><script type="math/tex">dfs(pos,tleft)</script></span> 的返回值. 刚开始把 <span><span class="MathJax_Preview">mem</span><script type="math/tex">mem</script></span> 中每个值都设成 <span><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span> (代表没访问过). 每次刚刚进入一个 dfs 前(我们的 dfs 是递归调用的嘛), 都检测 <span><span class="MathJax_Preview">mem[pos][tleft]</span><script type="math/tex">mem[pos][tleft]</script></span> 是否为 <span><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span> , 如果是就正常执行并把答案记录到 <span><span class="MathJax_Preview">mem</span><script type="math/tex">mem</script></span> 中, 否则?</p>
 <p><strong> 直接返回 <span><span class="MathJax_Preview">mem</span><script type="math/tex">mem</script></span> 中的值!</strong></p>
-<p><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">;</span>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">tcost</span><span class="p">[</span><span class="mi">103</span><span class="p">],</span><span class="n">mget</span><span class="p">[</span><span class="mi">103</span><span class="p">];</span>
 <span class="kt">int</span> <span class="n">mem</span><span class="p">[</span><span class="mi">103</span><span class="p">][</span><span class="mi">1003</span><span class="p">];</span>
 <span class="kt">int</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">,</span><span class="kt">int</span> <span class="n">tleft</span><span class="p">){</span>
@@ -3064,6 +3158,7 @@
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 此时 <span><span class="MathJax_Preview">mem</span><script type="math/tex">mem</script></span> 的意义与 dfs 相同:</p>
 <blockquote>
 <p>在时间 <span><span class="MathJax_Preview">tleft</span><script type="math/tex">tleft</script></span> 内采集 <strong>后</strong> <span><span class="MathJax_Preview">pos</span><script type="math/tex">pos</script></span> 个草药, 能获得的最大收益</p>
@@ -3093,7 +3188,16 @@
 <p>比如:</p>
 <p><span><span class="MathJax_Preview">dp[i][j][k] = dp[i+1][j+1][k-a[j]] + dp[i+1][j][k]</span><script type="math/tex">dp[i][j][k] = dp[i+1][j+1][k-a[j]] + dp[i+1][j][k]</script></span></p>
 <p>转为</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">dfs</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">j</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">k</span> <span class="p">){</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">dfs</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">j</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">k</span> <span class="p">){</span>
     <span class="err">边界条件</span>
     <span class="k">if</span><span class="p">(</span> <span class="n">mem</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span> <span class="k">return</span> <span class="n">mem</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">];</span>
     <span class="k">return</span> <span class="n">mem</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">);</span>
@@ -3104,10 +3208,23 @@
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dfs</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><span><span class="MathJax_Preview">dp[i] = max\{dp[j]+1\}\quad 1 \leq j &lt; i \text{且}a[j]&lt;a[i]</span><script type="math/tex">dp[i] = max\{dp[j]+1\}\quad 1 \leq j < i \text{且}a[j]<a[i]</script></span>  (最长上升子序列)</p>
 <p>转为</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">dfs</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">){</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">dfs</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">){</span>
     <span class="k">if</span><span class="p">(</span> <span class="n">mem</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span> <span class="k">return</span> <span class="n">mem</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
     <span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
     <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span> <span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">)</span>
@@ -3121,6 +3238,7 @@
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><strong>当然, 以我的经验更多情况下记忆化搜索是写完暴力 dfs(本来想骗分)后突然发现能改成记忆化搜索</strong></p>
 <p>~~ 然后 AC 了一道全场没几个人会的超难 dp~~</p>

@@ -1633,6 +1633,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2918,6 +2942,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3105,7 +3141,21 @@
 <h3 id="_8">实现<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>我们发现，上面介绍的几种操作主要依赖于两个核心：向上调整和向下调整。</p>
 <p>（伪代码）</p>
-<div class="codehilite"><pre><span></span><span class="n">up</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">up</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">h</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">h</span><span class="p">[</span><span class="n">x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">])</span> <span class="p">{</span>
         <span class="n">swap</span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">h</span><span class="p">[</span><span class="n">x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]);</span>
         <span class="n">x</span> <span class="o">/=</span> <span class="mi">2</span><span class="p">;</span>
@@ -3121,26 +3171,33 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_9">建堆<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>考虑这么一个问题，从一个空的堆开始，插入 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个元素，不在乎顺序。</p>
 <p>直接一个一个插入需要 <span><span class="MathJax_Preview">O(n \log n)</span><script type="math/tex">O(n \log n)</script></span> 的时间，有没有更好的方法？</p>
 <h4 id="decreasekey">方法一：使用 decreasekey（即，向上调整）<a class="headerlink" href="#decreasekey" title="Permanent link">&para;</a></h4>
 <p>从根开始，按 BFS 序进行.</p>
-<div class="codehilite"><pre><span></span>build_heap_1() {
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>build_heap_1() {
     for (i = 1; i &lt;= n; i++) up(i);
 }
 </pre></div>
+</td></tr></table>
 
 <p>为啥这么做：对于第 <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 层的结点，向上调整的复杂度为 <span><span class="MathJax_Preview">O(k)</span><script type="math/tex">O(k)</script></span> 而不是 <span><span class="MathJax_Preview">O(\log n)</span><script type="math/tex">O(\log n)</script></span>。</p>
 <p>总复杂度：<span><span class="MathJax_Preview">\log 1 + \log 2 + \cdots + \log n = \Theta(n \log n)</span><script type="math/tex">\log 1 + \log 2 + \cdots + \log n = \Theta(n \log n)</script></span>。</p>
 <p>（在「基于比较的排序」中证明过）</p>
 <h4 id="_10">方法二：使用向下调整<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>这时换一种思路，从叶子开始，逐个向下调整</p>
-<div class="codehilite"><pre><span></span>build_heap_2() {
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>build_heap_2() {
     for (i = n; i &gt;= 1; i--) down(i);
 }
 </pre></div>
+</td></tr></table>
 
 <p>换一种理解方法，每次「合并」两个已经调整好的堆，这说明了正确性。</p>
 <p>注意到向下调整的复杂度，为 <span><span class="MathJax_Preview">O(\log n - k)</span><script type="math/tex">O(\log n - k)</script></span>。</p>

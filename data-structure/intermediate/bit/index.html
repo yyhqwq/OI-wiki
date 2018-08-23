@@ -1631,6 +1631,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2857,6 +2881,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2959,11 +2995,15 @@
 <h2 id="_3">用法及操作<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>那么问题来了，你是怎么知道 <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 管的 <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的个数分别是多少呢？你那个 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 个，<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个，<span><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span> 个……是怎么来的呢？
 这时，我们引入一个函数—— <code>lowbit</code>：
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">lowbit</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span><span class="c1">//算出x二进制的从右往左出现第一个1以及这个1之后的那些0组成数的二进制对应的十进制的数 </span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">lowbit</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span><span class="c1">//算出x二进制的从右往左出现第一个1以及这个1之后的那些0组成数的二进制对应的十进制的数 </span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="o">-</span><span class="n">x</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 <code>lowbit</code> 的意思注释说明了，咱们就用这个说法来证明一下 <span><span class="MathJax_Preview">a[88]</span><script type="math/tex">a[88]</script></span>：<br>
 <span><span class="MathJax_Preview">88_{(10)}=1011000_{(2)}</span><script type="math/tex">88_{(10)}=1011000_{(2)}</script></span><br>
 发现第一个 <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 以及他后面的 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 组成的二进制是 <span><span class="MathJax_Preview">1000</span><script type="math/tex">1000</script></span><br>
@@ -2980,7 +3020,14 @@
 <span><span class="MathJax_Preview">x\ \&amp; \ (-x) = 1000_{(2)} = 8_{(10)}</span><script type="math/tex">x\ \& \ (-x) = 1000_{(2)} = 8_{(10)}</script></span>。</p>
 <p>神奇吧，我也觉得神奇！</p>
 <p>那么对于<strong>单点修改</strong>就更轻松了：</p>
-<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">change</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="p">,</span><span class="kt">int</span> <span class="n">k</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">change</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="p">,</span><span class="kt">int</span> <span class="n">k</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">)</span><span class="c1">//不能越界 </span>
     <span class="p">{</span>
@@ -2989,9 +3036,19 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>每次只要在他的上级那里更新就行，自己就可以不用管了。</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">getsum</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="c1">//a[1]……a[x]的和 </span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">getsum</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="c1">//a[1]……a[x]的和 </span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
@@ -3002,6 +3059,7 @@
     <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><strong>区间和</strong>也不用说了吧，代码十分清真。</p>
 <h2 id="_4">例题<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>

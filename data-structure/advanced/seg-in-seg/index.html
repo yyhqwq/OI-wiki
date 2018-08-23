@@ -1631,6 +1631,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2884,6 +2908,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2997,7 +3033,15 @@
 <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3262">陌上花开</a> 将第一维排序处理，然后用树套树维护第二维和第三维。</p>
 <h3 id="_7">示例代码<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>第二维查询
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">tree_query</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">tree_query</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">l</span> <span class="o">&amp;&amp;</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="n">sec</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="n">vec_query</span><span class="p">(</span><span class="n">ou_root</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">sec</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">z</span><span class="p">);</span>
@@ -3007,8 +3051,17 @@
     <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 第二维修改
-<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">tree_insert</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">tree_insert</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">k</span> <span class="o">=</span> <span class="o">++</span><span class="n">ou_tot</span><span class="p">;</span>
     <span class="n">vec_insert</span><span class="p">(</span><span class="n">ou_root</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">sec</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">z</span><span class="p">);</span>
@@ -3018,8 +3071,17 @@
     <span class="k">else</span> <span class="n">tree_insert</span><span class="p">(</span><span class="n">ou_ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 第三维查询
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">vec_query</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">vec_query</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">l</span> <span class="o">&amp;&amp;</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
@@ -3029,8 +3091,17 @@
     <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 第三维修改
-<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">vec_insert</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">loc</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">vec_insert</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">k</span><span class="p">,</span><span class="kt">int</span> <span class="n">l</span><span class="p">,</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span><span class="kt">int</span> <span class="n">loc</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">k</span> <span class="o">=</span> <span class="o">++</span><span class="n">tot</span><span class="p">;</span>
     <span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
@@ -3039,7 +3110,8 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">loc</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">)</span> <span class="n">vec_insert</span><span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">,</span><span class="n">mid</span><span class="p">,</span><span class="n">loc</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">loc</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="p">)</span> <span class="n">vec_insert</span><span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">loc</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div></p>
+</pre></div>
+</td></tr></table></p>
 <h3 id="_8">相关算法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>面对多维度信息的题目时，如果题目没有要求强制在线，我们还可以考虑 <strong>CDQ 分治</strong>，或者<strong>整体二分</strong>等分治算法，来避免使用高级数据结构，减少代码实现难度。</p>
                 

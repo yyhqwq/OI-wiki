@@ -1631,6 +1631,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2840,6 +2864,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2904,13 +2940,19 @@
 我们把原来长度为n的数组分为 <span><span class="MathJax_Preview">\sqrt{n}</span><script type="math/tex">\sqrt{n}</script></span> 个节点，每个节点对应的数组大小为 <span><span class="MathJax_Preview">\sqrt{n}</span><script type="math/tex">\sqrt{n}</script></span> 。
 所以我们这么定义结构体，代码见下。
 其中 <code>sqn</code> 表示 <code>sqrt(n)</code> 即 <span><span class="MathJax_Preview">\sqrt{n}</span><script type="math/tex">\sqrt{n}</script></span>，<code>pb</code> 表示 <code>push_back</code>，即在这个 <code>node</code> 中加入一个元素。</p>
-<div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">node</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">node</span>
 <span class="p">{</span>
     <span class="n">node</span><span class="o">*</span><span class="n">nxt</span><span class="p">;</span><span class="kt">int</span> <span class="n">size</span><span class="p">;</span><span class="kt">char</span> <span class="n">d</span><span class="p">[(</span><span class="n">sqn</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">5</span><span class="p">];</span>
     <span class="n">node</span><span class="p">(){</span><span class="n">size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">nxt</span><span class="o">=</span><span class="nb">NULL</span><span class="p">,</span><span class="n">memset</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">d</span><span class="p">));}</span>
     <span class="kt">void</span> <span class="n">pb</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">){</span><span class="n">d</span><span class="p">[</span><span class="n">size</span><span class="o">++</span><span class="p">]</span><span class="o">=</span><span class="n">c</span><span class="p">;}</span>
 <span class="p">};</span>
 </pre></div>
+</td></tr></table>
 
 <p>块状链表应该至少支持：分裂、插入、查找。
 什么是分裂？分裂就是分裂一个 <code>node</code>，变成两个小的 <code>node</code>，以保证每个 <code>node</code> 的大小都接近 <span><span class="MathJax_Preview">\sqrt{n}</span><script type="math/tex">\sqrt{n}</script></span> （否则可能退化成普通数组）。当一个 <code>node</code> 的大小超过 <span><span class="MathJax_Preview">2\times \sqrt{n}</span><script type="math/tex">2\times \sqrt{n}</script></span> 时执行分裂操作。</p>
@@ -2919,14 +2961,71 @@
 <p>还有一个要说的。
 随着元素的插入（或删除），<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 会变， <span><span class="MathJax_Preview">\sqrt{n}</span><script type="math/tex">\sqrt{n}</script></span> 也会变。这样块的大小就会变化，我们难道还要每次维护块的大小？</p>
 <p>其实不然，把 <span><span class="MathJax_Preview">\sqrt{n}</span><script type="math/tex">\sqrt{n}</script></span> 设置为一个定值即可。比如题目给的范围是 <span><span class="MathJax_Preview">10^6</span><script type="math/tex">10^6</script></span>，那么 <span><span class="MathJax_Preview">\sqrt{n}</span><script type="math/tex">\sqrt{n}</script></span> 就设置为大小为 <span><span class="MathJax_Preview">10^3</span><script type="math/tex">10^3</script></span> 的常量，不用更改它。</p>
-<div class="codehilite"><pre><span></span><span class="n">list</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">orz_list</span><span class="p">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">list</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">orz_list</span><span class="p">;</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="_2">例题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Big String POJ - 2887</p>
 <p>题解：
 很简单的模板题。代码如下：</p>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cstring&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cctype&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -2984,6 +3083,7 @@
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

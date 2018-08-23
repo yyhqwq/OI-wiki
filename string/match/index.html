@@ -1726,6 +1726,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2889,6 +2913,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3013,7 +3049,16 @@
 <h2 id="_6">暴力做法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>对于每个位置，尝试对模式串和待匹配串进行比对</p>
 <p>（伪代码）</p>
-<div class="codehilite"><pre><span></span>match(char *a, char *b, int n, int m) {
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>match(char *a, char *b, int n, int m) {
     ans = new vector();
     for (i = 0; i &lt; n - m + 1; i++) {
         for (j = 0; j &lt; m; j++) {
@@ -3024,6 +3069,7 @@
     return ans;
 }
 </pre></div>
+</td></tr></table>
 
 <p>时间复杂度分析：</p>
 <p>最坏时间复杂度是 <span><span class="MathJax_Preview">O(nm)</span><script type="math/tex">O(nm)</script></span> 的，</p>

@@ -1718,6 +1718,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../data-structure/novice/stack/" title="栈" class="md-nav__link">
+      栈
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/novice/queue/" title="队列" class="md-nav__link">
+      队列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../data-structure/novice/linked-list/" title="链表" class="md-nav__link">
       链表
     </a>
@@ -2881,6 +2905,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/discrete/" title="离散化" class="md-nav__link">
+      离散化
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2995,7 +3031,15 @@
 <p>Ir1d 提供了一份 linux 下编译好的版本在 <a href="https://github.com/FreestyleOJ/Project_lemon/tree/Built">Project_lemon</a>。</p>
 <p>Menci 提供了一份更新的版本在 <a href="https://github.com/Menci/Lemon/">Menci/Lemon</a></p>
 <h4 id="_2">自行编译<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span>sudo apt update
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt update
 sudo apt install qt5-default build-essential git -y
 git clone --depth<span class="o">=</span><span class="m">1</span> http://github.com/menci/lemon.git
 <span class="nb">cd</span> lemon
@@ -3005,11 +3049,20 @@ sed -i <span class="s1">&#39;s/make $/make -j 1 $/g&#39;</span> make
 cp Lemon ~
 <span class="nb">cd</span> ..
 </pre></div>
+</td></tr></table>
 
 <h4 id="_3">数据格式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>首先打开 lemon 选择新建试题，而后打开新建试题的文件夹</p>
 <p>题目和数据应该如以下格式所示
-<div class="codehilite"><pre><span></span>├── data
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>├── data
 │   ├── gendata.py
 │   ├── product
 │   │   ├── product100.in
@@ -3018,7 +3071,8 @@ cp Lemon ~
 │   │   ├── product10.out
 │   │   ├── product11.in
 ...
-</pre></div></p>
+</pre></div>
+</td></tr></table></p>
 <p>当所有试题添加完成后，回到 lemon 选择自动添加试题</p>
 <p>此时你的题目和数据点应该都显示在 lemon 当中了</p>
 <h3 id="arbiter">Arbiter<a class="headerlink" href="#arbiter" title="Permanent link">&para;</a></h3>
