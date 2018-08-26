@@ -3344,7 +3344,7 @@
 <h3 id="_2">直接存边<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>什么意思呢？我们开一个数组，数组里每个元素是图的一条边。</p>
 <p>这样做有个缺点，每次想要知道两个点之间是否有连边（或者说一条边是否存在），都需要在数组里进行一番查找。而且如果没有对边事先排序的话，就不能使用二分查找的方法（<span><span class="MathJax_Preview">O(\log n)</span><script type="math/tex">O(\log n)</script></span>），而是每次只能按顺序找（<span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>），成本较高。</p>
-<p>什么时候会用到这个方法呢？最简单的一个例子是使用 Kruskal 算法求 <a href="graph/mst">最小生成树</a> 的时候。</p>
+<p>什么时候会用到这个方法呢？最简单的一个例子是使用 Kruskal 算法求 <a href="/graph/mst">最小生成树</a> 的时候。</p>
 <h3 id="_3">邻接矩阵<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>邻接矩阵的英文名是 adjacency matrix。它的形式是 <code>bool adj[n][n]</code>，这里面 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 是节点个数，<span><span class="MathJax_Preview">adj[i][j]</span><script type="math/tex">adj[i][j]</script></span> 表示 <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 和 <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 之间是否有边。</p>
 <p>如果边有权值，也可以直接用 <code>int adj[n][n]</code>，直接把边权存进去。</p>
