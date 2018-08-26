@@ -579,7 +579,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="证明方法" class="md-nav__link">
+  <a href="#_1" title="常见做法" class="md-nav__link">
+    常见做法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="证明方法" class="md-nav__link">
     证明方法
   </a>
   
@@ -2906,7 +2913,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="证明方法" class="md-nav__link">
+  <a href="#_1" title="常见做法" class="md-nav__link">
+    常见做法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="证明方法" class="md-nav__link">
     证明方法
   </a>
   
@@ -2943,8 +2957,19 @@
                 <p>贪心算法顾名思义就是用计算机来模拟一个「贪心」的人做出决策的过程。</p>
 <p>这个人每一步行动总是按某种指标选取最优的操作，他总是只看眼前，并不考虑以后可能造成的影响。</p>
 <p>可想而知，并不是所有的时候贪心法都能获得最优解，所以一般使用贪心法的时候，都要确保自己能证明其正确性。</p>
-<h2 id="_1">证明方法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>可以从「如果交换方案中相邻的两个元素会发生什么」来考虑，如果答案不会变得更好，那么可以发现目前的解已经是最优解了。</p>
+<h2 id="_1">常见做法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>笔者很菜，只好班门弄斧，望大佬斧正</p>
+</blockquote>
+<p>在提高组难度以下的题目中，最常见的贪心有两种。一种是：「我们将 XXX 按照某某顺序排序，然后按某种顺序（例如从小到大）处理」。另一种是：「我们每次都取 XXX 中最大/小的东西，并更新 XXX」，有时「XXX 中最大/小的东西」可以优化，比如用优先队列维护。</p>
+<p>为啥分成两种？你可以发现，一种是离线的，一种是在线的。</p>
+<h2 id="_2">证明方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><del>从来都是大胆猜想，从来不会小心求证</del></p>
+<p>以下套路请按照题目自行斟酌，一般情况下一道题只会用到其中的一种方法来证明。</p>
+<ol>
+<li>运用反证法，如果交换方案中任意两个元素/相邻的两个元素后，答案不会变得更好，那么可以发现目前的解已经是最优解了。</li>
+<li>运用归纳法，先手算得出边界情况（例如 <span><span class="MathJax_Preview">n = 1</span><script type="math/tex">n = 1</script></span>）的最优解 <span><span class="MathJax_Preview">F_1</span><script type="math/tex">F_1</script></span>，然后再证明：对于每个 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，<span><span class="MathJax_Preview">F_{n+1}</span><script type="math/tex">F_{n+1}</script></span> 都可以由 <span><span class="MathJax_Preview">F_{n}</span><script type="math/tex">F_{n}</script></span> 推导出结果。</li>
+</ol>
                 
                   
                 
