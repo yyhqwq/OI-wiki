@@ -106,6 +106,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -444,6 +448,18 @@
   <li class="md-nav__item">
     <a href="../../introduction/softwares/" title="工具软件" class="md-nav__link">
       工具软件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/about/" title="关于本项目" class="md-nav__link">
+      关于本项目
     </a>
   </li>
 
@@ -1314,9 +1330,70 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        博弈论
+      </label>
+    
     <a href="./" title="博弈论" class="md-nav__link md-nav__link--active">
       博弈论
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="有向图游戏" class="md-nav__link">
+    有向图游戏
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nim" title="Nim 博弈" class="md-nav__link">
+    Nim 博弈
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icg" title="公平组合游戏 ICG" class="md-nav__link">
+    公平组合游戏 ICG
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mex-sg" title="mex 运算与 SG 函数" class="md-nav__link">
+    mex 运算与 SG 函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="参考" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2845,6 +2922,69 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="有向图游戏" class="md-nav__link">
+    有向图游戏
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nim" title="Nim 博弈" class="md-nav__link">
+    Nim 博弈
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icg" title="公平组合游戏 ICG" class="md-nav__link">
+    公平组合游戏 ICG
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mex-sg" title="mex 运算与 SG 函数" class="md-nav__link">
+    mex 运算与 SG 函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="参考" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="评论" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -2856,7 +2996,35 @@
                   <h1>博弈论</h1>
                 
                  <blockquote class="page-time"></blockquote>
-                
+                <h2 id="_1">有向图游戏<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>在一个 DAG 中，只有一个起点，上面有一个棋子，
+两个玩家轮流沿着有向边推动棋子，不能走的玩家判负。</p>
+<h2 id="nim">Nim 博弈<a class="headerlink" href="#nim" title="Permanent link">&para;</a></h2>
+<p><span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 堆物品，每堆有 <span><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 个，两个玩家轮流任选一堆来取物品，
+但不能不取，取走最后一个物品者获胜（不能取的玩家判负）
+不难发现 Nim 博弈是由 <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个有向图游戏组成的</p>
+<blockquote>
+<p>定理：先手必胜，当且仅当异或和 <span><span class="MathJax_Preview">\neq 0</span><script type="math/tex">\neq 0</script></span></p>
+</blockquote>
+<p>证明可用数学归纳法，从游戏结束开始分析，</p>
+<p>每次给对面一个平衡状态（异或和 = 0）</p>
+<h2 id="icg">公平组合游戏 ICG<a class="headerlink" href="#icg" title="Permanent link">&para;</a></h2>
+<p>两个玩家交替行动
+能执行的操作与具体玩家无关
+不能行动的玩家判负</p>
+<h2 id="mex-sg">mex 运算与 SG 函数<a class="headerlink" href="#mex-sg" title="Permanent link">&para;</a></h2>
+<p>定义 mex 为，非负整数集合 S 中，最小的不属于集合 S 的非负整数。</p>
+<p>对于状态 x，有 k 个后继状态 y</p>
+<div>
+<div class="MathJax_Preview">SG(x)=mex( { SG(y_1),SG(y_2)…SG(y_k) } )</div>
+<script type="math/tex; mode=display">SG(x)=mex( { SG(y_1),SG(y_2)…SG(y_k) } )</script>
+</div>
+<p>而对于多个有向图游戏，定义有向图游戏的和为，它们 sg(起点) 的异或和</p>
+<blockquote>
+<p>定理：有向图游戏的某个局面必胜，当且仅当其对应节点，sg 函数值大于 0（能到达必败终点）</p>
+</blockquote>
+<h2 id="_2">参考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><a href="http://zory.cf/posts/c7bb.html">http://zory.cf/posts/c7bb.html</a></p>
                 
                   
                 

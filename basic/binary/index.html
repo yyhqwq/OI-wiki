@@ -458,6 +458,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../introduction/about/" title="关于本项目" class="md-nav__link">
+      关于本项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../introduction/faq/" title="F.A.Q." class="md-nav__link">
       F.A.Q.
     </a>
@@ -613,6 +625,33 @@
   <a href="#_2" title="三分法" class="md-nav__link">
     三分法
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="分数规划" class="md-nav__link">
+    分数规划
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="二分法" class="md-nav__link">
+    二分法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dinkelbach" title="Dinkelbach 算法" class="md-nav__link">
+    Dinkelbach 算法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2914,6 +2953,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" title="分数规划" class="md-nav__link">
+    分数规划
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="二分法" class="md-nav__link">
+    二分法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dinkelbach" title="Dinkelbach 算法" class="md-nav__link">
+    Dinkelbach 算法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -3018,6 +3084,34 @@
 由于最值在二者中间，我们舍弃两侧的一个区间后，也不会影响最值，所以可以舍弃。</p>
 </li>
 </ul>
+<h2 id="_3">分数规划<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>分数规划是这样一类问题，每个物品有两个代价 <span><span class="MathJax_Preview">c_i</span><script type="math/tex">c_i</script></span>，<span><span class="MathJax_Preview">d_i</span><script type="math/tex">d_i</script></span>，要求通过某种方式选出若干个，使得 <span><span class="MathJax_Preview">\frac{\sum{c_i}}{\sum{d_i}}</span><script type="math/tex">\frac{\sum{c_i}}{\sum{d_i}}</script></span> 最大或最小。</p>
+<p>经典的例子是 最优比率环、最优比率生成树 等等。</p>
+<h3 id="_4">二分法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>比如说我们要求的是最小的，记 <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> 为最优的答案，对这个式子做一些变换：</p>
+<div>
+<div class="MathJax_Preview">L \geq \frac{\sum{c_i}}{\sum{d_i}}</div>
+<script type="math/tex; mode=display">L \geq \frac{\sum{c_i}}{\sum{d_i}}</script>
+</div>
+<p>把分母乘过去，把右侧化为 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>：</p>
+<div>
+<div class="MathJax_Preview">{\sum{d_i}} \times L - {\sum{c_i}} \geq 0</div>
+<script type="math/tex; mode=display">{\sum{d_i}} \times L - {\sum{c_i}} \geq 0</script>
+</div>
+<p>即：</p>
+<div>
+<div class="MathJax_Preview">{\sum_{i=1}^N{d_i}} \times L - {\sum_{i=1}^N{c_i}} \geq 0</div>
+<script type="math/tex; mode=display">{\sum_{i=1}^N{d_i}} \times L - {\sum_{i=1}^N{c_i}} \geq 0</script>
+</div>
+<div>
+<div class="MathJax_Preview">\sum_{i=1}^N{d_i \times L - c_i} \geq 0</div>
+<script type="math/tex; mode=display">\sum_{i=1}^N{d_i \times L - c_i} \geq 0</script>
+</div>
+<p>不难发现，如果 <span><span class="MathJax_Preview">L'</span><script type="math/tex">L'</script></span> 比 <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> 要小，上式左端的值会更大一些。</p>
+<p>所以要求得最小的 <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>，我们要求的就变成了让上式左端最接近 <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 的 <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>。</p>
+<p>不难发现左端的式子是随 <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> 变化而单调变化的，所以可以通过二分法来解决。</p>
+<h3 id="dinkelbach">Dinkelbach 算法<a class="headerlink" href="#dinkelbach" title="Permanent link">&para;</a></h3>
+<p>Dinkelbach 算法是每次用上一轮的答案当做新的 <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> 来输入，不断地迭代，直至答案收敛。</p>
                 
                   
                 
