@@ -6,27 +6,27 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/introduction/mode/</loc>
+     <loc>https://oi-wiki.org/intro/mode/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/introduction/resources/</loc>
+     <loc>https://oi-wiki.org/intro/resources/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/introduction/softwares/</loc>
+     <loc>https://oi-wiki.org/intro/softwares/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/introduction/about/</loc>
+     <loc>https://oi-wiki.org/intro/about/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/introduction/faq/</loc>
+     <loc>https://oi-wiki.org/intro/faq/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -431,177 +431,177 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/</loc>
+     <loc>https://oi-wiki.org/ds/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/stl/</loc>
+     <loc>https://oi-wiki.org/ds/stl/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/pb-ds/</loc>
+     <loc>https://oi-wiki.org/ds/pb-ds/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/novice/stack/</loc>
+     <loc>https://oi-wiki.org/ds/stack/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/novice/queue/</loc>
+     <loc>https://oi-wiki.org/ds/queue/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/novice/linked-list/</loc>
+     <loc>https://oi-wiki.org/ds/linked-list/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/novice/hash/</loc>
+     <loc>https://oi-wiki.org/ds/hash/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/novice/dsu/</loc>
+     <loc>https://oi-wiki.org/ds/dsu/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/novice/heap/</loc>
+     <loc>https://oi-wiki.org/ds/heap/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/novice/square-root-decomposition/</loc>
+     <loc>https://oi-wiki.org/ds/square-root-decomposition/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/novice/monotonous-stack/</loc>
+     <loc>https://oi-wiki.org/ds/monotonous-stack/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/novice/monotonous-queue/</loc>
+     <loc>https://oi-wiki.org/ds/monotonous-queue/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/intermediate/sparse-table/</loc>
+     <loc>https://oi-wiki.org/ds/sparse-table/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/intermediate/block-list/</loc>
+     <loc>https://oi-wiki.org/ds/block-list/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/intermediate/block-array/</loc>
+     <loc>https://oi-wiki.org/ds/block-array/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/intermediate/bit/</loc>
+     <loc>https://oi-wiki.org/ds/bit/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/intermediate/segment/</loc>
+     <loc>https://oi-wiki.org/ds/segment/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/intermediate/treap/</loc>
+     <loc>https://oi-wiki.org/ds/treap/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/intermediate/sbt/</loc>
+     <loc>https://oi-wiki.org/ds/sbt/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/intermediate/splay/</loc>
+     <loc>https://oi-wiki.org/ds/splay/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/intermediate/scapegoat/</loc>
+     <loc>https://oi-wiki.org/ds/scapegoat/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/intermediate/virtual-tree/</loc>
+     <loc>https://oi-wiki.org/ds/virtual-tree/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/seg-in-seg/</loc>
+     <loc>https://oi-wiki.org/ds/seg-in-seg/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/seg-in-balanced/</loc>
+     <loc>https://oi-wiki.org/ds/seg-in-balanced/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/balanced-in-seg/</loc>
+     <loc>https://oi-wiki.org/ds/balanced-in-seg/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/avl/</loc>
+     <loc>https://oi-wiki.org/ds/avl/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/dividin/</loc>
+     <loc>https://oi-wiki.org/ds/dividin/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/k-dtree/</loc>
+     <loc>https://oi-wiki.org/ds/k-dtree/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/persistent-seg/</loc>
+     <loc>https://oi-wiki.org/ds/persistent-seg/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/persistent-block-array/</loc>
+     <loc>https://oi-wiki.org/ds/persistent-block-array/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/persistent-balanced/</loc>
+     <loc>https://oi-wiki.org/ds/persistent-balanced/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/persistent-trie/</loc>
+     <loc>https://oi-wiki.org/ds/persistent-trie/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/lct/</loc>
+     <loc>https://oi-wiki.org/ds/lct/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/ett/</loc>
+     <loc>https://oi-wiki.org/ds/ett/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://oi-wiki.org/data-structure/advanced/tree-decompose/</loc>
+     <loc>https://oi-wiki.org/ds/tree-decompose/</loc>
      <lastmod>2018-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
